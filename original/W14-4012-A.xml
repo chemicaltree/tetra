@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-4012" editor="A" format="WS" position="NS" region="N">
+    <title>
+        <text>On the Properties of Neural Machine Translation: Encoder-Decoder Approaches</text>
+    </title>
+    <abstract>
+        <text>Neural machine translation is a relatively new approach to statistical machine translation based purely on neural networks.</text>
+        <edit type="word choice" crr="Neural machine translation" comments="word choice - 'The' is unneeded here since we have plural.">The neural machine translation</edit>
+        <text>models often consist of an encoder and a decoder. The encoder extracts a fixed-length representation from a variable-length input sentence, and the decoder generates a correct translation from this representation. In this paper, we focus on analyzing the properties of</text>
+        <edit type="grammar" crr="" comments="grammar - 'the' is not needed here as we're talking about NMT in general, not a specific model.">the</edit>
+        <text>neural machine translation using two models</text>
+        <edit type="punctuation" crr=";" comments="punctuation: colon to introduce list, not semicolon">:</edit>
+        <edit type="grammar;clarity" crr="the" comments="grammar, clarity - we're referring to a specific model here, so 'the' helps with understanding that."></edit>
+        <text>RNN Encoder-Decoder and a newly proposed gated recursive convolutional neural network. We show that</text>
+        <edit type="grammar" crr="" comments="grammar - 'the' not needed as described above">the</edit>
+        <text>neural machine translation performs relatively well on short sentences without unknown words, but its performance degrades rapidly as the length of the sentence and the number of unknown words increase. Furthermore, we find that the proposed gated recursive convolutional network learns a grammatical structure of a sentence automatically.</text>
+    </abstract>   
+    <introduction>
+        <text>A new approach for statistical machine translation based purely on neural networks has recently been proposed (Kalchbrenner and Blunsom, 2013; Sutskever et al., 2014). This new approach, which we refer to as neural machine translation, is inspired by the recent trend of deep representational learning. All the neural network models used in (Sutskever et al., 2014; Cho et al., 2014) consist of an encoder and a decoder. The encoder extracts a fixed-length vector representation from a variable-length input sentence, and</text>
+        <edit type="punctuation" crr="," comments="punctuation - commas to set off this introductory phrase"></edit>
+        <text>from this representation</text>
+        <edit type="punctuation" crr="," comments="punctuation - commas to set off this introductory phrase"></edit>
+        <text>the decoder generates a correct</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is used between adjectives if it would make sense if 'and' was used in the comma's place. In this case it doesn't.">,</edit>
+        <text>variable-length target translation.</text>
+        <text>\n\n The emergence of</text>
+        <edit type="grammar" crr="" comments="grammar - the article 'the' isn't appropriate here because we're talking about NMT in general, not a specific model.">the</edit>
+        <text>neural machine translation is highly significant, both practically and theoretically. Neural machine translation models require only a fraction of the memory needed by traditional statistical machine translation (SMT) models. The models we trained for this paper require only 500MB of memory in total. This stands in stark contrast with existing SMT systems, which often require tens of gigabytes of memory. This makes</text>
+        <edit type="grammar" crr="" comments="grammar - the article 'the' isn't appropriate here because we're talking about NMT in general, not a specific model.">the</edit>
+        <text>neural machine translation appealing in practice. Furthermore, unlike conventional translation systems, each and every component of the neural translation model is trained jointly to maximize the translation performance.</text>
+        <text>\n\n As this approach is relatively new, there has not been much work on analyzing the properties and behavior of these models. For instance: What are the properties of sentences on which this approach performs better? How does the choice of source</text>
+        <edit type="clarity" crr="and" comments="clarity - 'and' or 'or' is preferable and more unambiguous than '/'">/</edit>
+        <text>target vocabulary affect the performance? In which cases does</text>
+        <edit type="grammar" crr="" comments="grammar - the article 'the' isn't appropriate here because we're talking about NMT in general, not a specific model.">the</edit>
+        <text>neural machine translation fail?</text>
+        <text>\n\n  It is crucial to understand the properties and behavior of this new neural machine translation approach in order to determine future research directions. Also, understanding the weaknesses and strengths of neural machine translation might lead to better ways of integrating SMT and neural machine translation systems.</text>
+        <text>\n\n In this paper, we analyze two neural machine translation models. One of them is the RNN Encoder–Decoder that was proposed recently in (Cho et al., 2014). The other model replaces the encoder in the RNN Encoder–Decoder model with a novel neural network, which we call a gated recursive convolutional neural network (grConv). We evaluate these two models on the task of</text>
+        <edit type="readability" crr="translating" comments="readability - this flows a bit better">translation from</edit>
+        <text>French to English.</text>
+        <text>\n\n Our analysis shows that the performance of the neural machine translation model degrades quickly as the length of a source sentence increases. Furthermore, we find that the vocabulary size has a high impact on</text>
+        <edit type="grammar" crr="" comments="grammar - the article 'the' isn't appropriate here because we're talking about NMT in general, not a specific model.">the</edit>
+        <text>translation performance. Nonetheless, qualitatively we find that</text>
+        <edit type="grammar" crr="" comments="grammar - 'the' is inappropriate here">the</edit>
+        <text>both models are able to generate correct translations most of the time. Furthermore, the newly proposed grConv model is able to learn, without supervision, a kind of syntactic structure over the source language.</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-3001" editor="B" format="WS" position="S" region="N">
+    <title>
+        <text>Dimensions of Abusive Language on Twitter</text>
+    </title>
+    <abstract>
+        <text>In this paper, we use a new categorical form of multidimensional register analysis to identify the main dimensions of functional linguistic variation in a corpus of abusive language</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>consisting of racist and sexist Tweets. By analysing the use of a wide variety of parts-of-speech and grammatical constructions, as well as various features related to Twitter and computer-mediated communication, we discover three dimensions of linguistic variation in this corpus</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>which we interpret as being related to the degree of interactive, antagonistic and attitudinal language exhibited by individual Tweets. We then demonstrate that there is a significant functional difference between racist and sexist Tweets, with sexists Tweets tending to be more interactive and attitudinal than racist Tweets.</text>
+    </abstract>   
+    <introduction>
+        <text>With the rise of trolling and other forms of abusive language online, many computational methods for detecting abusive language have been introduced. These classifiers have been trained on a wide range of linguistic features, including specific keywords (Xiang et al., 2012), Bag-of-Words (Warner and Hirschberg, 2012), character n-grams (Mehdad and Tetreault, 2016), word n-grams (Chen et al., 2012; Yin et al., 2009), part-of-speech n-grams (Davidson et al., 2017), and various syntactic features (Burnap and Williams, 2014). A variety of extra-linguistic features have also been considered, including gender (Waseem and Hovy, 2016), location (Waseem and Hovy, 2016), user behaviour and performance (Balci and Salah, 2015; Dadvar et al., 2013), and surrounding posts (Yin et al., 2009). Many of these methods assume that abusive language includes profanity and negative sentiment, but such features are not always present in abusive posts. Including offensive terms in the feature set can even hinder the accuracy of classifiers (Davidson et al., 2017) because profanity can be used for amplification and other non-abusive functions, leading to many false positives (Chen et al., 2012). Trolls have also developed more covert ways of abusing others, such as using creative spelling or avoiding offensive words (Hine et al., 2017). These strategies have been accounted for in part by examining the use of offensive words in context, applying spell-correction algorithms (Chen et al., 2012), consulting WordNet (Chen et al., 2012), and using character n-grams to deal with the noisiness of online communication (Mehdad and Tetreault, 2016).</text>
+        <text>\\ Despite this growing body of research, functional variation in abusive language has yet to be investigated directly. At</text>
+        <edit type="word choice;clarity" crr="its" comments="">the</edit>
+        <text>most basic level, we do not know what</text>
+        <edit type="word order" crr="the general repertoire of styles for abusive language that exists online consists of." comments="">is the general repertoire of styles for abusive language that exists online.</edit>
+        <text>One</text>
+        <edit type="word choice" crr="method of understanding" comments="">way to understand</edit>
+        <text>how the structure of language varies depending on its communicative purpose is</text>
+        <edit type="clarity" crr="to use" comments=""></edit>
+        <text>multi-dimensional analysis (MDA) (Biber, 1988, 1989). MDA is generally based on the relative frequencies of many lexical and grammatical features measured across a corpus of texts representing a particular variety of language. The most important dimensions of linguistic variation are extracted from this dataset through factor analysis, and then interpreted functionally based on the linguistic features and the individual texts that are most strongly associated with each dimension. In addition to providing a more complete understanding of the structure of abusive language, incorporating this type of information into abusive language classification systems should lead to more robust and principled methods.</text>
+        <text>\\ The goal of this study is therefore to use MDA to identify the main dimensions of functional linguistic variation in a corpus of racist and sexist abusive Tweets (Waseem and Hovy, 2016). However, because MDA relies on the multivariate analysis of the relative frequencies of linguistic features, it is not suitable for analysing a corpus of Tweets, which typically include fewer than 30 words</text>
+        <edit type="clarity;punctuation" crr="each" comments="">,</edit>
+        <text>and are therefore too short to allow for the relative frequencies of most features to be measured accurately. Rather than concatenate Tweets to form longer texts (e.g., Passonneau et al., 2014), for example, by author, which would obscure text-level patterns, we therefore apply a new form of categorical MDA based on a multiple correspondence analysis of the simple occurrence of a variety of lexical and grammatical forms in individual Tweets to identify common patterns of functional variation in abusive Tweets. Finally, we investigate the degree to which the racist and sexist Tweets in our corpus vary in terms of these dimensions.</text>
+    </introduction>   
+</doc>

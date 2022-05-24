@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P12-1089" editor="C" format="Conf" position="NS" region="NN">
+    <title>
+        <text>Discriminative Learning for Joint Template Filling</text>
+    </title>
+    <abstract>
+        <text>This paper presents a joint model for template filling, where the goal is to automatically specify the fields of target relations such as seminar</text>
+        <edit type="readability;clarity" crr="or corporate acquisition announcements." comments="Readability/ambiguity - it's not clear what you mean by 'corporate acquisition event' - specify">announcements or corporate acquisition events.</edit>
+        <text>The approach models mention detection, unification, and field extraction in a flexible, feature-rich model that allows for joint modeling of interdependencies at all levels and across fields. Such an approach can, for example,</text>
+        <edit type="word choice;clarity" crr="predict" comments="">learn</edit>
+        <text>likely event durations and</text>
+        <edit type="clarity" crr="be able to know when" comments="Meaning/the sentence was incorrect/not clear. Insert to clarify">the fact that</edit>
+        <text>start times should come before end times. While the joint inference space is large, we demonstrate effective learning with a Perceptron-style approach that uses simple, greedy beam decoding. Empirical results in two benchmark domains demonstrate consistently strong performance on both mention detection and</text>
+        <edit type="hyphenation" crr="template-filling" comments="Punctuation/hyphenate when qualifying what comes next">template filling</edit>
+        <text>tasks.</text>
+    </abstract>   
+    <introduction>
+        <text>Information extraction (IE) systems recover structured information from text. Template filling is an IE task where the goal is to populate the fields of a target relation, for example to extract the attributes of a job posting (Califf and Mooney, 2003) or to</text>
+        <edit type="word choice" crr="pull out specific" comments="Vocabulary / pull out or extract is more accurate">recover the</edit>
+        <text>etails of a corporate acquisition event from a news story (Freitag and McCallum, 2000).</text>
+        <text>\\ This task is challenging due to the wide range of cues from the input documents</text>
+        <edit type="readability" crr=". In addition," comments="Readability/end sentence here as the next sentence requires restructuring in order to clarify">; as well as</edit>
+        <text>non-textual background knowledge</text>
+        <edit type="readability" crr="" comments="Readability/rephrase to clarify sentence">, that</edit>
+        <text>must be considered</text>
+        <edit type="clarity" crr="in order" comments=""></edit>
+        <text>to find the best joint assignment for the fields of the extracted relation. For example, Figure 1 shows an extraction from CMU seminar announcement corpus (Freitag and McCallum, 2000). Here, the goal is to perform mention detection and extraction</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>by</text>
+        <edit type="clarity" crr="first" comments="Comprehension/insert to describe a sequence and clarify"></edit>
+        <text>finding all of the text spans, or mentions, that describe field values,</text>
+        <edit type="grammar" crr="then unifying" comments="Grammar/make tense consistent with verb use in sentence">unify</edit>
+        <text>these mentions by grouping them according to target field, and</text>
+        <edit type="clarity;consistency" crr="finally," comments="Comprehension/as above"></edit>
+        <text>normalizing the results within each group to provide the final extractions. Each of these steps requires significant knowledge about the target relation. For example, in Figure 1, the mention “3:30” appears three times and provides the only reference to a time. We must infer that this is the</text>
+        <edit type="spelling" crr="start" comments="Spelling/'start' is accurate">starting</edit>
+        <text>time, that the end time is never explicitly mentioned, and also that the event is in the afternoon. Such inferences may not hold in more general settings, such as extraction for medical emergencies or</text>
+        <edit type="word choice" crr="similar" comments="Word usage/replacement is more accurate">related</edit>
+        <text>events</text>
+        <edit type="grammar" crr="." comments="Punctuation/end sentence with ."></edit>
+        <text>\\ In this paper, we present a joint modeling and learning approach for the combined tasks of mention detection, unification, and template filling, as described above. As we will see in Section 2, previous work has mostly focused on learning tagging models for mention detection,</text>
+        <edit type="readability" crr="(difficult to aggregate into a full template extraction)" comments="Readability/your construction is correct. However, the sentence is very long and hard to read. When it's difficult to split the sentence (as in this case), then insert (...) to isolate non-critical clauses.">which can be difficult to aggregate into a full template extraction</edit>
+        <text>, or directly learning template field value extractors, often in isolation and with no reasoning across different fields in the same relation. We present a simple, feature-rich, discriminative model that readily incorporates a broad range of possible constraints on the mentions and joint field assignments.</text>
+        <text>\\ Such an approach allows us to learn, for each target relation, an integrated model to</text>
+        <edit type="clarity" crr="apply a weighting to" comments="Vocabulary/your use is correct, but this is a little more descriptive">weight</edit>
+        <text>the different extraction options, including</text>
+        <edit type="readability" crr=", for example," comments="Punctuation/insert commas to break up sentence and improve readability.">for example</edit>
+        <text>the likely lengths</text>
+        <edit type="grammar" crr="of" comments="">for</edit>
+        <text>events, or</text>
+        <edit type="clarity" crr="defining rules that dictate that" comments="Comprehension/replace to clarify">the fact that</edit>
+        <text>start times should come before end times. However, there are significant computation challenges that</text>
+        <edit type="style" crr="accompany" comments="Style/replacement is a better word in academic writing">come with</edit>
+        <text>this style of joint learning. We demonstrate empirically that these challenges can be solved with a combination of greedy beam decoding, performed directly in the joint space of possible mention clusters and field assignments,</text>
+        <edit type="repetitiveness" crr="as well as" comments="Vocabulary/repetition of 'and'/replace">and</edit>
+        <text>structured Perceptron-style learning algorithms (Collins, 2002).</text>
+        <text>\\ We report experimental evaluations on two benchmark datasets in different genres, the CMU seminar announcements and corporate acquisitions (Freitag and McCallum, 2000). In each case, we evaluated both template extraction and mention detection performance. Our joint learning approach provides consistently strong results across every setting, including new state-of-the-art results. We also demonstrate, through ablation studies on the feature set, the need for joint modeling and the relative importance of the different types of joint constraints.</text>
+    </introduction>   
+</doc>

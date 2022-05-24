@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-1026" editor="A" format="Conf" position="S" region="NN">
+    <title>
+        <text>Question Answering over Freebase with Multi-Column Convolutional Neural Networks</text>
+    </title>
+    <abstract>
+        <text>Answering natural language questions over a knowledge base is an important and challenging task. Most</text>
+        <edit type="grammar" crr="" comments="grammar - if a preposition is used, it would need to be followed by an article 'the'. But sentence makes perfect sense without the preposition, so dropping it">of</edit>
+        <text>existing systems typically rely on</text>
+        <edit type="hyphenation" crr="hand crafted" comments="hyphenation - this word is listed closed in MW Unabridged">hand-crafted</edit>
+        <text>features and rules to conduct question understanding and/or answer ranking. In this paper, we introduce</text>
+        <edit type="hyphenation" crr="multi column" comments="hyphenation - this word is listed closed in MW Unabridged">multi-column</edit>
+        <text>convolutional neural networks (MCCNNs) to understand questions from three different aspects (namely, answer path, answer context, and answer type) and learn their distributed representations. Meanwhile, we jointly learn low-dimensional embeddings of entities and relations in the knowledge base. Question-answer pairs are used to train the model to rank candidate answers. We also leverage question paraphrases to train the column networks in a multi-task learning manner. We use</text>
+        <edit type="capitalization" crr="Freebase" comments="capitalization - this is styled as capitalized, not all caps">FREEBASE</edit>
+        <text>as the knowledge base and conduct extensive experiments on the</text>
+        <edit type="capitalization" crr="WebQuestions" comments="capitalization - this is styled in camel case, not all caps">WEBQUESTIONS</edit>
+        <text>dataset. Experimental results show that our method achieves better or comparable performance compared with baseline systems. In addition, we develop a method to compute the salience scores of question words in different column networks. The results help us intuitively understand what MCCNNs learn.</text>
+    </abstract>   
+    <introduction>
+        <text>Automatic</text>
+        <edit type="hyphenation" crr="question-answering" comments="hyphenation - missing hyphen in compound noun. This may not be needed for this audience, however for consistency I'm adding it as we use 'question-answer pairs' later">question answering</edit>
+        <text>systems return the direct and exact answers to natural language questions. In recent years, the development of large-scale knowledge bases, such as</text>
+        <edit type="capitalization" crr="Freebase" comments="capitalization - this is styled as capitalized, not all caps">FREEBASE</edit>
+        <text>(Bollacker et al., 2008), provides a rich resource to answer open-domain questions. However, how to understand questions and bridge the gap between natural languages and structured semantics of knowledge bases is still very challenging.</text>
+        <text>\\ Up to now, there</text>
+        <edit type="readability;grammar" crr="have been" comments="readability / grammar - present perfect tense works better here">are</edit>
+        <text>two mainstream methods for this task. The first one is based on semantic parsing (Berant et al., 2013; Berant and Liang, 2014), and the other relies on information extraction over the structured knowledge base (Yao and Van Durme, 2014; Bordes et al., 2014a; Bordes et al., 2014b). The semantic parsers learn to understand natural language questions by converting them into logical forms. Then, the parse results are used to generate structured queries to search knowledge bases and obtain the answers. Recent works mainly focus on using question-answer pairs, instead of annotated logical forms of questions, as weak training signals (Liang et al., 2011; Krishnamurthy and Mitchell, 2012) to reduce annotation costs. However, some of them still assume a fixed and pre-defined set of lexical triggers which limit their domains and scalability</text>
+        <edit type="conciseness" crr="" comments="conciseness - capability is redundant with scalabilit">capability</edit>
+        <text>. In addition, they need to manually design features for semantic parsers. The second approach uses information extraction techniques for open question answering. These methods retrieve a set of candidate answers from the knowledge base, and then extract features for the question and these candidates to rank them. However, the method proposed by Yao and Van Durme (2014) relies on rules and dependency parse results to extract hand-crafted features for questions. Moreover, some methods (Bordes et al., 2014a; Bordes et al., 2014b) use the summation of question word embeddings to represent questions, which ignores word-order information and cannot process complicated questions.</text>
+        <text>\\ In this paper, we introduce</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <edit type="hyphenation" crr="multi column" comments="hyphenation - this word is listed closed in MW Unabridged">multi-column</edit>
+        <text> convolutional neural networks (MCCNNs) to automatically analyze questions from multiple aspects. Specifically, the model shares the same word embeddings to represent question words. MCCNNs use different column networks to extract answer types, relations, and context information from the input questions. The entities and relations in the knowledge base (namely</text>
+        <edit type="capitalization" crr="Freebase" comments="capitalization - this is styled as capitalized, not all caps">FREEBASE</edit>
+        <text>in our experiments) are also represented as low-dimensional vectors. Then, a score layer is employed to rank candidate answers according to the representations of questions and candidate answers. The proposed information extraction - based method utilizes question-answer pairs to automatically learn the model without relying on manually annotated logical forms and hand-crafted features. We also do not use any pre-defined lexical triggers and rules. In addition, the question paraphrases are also used to train networks and generalize for the unseen words in a multi-task learning manner. We have conducted extensive experiments on</text>
+        <edit type="capitalization" crr="WebQuestions" comments="capitalization - this is styled in camel case, not all caps">WEBQUESTIONS</edit>
+        <text>. Experimental results illustrate that our method outperforms several baseline systems.</text>
+        <text>\\ The contributions of this paper are three-fold:</text>
+        <edit type="capitalization" crr="\ we introduce multi-column convolutional neural networks for question understanding without relying on hand-crafted features and rules, and use question paraphrases to train the column networks and word vectors in a multi-task learning manner;" comments="capitalization - first word in bullets in a list formatted as a sentence is typically not captialized">\ We introduce multi-column convolutional neural networks for question understanding without relying on hand-crafted features and rules, and use question paraphrases to train the column networks and word vectors in a multi-task learning manner;</edit>
+        <edit type="capitalization" crr="\ we" comments="">\ We</edit>
+        <text>jointly learn low-dimensional embeddings for the entities and relations in</text>
+        <edit type="capitalization" crr="Freebase" comments="capitalization - this is styled as capitalized, not all caps">FREEBASE</edit>
+        <text>with question-answer pairs as supervision signals;</text>
+        <edit type="grammar" crr="and" comments="grammar - missing conjunction in list formatted as sentence"></edit>
+        <edit type="capitalization" crr="\ we" comments="">\ We</edit>
+        <text>conduct extensive experiments on the</text>
+        <edit type="capitalization" crr="WebQuestions" comments="capitalization - this is styled in camel case, not all caps">WEBQUESTIONS</edit>
+        <text> dataset, and provide some intuitive interpretations for MCCNNs by developing a method to detect salient question words in the different column networks.</text>
+    </introduction>   
+</doc>

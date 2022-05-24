@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-1603" editor="A" format="WS" position="NS" region="NN">
+    <title>
+        <text>A Quantitative Study of Data in the NLP</text>>
+        <edit type="capitalization" crr= "Community" comments="capitalization - title should be in title/headline case">community</edit>        
+    </title>
+    <abstract>
+        <text>We present results</text>
+        <edit type="word choice" crr="of" comments="word choice - present results of, not on">on</edit>
+        <text>a quantitative analysis of publications in the NLP domain</text>
+        <edit type="word choice" crr="regarding" comments="word choice - 'analysis... on' doesn't work">on</edit>
+        <edit type="parallelism" crr="how they collect, publish, and make research data available." comments="parallelism - verbs in this kind of list should have the same form. I'm not entirely sure that  ``make research data available'' is the intended meaning, but I believe it is based on the intro. Full paper would make it more clear I think.">collecting, publishing, and availability of research data.</edit>
+        <text>We find that a wide range of publications rely on data crawled from the web, but few give details on how potentially sensitive data was treated. Additionally, we find that while links to</text>
+        <edit type="conciseness;readability" crr="data repositories" comments="">repositories of data</edit>
+        <text>are given, they often do not work even a short time after publication. We</text>
+        <edit type="word choice;style" crr="present" comments="word choice - the original works but is a bit casual for published material">put together</edit>
+        <text>everal suggestions on how to improve this situation based on publications from the NLP domain</text>
+        <edit type="word choice;style" crr="as well as" comments="word choice - 'but also' would work if there was a 'not only' earlier. As it is, the sentence flows better with 'as well as'">, but also</edit>
+        <text>other research areas. \n\n</text>
+     </abstract>
+    <introduction>
+        <text>The Natural Language Processing (NLP) community makes extensive use of resources available on the internet.</text>
+        <edit type="readability" crr="As" comments="Readability - the 'and' doesn't add anything here">And a</edit>
+        <text>research in NLP attracts more attention by the general public, we have to make sure</text>
+        <edit type="punctuation" crr="" comments="punctuation, comma is inappropriate here">,</edit>
+        <text>our results are solid and reliable, similar to those from the medical and pharmacology fieldsmedicine and pharmacy.</text>
+        <edit type="readability;clarity" crr="those from the medical and pharmacology fields" comments="readability - need to make it clearer where the 'similar to' ties back to, in this case 'results';clarity - we're not making sure our results are similar to those fields but to the results those fields present.">medicine and pharmacy</edit>
+        <text>In the case of medicine, the general public is often too optimistic. In NLP</text>
+        <edit type="punctuation" crr="," comments="punctuation, missing comma after introductory phrase."></edit>
+        <text>this</text>
+        <edit type="hyphenation" crr="over optimism" comments="hyphenation - over typically isn't hyphenated unless the result is awkward. This can be stylistic">over-optimism</edit>
+        <text>can have a negative impact, such as</text>
+        <edit type="word choice" crr="with" comments="word choice - with seems a better choice here as the overoptimism isn't in the articles but stemming from them.">in</edit>
+        <text>articles on automatic speech recognition or personality profiling. Few point out</text>
+        <edit type="punctuation" crr="" comments="punctuation, comma inappropriate here">,</edit>
+        <text>that the algorithms are not perfect and do not solve all the problems,</text>
+        <edit type="word choice" crr="for example, with regard to" comments="word choice - 'as on' just doesn't make sense here when we want to say that these are two fields where the algorithms are incomplete">as on</edit>
+        <text>errorism prevention or sentiment analysis.</text>
+        <edit type="style" crr="" comments="Style - this sentence works better as the close to the prior para and avoids having a one sentence para.">\n\n</edit>  
+        <text>Therefore, important questions</text>
+        <edit type="readability" crr="arise regarding" comments="">are,</edit>
+        <text>what happens to the data and how reliable</text>
+        <edit type="word order;readability" crr="the results obtained through it are" comments="word order and readability - this is more natural sounding. Also, the article 'the' was missing.">are results obtained through them</edit>
+        <text>\n\n We present a quantitative analysis of how often data is being collected, how data is published, and what data types are being collected. Taken together</text>
+        <edit type="punctuation" crr="," comments="punctuation - missing comma after introductory phrase"></edit> 
+        <edit type="clarity" crr="our analysis" comments="clarity - make it clear what 'it' refers to">it</edit>
+        <text>gives insight into issues arising from collecting data and</text>
+        <edit type="clarity" crr="" comments="conciseness - preposition doesn't need repeated here">from</edit>
+        <text>distributing it via channels</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>that do not allow for reproducing results, even after a comparably short period of time. Based on this, we open a discussion about best practices</text>
+        <edit type="word choice" crr="for" comments="word choice - for works better than on here">on</edit>
+        <text>data collection, storage</text>
+        <edit type="punctuation" crr="," comments="punctuation - adding serial comma, could be style specific"></edit>
+        <text>and distribution in order to ensure high-quality research</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>that is solid and</text>
+        <edit type="spelling" crr="reproducible" comments="">reproducable</edit>  
+        <edit type="readability;grammar;flow" crr="as well as ensuring that" comments="readability, grammar, and flow - that second sentence wasn't a complete sentence">. But also to make sure,</edit>
+        <text>users of,</text>
+        <edit type="word choice" crr="e.g." comments="word choice - i.e. is that is, e.g. is for example. We want the latter here.">i.e.</edit>
+        <text>, social media channels are treated according to general standards concerning sensitive data.</text>
+    </introduction>
+</doc>

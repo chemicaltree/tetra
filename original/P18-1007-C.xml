@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P18-1007" editor="C" format="Conf" position="NS" region="NN">
+    <title>
+        <text>Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates</text>
+    </title>
+    <abstract>
+        <text>Subword units are an effective way to alleviate the open vocabulary problems in neural machine translation (NMT). While sentences are usually converted into unique subword sequences, subword segmentation is potentially ambiguous and multiple segmentations are possible</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>even with the same vocabulary. The question addressed in this paper is whether it is possible to harness the segmentation ambiguity as a noise</text>
+        <edit type="word usage;clarity" crr="in order" comments=""></edit>
+        <text>to improve the robustness of NMT. We present a simple regularization method</text>
+        <edit type="word usage;clarity" crr="called-subword" comments="">, subword</edit>
+        <text>regularization</text>
+        <edit type="flow" crr=". This" comments="Split sentence / start new sentence">, which</edit>
+        <text>trains the model with multiple subword segmentations</text>
+        <edit type="word usage;clarity" crr="that are" comments=""></edit>
+        <text>probabilistically sampled during training. In addition, for</text>
+        <edit type="style" crr="improved" comments="">better</edit>
+        <text>ge model. We experiment with multiple corpora and report consistent improvements</text>
+        <edit type="punctuation;flow" crr="," comments=""></edit>
+        <text>especially on low resource and out-of-domain settings.</text>
+    </abstract>   
+    <introduction>
+        <text>Neural</text>
+        <edit type="consistency" crr="machine translation" comments="Spelling consistency">Machine Translation</edit>
+        <text>(NMT) models (Bahdanau et al., 2014; Luong et al., 2015; Wu et al., 2016; Vaswani et al., 2017) often operate with fixed word vocabularies, as their training and inference depend heavily on the</text>
+        <edit type="word usage;clarity" crr="size of vocabulary." comments="">vocabulary size.</edit>
+        <text>However, limiting vocabulary size increases the amount of unknown words, which</text>
+        <edit type="word usage;style" crr="render" comments="">makes</edit>
+        <text>the translation inaccurate, especially in an open vocabulary setting.</text>
+        <text>\n\n A common approach for dealing with the open vocabulary issue is to break up rare words into subword units (Schuster and Nakajima, 2012; Chitnis and DeNero, 2015; Sennrich et al., 2016; Wu et al., 2016). Byte-Pair-Encoding (BPE) (Sennrich et al., 2016) is a de facto standard subword segmentation algorithm that is applied to many NMT systems and</text>
+        <edit type="word usage;clarity" crr="achieves" comments="">achieving</edit>
+        <edit type="style" crr="excellent" comments="">top</edit>
+        <text>translation quality in several shared tasks (Denkowski and Neubig, 2017; Nakazawa et al., 2017). BPE segmentation</text>
+        <edit type="style" crr="provides" comments="Style / replace / academic register">gives</edit>
+        <text>a good balance between the vocabulary size and</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>decoding efficiency</text>
+        <edit type="readability" crr=". It also" comments="Break into two sentences to improve readability">, and also</edit>
+        <text>sidesteps the need for a special treatment of unknown words.</text>
+        <text>BPE encodes a sentence into a unique subword sequence. However, a sentence can be represented in multiple subword sequences even with the same vocabulary. Table 1 illustrates an example. While these sequences encode the same input</text>
+        <edit type="punctuation" crr="“Hello World,”" comments="">“Hello World”,</edit>
+        <text>NMT handles them as completely different inputs. This observation becomes more apparent when converting subword sequences into id sequences (right column in Table 1). These variants can be viewed as a spurious ambiguity, which might not always be resolved in</text>
+        <edit type="clarity" crr="the" comments=""></edit>
+        <text>decoding process.</text>
+        <edit type="clarity" crr="During the NMT training process" comments="">At training time of NMT</edit>
+        <text>, multiple segmentation candidates will</text>
+        <edit type="word usage;style" crr="reinforce" comments="">make</edit>
+        <text>the model</text>
+        <edit type="redundancy" crr="" comments="Not required">robust</edit>
+        <edit type="word usage" crr="against" comments="">to</edit>
+        <text>noise and segmentation errors</text>
+        <edit type="readability" crr=". These can" comments="Break into two sentences to improve readability.">, as they can</edit>
+        <text>indirectly help the model to learn the compositionality of words</text>
+        <edit type="word usage" crr=". For example," comments="">e.g.,</edit>
+        <text>“books” can be decomposed into “book” + “s”.</text>
+        <text>\n\n  In this study, we propose a new regularization method for open-vocabulary NMT, called subword regularization</text>
+        <edit type="readability" crr=". This method" comments="">, which</edit>
+        <text>employs multiple subword segmentations to</text>
+        <edit type="style" crr="render" comments="avoid the use of 'make' in academic text. In this case, 'render' more in line with register">make</edit>
+        <text>the NMT model accurate and robust. Subword regularization consists of the following two sub-contributions:</text>
+        <text>\n We propose a simple NMT training algorithm to integrate multiple segmentation candidates. Our approach is implemented as an on-the-fly</text>
+        <edit type="word usage;style" crr="method of data" comments="">data</edit>
+        <text>sampling, which is not specific to NMT architecture. Subword regularization can be applied to any NMT system without changing the model structure.</text>
+        <text>\n We also propose a new subword segmentation algorithm based on a language model, which provides multiple segmentations with probabilities. The language model allows</text>
+        <edit type="word usage" crr="the emulation of noise" comments="">to emulate the noise</edit>
+        <text>generated during the segmentation of actual data.</text>
+        <text>\n\n Empirical experiments using multiple corpora with different sizes and languages show that subword regularization achieves significant improvements over the method using a single subword sequence. In addition, through experiments with out-of-domain corpora, we show that subword regularization improves the robustness of the NMT model.</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-1905" editor="B" format="WS" position="S" region="NN">
+    <title>
+        <text>Classifying Lexical-semantic Relationships by Exploiting Sense/Concept Representations</text>
+    </title>
+    <abstract>
+        <text>This paper proposes a method for classifying the type of lexical-semantic relation between a given pair of words. Given an inventory of target relationships, this task can be seen as a multi-class classification problem. We train a supervised classifier by assuming that a specific type of lexical-semantic relation between a pair of words would be signaled by a carefully designed set of relation-specific similarities between the words. These similarities are computed by exploiting “sense representations” (sense/concept embeddings). The experimental results show that the proposed method clearly outperforms an existing state-of-the-art method that does not utilize sense/concept embeddings, thereby demonstrating the effectiveness of the sense representations.</text>
+    </abstract>   
+    <introduction>
+        <text>Given a pair of words, classifying the type of lexical-semantic relation that could hold between them may have a range of applications. In particular, discovering typed lexical-semantic relation instances is vital in building a new lexical-semantic resource, as well as for populating an existing lexical-semantic resource. As argued in (BoydGraber et al., 2006), even Princeton WordNet</text>
+        <edit type="punctuation" crr="(henceforth, PWN)" comments="">(henceforth PWN)</edit>
+        <text>(Miller, 1995) is noted for its sparsity of useful internal lexical-semantic relations. A distributional thesaurus (Weeds et al., 2014), usually built</text>
+        <edit type="word choice" crr="using" comments="">with</edit>
+        <text>an automatic method such as that described in (Rychly and Kilgarriff, 2007), often comprises a disorganized semantic network internally, where a variety of lexical-semantic relations are incorporated without having proper relation labels attached</text>
+        <edit type="clarity" crr="to them" comments=""></edit>
+        <text>. These issues could be addressed if an accurate method for classifying the type of lexical-semantic relation is available.</text>
+        <text>\n\n A number of research studies on the classification of lexical-semantic relationships have been conducted. Among them, Necsulescu et al. (2015) recently presented two classification methods that utilize word-level feature representations</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>including word embedding vectors. Although the reported results are superior to the compared systems, neither of the proposed methods exploited “sense representations,” which are described as the fine-grained representations of word senses, concepts, and entities in the description of this workshop.</text>
+        <text>\n\n Motivated by the above-described issues and previous work, this paper proposes a supervised classification method that exploits sense representations</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and discusses their utilities in the lexical relation classification task. The major rationales behind the proposed method are</text>
+        <edit type="punctuation" crr="as follows" comments="punctuation; the statement before the colon needs to be a complete clause."></edit>
+        <text>: (1) a specific type of lexical-semantic relation between a pair of words would be indicated by a carefully designed set of relation-specific similarities associated with the words; and (2) the similarities could be effectively computed by exploiting sense representations.</text>
+        <text>\n\n More specifically, for each word in the pair, we first collect relevant sets of sense/concept nodes (node sets) from an existing lexical-semantic resource (PWN), and then compute similarities for some designated pairs of node sets, where each node is represented by an embedding vector depending on its type (sense/concept). In terms of its design, each node set pair is constructed such that it is associated with a specific type of lexical-semantic relation.</text>
+        <edit type="word order" crr="Finally, the resulting array of similarities, along with the underlying word/sense/concept embedding vectors, is" comments="">The resulting array of similarities, along with the underlying word/sense/concept embedding vectors, is finally</edit>
+        <text>fed into the classifier as</text>
+        <edit type="clarity" crr="a set of" comments="word choice; added so there is agreement between 'array' and what is being added to the classier."></edit>
+        <text>features.</text>
+        <text>\n\n The empirical results</text>
+        <edit type="clarity" crr="generated" comments="added for clarity; it seems like results don't use BLESS; they're generate while the researchers are using the dataset.">that</edit>
+        <edit type="word choice" crr="using" comments="">use</edit>
+        <text>the BLESS dataset (Baroni and Lenci, 2011) demonstrate that our method clearly outperformed existing state-of-the-art methods (Necsulescu et al., 2015) that did not employ sense/concept embeddings, confirming that properly combining the similarity features</text>
+        <edit type="word choice" crr="together" comments="">also</edit>
+        <text>with the underlying semantic/conceptual-level embeddings is indeed effective. These results</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>in turn</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>highlight the utility of “the sense representations” (the sense/concept embeddings) created by the existing system referred to as AutoExtend (Rothe and Schutze, 2015).</text>
+        <text>\n\n The remainder of the paper first reviews related work (section 2),</text>
+        <edit type="clarity" crr="" comments="extraneous word">and</edit>
+        <text>then presents our approach (section 3). As our experiments (section 4) utilize the BLESS dataset, the experimental results are directly compared with</text>
+        <edit type="word choice" crr="those" comments="word choice; demonstrative">that</edit>
+        <text>of (Necsulescu et al., 2015) (section 5). Although our methods</text>
+        <edit type="word choice" crr="proved superior throughout" comments="">were proved to be superior through</edit>
+        <text>he experiments, our operational requirement (sense/concept embeddings should be created from the underlying lexical-semantic resource) could be problematic, especially when</text>
+        <edit type="word choice" crr="processing" comments="word choice; this simplifies the statement.">having to process</edit>
+        <text>unknown words. We conclude the present paper by discussing future work to address this issue (section 6).</text>
+    </introduction>   
+</doc>

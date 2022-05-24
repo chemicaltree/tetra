@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P18-1016" editor="B" format="Conf" position="S" region="NN">
+    <title>
+        <text>Simple and Effective Text Simplification Using Semantic and Neural Methods</text>
+    </title>
+    <abstract>
+        <text>Sentence splitting is a major simplification operator.</text>
+        <edit type="word choice" crr="In this paper," comments="word choice; this is more specific.">Here</edit>
+        <text>we present a simple and efficient splitting algorithm based on an automatic semantic parser.</text>
+        <edit type="flow" crr="" comments="">After splitting, the text is amenable for further fine-tuned simplification operations.</edit>
+        <text>In particular, we show that neural</text>
+        <edit type="capitalization" crr="machine translation" comments="misuse of capitalization; there's no need to put a capital here;This is not a technical term. I just don't know what else to call this error. People at all levels of academia do it quite frequently">Machine Translation</edit>
+        <text>can be effectively used in this situation. Previous</text>
+        <edit type="grammar" crr="applications" comments="plural rather than singular">application</edit>
+        <text>of</text>
+        <edit type="capitalization" crr="machine translation" comments="misuse of capitalization; there's no need to put a capital here;This is not a technical term. I just don't know what else to call this error. People at all levels of academia do it quite frequently">Machine Translation</edit>
+        <text>for simplification</text>
+        <edit type="clarity;word choice" crr="reveal that it has the" comments="">suffers from a</edit>
+        <text>considerable disadvantage</text>
+        <edit type="clarity;word choice" crr="of being overly" comments="in that they are over"></edit>
+        <text>conservative, often failing to modify the source in any way.</text>
+        <edit type="word order" crr="The proposed method of splitting based on semantic parsing" comments="">Splitting based on semantic parsing, as proposed here,</edit>
+        <text>alleviates this issue</text>
+        <edit type="flow" crr="; A after splitting, more fine-tuned simplification operations can be applied to the text." comments="">.</edit>
+        <text>Extensive automatic and human evaluation</text>
+        <edit type="grammar" crr="show" comments="">shows</edit>
+        <text>that the proposed method</text>
+        <edit type="grammar" crr="compare" comments="">compares</edit>
+        <text>favorably to</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>state-of-the-art</text>
+        <edit type="clarity" crr="methods for" comments="">in</edit>
+        <text>combined lexical and structural simplification.</text>
+    </abstract>   
+    <introduction>
+        <edit type="capitalization" crr="Text simplification" comments="unnecessary capital; change to lowercase">Text Simplification</edit>
+        <text>(TS) is generally defined as</text>
+        <edit type="word choice" crr="converting" comments="Word choice; active versus passive language.">the conversion of</edit>
+        <text>a sentence into one or more simpler sentences.</text>
+        <edit type="readability" crr="Researchers have found TS" comments="Vague passive construction; replaced with active voice">It has been shown to be</edit>
+        <text>useful</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>both as a preprocessing step for tasks such as</text>
+        <edit type="capitalization" crr="machine translation" comments="nnecessary capital; change to lowercase">Machine Translation</edit>
+        <text>Mishra et al., 2014; Štajner and Popović, 2016) and relation extraction (Niklaus et al., 2016)</text>
+        <edit type="punctuation" crr=", and as a tool" comments="punctuation; unnecessary here">as well as</edit>
+        <text>or developing reading aids</text>
+        <edit type="clarity" crr="for people with a variety of literacy needs, including" comments="">, e.g., for</edit>
+        <edit type="word choice;flow" crr="those" comments="">people</edit>
+        <text>with dyslexia (Rello et al., 2013)</text>
+        <edit type="parallelism" crr="and" comments="conjunction; and instead of or">or</edit>
+        <text>non-native speakers (Siddharthan, 2002).</text>
+        <text>\n\n TS includes both structural and lexical operations. The main structural simplification operation is sentence splitting, </text>
+        <edit type="word choice" crr="which involves" comments="">namely</edit>
+        <text>TS is considered a case of monolingual translation, the sentence splitting operation has not been addressed by these systems,</text>
+        <edit type="word choice" crr="possibly" comments="">potentially</edit>
+        <text>due to the rareness of this operation in the training corpora (Narayan and Gardent, 2014; Xu et al., 2015).</text>
+        <text>\n\n We show that</text>
+        <edit type="grammar" crr="" comments="extraneous word">the</edit>
+        <text>explicit integration of sentence splitting</text>
+        <edit type="word choice" crr="into" comments="">in</edit>
+        <text>the simplification system could also reduce conservatism, which is a </text>
+        <edit type="style" crr="significant" comments="word choice; this is discretionary. It could be described as grave, depending on how dire you feel it is.">grave</edit>
+        <text>limitation of NMT-based TS systems (Alva-Manchego et al., 2017). Indeed,</text>
+        <edit type="grammar" crr="in" comments="preposition needed"></edit>
+        <text>experimenting with a state-of-the-art neural system (Nisioi et al., 2017), we find that 66% of the input sentences remain unchanged, while none of the corresponding references</text>
+        <edit type="grammar" crr="are" comments="">is</edit>
+        <text>identical to the source. Human and automatic evaluation of the references (</text>
+        <edit type="clarity" crr="as judged" comments=""></edit>
+        <text>against other references), confirm that the references are indeed simpler than the source, indicating that the observed conservatism is excessive. Our</text>
+        <edit type="grammar" crr="method" comments="s removed; singular; this seems like it's singular">methods</edit>
+        <edit type="grammar" crr="of" comments="">for</edit>
+        <text>performing sentence splitting as</text>
+        <edit type="clarity" crr="a pre-processing step" comments="">pre-processing</edit>
+        <edit type="grammar" crr="allow" comments="">allows</edit>
+        <text>the TS system to perform other structural </text>
+        <edit type="word order" crr="and lexical operations (e.g., deletions and word substitutions)" comments="">(e.g., deletions) and lexical (e.g., word substitutions) operations</edit>
+        <text>, thus increasing both structural and lexical simplicity.</text>
+        <edit type="word choice" crr="\n\n To combine" comments="">\n\n For combining</edit> 
+        <text>linguistically informed sentence splitting with data-driven TS, two main methods have been proposed. The first involves handcrafted syntactic rules, whose compilation and validation are laborious (Shardlow, 2014). For example, Siddharthan and Angrosh (2014) used 111 rules for relative clauses, appositions, subordination and coordination. Moreover, syntactic splitting rules, which</text>
+        <edit type="word choice" crr="make up a substantial subset of the rules" comments="">form a substantial part of the rules</edit> 
+        <edit type="clarity" crr="employed" comments=""></edit>
+        <text>, are usually language specific, requiring the development of new rules when ported to other languages (</text>
+        <edit type="clarity" crr="see" comments=""></edit>
+        <text>Aluisio and Gasperin, 2010; Seretan, 2012; Hung et al., 2012; Barlacchi and Tonelli, 2013, for Portuguese, French, Vietnamese, and Italian, respectively). The second method uses linguistic information</text>
+        <edit type="word choice" crr="to detect" comments="">for detecting</edit>
+        <text>potential splitting points, while splitting probabilities are learned</text>
+        <edit type="clarity" crr="through the use of" comments="added for clarity; it's not clear who is using">using</edit>
+        <text>a parallel corpus. For example, in the system</text>
+        <edit type="word choice" crr="developed by" comments="">of</edit>
+        <text>Narayan and Gardent (2014) (henceforth</text>
+        <edit type="clarity" crr="referred to as" comments="">,</edit>
+        <text>HYBRID), the state-of-the-art</text>
+        <edit type="clarity" crr="method" comments=""></edit>
+        <text>for joint structural and lexical TS, potential splitting points are determined by event boundaries.</text>
+        <text>\n\n In</text>
+        <edit type="consistency" crr="our" comments="">this</edit>
+        <text>work,</text>
+        <edit type="conciseness" crr="" comments="extraneous words; this change is discretionary">which is</edit> 
+        <text>the first to combine structural semantics and neural methods for TS, we propose an intermediate</text>
+        <edit type="style" crr="approach" comments="">way</edit>
+        <edit type="grammar" crr="to" comments="">for</edit>
+        <edit type="conciseness" crr="" comments="extraneous word">performing</edit>
+        <text>sentence splitting</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <edit type="word choice" crr="by introducing" comments="">presenting</edit>
+        <text>Direct Semantic Splitting (DSS), a simple and efficient algorithm based on a semantic parser which supports the direct decomposition of the sentence into its main semantic constituents. After splitting, NMT-based simplification is performed</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>using the NTS system. We show that the resulting system outperforms HYBRID</text>
+        <edit type="clarity" crr=", as evidenced" comments=""></edit>
+        <text>in both automatic and human evaluation</text>
+        <text>\n\n We use the UCCA scheme for semantic representation (Abend and Rappoport, 2013),</text>
+        <edit type="word choice" crr="in which" comments="">where</edit>
+        <text>the semantic units are anchored in the text,</text>
+        <edit type="word choice" crr="to" comments="">which</edit>
+        <edit type="grammar" crr="simplify" comments="">simplifies</edit>
+        <text>the splitting operation. We further leverage the explicit distinction in UCCA between types of</text>
+        <edit type="capitalization" crr="scenes" comments="unnecessary capital letter">Scenes</edit>
+        <text>(events), applying a specific rule for each of the cases.</text>
+        <edit type="clarity" crr="Despite being developed using UCCA" comments="">Nevertheless</edit>  
+        <text>, the DSS approach can be adapted to other semantic schemes,</text>
+        <edit type="style" crr="such as" comments="">like</edit>
+        <text>AMR (Banarescu et al., 2013)</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>\n\n We</text>
+        <edit type="grammar" crr="collected" comments="">collect</edit>
+        <text>human judgments for multiple variants of our system, its</text>
+        <edit type="punctuation" crr="subcomponents," comments="punctuation; Webster doesn't use a comma for this">sub-components,</edit>
+        <text>HYBRID</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>and similar systems that use phrase-based MT.</text>
+        <edit type="clarity" crr="In doing this, we produced" comments="">This results in</edit>
+        <text>a sizable human evaluation benchmark</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>which includes 28 systems</text>
+        <edit type="word choice" crr="and a total of" comments="">, totaling at</edit>
+        <text>1960 complex-simple sentence pairs, each annotated by three annotators using four criteria. This benchmark will support the future analysis of TS systems</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and evaluation practices.</text>
+    </introduction>   
+</doc>

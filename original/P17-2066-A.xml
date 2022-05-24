@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P17-2066" editor="A" format="Conf" position="NS" region="NN">
+    <title>
+        <text>STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset</text>
+    </title>
+    <abstract>
+        <text>In recent years,</text>
+        <edit type="readability" crr="image captioning, the automatic generation of image descriptions (captions), " comments="readability - rearranged for better flow">automatic generation of image descriptions (captions), that is, image captioning,</edit>
+        <text>has attracted a great deal of attention. In this paper, we particularly consider generating Japanese captions for images. Since most available caption datasets have been constructed for</text>
+        <edit type="grammar" crr="the" comments="grammar - missing article"></edit>
+        <text>English language, there are few datasets for Japanese. To tackle this problem, we construct a large-scale Japanese</text>
+        <edit type="hyphenation" crr="image-caption dataset" comments="hyphenation - missing hyphen in compound adjective">image caption dataset</edit>
+        <edit type="clarity" crr=", called STAIR Captions, based on images from MS-COCO." comments="clarity - moved this appositive close to what it references">based on images from MS-COCO, which is called STAIR Captions.</edit>
+        <text>STAIR Captions consists of 820,310 Japanese captions for 164,062 images. In the experiment, we show that a neural network trained using STAIR Captions can generate more natural and better Japanese captions</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not appropriate here because what follows is essential to understanding the rest of the sentence.">,</edit>
+    </abstract>   
+    <introduction>
+        <text>Integrated processing of natural language and images has attracted attention in recent years. The Workshop on Vision and Language held in 2011 has since become an annual event.1. In this research area,</text>
+        <edit type="readability" crr="image captioning methods, which automatically generate image descriptions (captions)," comments="readability, rearranged to make it less choppy and make the choice of 'have' vs 'has' more clear">methods to automatically generate image descriptions (captions), that is, image captioning,</edit>
+        <text>have attracted a great deal of attention (Karpathy and Fei-Fei, 2015; Donahue et al., 2015; Vinyals et al., 2015; Mao et al., 2015).</text>
+        <edit type="conciseness" crr="" comments="conciseness - we say this in the prior para">\n\n Image captioning is to automatically generate a caption for a given image.</edit>
+        <text>\n\n By improving the quality of image captioning,</text>
+        <edit type="readability" crr="it becomes possible to implement both image search using natural sentences and image recognition support for visually impaired people by outputting captions as sounds." comments="readability - rearrange and reword to make it sound less awkward">image search using natural sentences and image recognition support for visually impaired people by outputting captions as sounds can be made available.</edit>    
+        <text>Recognizing various images and generating appropriate captions for the images necessitates the compilation of a large number of image and caption pairs.</text>
+        <text>In this study, we consider generating image captions in Japanese. Since most available caption datasets have been constructed for</text>
+        <edit type="grammar" crr="the" comments="grammar - missing article"></edit>
+        <text>English language, there are few datasets for Japanese. A straightforward solution is to translate English captions into Japanese ones by using machine translation such as Google Translate. However, the translated captions may be literal and unnatural because image information cannot be reflected in the translation. Therefore, in this study, we construct a Japanese</text>
+        <edit type="hyphenation" crr="image-caption dataset" comments="hyphenation - missing hyphen in compound adjective">image caption dataset</edit>
+        <text>, and</text>
+        <edit type="punctuation" crr="," comments="punctuation - comma can be omitted here but in this case I think it's needed for readability"></edit>
+        <text>for given images, we aim to generate more natural Japanese captions than</text>
+        <edit type="clarity;readability" crr="can be obtained by" comments="clarity and readability - 'than translating' doesn't tie well with the prior clause"></edit>
+        <text>translating the generated English captions into the Japanese ones.</text>
+        <text>\n\n The contributions of this paper are as follows:</text>
+        <text>\n We constructed a large-scale Japanese</text>
+        <edit type="hyphenation" crr="image-caption dataset" comments="hyphenation - missing hyphen in compound adjective">image caption dataset</edit>
+        <text>, STAIR Captions, which consists of Japanese captions for all</text>
+        <edit type="readability" crr="of" comments="readability - the preposition helps the flow of text here even though it's not strictly necessary"></edit>
+        <text>the images in MS-COCO (Lin et al., 2014) (Section 3).</text>
+        <text>\n We confirmed that</text>
+        <edit type="readability;hyphenation;word choice" crr="the Japanese captions generated by applying a neural network–based image-caption-generation model trained on STAIR Captions are quantitatively and qualitatively better than the ones translated from English captions (Section 5)." comments="readability, hyphenation, and word choice - rearranged to make it flow better.;Also, minor stylistic thing: replace hyphen with en-dash in neural network-based . En-dash is used when one part of the compound adjective is an open word (neural network). Also hyphenated image-caption-generation;Also replaced 'learned' with 'trained' to better capture the meaning.">quantitatively and qualitatively better Japanese captions than the ones translated from English captions can be generated by applying a neural network-based image caption generation model learned on STAIR Captions (Section 5).</edit>     
+    </introduction>   
+</doc>

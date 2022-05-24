@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W08-1502" editor="A" format="WS" position="S" region="NN">
+    <title>
+        <text>Speech Translation with Grammatical Framework</text>
+    </title>
+    <abstract>
+        <text>Grammatical Framework (GF) is a grammar formalism which supports interlingua-based translation, library-based grammar engineering, and compilation to speech recognition grammars. We show how these features can be used in the construction of portable high-precision domain-specific speech translators.</text>
+    </abstract>   
+    <introduction>
+        <text>Speech translators for safety-critical applications such as medicine need to offer high-precision translation. One way to achieve high precision is to limit the coverage of the translator to a specific domain. The development of such high-precision domain-specific translators can be resource intensive</text>
+        <edit type="punctuation" crr="" comments="punctuation, no comma needed before dependent clause">,</edit>
+        <text>and require rare combinations of developer skills. For example, consider developing a Russian-Swahili speech translator for the orthopedic domain using direct translation between the two languages. Developing such a system could require an orthopedist programmer and linguist who speaks Russian and Swahili. Such people may be hard to find. Furthermore, developing translators for all pairs of N languages requires O(N2) systems, developed by an equal number of bilingual domain experts.</text>
+        <text>\\ The language pair explosion and the need for the same person to possess knowledge about the source and target languages can be avoided by using an interlingua-based approach. The requirement that developers be both domain experts and linguists can be addressed by the use of grammar libraries which implement the domain-independent linguistic details of each language.</text>
+        <text>\\ Grammatical Framework (GF) (Ranta, 2004) is a type-theoretic grammar formalism which is well suited to high-precision domain-specific interlingua-based translation (Khegai, 2006), and library-based grammar engineering (Ranta, 2008). GF divides grammars into abstract syntax and concrete syntax. The abstract syntax defines what can be said in the grammar, and the concrete syntax defines how it is said in a particular language. If one abstract syntax</text>
+        <edit type="grammar" crr="" comments="grammar - duplicate word">syntax</edit>
+        <text>is given multiple concrete syntaxes, the abstract syntax can be used as an interlingua. Given an abstract and a concrete syntax, GF allows both parsing (text to abstract syntax) and linearization (abstract syntax to text). This means that interlingua-based translation is just a matter of parsing in one language and linearizing to another.</text>
+        <text>\\ The GF Resource Grammar Library (Ranta, 2008) implements the domain-independent morphological and syntactic details of eleven languages. A grammar writer can use functions from a resource grammar when defining the concrete syntax of an application grammar. This is made possible by GF's support for grammar composition</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not needed before a dependent clause">,</edit>
+        <text>and frees the grammar writer from having to implement linguistic details such as agreement, word order, etc.</text>
+        <text>\\ In addition to parsing and linearization, the declarative nature of GF grammars allows them to be compiled to other grammar formats. The GF speech recognition grammar compiler (Bringert, 2007) can produce context-free grammars or finite-state models which can be used to guide speech recognizers.</text>
+        <text>\\ These components interlingua-based translation, grammar libraries, and speech recognition grammar compilation, can be used to develop domain-specific speech translators based on GF grammars. Figure 1 shows an overview of a minimal unidirectional speech translator which uses these components. This is a proof-of-concept system that demonstrates how GF components can be used for speech translation, and as such, it can hardly be compared to a more complete and mature system such as MedSLT (Bouillon et al., 2005). However, the system has some promising features compared to systems based on unification grammars: the expressive power of GF's concrete syntax allows us to use an application-specific interlingua without any transfer rules, and the wide language support of the GF Resource Grammar Library makes it possible to quickly port applications to new languages.</text>
+        <text>\\ In Section 2</text>
+        <edit type="punctuation" crr="," comments="punctuation - comma needed after intro clause"></edit>
+        <text>we show a small example grammar for a medical speech translator. Section 3 briefly discusses how a speech translator can be implemented. Section 5 describes some possible extensions to the proof-of-concept system, and Section 6 offers some conclusions.</text>
+    </introduction>   
+</doc>

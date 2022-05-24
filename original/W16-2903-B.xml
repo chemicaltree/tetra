@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W16-2903" editor="B" format="WS" position="S" region="N">
+    <title>
+        <text>Identification, characterization, and grounding of gradable terms in clinical text</text>
+    </title>
+    <abstract>
+        <text>Gradable adjectives are inherently vague and are used by clinicians to document medical interpretations (e.g., severe reaction, mild symptoms). We present a comprehensive study of gradable adjectives used in the clinical domain. We automatically identify gradable adjectives and demonstrate that they have a substantial presence in clinical text. Further, we show that there is a specific pattern associated with their usage</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <edit type="word choice" crr="in which" comments="">where</edit>
+        <text>certain medical concepts are more likely to be described using these adjectives than others. Interpretation of statements using such adjectives is a barrier</text>
+        <edit type="grammar" crr="to" comments="">in</edit>
+        <text>medical decision making. Therefore, we use a simple probabilistic model to ground their meaning based on their usage in context.</text>
+     </abstract>
+    <introduction>
+        <text>Expressions used in a language are said to be vague if they do not convey a precise meaning. Sentences using vague expressions do not give rise to precise truth conditions (Kennedy, 2007). Consider the following sentence: ``The patient was maintained on a high dose of insulin.'' Interpreting such statements is a problem since it is unclear what</text>
+        <edit type="grammar" crr="" comments="">was</edit>
+        <text>the exact amount of insulin used</text>
+        <edit type="grammar" crr="was" comments=""></edit>
+        <text>. Gradability (Sapir, 1944; Lyons, 1977) is a semantic property that allows a word to describe the intensity of a measure in context, and thus enables comparative constructs. In the above example, the word high is said to be gradable since it conveys the meaning associated with</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>measure - amount.\n\n Gradable adjectives inherently possess a degree of vagueness and are used in a language to express epistemic uncertainties (Kennedy, 2007; Frazier et al., 2008). While judgments are strong in extreme cases, there exist borderline cases</text>
+        <edit type="grammar" crr="for which" comments="">, where</edit>
+        <text>it is difficult to ascribe an adjective. In the above example, some amounts of insulin would be considered</text>
+        <edit type="word choice" crr="" comments="">as a</edit>
+        <text>high</text>
+        <edit type="grammar" crr="doses" comments="">dose</edit>
+        <text>by all</text>
+        <edit type="word choice" crr="practitioners" comments=""></edit>
+        <text>,</text>
+        <edit type="grammar" crr="and" comments=""></edit>
+        <text>other amounts would never be considered</text>
+        <edit type="grammar" crr="" comments="">a</edit>
+        <text>high</text>
+        <edit type="grammar" crr="doses" comments="">dose</edit>
+        <edit type="readability" crr="." comments="">,</edit>
+        <edit type="readability" crr="But," comments="">but</edit>
+        <text>there is a middle</text>
+        <edit type="word choice" crr="ground" comments="">range</edit>
+        <text>where it can be difficult</text>
+        <edit type="word order" crr="even for" comments="">for even</edit>
+        <text>experts to judge</text>
+        <edit type="word order" crr="whether or not a given does is high" comments="">, if it is a high dose</edit>
+        <text>. This is</text>
+        <edit type="grammar;word choice;style" crr="due to" comments="">because,</edit>
+        <text>different experts</text>
+        <edit type="grammar" crr="having" comments="">may have</edit>
+        <edit type="grammar;word choice" crr="different" comments="">differing</edit>
+        <text>thresholds for what constitutes a high dose.\n\n Broadly, gradable adjectives can be classified into two categories based on their interpretation as measure functions (Bartsch, 1975; Kennedy, 1999). Adjectives such as tall, heavy,</text>
+        <edit type="grammar" crr="and" comments=""></edit>
+        <text>expensive can be viewed as measurements that are clearly associated with a numerical quantity (height, weight, </text>
+        <edit type="grammar" crr="or" comments=""></edit>
+        <text>cost). In contrast, adjectives like clever, beautiful,</text>
+        <edit type="grammar" crr="and" comments=""></edit>
+        <text>naive are more complex and underspecified</text>
+        <edit type="word choice" crr="in terms of" comments="">for</edit>
+        <text>the exact feature being measured. Gradable adjectives have been the focus of several recent studies (de Melo and Bansal, 2013; Ruppenhofer et al., 2014) in the NLP community. Gradablity is</text>
+        <edit type="grammar" crr="a" comments=""></edit>
+        <text>property not limited to adjectives</text>
+        <edit type="punctuation" crr=";" comments="">and</edit>
+        <edit type="clarity" crr="it" comments=""></edit>
+        <text> also extends to other parts of speech such as adverbs (Shivade et al., 2015; Ruppenhofer et al., 2015) (e.g., slightly, marginally), nouns (e.g., joy, euphoria), and also verbs (e.g., drizzling, pouring).\n\n In this paper, we conduct a comprehensive study of gradable adjectives used in clinical text. Using a method proposed by Hatzivassiloglou and Wiebe (2000), we identify the gradable adjectives in our dataset of clinical notes. We found that these adjectives have a substantial presence (30%) in our data. Further, we show that there is a specific pattern in which gradable adjectives are used: some medical concepts are more likely to be modified</text>
+        <edit type="word choice" crr="using" comments="">by</edit>
+        <text>these adjectives than others. Finally, we focus on a specific subset of gradable adjectives associated with measurements of numerical quantities and demonstrate the use of a simple computational model to ground their meaning.</text>
+    </introduction>
+</doc>

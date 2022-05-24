@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P13-1062 " editor="A" format="Conf" position="S" region="NN">
+    <title>
+        <text>Bootstrapping Entity Translation on Weakly Comparable Corpora</text>
+    </title>
+    <abstract>
+        <text>This paper studies the problem of mining named entity translations from comparable corpora</text>
+        <edit type="clarity" crr="that have" comments="clarity - make it clearer that the asymmetry applies to the corpora, not the translations">with</edit>
+        <edit type="punctuation" crr="some “asymmetry.”" comments="punctuation - period goes inside the quote - though this can be style specific.">some “asymmetry”.</edit>
+        <text>Unlike the previous approaches</text>    
+        <edit type="readability" crr="that rely" comments="">relying</edit>
+        <text>on the “symmetry” found in parallel corpora, the proposed method is tolerant</text>
+        <edit type="word choice" crr="of" comments="word choice - of is the more appropriate preposition here">to</edit>
+        <edit type="grammar" crr="the" comments="grammar - missing article"></edit>
+        <text>asymmetry often found in comparable corpora</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <edit type="grammar;readability" crr="because it distinguishes" comments="grammar / readability - this is more natural English">by distinguishing</edit>
+        <text>different semantics of</text>
+        <edit type="readability" crr="entity pair relations" comments="">relations of entity pairs</edit>
+        <text>to selectively propagate seed entity translations on weakly comparable corpora. Our experimental results on English-Chinese corpora show that our selective propagation approach outperforms the previous approaches in named entity translation</text>
+        <edit type="clarity" crr="" comments="clarity - removed in favor of putting the unit after the number">in terms of the mean reciprocal rank </edit>
+        <text>by up to 0.16</text>
+        <edit type="clarity" crr="higher mean reciprocal rank (MRR)" comments="clarity - need to specify the units or context of the number"></edit>
+        <text>for organization names</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>and 0.14</text>
+        <edit type="clarity" crr="higher MRR" comments="clarity - need to specify the units or context of the number"></edit>                
+        <text>in a low comparability case.</text>
+    </abstract>   
+    <introduction>
+        <text>Identifying and understanding entities is a crucial step in understanding text. This task is more challenging in the presence of multilingual text, because translating named entities (NEs), such as</text>
+        <edit type="readability" crr="people" comments="readability - this is just more natural sounding">persons</edit>
+        <text>, locations, or organizations, is a</text>
+        <edit type="hyphenation" crr="non trivial" comments="hyphenation - not needed after non- unless result is confusing or awkward. This can be style specific.">non-trivial</edit>
+        <text>task. Early research on NE translation used phonetic similarities, for example, to mine the translation</text>
+        <edit type="punctuation" crr="“Mandelson”→”曼德尔森”" comments="punctuation - double quotes for terms, though this can be style specific">‘Mandelson’→‘曼德尔森’</edit>
+        <text>[ManDeErSen] with similar sounds. However, not all NE translations are based on transliterations, as shown in Table 1—</text>
+        <edit type="capitalization" crr="some translations" comments="capitalization - no capital is used after emdash">Some translations</edit>
+        <text>, especially the names of most organizations, are based on semantic equivalences. Furthermore, names can be abbreviated in one or both languages</text>
+        <edit type="punctuation" crr=";" comments="punctuation - since what follows e.g. is a full sentence, semicolon is appropriate here">,</edit>
+        <text>e.g., the</text>
+        <edit type="punctuation" crr="“World Trade Organization”" comments="punctuation - double quotes for terms, though this can be style specific">‘World Trade Organization’ </edit>
+        <text>(世界贸易组织) can be called the</text>
+        <edit type="punctuation" crr="“WTO”" comments="punctuation - double quotes for terms, though this can be style specific">‘WTO’</edit>
+        <text>(世贸组织). Another challenging example is that</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>a translation can be arbitrary, e.g.,</text>
+        <edit type="punctuation" crr="“Jackie Chan” → “成龙”" comments="punctuation - double quotes for terms, though this can be style specific">‘Jackie Chan’ → ‘成龙’</edit>
+        <text>[ChengLong]. There are many approaches that deal with some of these challenges (Lam et al., 2007; Yang et al., 2009), e.g., by combining phonetic similarity and a dictionary. However, arbitrary translations still cannot be handled by examining the NE pair itself. Corpus-based approaches (Kupiec, 1993; Feng, 2004)</text>
+        <edit type="readability" crr="complement the problem of transliteration-based approaches, by mining external signals, such as parenthetical translations like “成龙 (Jackie Chan)”, from a large corpus," comments="readability - makes this less choppy and puts the phrases in a more logical order">, by mining external signals, such as parenthetical translations like “成龙 (Jackie Chan)”, from a large corpus, such as parenthetical translation “成龙 (Jackie Chan)”, complement the problem of transliteration-based approaches,</edit>
+        <text>but the coverage of this approach is limited to popular entities</text>
+        <edit type="clarity" crr="for which such evidence exists." comments="clarity - it wasn't totally clear that the 'with such evidence' applied to the entities vs approach or coverage.">with such evidence.</edit>
+        <text>\n\n The most effective known approach to NE translation has been a holistic framework (You et al., 2010; Kim et al., 2011; You et al., 2012) combining transliteration- and corpus-based methods. In these approaches, both 1) arbitrary translations and 2) lesser-known entities can be handled</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>by propagating the translation scores of known entities to lesser-known entities if they co-occur frequently in both corpora. For example, a lesser-known entity Tom Watson can be translated if Mandelson and Tom Watson co-occur frequently in an English corpus</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>and their Chinese translations also co-occur frequently in a Chinese corpus</text>
+        <edit type="punctuation" crr=";" comments="punctuation - semicolon is appropriate here because what follows e.g. is a full sentence.">,</edit>   
+        <text>i.e., if the co-occurrences in the two corpora are</text>
+        <edit type="punctuation" crr="“symmetric.”" comments="punctuation - period inside the quote - thought this can be style specific.">“symmetric”.</edit>
+        <edit type="conciseness" crr="\n\n In this paper, we ask:" comments="conciseness - the 'A research question we ask' is a bit redundant.">\n\n A research question we ask in this paper is:</edit>   
+        <text>What if comparable corpora are not comparable enough to support this symmetry assumption? We found that this is indeed the case. For example, even English and Chinese news from the same publisher may have different</text>
+        <edit type="word choice" crr="focuses" comments="word choice - plural needed here because we have two different focuses.">focus</edit>   
+        <text>–the Chinese version focuses more on Chinese Olympic teams and Chinese local news. In the presence of such asymmetry, all previous approaches,</text>
+        <edit type="readability" crr="which rely on" comments="readability, this is smoother, also i think 'rely' fits the meaning better than 'build'">building upon</edit>
+        <text>symmetry, quickly deteriorate by propagating false positives. For example,</text>
+        <edit type="conciseness;readability" crr="Mandelson and Tom Watson may not co-occur" comments="">co-occurrence of Mandelson and Tom Watson may not</edit>
+        <text>in a Chinese corpus, which may lead to the translation of Tom Watson into another Chinese entity</text>
+        <edit type="readability" crr=", e.g., Gordon Brown," comments="">Gordon Brown</edit>   
+        <text>which happens to co-occur with the Chinese translation of Mandelson.</text>
+        <text>\n\n Our key contribution is to avoid such false propagation</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>by discerning the semantics of relations. For example, relations between Mandelson and Tom Watson</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>should be semantically different from Chinese relations between ‘戈登·布朗’ (Gordon Brown) and ‘曼德尔森’ (Mandelson). A naive approach would be finding documents with</text>
+        <edit type="word choice" crr="similar topics" comments="word choice - made plural because we have two topics">a similar topic</edit>
+        <text>such as politics</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not appropriate in this list of two.">,</edit>
+        <text>and scientific discovery, and allowing propagation only when the topic agrees. However, we found that a topic is</text>
+        <edit type="readability;conciseness" crr="too coarse of a unit" comments="readability and conciseness - this flows better">a unit that is too coarse</edit>   
+        <text>for this task because most articles on Mandelson will invariably fall into the same topic. In clear contrast, we selectively propagate seed translations</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>only when the relations in the two corpora share the same semantics.</text>
+        <text>\n\n This selective propagation can be especially effective for translating challenging types of entities such as organizations</text>
+        <edit type="clarity;readability" crr=", such as the WTO," comments="clarity and readability - It seems wto is used as an example here ,not as something specifically included in the organization list">including the WTO</edit>
+        <text>used with and without abbreviation in both languages. Applying a holistic approach (You et al., 2012) on organizations leads to poor results, 0.06 in terms of the F1-score. A naive approach to increase the precision would be to consider multitype co-occurrences, hoping that highly precise translations of some type, e.g.,</text>
+        <edit type="readability" crr="people" comments="readability - as in higher in the paper, this seems a better choice">persons</edit>   
+        <text>with an F1-score of 0.69 (You et al., 2012), can be propagated to boost the precision on organizations. In our experiments, this naive</text>
+        <edit type="hyphenation" crr="multi type" comments="">multi-type</edit>   
+        <text>propagation still leads to an unsatisfactory F1-score of 0.12. Such a low score can be explained by the following example. When translating</text>
+        <edit type="punctuation" crr="“WTO”" comments="punctuation - double quotes for terms, though this can be style specific">‘WTO’</edit>
+        <text>using the co-occurrence with</text>
+        <edit type="punctuation" crr="“Mandelson”" comments="punctuation - double quotes for terms, though this can be style specific">‘Mandelson’</edit>
+        <text>, other co-occurrences such as (London, Mandelson) and (EU, Mandelson) produce a lot of noise because the</text>
+        <edit type="clarity" crr="correct" comments="clarity - to avoid confusion with alternate meanings of 'right'">right</edit>
+        <text>translation of WTO does not share much phonetic/semantic similarity. Our understanding of relation semantics</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>can distinguish “Mandelson was born in London” from “Mandelson visited the WTO”</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>to stop false propagations,</text>
+        <edit type="clarity;word choice" crr="resulting in" comments="clarity and word choice - it's unclear what 'which generates' refers to.">which generates</edit>   
+        <text>\n\n More formally, we enable selective propagation of seed translations on weakly comparable corpora</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>by 1) clarifying the detailed meaning of relational information</text>
+        <edit type="word choice" crr="regarding" comments="word choice - I don't think the information belongs to the entities, it's about the entities">on</edit>
+        <text>co-occurring entities</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>and 2) identifying the contexts of the relational information using statement-level context comparison. In other words, we propagate the translation score of a known translation pair to a neighbor pair if the semantics of their relations in English and Chinese corpora are equivalent</text>
+        <edit type="clarity" crr="enough" comments="">clarity - it seems this is needed here, though I would need to review the full paper to be sure. alternately, the "to accurately..." phrase may just need to be dropped. As it stands, "propagating the translation score...to accurately propagate the scores" doesn't really make sense.</edit>   
+        <text>to accurately propagate the scores. For example, if we know</text>
+        <edit type="punctuation" crr="“Russia”→”俄罗斯”(1) and “join”→”加入”" comments="punctuation - double quotes for terms, though this can be style specific">‘Russia’→‘俄罗斯’(1) and join→加入</edit>
+        <text>(2), then from a pair of statements “Russia(1) joins(2) the WTO(3)” and “俄罗斯(1) 加入(2) 世贸组织(3)”, we can propagate the translation score of (Russia, 俄罗斯)(1) to (WTO, 世贸组织)(3). However, we do not exploit a pair of statements “Russia joined the WTO” and “俄罗斯 谴责(2’) 摩洛哥” because 谴责(2’) does not mean join(2). Furthermore, we mine a similar English-Chinese document pair that can be found by comparing the entity relationships, such as “Mandelson visited Moscow” and “Mandelson met Alexei Kudrin”, within the English document and the Chinese document to leverage similar contexts to assure that we use symmetric parts.</text>
+        <text>\n\n For this goal, we first extract relations among entities in documents, such as visit and join, and mine semantically equivalent relations across the languages, e.g., English and Chinese, such as</text>
+        <edit type="consistency;punctuation" crr=" “join”→”加入”." comments="consistency and punctuation - adding quotes here for consistency">join→加入.</edit>   
+        <text>Once these relation translations are mined, similar document pairs can be identified by comparing each constituent relationship among entities using their relations. Knowing</text>
+        <edit type="clarity" crr="the document similarity leads to improvements in" comments="clarity - in the original it's unclear if we mean '(knowing document similarity) improves NE translation' or 'knowing (document similarity improvies NE translation)'">document similarity improves</edit>
+        <text>NE translation, and improved NE translation can boost the accuracy of document and relationship similarity. This iterative process can continue until convergence.</text>
+        <text>\n\n To the best of our knowledge, our approach is the first to translate a broad range of multilingual relations and exploit them to enhance NE translation. In particular, our approach leverages semantically similar document pairs to exclude incomparable parts that appear in one language only. Our method outperforms the previous approaches in translating NE</text>
+        <edit type="readability" crr="by" comments="readability - adding the preposition helps the flow here"></edit> 
+        <text>up to 0.16 in terms of the mean reciprocal rank (MRR) for organization names. Moreover, our method shows robustness, with 0.14 higher MRR than seed translations</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>on</text>
+        <edit type="hyphenation" crr="less-comparable" comments="hyphenation - needed here for clarity">less comparable</edit>   
+        <text>corpora.</text>                                                        
+    </introduction>   
+</doc>

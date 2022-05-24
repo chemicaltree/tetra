@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W08-0204" editor="B" format="WS" position="NS" region="N">
+    <title>
+        <text>Defining a Core Body of Knowledge for the Introductory Computational Linguistics Curriculum</text>
+    </title>
+    <abstract>
+        <text>Discourse in and about computational linguistics depends on a shared body of knowledge. However, little content is shared across</text>
+        <edit type="grammar" crr="" comments="extraneous">the</edit>
+        <text>introductory courses in this field. Instead,</text>
+        <edit type="clarity" crr="introductory courses" comments="added for clarity; discretionary">they</edit>
+        <text>ypically cover a diverse assortment of topics tailored to the capabilities of</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>students and the interests of the instructor. If the core body of knowledge could be agreed</text>
+        <edit type="grammar" crr="upon" comments="a preposition is necessary here; otherwise a word like 'determined' could be substituted."></edit>
+        <text>and incorporated into introductory courses</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>several benefits would ensue, such as the proliferation of instructional materials, software support, and extension modules building on a common foundation. This paper argues that it is worthwhile to articulate a core body of knowledge</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and proposes a starting point based on the ACM Computer Science Curriculum. A variety of issues specific to the multidisciplinary nature of computational linguistics are explored.</text>
+    </abstract>   
+    <introduction>
+        <text>Surveys of introductory courses in computational linguistics and natural language processing provide evidence of great diversity. Regional variation is stark: courses may emphasise theory over programming (or vice versa), rule-based approaches over statistical approaches (or vice versa), tagging and parsing over semantic interpretation (or vice versa), and so on. Thise diversity is hardly surprising given</text>
+        <edit type="clarity" crr="the degree to which" comments=""></edit>
+        <text>the particular</text>
+        <edit type="word choice" crr="makeup" comments="background"></edit>
+        <text>of a student cohort and the particular expertise of an instructor</text>
+        <edit type="clarity" crr="may vary." comments="">.</edit>
+        <text>\\ In spite of this variation, the introductory course needs to serve some common, basic needs. For some students, it will be the first step in a pathway leading to specialised courses, graduate research, or employment in this field. These students should receive a solid technical foundation and should come away with an accurate picture of the many opportunities that lie ahead. For students who do not continue, the introductory course will be their main exposure to the field. In addition to the technical content, these students need to understand how the field draws from and contributes</text>
+        <edit type="conciseness" crr="" comments="extraneous">back</edit>
+        <text>to its parent disciplines of linguistics and computer science, along with</text>
+        <edit type="clarity" crr="the" comments="article added for clarity"></edit>
+        <text>technological applications that are helping to shape the future information society. Naturally, this course is also a prime opportunity to promote the field to newcomers and encourage them to pursue advanced studies in this area. In all cases, the introductory course needs to cover a core body of knowledge.</text>
+        <text>\\ he fact that a core body of knowledge exists in computational linguistics is demonstrated anecdotally: a doctoral student is told to curtail her extended discussions of basic POS tagging and CFG parsing algorithms since they are part of the presumed knowledge of the audience; a researcher presenting work to a general linguistics or computer science audience discovers to his surprise that certain methodologies or algorithms need to be explicated and defended, even though they</text>
+        <edit type="grammar" crr="were" comments="word choice; plural versus singular">was</edit>
+        <text>uncontroversial when presented at a conference; or a keynote speaker at a computational linguistics conference</text>
+        <edit type="word choice" crr="may" comments="">can</edit>
+        <text>presume that certain theoretical programs and practical goals of the field are widely accepted. These three areas - terminology, methodology,</text>
+        <edit type="clarity" crr="and" comments="added for clarity"></edit>
+        <text>ideology - constitute part of the core body of knowledge of computational linguistics. They provide us with the starting point for identifying the concepts and skills</text>
+        <edit type="clarity" crr="that need" comments="added for clarity"></edit>
+        <text>to be covered in introductory courses.</text>
+        <text>\\ Identifying a core body of knowledge would</text>
+        <edit type="style" crr="provide" comments="">bring</edit>
+        <text>three major benefits. First, technical support would be consolidated: instructional materials, together with implementations of standard algorithms, would be available in several programming paradigms and languages. Second, colleagues without a research specialization in computational linguistics would have a non-controversial curriculum with external support,</text>
+        <edit type="clarity" crr="meaning" comments="added for clarity"></edit>
+        <text>a standard course that could be promoted to a broad range of students as a mainstream option, in both linguistics and computer science. Similarly, new graduates beginning</text>
+        <edit type="clarity;grammar" crr="their teaching careers" comments="">a teaching career</edit>
+        <text>would be better equipped to push for the adoption of a new computational linguistics or natural language processing course at institutions where it is not yet established. Third, employers and graduate schools would be able to make assumptions about the knowledge and skills of a new graduate.</text>
+        <text>\\ The goal of this paper is to advocate the idea of</text>
+        <edit type="clarity" crr="establishing" comments=""></edit>
+        <text>consensus around a body of knowledge</text>
+        <edit type="clarity" crr="that could help faculty" comments="added for clarity">as a promising way</edit>
+        <text>to coordinate the introductory computational linguistics curriculum</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>without attempting to mandate the structure of individual courses or the choice of textbooks.</text>
+        <edit type="word choice" crr="This" comments="">The</edit>
+        <text>paper is organised as follows: section 2 sets the scene by describing</text>
+        <edit type="grammar" crr="the" comments="">a</edit>
+        <text>variety of contexts in which computational linguistics is taught, drawing on the author's first-hand experience; section 3 sets out a possible organization for</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>introductory topics in computational linguistics, modelled on the ACM Computer Science Curriculum; section 4 explores some implications of this approach for curriculum and assessment. The paper closes with remarks about next steps.</text>
+    </introduction>   
+</doc>

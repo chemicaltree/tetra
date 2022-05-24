@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W06-1402" editor="C" format="Conf" position="NS" region="NN">
+    <title>
+        <edit type="style;capitalization" crr="A Generation-Oriented Workbench for Performance Grammar: Capturing Linear Order Variability in German and Dutch" comments="Style/Better to use capitalization for titles">A generation-oriented workbench for Performance Grammar: Capturing linear order variability in German and Dutch</edit>
+    </title>
+    <abstract>
+        <text>We describe a generation-oriented workbench for the Performance Grammar (PG) formalism, highlighting the treatment of certain word order and movement constraints in Dutch and German. PG enables a simple and uniform treatment of a heterogeneous collection of linear order phenomena in the domain of verb constructions (variably known as Cross-serial Dependencies, Verb Raising, Clause Union, Extraposition, Third Construction,</text>
+        <edit type="grammar" crr="and" comments="Conjunction/use 'and' in serial sentence"></edit>
+        <text>Particle Hopping, etc.). The central data structures enabling this feature are clausal “topologies”: one-dimensional arrays associated with clauses, whose cells (“slots”) provide landing sites for the constituents of the clause. Movement operations are enabled by unification of lateral slots of topologies at adjacent levels of the clause hierarchy. The PGW generator assists the grammar developer in testing whether the implemented syntactic knowledge allows all and only the well-formed permutations of constituents.</text>
+    </abstract>   
+    <introduction>
+        <text>Workbenches for natural-language grammar formalisms typically provide a parser to test whether given sentences are treated adequately — D-PATR for Unification Grammar (Karttunen, 1986) or XTAG for Tree-Adjoining Grammars (Paroubek et al., 1992) are early examples. However, a parser is not a convenient tool for checking whether the current grammar implementation licenses all and only the strings qualifying as well-formed expressions of a given input. Sentence generators that try out all possible combinations of grammar rules applicable to the current input, are better suited.</text>
+        <text>\\ Few workbenches in the literature come with such a facility. LinGO (Copestake and Flickinger, 2000)</text>
+        <edit type="readability" crr="provides a generator in addition to a parser for Head-Driven Phrase Structure Grammar." comments="Syntax/the sentence structure was incorrect.">, for Head-Driven Phrase Structure Grammar, provides a generator in addition to a parser.</edit>
+        <text>For Tree Adjoining Grammars, several workbenches with generation components have been built</text>
+        <edit type="punctuation" crr="." comments="Punctuation/again, better to end the sentence here and avoid the colon">:</edit>
+        <text>InTeGenInE (Harbusch and Woch, 2004) is a recent example</text>
+        <edit type="readability" crr="of this." comments="Flow/the additional words makes the sentence flow a little better">.</edit>
+        <edit type="spelling" crr="\\ Fine-tuning" comments="Spelling/using the hypen is better">\\ Fine tuning</edit>
+        <text>the grammar such that it neither over- nor undergenerates, is a major problem for semi-free word order languages (e.g., German; cf. Kallmeyer and Yoon, 2004). Working out a satisfactory solution to this problem is logically prior to designing a generator capable of selecting, from the set of all possible paraphrases, those that sound “natural,” i.e., the ones human speakers/writers would choose in the situation at hand (cf. Kempen and Harbusch, 2004).</text>
+        <text>\\ Verb constructions in German and Dutch exhibit extremely intricate word order patterns (cf. Seuren and Kempen, 2003). One of the factors contributing to this complexity is the phenomenon of clause union</text>
+        <edit type="punctuation;clarity" crr="which allows" comments="Punctuation/comma not required here">, which</edit>
+        <text>constituents of a complement clause to be interspersed between those of the</text>
+        <edit type="spelling" crr="dominanting" comments="Spelling/dominant is better">dominant</edit>
+        <text>clause. The resulting sequences exhibit, among other things, cross-serial dependencies and clause-final verb clusters. Further complications arise from</text>
+        <edit type="style" crr="a range of" comments="Style/'all sorts of' is probably best avoided in academic narrative">all sorts</edit>
+        <text>of 'movement' phenomena such as fronting, extraction, dislocation, extraposition,</text>
+        <edit type="style;repetitiveness" crr="and scrambling." comments="Style/avoid over-use of 'etc.' It comes across as a little lazy sometimes. You've already given some examples - but the reader knows it doesn't have to be a conclusive list">scrambling, etc.</edit>
+        <text>Given the limited space available, we cannot describe the Performance Grammar (PG) formalism and the linearization algorithm that enables</text>
+        <edit type="style" crr="the generation of" comments="Style/'generating' is correct, but better to use noun after 'enable'">generating</edit>
+        <text>a broad range of linear order phenomena in Dutch, German, and English verb constructions. Instead, we refer to Harbusch and Kempen (2002), and Kempen and Harbusch (2002, 2003). Here, we present the generation-oriented PG Workbench (PGW), which</text>
+        <edit type="readability" crr=", among other things, assists grammar developers" comments="Syntax/better to place that here so that your main point remains uninterrupted by a clause and keeps the flow">assists grammar developers , among other things,</edit>
+        <text>in testing whether the implemented syntactic and lexical knowledge allows all and only well-formed permutations.</text>
+        <text>\\ In Section 2, we describe PG's topology-based linearizer implemented in the PGW generator, whose software design is</text>
+        <edit type="word choice" crr="outlined" comments="Vocabulary/nothing wrong with 'sketched' but  stylistically 'outline' shows a more methodical approach (other words: summarized, highlighted, etc.)">sketched</edit>
+        <text>in Section 3. Section 4</text>
+        <edit type="style" crr="illustrate" comments="Style/a possible alternative for academic writing">shows</edit>
+        <text>he PGW at work and draws some conclusions.</text>
+    </introduction>   
+</doc>

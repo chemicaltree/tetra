@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P12-3011" editor="B" format="Conf" position="NS" region="N">
+    <title>
+        <text>The OpenGrm open-source finite-state grammar software libraries</text>
+    </title>
+    <abstract>
+        <text>In this paper, we present a new collection of open -source software libraries that</text>
+        <edit type="grammar" crr="provide" comments="">provides</edit>
+        <text>command line binary utilities</text>
+        <edit type="clarity" crr="," comments="word choice; added for clarity">and</edit>
+        <text>library classes, and functions for compiling regular expression and context-sensitive rewrite rules into finite-state transducers, and for n-gram language modeling. The OpenGrm libraries use the OpenFst library to provide</text>
+        <edit type="grammar" crr="" comments="word choice; article not necessary">an</edit>
+        <text>efficient encoding of grammars and general algorithms for building, modifying and applying models.</text>
+    </abstract>   
+    <introduction>
+        <text>The OpenGrm libraries are a (growing) collection of open-source software libraries for building and applying various</text>
+        <edit type="word choice;style" crr="types" comments="word choice; discretionary">kinds</edit>
+        <text>of formal grammars. The C++ libraries use the OpenFst library for the underlying finite-state representation, which allows for easy inspection of the resulting grammars and models, as well as straightforward combination with other finite-state transducers. Like OpenFst, there are easy-to-use command line binaries for frequently used operations, as well as a C++ library interface, allowing library users to create their own algorithms from the basic classes and functions provided.</text>
+        <text>\\ The libraries can be used for a range of common string processing tasks, such as text normalization, as well as for building and using large statistical models for applications like speech recognition. In</text>
+        <edit type="conciseness" crr="this paper, we will present two libraries, the Thrax grammar compiler and the NGram library." comments="">the rest of the paper, we will present each of the two libraries, starting with the Thrax grammar compiler and then the NGram library.</edit>
+        <text>First,</text>
+        <edit type="style" crr="however" comments="word choice; formal versus informal">though</edit>
+        <text>, we will briefly present (informal)</text>
+        <edit type="conciseness" crr="an introduction to weighted finite-state transducers (WFST)." comments="">some preliminary (informal) background on weighted finite-state transducers (WFST), just as needed for this paper.</edit>
+    </introduction>   
+</doc>

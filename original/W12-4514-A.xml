@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W12-4514" editor="A" format="WS" position="S" region="NN">
+    <title>
+        <text>Hybrid Rule-based Algorithm for Coreference Resolution</text>
+    </title>
+    <abstract>
+        <text>This paper describes our coreference resolution system for the CoNLL-2012 shared task. Our system is based on</text>
+        <edit type="grammar" crr="" comments="grammar - don't need the article before the possessive">the</edit>
+        <text>Stanford's dcoref deterministic system which applies multiple sieves</text>
+        <edit type="readability" crr="arranged" comments="readability - 'with the order from' is a little awkward here, reworded to smooth it out">with the order</edit>
+        <text>from high</text>
+        <edit type="conciseness" crr="" comments="conciseness - we don't need to repeat precision here">precision</edit>
+        <text>to low precision to generate coreference chains. We introduce the newly added constraints and sieves and discuss the improvement on the original system. We evaluate the system using the OntoNotes data set and report our results of an average F-score</text>
+        <edit type="grammar" crr="of" comments="grammar - need the preposition here to separate the number from the metric. Alternately '=' or 'equal to' would work."></edit>
+        <text>58.25 in the closed track.</text>
+    </abstract>   
+    <introduction>
+        <text>In this paper, our coreference resolution system for the CoNLL-2012 shared task (Pradhan et al., 2012) is summarized. Our system is an extension of Stanford's</text>
+        <edit type="hyphenation" crr="multipass" comments="hyphenation - don't need the hyphen after multi unless unclear, though this is style specific">multi-pass</edit>
+        <text>sieve system, (Raghunathan et al., 2010) and (Lee et al., 2011), by adding novel constraints and sieves. In the original model , sieves are sorted in decreasing order of precision. Initially</text>
+        <edit type="punctuation" crr="," comments="punctuation - missing comma after initial phrase"></edit>
+        <text>each mention is in its own cluster. Mention clusters are combined by satisfying the condition of each sieve in the scan pass. Through empirical studies, we</text>
+        <edit type="tense" crr="propose" comments="tense - I would choose present tense here as they are talking about what they are proposing in this paper, though this can be style specific">proposed</edit>
+        <text>some extensions and algorithms for</text>
+        <edit type="word choice" crr="further" comments="word choice - furthermore is not common usage in this sense.">furthermore</edit>
+        <text>enhancing the performance.</text>
+        <text>\\ Many other existing systems applied supervised or unsupervised (Haghighi and Klein, 2010) learning models. The classical resolution algorithm was proposed by (Soon et al., 2001). Semantic knowledge like word associations was involved by (Kobdani et al., 2011). Most of the supervised learning models in the CoNLL-2011 shared task (Chang et al., 2011)(Björkelund and Nugues, 2011) used classifiers (Maximum Entropy or SVM) to train the models for obtaining the pairwise mention scores. However, the training process usually takes much longer time than unsupervised or deterministic systems. In contrast, (Raghunathan et al., 2010) proposed a rule-based model which obtained a competitive result with less time.</text>
+        <text>\\ Two considerable extensions to the Stanford model in this paper</text>
+        <edit type="tense" crr="were" comments="tense - here we are talking about the work done in the experiments, so I would use past tense. Again, could be style specific.">are</edit>
+        <text>made to guarantee higher precision and recall. First, we recorded error patterns from outputs of the original Stanford system and found that the usual errors are mention-boundary mismatches, pronoun mismatches, and so on. To avoid the irrational coreference errors, we added some constraints to the mention detection for eliminating some unreasonable mention-boundary mismatches. Second, we added some constraints in the coreference sieves based on the errors on the training set and the development set.</text>
+        <text>\\ We participated in the closed track and received an official F-score (unweighted mean of MUC, BCUBED and CEAF(E) metrics) of 58.25 for English. The system with our extensions is briefly introduced in Section 2. We report our evaluation results and discuss in Section 3.</text>
+    </introduction>   
+</doc>

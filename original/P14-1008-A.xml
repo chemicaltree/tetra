@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="" editor="A" format="Conf" position="NS" region="NN">
+    <title>
+        <text>Logical Inference on Dependency-based Compositional Semantics</text>
+    </title>
+    <abstract>
+        <text>Dependency-based Compositional Semantics (DCS) is a framework of natural language semantics with easy-to-process structures as well as strict semantics. In this paper, we equip the DCS framework with logical inference</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not needed here before prepositional phrase">,</edit>
+        <text>by defining abstract denotations as an abstraction of the computing process of denotations in original DCS.</text>
+        <edit type="style;clarity" crr="We also build an inference engine which processes the" comments="style and clarity - rewording to remove the passive voice and make it clear this is part of the current work (I assume it is, but I'd need the rest of the paper to confirm).">An inference engine is built to achieve inference on</edit>
+        <text>abstract denotations. Furthermore, we propose a way to generate on-the-fly knowledge in logical inference</text>
+        <edit type="punctuation" crr="" comments="punctuation - as above">,</edit>
+        <text>by combining our framework with the idea of tree transformation. Experiments on FraCaS and PASCAL RTE datasets show promising results.</text>
+    </abstract>   
+    <introduction>
+        <text>Dependency-based Compositional Semantics (DCS) provides an intuitive way to model semantics of questions, by using simple dependency-like trees (Liang et al., 2011). It is expressive enough to represent complex natural language queries on a relational database, yet simple enough to be latently learned from question-answer pairs. In this paper, we equip DCS with logical inference, which, in one point of view, is “the best way of testing an NLP system's semantic capacity” (Cooper et al., 1996).</text>
+        <text>\\ It should be noted that, however, a framework primarily designed for question answering is not readily suited for logical inference</text>
+        <edit type="grammar" crr="because" comments="grammar - joining these sentences because the second was a fragment">. Because,</edit>
+        <text>answers returned by a query depend on the specific database</text>
+        <edit type="punctuation" crr="" comments="punctuation - dropping this comma, even though what follows is an independent clause, because it's part of the 'because' phrase">,</edit>
+        <text>but implication is independent of any databases. For example, answers to the question “What books are read by students?”</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma doesn't below here between the subject and the verb">,</edit>
+        <text>should always be a subset of answers to “What books are ever read by anyone?”, no matter how we store the data of students and how many records of books are there in our database.</text>
+        <text>\\ Thus, our first step is to fix a notation which abstracts the calculation process of DCS trees</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma doesn't belong here before dependent clause">,</edit>
+        <text>so as to clarify its meaning without the aid of any existing database. The idea is to borrow a minimal set of operators from relational algebra (Codd, 1970), which is already able to formulate the calculation in DCS, and define abstract denotation, which is an abstraction of the computation of denotations guided by DCS trees. Meanings of sentences</text>
+        <edit type="readability" crr="can then" comments="readability - 'then can be' reads a little oddly. 'then' works better before 'be' or at the beginning of the sentence.">then can</edit>
+        <text>be represented by primary relations among abstract denotations. This formulation keeps the simpleness and computability of DCS trees mostly unaffected; for example, our semantic calculation for DCS trees is parallel to the denotation computation in original DCS.</text>
+        <edit type="style;clarity" crr="\\ We build an inference engine which processes the" comments="style and clarity - rewording to remove the passive voice and make it clear this is part of the current work (I assume it is, but I'd need the rest of the paper to confirm).">An inference engine is built to handle inference on </edit>
+        <text>abstract denotations. Moreover, to compensate the lack of background knowledge in practical inference, we combine our framework with the idea of tree transformation (Bar-Haim et al., 2007)</text>
+        <edit type="punctuation" crr="" comments="punctuation - as above, comma doesn't belong before prepositional phrase">,</edit>
+        <text> to propose a way of generating knowledge in a logical representation from entailment rules (Szpektor et al., 2007), which are by now typically considered as syntactic rewriting rules.</text>
+        <text>\\ We test our system on FraCaS (Cooper et al., 1996) and PASCAL RTE datasets (Dagan et al., 2006). The experiments show: (i) a competitive performance on FraCaS dataset; (ii) a big impact of our automatically generated on-the-fly knowledge in achieving high recall for a logic-based RTE system; and (iii) a result that outperforms state-of-the-art RTE system on RTE5 data. Our whole system is publicly</text>
+        <edit type="word choice;style" crr="available" comments="word choice - while the meaning of 'publicly released' is clear, I think 'available' works better here. Alternately, we could say 'We have publicly released our whole system, and it...'">released</edit>
+        <text>and can be downloaded from [URL].</text>
+    </introduction>   
+</doc>

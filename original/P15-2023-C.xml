@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-2023" editor="C" format="Conf" position="S" region="NN">
+    <title>
+        <text>Discriminative</text>
+        <edit type="hyphenation" crr="Pre-ordering" comments="">Pre ordering</edit>
+        <text>Meets Kendall's τ Maximization</text>
+    </title>
+    <abstract>
+        <text>This paper explores a simple discriminative</text>
+        <edit type="hyphenation" crr="pre-ordering" comments="">pre ordering</edit>
+        <text>model for statistical machine translation. Our model traverses binary constituent trees</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and classifies whether children of each node should be reordered.</text>
+        <edit type="style" crr="Although the model itself is not extremely novel, we" comments="avoid using 'but' in the middle of a sentence in academic text. 'Although' is more appropriate, since you're setting the reader up for an expectation at the beginning of the sentence">The model itself is not extremely novel, but herein we</edit>
+        <text>introduce a new procedure to determine oracle labels</text>
+        <edit type="style" crr="in order to" comments="">so as to</edit>
+        <text>maximize Kendall's τ. Experiments in Japanese-to-English translation revealed that our simple method is comparable with, or superior to, state-of-the-art methods in translation accuracy.</text>
+    </abstract>   
+    <introduction>
+        <text>Current statistical machine translation systems suffer from major accuracy degradation in distant languages, primarily because they utilize exceptionally dissimilar word orders. One promising solution to this problem is pre-ordering, in which source sentences are reordered to resemble the target language word orders, after which statistical machine translation is applied to</text>
+        <edit type="clarity" crr="those" comments=""></edit>
+        <edit type="hyphenation" crr="re-ordered" comments="">reordered</edit>
+        <text>sentences (Xia and McCord, 2004; Collins et al., 2005). This is particularly effective for distant language pairs</text>
+        <edit type="punctuation" crr="," comments="insert comma to separate clauses and improve readability"></edit>
+        <text>such as English and Japanese (Isozaki et al., 2010b).</text>
+        <text>Among such pre-ordering, one of the simplest and straightforward</text>
+        <edit type="grammar" crr="models" comments="">model</edit>
+        <text>is a discriminative pre-ordering model (Li et al., 2007), which classifies whether children of each constituent node should be re-ordered, given binary trees.</text>
+        <edit type="style" crr="However, this simple model has difficulty" comments="">This simple model has, however, difficulty</edit>
+        <edit type="grammar" crr="in finding" comments="">to find</edit>
+        <text>oracle labels. Yang et al. (2012) proposed a method to approximate oracle labels along dependency trees.</text>
+        <text>\\ The present paper proposes a new procedure for finding oracle labels. The </text>
+        <edit type="style" crr="fundamental" comments=" 'main' is correct, but consider the proposed alternative to beef up your academic style and draw attention to your central argument">main</edit>
+        <text>idea is simple: we determine re-ordering decisions in a way that maximizes Kendall's τ of word alignments. We prove that our procedure guarantees the optimal solution for word alignments given as an integer list</text>
+        <edit type="punctuation" crr="" comments="">;</edit>
+        <text>in a way that local decisions on each node reach global maximization of Kendall's τ in total. Any re-ordering methods that utilize word alignments along constituency</text>
+        <edit type="readability" crr="would" comments="consider inserting, since the sentence without it is a little abrupt"></edit>
+        <text>benefit from this proof.</text>
+        <text>\\ Empirical</text>
+        <edit type="style;consistency" crr="studies" comments="'studies' is more appropriate">study</edit>
+        <text>in Japanese-to-English translation demonstrate that our simple method outperforms a rule-based pre-ordering method, and is comparable with, or superior to, state-of-the-art methods that rely on language-specific heuristics. Our contributions are summarized as follows:</text>
+        <edit type="style;consistency" crr="\ A method for obtaining oracle labels in discriminative pre-ordering, as the maximization of Kendall's τ." comments="Consistency / restructure sentence so that is has the same structure as the other bullets">\ We define a method for obtaining oracle labels in discriminative pre-ordering, as the maximization of Kendall's τ.</edit>
+        <edit type="style;consistency" crr="\ A theoretical background to Kendall's τ based re-ordering for binary constituent trees is given." comments="">\ We give a theoretical background to Kendall's τ based re-ordering for binary constituent trees.</edit>
+        <edit type="style;consistency" crr="\ State-of-the-art accuracy in Japanese-to-English translation with a simple method without language-specific heuristics is achieved." comments="">\ We achieve state-of-the-art accuracy in Japanese-to-English translation with a simple method without language-specific heuristics.</edit>
+    </introduction>   
+</doc>

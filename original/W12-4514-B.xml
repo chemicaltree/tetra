@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W12-4514" editor="B" format="WS" position="S" region="NN">
+    <title>
+        <text>Hybrid Rule-based Algorithm for Coreference Resolution</text>
+    </title>
+    <abstract>
+        <text>This paper describes our coreference resolution system for the CoNLL-2012 shared task. Our system is based on</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>Stanford's dcoref deterministic</text>
+        <edit type="clarity" crr="coreference" comments="This appears to have been left out of the description."></edit>
+        <text>system</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>which applies multiple sieves</text>
+        <edit type="word choice" crr="in" comments="">with the</edit>
+        <text>order from high precision to low precision to generate coreference chains. We introduce</text>
+        <edit type="word choice;conciseness" crr="novel" comments="">the nowly added</edit>
+        <text>constraints and sieves and discuss the improvement</text>
+        <edit type="clarity" crr="these add to the performance of" comments="added for clarity">on</edit>
+        <text>he original system. We evaluate the system using the OntoNotes data set and report</text>
+        <edit type="word order" crr="an average F-score result of 58.25" comments="">our results of average F-score 58.25</edit>
+        <text>in the closed track.</text>
+    </abstract>   
+    <introduction>
+        <text>In this paper, our coreference resolution system for</text>
+        <edit type="grammar;clarity" crr="the" comments="article; added for clarity"></edit>
+        <text>CoNLL-2012 shared task (Pradhan et al., 2012) is summarized. Our system</text>
+        <edit type="word choice" crr="extends" comments="">is an extension of</edit>
+        <text>Stanford's multi-pass sieve system</text>
+        <edit type="style;readability" crr="(Raghunathan et al., 2010;Lee et al., 2011)" comments="">, (Raghunathan et al., 2010) and (Lee et al., 2011),</edit>
+        <text>by adding novel constraints and sieves. In the original model , sieves are sorted in</text>
+        <edit type="word order" crr="order of decreasing precision." comments="">decreasing order of precision.</edit>
+        <text>Initially each mention is in its own cluster</text>
+        <edit type="flow" crr=", and mention clusters" comments="sentence choice? It seems like the two original sentences can word together.">. Mention clusters</edit>
+        <text>are combined by satisfying the condition of each sieve in the scan pass. Through empirical studies, we proposed some extensions and algorithms</text>
+        <edit type="word choice" crr="to further enhance" comments="">for furthermore enhancing</edit>
+        <edit type="clarity" crr="system's" comments="dded for clarity"></edit>
+        <text>performance.</text>
+        <text>\\ Many</text>
+        <edit type="redundancy" crr="" comments="extraneous; this might be discretionary, but 'other' is implied in this statement.">other</edit>
+        <text>existing systems</text>
+        <edit type="tense" crr="apply" comments="word choice; verb tense: if they are existing, they still apply the learning models">applied</edit>
+        <text>supervised or unsupervised</text>
+        <edit type="word order" crr="learning models (Haghighi and Klein, 2010)." comments="">(Haghighi and Klein, 2010) learning models. </edit>
+        <text>The classical resolution algorithm was proposed by (Soon et al., 2001). Semantic knowledge</text>
+        <edit type="style" crr=", such as word associations," comments="">like word associations</edit>
+        <text>was</text>
+        <edit type="word choice" crr="explored" comments="">involved</edit>
+        <text>by (Kobdani et al., 2011). Most of the supervised learning models in</text>
+        <edit type="grammar;clarity" crr="the" comments="article; added for clarity"></edit>
+        <text>CoNLL-2011 shared task</text>
+        <edit type="style;readability" crr="(Chang et al., 2011;Björkelund and Nugues, 2011)" comments="">(Chang et al., 2011) (Björkelund and Nugues, 2011)</edit>
+        <text>used classifiers (e.g., Maximum Entropy or SVM) to train the models</text>
+        <edit type="word choice;grammar" crr="to obtain pairwise mention scores." comments="">for obtaining the pairwise mention scores.</edit>
+        <text>However, the training process usually takes much longer</text>
+        <edit type="redundancy" crr="" comments="">time</edit>
+        <text>than</text>
+        <edit type="clarity" crr="the training process in" comments="">added for clarity</edit>
+        <text>unsupervised or deterministic systems. In contrast, (Raghunathan et al., 2010) proposed a rule-based model which obtained</text>
+        <edit type="word choice" crr="comparable" comments="word choice; possibly discretionary">competitive</edit>
+        <edit type="grammar" crr="results in less time." comments="">result with less time.</edit>
+        <edit type="readability" crr="\\ In this paper, two considerable extensions of the Stanford model" comments="">\\ Two considerable extensions to the Stanford model in this paper</edit>
+        <edit type="style" crr="are introduced to achieve" comments="">are made to guarantee</edit>
+        <text>higher precision and recall.</text>
+        <edit type="clarity;readability" crr="In our empirical studies, we first recorded" comments="word order and words added for clarity">First, we recorded</edit>
+        <text>error patterns from outputs of the original Stanford system and found that the usual errors</text>
+        <edit type="clarity" crr="consist of" comments="">are</edit>
+        <text>mention boundary mismatches, pronoun mismatches and so on. To avoid the irrational coreference errors, we added</text>
+        <edit type="redundancy" crr="" comments="word choice; too vague">some</edit>
+        <text>constraints to the mention detection</text>
+        <edit type="word choice" crr="to eliminate" comments="">for eliminating some</edit>
+        <text>unreasonable mention boundary mismatches. Second, we added</text>
+        <edit type="redundancy" crr="" comments="word choice; this seems extraneous; it's vague and it doesn't add information">some</edit>
+        <text>constraints</text>
+        <edit type="grammar" crr="to" comments="">in</edit>
+        <text>the coreference sieves based on the errors</text>
+        <edit type="clarity" crr="observed in" comments="added for clarity">on</edit>
+        <edit type="conciseness" crr="the training and development sets." comments="">the training set and the development set.</edit>
+        <text>\\ We participated in the closed track</text>
+        <edit type="clarity" crr="of CoNLL-2012 shared task" comments="added for clarity"></edit>
+        <text>and received an official F-score (i.e., the unweighted mean of the MUC, BCUBED and CEAF(E) metrics) of 58.25 for English. The system</text>
+        <edit type="grammar;readability" crr="and our extensions are" comments="">with our extensions is</edit>
+        <text>briefly introduced in Section 2. We report</text>
+        <edit type="word order" crr="and discuss our evaluation results in Section 3." comments="">our evaluation results and discuss in Section 3.</edit>
+    </introduction>   
+</doc>

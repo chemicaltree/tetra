@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W15-2117" editor="B" format="WS" position="NS" region="NN">
+    <title>
+        <text>Non-projectivity and processing constraints: Insights from Hindi</text>
+    </title>
+    <abstract>
+        <text>Non-projectivity is an important theoretical and computational concept that has been investigated extensively in the dependency grammar/parsing paradigms. However, from a human sentence processing perspective, non-projectivity has received very little attention. In this paper, we look at existing work and propose new factors related to processing non-projective</text>
+        <edit type="grammar" crr="configurations." comments="">configuration.</edit>
+        <text>We argue that</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>(a) counter to the claims in the psycholinguistic literature (Levy et al, 2012), different aspects of prediction maintenance can lead to higher processing cost for a non-projective dependency, (b) parsing strategies can interact with the expectation for a non-projective dependency, and (c) memory (re)activation can explain processing cost in certain non-projective configurations.</text>
+ </abstract>   
+    <introduction>
+        <text>Within the dependency grammar framework, non-projectivity has received considerable attention from both the theoretical</text>
+        <edit type="word choice" crr="and" comments="word choice; this might be discretionary; editing is generally geared towards creating concise statements. 'And' says the same thing as 'as well as' in fewer words.">as well as</edit>
+        <text>computational perspectives. Non-projective structures are assumed to be both more complex to analyze and more difficult to parse. Figure 1 shows a Hindi sentence involving a non-projective dependency between abhay kaa 'Abhay's' and caSamaa 'spectacles'.</text>
+        <text>\\ Formally, an arc i → j is projective if and only if there is no word k between i and j that i does not dominate (Nivre and Nilsson, 2005).</text>
+        <text>\\ While some parsing paradigms can handle such dependencies, others either cannot</text>
+        <edit type="clarity" crr="handle them" comments=""></edit>
+        <text>or have special mechanisms to process them (e.g., Kuhlmann and Nivre (2010); Rambow and Joshi (1994)). Many theoretical approaches have special mechanisms to account for these constructions within their frameworks (e.g., Chomsky (1981); Pollard and Sag (1994)).</text>
+        <text>It is unclear if the complexity arising from non-projectivity has any processing cost</text>
+        <edit type="clarity" crr="in terms of" comments="">in</edit>
+        <text>human language comprehension.</text>
+        <edit type="flow" crr="In other words" comments="">That is</edit>
+        <text>, does the human sentence processing system find such sentences difficult to process, compared to projective dependencies? Previous work has addressed this question. In a classic study, Bach et al. (1986) showed that Dutch speakers find cross-serial dependencies in Dutch more acceptable</text>
+        <edit type="conciseness" crr="than" comments="">compared to</edit>
+        <text>German speakers</text>
+        <edit type="word choice" crr="reading" comments="">who read</edit>
+        <text>matched sets of embedded constructions in German. Other work has</text>
+        <edit type="style;word choice" crr="examined" comments="Editors usually try to get two words for the price of one.">looked at</edit>
+        <text>filler-gap dependencies, but these</text>
+        <edit type="clarity" crr="studies" comments=""></edit>
+        <text>have generally focused on the question of wh movement (e.g., Traxler and Pickering (1996)). More recently, Levy et al. (2012) have directly</text>
+        <edit type="style;word choice" crr="considered" comments="There may be some UK vs US differences in meaning. taken up vs taken on">taken up</edit>
+        <text>the issue of non-projectivity and sentence processing. They raised the following questions:</text>
+        <text>\ Under what circumstances are non-projective dependency structures easier or harder to comprehend than corresponding projective-dependency structures?</text>
+        <text>\ How can these differences in comprehension difficulty be understood with respect to existing theories of online comprehension?</text>
+        <text>Levy et al. (2012) try to answer the above questions using right-extraposed relative clauses in English. They show that the right-extraposed version is more costly than the embedded relative clause (RC), </text>
+        <edit type="word choice" crr="thus" comments="">hence</edit>
+        <text>demonstrating that non-projective structures are indeed costlier than</text>
+        <edit type="clarity" crr="thier" comments="">the</edit>
+        <text>projective counterparts. Additionally, they argue that the expectation-based theory of surprisal (Levy, 2008) explains the experimental results better than other competing theories, like the cue-based memory model of Lewis and Vasishth (2005) and the derivational theory of complexity (Miller, 1962).</text>
+        <text>\\ In this paper, we take up Levy's questions by investigating non-projectivity in Hindi participle clauses. We confirm that non-projectivity is indeed costly. However, we show that surprisal</text>
+        <edit type="word choice" crr="does not" comments="">is unable to</edit>
+        <text>account for the increased processing cost, and that the cue-based memory model of Lewis and Vasishth (2005) can partly account for the results. To anticipate the conclusion, we argue that, while expectation (formalized as conditional probability of the head in a dependency given previous syntactic dependencies) is relevant for explaining processing of non-projective dependencies, other factors (that can be orthogonal to predictive processing) can be equally critical. In particular, the following factors are implicated in the processing of non-projective dependencies: (a)</text>
+        <edit type="capitalization" crr="the nature" comments="unnecessary capitalization; this might be discretionary">The nature</edit>
+        <text>of the intervening material between a head and its dependent; (b) the nature of the head-dependent relation; (c) the length/complexity of the intervening material; (d) memory activation; and (e) Parsing strategies.</text>
+        <text>\\ Hindi is a useful language for investigating non-projectivity because its relatively free-word order allows non-projective dependencies to occur quite frequently (see Mannem et al. (2009) for a more detailed discussion).</text>
+        <text>\\ The paper is organized as follows</text>
+        <edit type="punctuation" crr=":" comments="">,</edit>
+        <text>we first discuss relevant processing theories and their predictions regarding non-projectivity in Section 2. Following this, in Section 3, we discuss experiments that investigate processing of non-projective structures in Hindi. In Section 4 we discuss these findings and</text>
+        <edit type="redundancy" crr="" comments="">discuss</edit>
+        <text>potential factors that could influence processing non-projective configurations. Section 5 concludes.</text>
+    </introduction>   
+</doc>

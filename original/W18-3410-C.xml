@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W18-3410" editor="C" format="WS" position="NS" region="N">
+    <title>
+        <text>Low-rank passthrough neural networks</text>
+    </title>
+    <abstract>
+        <text>Various common deep learning architectures</text>
+        <edit type="punctuation" crr="" comments="comma not required">,</edit>
+        <text>such as LSTMs, GRUs, Resnets, and Highway Networks, employ state passthrough connections that support training with high feed-forward depth or recurrence over many time steps. These “Passthrough Networks” architectures also enable the decoupling of the network state size from the number of parameters of the network</text>
+        <edit type="grammar" crr="“Passthrough Networks”" comments="Grammar / duplicate plural doesn't work">“Passthrough Networks</edit>
+        <text>architectures also enable the decoupling of the network state size from the number of parameters of the network</text>
+        <edit type="readability" crr="and, their low-rank parametrization of the LSTM (a possibility which has been studied by Sak et al. (2014))." comments="Readability / restructure sentence to improve flow"> a possibility has been studied by Sak et al. (2014) with their low-rank parametrization of the LSTM.</edit>
+        <text>In this work, we extend this line of research</text>
+        <edit type="word choice" crr="by" comments="Word choice / insert 'by' to improve meaning">,</edit>
+        <text>proposing effective, low-rank and low-rank plus diagonal matrix parametrizations for Passthrough Networks which exploit this decoupling property</text>
+        <edit type="readability" crr=". This reduces both" comments="Readability/end potentially long sentence">, reducing</edit>
+        <text> the data complexity and memory requirements of the network while preserving its memory capacity. This is particularly beneficial in low-resource settings as it supports expressive models with a compact parametrization</text>
+        <edit type="readability" crr="that are" comments="Readability/insert to amplify meaning"></edit>
+        <text>less susceptible to overfitting. We present competitive experimental results on several tasks, including language modeling and a near</text>
+        <edit type="hyphenation" crr="state-of-the-art" comments="">state of the art</edit>
+        <text>result on sequential, randomly-permuted MNIST</text>
+        <edit type="grammar" crr="classifications" comments="Grammar/use plural in this case, since you're generalizing">classification</edit>
+        <text>, a hard task on natural data.</text>
+    </abstract>   
+    <introduction>
+        <text>Deep neural networks can perform non-trivial computations</text>
+        <edit type="word choice" crr="through" comments="Vocabulary/suggested alternative is more precise">by</edit>
+        <text>the repeated</text>
+        <edit type="word choice" crr="" comments="Word choice/not required in this instance">the</edit>
+        <text>application of parametric non-linear transformation layers to vectorial data. This staging of</text>
+        <edit type="word choice" crr="multiple" comments="Vocabulary/suggested alternative is better in this instance">many</edit>
+        <text>computation steps can be</text>
+        <edit type="style" crr="executed" comments="Register/proposed alternative is more suitable for academic text">done</edit>
+        <text>over a time dimension for tasks involving sequential inputs or outputs of varying length, yielding a recurrent neural network, or over an intrinsic circuit depth dimension, yielding a deep feed-forward neural network, or both. Training these deep models is complicated by</text>
+        <edit type="readability" crr="both" comments="Vocabulary/insert proposed alternative as it amplifies meaning">the</edit>
+        <text>exploding and vanishing gradient problems (Hochreiter, 1991; Bengio et al., 1994).n</text>
+        <text>\\ Various network architectures have been proposed to ameliorate the vanishing gradient problem in the recurrent setting, such as the LSTM (Hochreiter and Schmidhuber, 1997; Graves and Schmidhuber, 2005), the GRU (Cho et al., 2014),</text>
+        <edit type="readability" crr="and" comments="Vocabulary/insert in the final part of a serial sentence"></edit>
+        <text> the RHN (Zilly et al., 2016), etc. Similar methods have also been applied in the feed-forward setting with architectures such as Highway Networks (Srivastava et al., 2015), Deep Residual Networks (He et al., 2015), and so on. All these architectures are based on a single structural principle which, in this work, we will refer to as the “state passthrough.” We will thus refer to these architectures as “Passthrough Networks.”</text>
+        <text>\\ In many settings, especially low-resource natural language processing tasks, the main difficulty in training neural networks is the trade-off between the network representation power and its training data complexity, which is related to the number of trainable parameters.</text>
+        <edit type="clarity" crr="\\ On the one hand," comments="Vocabulary/insert as a full phrase">On one hand,</edit>
+        <text>the number of parameters can be thought</text>
+        <edit type="grammar" crr="of" comments="Vocabulary/insert to complete 'to think of' something"></edit>
+        <text>as the number of tunable “knobs” that need to be set to represent a function</text>
+        <edit type="readability" crr=". On" comments="Readability/start new sentence">, on</edit>
+        <text>the other hand, it also constrains the size of the partial results that are propagated inside the network. In typical fully connected networks, a layer acting on a n-dimensional state vector has O(n2) parameters stored in one or more matrices</text>
+        <edit type="readability" crr=". However," comments="Readability/end potentially long sentence">, but</edit>
+        <text> there can be many functions of practical interest that are simple enough to be represented by a relatively small number of bits while still requiring some sizable amount of memory in order to be computed. Therefore, representing these functions on a fully connected neural network can be wasteful in terms of the number of parameters. The full parameterization implies that, at each step, all the information in each state component can affect all the information in any state component at the next step.</text>
+        <edit type="readability" crr="However, classical physical systems" comments="Readability/change sentence structure">Classical physical systems, however, consist</edit>
+        <text>consist of spatially separated parts with primarily local interactions</text>
+        <edit type="readability" crr=". Long-distance" comments="Readability/end potentially long sentence">, long-distance</edit>
+        <text>interactions are possible, but they tend to be limited by propagation delays, bandwidth, and noise. Therefore, it may be beneficial to bias our model class towards models that tend to adhere to these physical constraints by using a parametrization which reduces the number of parameters required to represent them. This can be accomplished by imposing some constraints on the n×n matrices that parametrize the state transitions. One way of doing this is to impose a convolutional structure on these matrices (LeCun et al., 2004; Krizhevsky et al., 2012), which corresponds to strict locality and periodicity constraints as in a cellular automaton. These constraints work well in certain domains such as vision</text>
+        <edit type="readability" crr=". However, they" comments="Readability/start new sentence">, but</edit>
+        <text>may be overly restrictive in other domains.</text>
+        <text>\\ The state passthrough allows for a systematic decoupling of the network state size from the number of parameters</text>
+        <edit type="readability" crr=". Since" comments="Readability/end sentence here">, since</edit>
+        <edit type="readability" crr=", by default," comments="Readability/insert commas to break up long sentence and improve flow">by default</edit>
+        <text>the state vector passes mostly unaltered through the layers, each layer can then be</text>
+        <edit type="style" crr="rendered" comments="Register/'made' is correct, but the proposed alternative is more suitable in an academic context">made</edit>
+        <text>simple enough to be described</text>
+        <edit type="word choice" crr="with just" comments="Word choice/proposed alternative is more suitable in this context">only by</edit>
+        <text>a small number of parameters without affecting the overall memory capacity of the network</text>
+        <edit type="readability" crr=". This effectively spreads" comments="Readability/start new (shorter) sentence;">, effectively spreading</edit>
+        <text>the computation over the depth or time dimension of the network</text>
+        <edit type="style" crr="without “thinning” the network." comments="Readability/propose restructure of the sentence, as 'making thin' is probably not a good use of academic register">, but without making the network “thin”.</edit>
+        <text>This has been exploited by some convolutional passthrough architectures (Srivastava et al., 2015; He et al., 2015; Kaiser and Sutskever, 2015), or architectures with addressable read-write memory (Graves et al., 2014; Danihelka et al., 2016).</text>
+        <text>In this work, we propose simple but effective low-dimensional parametrizations that exploit this decoupling based on low-rank or low-rank plus diagonal matrix decompositions. Our approach extends the LSTM architecture with a single projection layer proposed by Sak et al. (2014) which has been applied to speech recognition, natural language modeling (Józefowicz et al., 2016),</text>
+        <edit type="grammar" crr="and" comments="Grammar/use conjunction 'and' in a series"></edit>
+        <text>video analysis (Sun et al., 2015), etc. We provide</text>
+        <edit type="grammar" crr="an" comments="Grammar/insert to qualify"></edit>
+        <text>experimental evaluation of our approach on GRU and LSTM architectures on various machine learning tasks, including a near</text>
+        <edit type="hyphenation" crr="state-of-the-art" comments="">state of the art</edit>
+        <text>result for the hard task of sequential randomly-permuted MNIST image recognition (Le et al., 2015).</text>
+    </introduction>   
+</doc>

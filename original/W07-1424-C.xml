@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W07-1424" editor="C" format="WS" position="NS" region="N">
+    <title>
+        <text>Mutaphrase: Paraphrasing with FrameNet</text>
+    </title>
+    <abstract>
+        <text>We</text>
+        <edit type="word choice;style" crr="outline" comments="Word usage / style / consider replacing">describe</edit>
+        <text>a preliminary version of Mutaphrase,</text>
+        <edit type="clarity" crr="which is" comments="Consider inserting to amplify meaning"></edit>
+        <text>a system that generates paraphrases of</text>
+        <edit type="hyphenation" crr="semantically-labeled" comments="">semantically labeled</edit>
+        <text>input sentences</text>
+        <edit type="clarity" crr="by" comments="Word usage / insert to amplify meaning"></edit>
+        <text>using the semantics and syntax encoded in FrameNet, a freely available lexico-semantic database. The algorithm generates</text>
+        <edit type="word choice" crr="a large number of" comments="Word choice / consider replacing to shorten sentence">numerous</edit>
+        <text>paraphrases with a wide range of syntactic and semantic distances from the input. For example, given the input “I like eating cheese,” the system outputs the syntactically- distant “Eating cheese is liked by me,”</text>
+        <edit type="hyphenation" crr="the semantically-distant" comments="">the semantically distant</edit>
+        <text>“I fear sipping juice,” and thousands of other sentences. The wide range of generated paraphrases makes the algorithm ideal for a range of statistical machine learning problems such as machine translation and language modeling</text>
+        <edit type="punctuation" crr="," comments="Punctuation / comma to introduce clause"></edit>
+        <text>as well as other semantics-dependent tasks such as query and language generation.</text>
+    </abstract>   
+    <introduction>
+        <text>A central tenet of statistical natural language processing (NLP) is “there's no data like more data.” One method for generating more data is to restate each phrase</text>
+        <edit type="clarity;word choice" crr="within" comments="Word choice / replace to clarify">in</edit>
+        <text>a corpus, keeping similar semantics while changing both the words and the word sequence. The efficacy of this approach has been well established in many areas, including automated evaluation of machine translation systems (Kauchak and Barzilay, 2006), text summarization (Kittredge, 2002), question answering (Rinaldi et al., 2003), document retrieval (Zukerman and Raskutti, 2002), and many others.</text>
+        <text>\\ Most of the reported work on paraphrase generation from arbitrary input sentences uses machine learning techniques trained on sentences that are known or can be inferred to be paraphrases of each other (Bannard and Callison-Burch, 2005; Barzilay and Lee, 2003; Barzilay and McKeown, 2001; Callison-Burch et al., 2006; Dolan et al., 2004; Ibrahim et al., 2003; Lin and Pantel, 2001; Pang et al., 2003; Quirk et al., 2004; Shinyama et al., 2002). Mutaphrase instead generates paraphrases</text>
+        <edit type="clarity" crr="that" comments="Meaning / insert to specify"></edit>
+        <text>algorithmically using an input sentence and FrameNet, a freely available lexico-semantic resource (information regarding FrameNet, including relevant terminology, is presented in Section 2).</text>
+        <text>\\ Conceptually, the Mutaphrase algorithm takes a semantic specification of a sentence,</text>
+        <edit type="clarity" crr="that is" comments="Word usage / insert to clarify"></edit>
+        <text>provided by an automatic semantic parser such as Shalmaneser (Erk and Padó, 2006), and recursively replaces each</text>
+        <edit type="hyphenation" crr="semantically-parsed phrase with a semantically-similar phrase." comments="">semantically parsed phrase with a semantically similar phrase.</edit>
+        <text>To generate each new phrase, each of the semantic parts of the original phrase is mapped, using FrameNet data, onto a new word or phrase whose position and syntactic marking may be quite different.</text>
+        <text>\\ The Mutaphrase algorithm outputs a large set of paraphrases with a variety of distances from the input in terms of both syntax and semantics</text>
+        <edit type="punctuation" crr="(see Figure 1). " comments="Punctuation / replace with brackets">; see Figure 1. </edit>
+        <text>Depending on the needs of the application, filtering can be applied to limit the distance to within a desired range. For example, language modeling may benefit from a wider variety of semantic outputs, since if I like eating cheese is in-domain, then I like sipping juice is also likely</text>
+        <edit type="clarity" crr="to be" comments="Word choice / insert to clarify"></edit>
+        <text>in-domain. Other applications </text>
+        <edit type="word choice" crr="such as" comments="">, e.g.</edit>
+        <text>Question Answering require more stringent limits on semantic distance</text>
+        <edit type="punctuation" crr="(see Section 4)." comments="">. See Section 4.</edit>
+        <text>\\ The current implementation of Mutaphrase suffers from several limitations. Perhaps the most significant</text>
+        <edit type="clarity" crr="limitation" comments="Word choice / insert to clarify"></edit>
+        <text>is that the input sentences must be semantically labeled using FrameNet annotations. Since no automated systems for FrameNet-specific annotation are currently incorporated into our algorithm, input is limited to hand-annotated sentences. Also, certain types of semantic ill-formedness are permitted (e.g. I like sipping meat), and some types of syntax are not</text>
+        <edit type="hyphenation" crr="well-supported" comments="">well supported</edit>
+        <text>(e.g. conjunctions, relative-clauses). We believe all these factors can be addressed</text>
+        <edit type="punctuation" crr="and" comments="Punctuation / better to use conjunction 'and'">; they</edit>
+        <text>are covered briefly in Future Work (Section 4). We confine ourselves in other sections to describing the core Mutaphrase algorithm as currently implemented.</text>
+    </introduction>   
+</doc>

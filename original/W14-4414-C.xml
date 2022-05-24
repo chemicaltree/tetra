@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-4414" editor="C" format="WS" position="S" region="N">
+    <title>
+        <text>Two-Stage Stochastic Email Synthesizer</text>
+    </title>
+    <abstract>
+        <text>This paper presents the design and implementation details of an email synthesizer using two-stage stochastic natural language generation</text>
+        <edit type="readability" crr=". The" comments="Readability/split sentence. It's a very long, complex, and tedious sentence.">, where the</edit>
+        <text>first stage</text>
+        <edit type="readability" crr="of the synthesizer" comments="Readability/insert to refer back to the previous sentence"></edit>
+        <text>structures the emails according to sender style and topic structure</text>
+        <edit type="readability" crr=". The" comments="Readability/split sentence. It's a very long, complex, and tedious sentence.">, where the</edit>
+        <text>second stage synthesizes text content based on the particulars of an email structure element and the goals of a given communication for surface realization. The synthesized emails reflect</text>
+        <edit type="readability" crr="both" comments="Vocabulary/insert when describing series"></edit>
+        <text>sender style and</text>
+        <edit type="readability" crr="communication intent" comments="Readability / restructure to simplify">the intent of communication</edit>
+        <text>, which can be further used as synthetic evidence for developing other applications.</text>
+    </abstract>   
+    <introduction>
+        <text>This paper focuses on synthesizing emails that reflect</text>
+        <edit type="readability" crr="both" comments="Readability/see above"></edit>
+        <text>sender style and</text>
+        <edit type="readability" crr="communication intent." comments="Readability/see above">the intent of the communication.</edit>
+        <text>Such a process might be used for the generation of common messages</text>
+        <edit type="word choice;conciseness" crr="(e.g., a request for a meeting without direct intervention from the sender)." comments="Word choice/you can abbreviate here to shorten the sentence)">(for example a request for a meeting without direct intervention from the sender).</edit>
+        <text>It can also be used in situations where naturalistic emails are needed for other applications. For instance, our email synthesizer was developed to provide emails to be used as part of synthetic evidence of insider threats for</text>
+        <edit type="grammar" crr="the" comments="Grammar/insert definite article to make more specific"></edit>
+        <text>purposes of training, prototyping, and evaluating anomaly detectors (Hershkop et al., 2011).</text>
+        <text>\\ Oh and Rudnicky (2002) showed that stochastic generation benefits from two factors</text>
+        <edit type="readability" crr="." comments="">:</edit>
+        <edit type="readability" crr="Firstly, it takes advantage of the practical language of a domain expert instead of the developer. Secondly," comments="Readability/when describing a short series, better to use words rather than digits">1) it takes advantage of the practical language of a domain expert instead of the developer. and 2)</edit>
+        <text> it restates the problem in terms of classification and labeling, where expertise is not required for developing a rule-based generation system. In the present work</text>
+        <edit type="punctuation" crr="," comments="Punctuation/use comma when introducing a theme that follows"></edit>
+        <text>we investigate the use of stochastic techniques for the generation of a different class of communications and whether global structures can be convincingly created. Specifically</text>
+        <edit type="punctuation" crr="," comments="Punctuation/see above for application of same rule"></edit>
+        <text>we investigate whether stochastic techniques can be used to</text>
+        <edit type="style" crr="" comments="Register/it's not really used that much, especially in academic context">acceptably</edit>
+        <text>model both longer texts and individual sender characteristics in the email domain, both of which may require higher cohesion to be acceptable (Chen and Rudnicky, 2014).</text>
+        <text>\\ Our proposed system involves two-stage stochastic generation,</text>
+        <edit type="readability" crr="as" comments="Readability/insert to make more precise"></edit>
+        <text>shown in Figure 1</text>
+        <edit type="readability;conciseness" crr=". The" comments="Readability/start new (shorter) sentence">, in which the</edit>
+        <text>first stage models email structures according to sender style and topic structure (high-level generation)</text>
+        <edit type="punctuation" crr="" comments="Punctuation/not required in this instance">,</edit>
+        <text>and the second stage synthesizes text content based on the particulars of a given communication (surface-level generation).</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W15-1522" editor="C" format="WS" position="NS" region="N">
+    <title>
+        <text>Distributed Word Representations Improve NER for e-Commerce</text>
+    </title>
+    <abstract>
+        <text>This paper presents a case study</text>
+        <edit type="readability" crr="highlighting the use of" comments="Syntax/this construction allows for better flow">of using of</edit>
+        <text>distributed word representations</text>
+        <edit type="style" crr="such as" comments="Style/'in particular' suggests there are others, so best to insert 'such as'">,</edit>
+        <text>word2vec in particular, for improving performance of Named Entity Recognition for the eCommerce domain. We also demonstrate that distributed word representations trained on a smaller amount of in-domain data are more effective than word vectors trained on very large amount of out-of-domain data, and that their combination gives the best results.</text>
+    </abstract>   
+    <introduction>
+        <text>On-line commerce has gained a lot of popularity over the past decade.</text>
+        <edit type="style;consistency" crr="Consequently, large" comments="Style/Insert this word so that the reader makes the link with the previous sentence">Large</edit>
+        <text>on-line C2C marketplaces</text>
+        <edit type="style" crr="such as" comments="Style/'like' is correct, but not the best word for academic writing">like</edit>
+        <text>eBay, Alibaba, and Amazon feature a very large and long-tail inventory with millions of items (product offers) entered into the marketplace every day by a large variety of sellers.</text>
+        <text>\\ To manage items effectively and to provide the best user experience, it is critical for these marketplaces to structure their inventory into descriptive name-value pairs (called properties) and ensure that items of the same kind (digital cameras, for instance) are described using a unique set of properties (brand name, model number, zoom, resolution, etc.).</text>
+        <edit type="word order" crr="This is important for merchandising recommendations" comments="Syntax/change word order to improve flow">This is important for recommendations in merchandising</edit>
+        <text>, providing faceted navigation, and assisting business intelligence applications.</text>
+        <text>\\ While some sellers (generally large, professional retailers) provide rich, structured descriptions of their products (using schemas or global trade item numbers), the vast majority of sellers only provide unstructured natural language descriptions. In the latter case, one solution to the problem of structuring e-commerce inventory is</text>
+        <edit type="style" crr="the use of" comments="Syntax/'to use' is correct, but in this instance, it comes across as slightly clumsy in the sentence/use alternative for academic writing">to use</edit>
+        <text>techniques such as Named-Entity Recognition (NER) to extract properties from the textual description of the items. The</text>
+        <edit type="style;clarity" crr="sheer" comments="Style/meaning/'scale' on its own falls flat, so I recommend the use of an adjective here to amplify the point you're trying to get across"></edit>
+        <text>scale at which on-line marketplaces operate makes it impractical to solve this problem manually.</text>
+        <text>\\ This paper focuses on NER,</text>
+        <edit type="style" crr="which is" comments="Style/insert this to place more emphasis"></edit>
+        <text>generally defined as the task of classifying elements of text into predefined categories</text>
+        <edit type="readability" crr=". This is often referred to as “entity types” or “entities.” " comments="">(often referred to as entity types or entities).”</edit>
+        <text>ntities usually include names of persons, organizations, locations, times, and quantities (CoNLL-2003 dataset), as well as nationalities or religious groups, products</text>
+        <edit type="style;repetitiveness" crr="such as vehicles, weapons, and foods, as well as" comments="Style/use this to avoid repetition of 'and'">(vehicles, weapons, foods, etc.), and</edit>
+        <text>titles of books or songs (Ontonotes 5.0 dataset).</text>
+        <text>\\ In the e-commerce domain, these entities are item properties such as brand name, color, material, clothing size, golf club type, makeup shade code,</text>
+        <edit type="repetitiveness" crr="and sun protection factor." comments="See above re: use of 'etc.'">sun protection factor, etc.</edit>
+        <text>Another important specificity of the e-commerce domain with respect to NER is that the sentences are usually much shorter than in other applications and don't exhibit the grammatical structure of natural language.</text>
+        <text>\\ This paper investigates whether distributed word vectors benefit NER in the e-commerce domain. Distributed word representations based on neural networks from unlabeled text data have proven useful for many natural language tasks, including NER. In fact, Passos et al. (2014) reported results that are comparable to state-of-the-art for the CoNLL 2003 NER task using such representations. In this paper, we evaluate distributed word vectors with a focus on</text>
+        <edit type="style" crr="the use of" comments="Syntax/'to use' is correct, but in this instance, it comes across as slightly clumsy in the sentence/use alternative for academic writing">use</edit>
+        <text>in-domain data for their training.</text>
+        <text>\\ In the remainder of this paper, we</text>
+        <edit type="readability" crr="" comments="Not required and is confusing">first</edit>
+        <text>explain the specificity of NER in the e-commerce domain and describe the approach we use for performing</text>
+        <edit type="clarity" crr="a" comments="Meaning/'the' is confusing as it's not clear what it refers to">the</edit>
+        <text>ask. In Section 3, we describe our datasets. In Section 4, we</text>
+        <edit type="style;repetitiveness" crr="" comments="Style/repetition of 'describe'/avoid in acadmic writing">describe</edit>
+        <text>the setting of the experiments we have conducted and discuss the results in Section 5. Finally, we review related works in Section 6.</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P14-1008" editor="C" format="Conf" position="NS" region="NN">
+    <title>
+        <text>Logical Inference on</text>
+        <edit type="consistency" crr="Dependency-Based" comments="capitalization">Dependency-based</edit>
+        <text>Compositional Semantics</text>
+    </title>
+    <abstract>
+        <edit type="capitalization;consistency" crr="Dependency-Based" comments="Consistency: use either capitals throughout the expression or lower case, but not a combination (so, you can also say, 'Dependency-based compositional semantics....')">Dependency-based</edit>
+        <text>Compositional Semantics (DCS) is a framework of natural language semantics with easy-to-process structures as well as strict semantics. In this paper, we equip the DCS framework with logical inference, by defining abstract denotations as an abstraction of the computing process of denotations in original DCS. An inference engine is built to achieve inference on abstract denotations. Furthermore, we propose a</text>
+        <edit type="word choice;style" crr="method" comments="way"></edit>
+        <text>to generate on-the-fly knowledge in logical inference</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>by combining our framework with the idea of tree transformation. Experiments on FraCaS and PASCAL RTE datasets show promising results.</text>
+    </abstract>   
+    <introduction>
+        <edit type="capitalization;consistency" crr="Dependency-Based" comments="Consistency: use either capitals throughout the expression or lower case, but not a combination (so, you can also say, 'Dependency-based compositional semantics....')">Dependency-based</edit>
+        <text>Compositional Semantics (DCS) provides an intuitive way to model</text>
+        <edit type="grammar" crr="the" comments="Grammar / definite article better here"></edit>
+        <text>semantics of questions</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>by using simple dependency-like trees (Liang et al., 2011).</text>
+        <edit type="clarity" crr="DCS" comments="">it</edit>
+        <text>is expressive enough to represent complex natural language queries ion a relational database, yet simple enough to be latently learned from question-answer pairs. In this paper, we equip DCS with logical inference, which,</text>
+        <edit type="word choice" crr="according to" comments="Vocabulary / the proposed alternative is better here">in</edit>
+        <text>one point of view, is “the best way of testing an NLP system's semantic capacity” (Cooper et al., 1996).</text>
+        <edit type="readability;clarity" crr="\\ However, it should be noted that" comments="Meaning / always deploy 'however' at the beginning of the sentence where you can to denote 'contrary'">\\ It should be noted that, however,</edit>
+        <text>a framework primarily designed for question answering</text>
+        <edit type="word choice" crr="can not be adapted to the purpose of" comments="Comprehension / 'not readily suited' is correct, but it's a little vague. The proposed alternative is what I think you mean?">is not readily suited for</edit>
+        <text>logical inference.</text>
+        <edit type="clarity" crr="This is because answers returned by a query depend on the specific database and" comments="Sentence structure/meaning - A sentence cannot start with 'because' and the current sentence is ambiguous. I presume you mean 'This is because...'?; If not, then you might mean 'Since answers returned by ....depend on the specific database....'; It's hard to know what you're intending to say, so I have gone with the first option">Because, answers returned by a query depend on the specific database, but</edit>
+        <text>implication is independent of any databases. For example, answers to the question, “What books are read by students?”, should always be a subset of answers to, “What books are ever read by anyone?”, no matter how we store the data of students and how many records of books</text>
+        <edit type="word order" crr="there are" comments="">are there</edit>
+        <text>in our database.</text>
+        <text>\\ Thus, our first step is to fix a notation which</text>
+        <edit type="word choice" crr="extracts" comments="">abstracts</edit>
+        <text>the calculation process of DCS trees</text>
+        <edit type="punctuation" crr="" comments="Punctuation / comma not required here">,</edit>
+        <text>so as to clarify its meaning without the aid of any existing database. The idea</text>
+        <edit type="clarity" crr="put forward" comments="Comprehension / insert these words to amplify meaning"></edit>
+        <text>is to borrow a minimal set of operators from relational algebra (Codd, 1970)</text>
+        <edit type="readability;clarity" crr=". This method" comments="Readability/end long and complex sentence here to improve comprehension and flow">, which</edit>
+        <text>is already able to formulate the calculation in DCS and define abstract denotation</text>
+        <edit type="readability" crr="" comments="">, which is</edit>
+        <text>an abstraction of the computation of denotations guided by DCS trees. Meanings of sentences then can be represented by primary relations among abstract denotations. This formulation keeps the simpleness and computability of DCS trees mostly unaffected</text>
+        <edit type="punctuation" crr=". For example" comments="Punctuation/end sentence here. Use of semi-colon often complicates the sentence structure and erodes flow">; for example,</edit>
+        <text>our semantic calculation for DCS trees is parallel to the denotation computation in original DCS.</text>
+        <text>\\ An inference engine is built to handle inference on abstract denotations. Moreover, to compensate</text>
+        <edit type="grammar" crr="for" comments="Grammar / insertion of 'for' is correct"></edit>
+        <text>the lack of background knowledge in practical inference, we combine our framework with the idea of tree transformation (Bar-Haim et al., 2007)</text>
+        <edit type="readability" crr="as" comments="Readability / replace to shorten sentence">, to propose</edit>
+        <text>a way of generating knowledge in logical representation from entailment rules (Szpektor et al., 2007)</text>
+        <edit type="readability" crr="and" comments="">,</edit>
+        <text>which are by now typically considered as syntactic rewriting rules.</text>
+        <text>\\ We test our system on FraCaS (Cooper et al., 1996) and PASCAL RTE datasets (Dagan et al., 2006). The experiments show: (i) a competitive performance on FraCaS dataset; (ii) a</text>
+        <edit type="style" crr="major" comments="Register / 'big' is correct, but proposed alternative is better for academic writing">big</edit>
+        <text>impact of our automatically generated on-the-fly knowledge in achieving high recall for a logic-based RTE system; and (iii) a result that outperforms state-of-the-art RTE system on RTE5 data. Our</text>
+        <edit type="word choice" crr="entire" comments="Vocabulary / 'entire' is better here">whole</edit>
+        <text>system</text>
+        <edit type="flow;grammar" crr="has been released to the public" comments="Sentence structure / the proposed alternative flows better">is publicly released to the public</edit>
+        <text>and can be downloaded from [URL].</text>
+    </introduction>   
+</doc>

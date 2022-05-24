@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W10-1111" editor="A" format="WS" position="NS" region="N">
+    <title>
+        <text>Measuring Risk and Information Preservation: Toward New Metrics for De-identification of Clinical Texts</text>
+    </title>
+    <abstract>
+        <text>Current metrics for de-identification are based on information extraction metrics</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not needed here as what follows is not a full sentence">,</edit>
+        <text>and do not address the real-world questions “how good are current systems” and “how good do they need to be.” Metrics are needed that quantify both the risk of re-identification and information preservation. We review the challenges in de-identifying clinical texts and the current metrics for assessing clinical de-identification systems. We then introduce three areas to explore that can lead to metrics that quantify</text>
+        <edit type="hyphenation;consistency" crr="re-identification" comments="hyphenation and consistency - the hyphen isn't needed with 're' unless result is confusing, however, author uses it consistently throughout with re and de, so I'm adding it here for consistency">re identification</edit>
+        <text>risk and information preservation.</text>
+    </abstract>   
+    <introduction>
+        <text>Our current metrics do not address the questions “how good are current free-text de-identification systems” and “how good do they need to be</text>
+        <edit type="punctuation" crr="." comments="punctuation - this is an indirect question and doesn't need a question mark. Changing it to period for consistency with usage in the abstract and with the earlier indirect question earlier in the sentence.">?</edit>
+        <text>We need measures that quantify</text>
+        <edit type="grammar" crr="the" comments="grammar - article is needed here"></edit>
+        <text>risk of re-identification based on the type and amount of personal health identifier (PHI) leakage (PHI terms not redacted in the de-identification process) and measures that quantify information preservation or readability.</text>
+        <text>The metrics in current use were developed originally for entity extraction (the correct labeling of types of phrases in free text, such as person name, date, organization). Entity extraction performance is typically measured in terms of precision, recall</text>
+        <edit type="punctuation" crr="," comments="punctuation - adding serial comma, though this can be style specific"></edit>
+        <text>and balanced f-measure at both the token (word) and phrase level. The top de-identification systems (Szarvas, Farkas, and BusaFekete, 2007; Wellner, et al., 2007) performed well on these measures, as reported at the first i2b2 De-identification challenge evaluation (Uzuner, Luo, and Szolovits, 2007), achieving accuracies of over 97% token-level f-measure, with recall (sensitivity) of over 95%. Over the past several years, these results have been extended to more record types and record formats; for example, (Friedlin and McDonald, 2008) reported that their MeDS system successfully removed 99.5% of HIPAA-specified identifiers from HL7 records. These are encouraging numbers, but recall and precision do not tell us how good a de-identification system needs to be for a particular intended use.</text>
+     </introduction>   
+</doc>

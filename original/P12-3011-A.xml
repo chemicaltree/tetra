@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P12-3011" editor="A" format="Conf" position="NS" region="N">
+    <title>
+        <text>The OpenGrm open-source finite-state grammar software libraries</text>
+    </title>
+    <abstract>
+        <text>In this paper, we present a new collection of open-source software libraries that provides command line binary utilities and library classes and functions for compiling regular expression and context-sensitive rewrite rules into finite-state transducers, and for n-gram language modeling. The OpenGrm libraries use the OpenFst library to provide an efficient encoding of grammars and general algorithms for building, modifying</text>
+        <edit type="punctuation" crr="," comments="punctuation - serial comma"></edit>
+        <text>and applying models.</text>
+    </abstract>   
+    <introduction>
+        <text>The OpenGrm libraries are a (growing) collection of open-source software libraries for building and applying various kinds of formal grammars. The C++ libraries use the OpenFst library for the underlying finite-state representation, which allows for easy inspection of the resulting grammars and models</text>
+        <edit type="punctuation" crr="" comments="punctuation - no comma needed before as well as. I'm assuming the ':as well as' ties to 'which allows for...' though I'd really need the rest of the paper to verify">,</edit>
+        <text>as well as straightforward combination with other finite-state transducers. Like OpenFst, there are easy-to-use command line binaries for frequently used operations, as well as a C++ library interface, allowing library users to create their own algorithms from the basic classes and functions provided.</text>
+        <text>\\ The libraries can be used for a range of common string processing tasks, such as text normalization, as well as for building and using large statistical models for applications like speech recognition. In the rest of the paper, we will present each of the two libraries, starting with the Thrax grammar compiler and then the NGram library. First, though, we will briefly present some preliminary (informal) background on weighted finite-state transducers (WFST)</text>
+        <edit type="grammar" crr="that is needed for the remainder of the paper." comments="grammar - 'just as needed ...' isn't grammatical, so I reworded. I think this captures the meaning, but I'd need the rest of the paper to be sure.">, just as needed for this paper.</edit>
+    </introduction>   
+</doc>

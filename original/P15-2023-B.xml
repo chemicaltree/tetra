@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-2023" editor="B" format="Conf" position="S" region="NN">
+    <title>
+        <text>Discriminative Preordering Meets Kendall's τ Maximization</text>
+    </title>
+    <abstract>
+        <text>This paper explores a simple discriminative preordering model for statistical machine translation. Our model traverses binary constituent trees</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and classifies whether children of each node should be reordered. The model itself is not extremely novel, but herein we introduce a new procedure to determine oracle labels so as to maximize Kendall's τ. Experiments in Japanese-to-English translation revealed that our simple method is comparable</text>
+        <edit type="word choice" crr="" comments="word choice; 'comparable with' suggests pointing out differences">with</edit>
+        <text>or superior to state-of-the-art methods</text>
+        <edit type="clarity" crr="in terms of" comments="">in</edit>
+        <text>translation accuracy.</text>
+    </abstract>   
+    <introduction>
+        <text>Current statistical machine translation systems suffer from major accuracy degradation in distant languages, primarily because they utilize exceptionally dissimilar word orders. One promising solution to this problem is preordering, in which source sentences are reordered to resemble the target language word orders, after which statistical machine translation is applied to reordered sentences (Xia and McCord, 2004; Collins et al., 2005). This is particularly effective for distant language pairs such as English and Japanese (Isozaki et al., 2010b).</text>
+        <text>Among such preordering, one of the simplest and</text>
+        <edit type="clarity" crr="most" comments=""></edit>
+        <text>straightforward</text>
+        <edit type="grammar" crr="models" comments="">model</edit>
+        <text>is a discriminative preordering model (Li et al., 2007), which classifies whether children of each constituent node should be reordered, given binary trees. This simple model</text>
+        <edit type="word order" crr=", however, has" comments="">has, however,</edit>
+        <text>difficulty</text>
+        <edit type="word choice" crr="finding" comments="">to find</edit>
+        <text>oracle labels. Yang et al. (2012) proposed a method to approximate oracle labels along dependency trees.</text>
+        <text>\\ The present paper proposes a new procedure to find oracle labels. The main idea is simple: we determine reordering decisions in a way that maximizes Kendall's τ of word alignments. We prove that our procedure guarantees the optimal solution for word alignments given as an integer list</text>
+        <edit type="punctuation" crr="" comments="">;</edit>
+        <text>in a way that local decisions on each node reach global maximization of Kendall's τ in total. Any reordering methods that utilize word alignments along constituency benefit from this proof.</text>
+        <text>\\ Empirical study</text>
+        <edit type="grammar" crr="of" comments="">in</edit>
+        <text>Japanese-to-English translation</text>
+        <edit type="grammar" crr="demonstrates" comments="">demonstrate</edit>
+        <text>that our simple method outperforms a rule-based preordering method, and is comparable or superior to, state-of-the-art methods that rely on language-specific heuristics.</text>
+        <text>\\ Our contributions are summarized as follows:</text>
+        <text>\ We define a method for obtaining oracle labels in discriminative preordering as the maximization of Kendall's τ.</text>
+        <text>\ We give a theoretical background to Kendall's τ based reordering for binary constituent trees.</text>
+        <text>\ We achieve state-of-the-art accuracy in Japanese-to-English translation</text>
+        <edit type="word choice" crr="using" comments="">with</edit>
+        <text>a simple method without language-specific heuristics.</text>
+      </introduction>   
+</doc>

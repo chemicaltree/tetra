@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W09-2101" editor="C" format="WS" position="NS" region="NN">
+    <title>
+        <text>Automatic Assessment of Spoken Modern Standard Arabic</text>
+    </title>
+    <abstract>
+        <text>Proficiency testing is an important ingredient in successful language teaching. However, repeated testing for course placement,</text>
+        <edit type="readability;conciseness" crr="whether throughout" comments="Readability / comprehension / replace to reduce wordiness / also 'course' can be potentially ambiguous here as it clashes with 'instruction' and has the same meaning, so avoid">over the course of</edit>
+        <text>instruction or for certification</text>
+        <edit type="clarity" crr="purposes," comments="Meaning / vocabulary / insert to clarify"></edit>
+        <text>can be time-consuming and costly. We present</text>
+        <edit type="clarity" crr="both the design and validation components of" comments="Vocabulary / there's a word missing here, so suggest adding this or something similar to clarify">the design and validation of</edit>
+        <text>the Versant Arabic Test</text>
+        <edit type="readability" crr=". This is" comments="Readability / end potentially long sentence">,</edit>
+        <text>a fully automated test of spoken Modern Standard Arabic</text>
+        <edit type="punctuation" crr="" comments="Punctuation / not required in this instance">,</edit>
+        <text>that evaluates test-takers</text>
+        <edit type="word choice" crr="abilities" comments="Vocabulary / the suggested alternative is more accurate in this instance">facility</edit>
+        <text>in listening and speaking. Experimental data</text>
+        <edit type="style" crr="reveals" comments="Register / 'shows' is correct, but in academic narrative, the suggested alternative is a better word">shows</edit>
+        <text>the test to be</text>
+        <edit type="clarity" crr="both" comments=""></edit>
+        <text>highly reliable (test-retest r=0.97) and</text>
+        <edit type="conciseness" crr="a strong performance predictor" comments="Syntax / reduce wordiness">to strongly predict performance</edit>
+        <text>on the ILR OPI (r=0.87), a standard interview test that assesses oral proficiency.</text>
+    </abstract>   
+    <introduction>
+        <text>Traditional high-stakes testing of spoken proficiency often evaluates the test-taker's ability to accomplish communicative tasks in a conversational setting. For example, learners may introduce themselves, respond to requests for information, or accomplish daily tasks in a role-play</text>
+        <edit type="clarity" crr="setting." comments="Vocabulary / insert to amplify meaning">.</edit>
+        <text>\\ Testing oral proficiency in this way can be</text>
+        <edit type="clarity" crr="both" comments=""></edit>
+        <text>time-consuming and costly, since at least one trained interviewer is</text>
+        <edit type="style" crr="required" comments="Register / 'needed' is correct, but 'required' is better for academic narrative">needed</edit>
+        <text>for each student. For example, the standard oral proficiency test used by the United States government agencies (the Interagency Language Roundtable Oral Proficiency Interview, or ILR OPI) is usually administered by two certified interviewers for</text>
+        <edit type="clarity" crr="a duration of" comments="Vocabulary / insert this to clarify"></edit>
+        <text>approximately 30-45 minutes per candidate.</text>
+        <text>\\ The great effort involved in oral proficiency interview (OPI) testing makes automated testing an attractive alternative. Work has been reported on fully automated scoring of speaking</text>
+        <edit type="grammar" crr="abilities" comments="Grammar / in this context, the plural form is more appropriate, since you're talking in general">ability</edit>
+        <text>(e.g., Bernstein and Barbier, 2001; Zechner et al., 2007, for English; Balogh and Bernstein, 2007, for English and Spanish). Automated testing systems do not aim to simulate a conversation with the test-taker and therefore do not directly observe interactive human communication. Bernstein and Barbier (2001)</text>
+        <edit type="repetitiveness" crr="introduce" comments="Vocabulary / repetition of 'describe' / avoid">describe</edit>
+        <text>a system that might be used in qualifying simultaneous interpreters; Zechner et al. (2007)</text>
+        <edit type="grammar" crr="and" comments="Grammar / insert this conjunction here"></edit>
+        <text>describe an automated scoring</text>
+        <edit type="repetitiveness" crr="process" comments="Vocabulary / repetition of 'system' / use proposed alternative or other suitable word">system</edit>
+        <text>that assesses performance according to the TOEFL iBT speaking rubrics. Balogh and Bernstein (2007) focus on evaluating facility in a spoken language, a separate test construct that relates to oral proficiency.</text>
+        <text>\\ “Facility in a spoken language” is defined as “the ability to understand a spoken language on everyday topics and to respond appropriately and intelligibly at a native-like conversational pace” (Balogh and Bernstein, 2007, p. 272). This ability is assumed to underlie high performance in communicative settings, since learners</text>
+        <edit type="style" crr="need to" comments="Register / 'have to' is correct, but 'need to' is more accurate and also more appropriate for academic writing">have to</edit>
+        <text>to understand their interlocutors correctly and efficiently in real time</text>
+        <edit type="clarity" crr="in oder to" comments="">to</edit>
+        <text>be able to respond. Equally, learners</text>
+        <edit type="style" crr="should" comments="Register / see above">have to</edit>
+        <text>be able to</text>
+        <edit type="clarity" crr="both" comments=""></edit>
+        <text>formulate and articulate a comprehensible answer without undue delay.</text>
+        <edit type="readability" crr="On the other hand, testing for oral proficiency conventionally" comments="Readability / this clause is always better at the beginning of a sentence when introducing a potential counter-theme..it sets the reader up for an expectation and you're not breaking up the sentence">Testing for oral proficiency, on the other hand, conventionally</edit>
+        <text>includes additional aspects such as correct interpretation of the pragmatics of a conversation, socially and culturally appropriate wording, and content and knowledge of the subject matter under discussion.</text>
+        <text>\\ In this paper, we describe the design and validation of the Versant Arabic Test (VAT)</text>
+        <edit type="readability" crr=". This is" comments="Readability / end potentially long sentence">,</edit>
+        <text>a fully automated test of facility with spoken Modern Standard Arabic (MSA). Focusing on facility rather than communication-based oral proficiency enables the creation of an efficient yet informative automated test of</text>
+        <edit type="clarity" crr="both" comments=""></edit>
+        <text>listening and speaking ability. The automated test can be </text>
+        <edit type="clarity" crr="either" comments=""></edit>
+        <text>administered over the telephone or on a computer</text>
+        <edit type="clarity" crr=", and can be completed" comments="Meaning / insert to clarify"></edit>
+        <text> in approximately 17 minutes. Despite its much shorter format and constrained tasks, test-taker scores on the VAT strongly correspond to their scores from an ILR Oral Proficiency Interview.</text>
+        <text>\\ The paper is structured as follows: After reviewing related work</text>
+        <edit type="clarity" crr="in Section 1" comments="Clarity / you've skipped precisely what the reader can expect in Section 1 and 2, and jump straight to Section 3. Better to bring the reader through each section and explain what's in Section 1 and 2."></edit>
+        <text>, we</text>
+        <edit type="clarity" crr="then" comments=""></edit>
+        <text>describe Modern Standard Arabic and introduce the test construct (i.e., what the test is intended to measure) in detail</text>
+        <edit type="punctuation;consistency" crr="in Section 3. " comments="">(Section 3). </edit>
+        <text>We then describe the structure and development of the VAT in Section 4 and present evidence for its reliability and validity in Section 5.</text>
+    </introduction>   
+</doc>

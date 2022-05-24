@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W10-1111" editor="B" format="WS" position="NS" region="N">
+    <title>
+        <text>Measuring Risk and Information Preservation: Toward New Metrics for De-identification of Clinical Texts</text>
+    </title>
+    <abstract>
+        <text>Current metrics for de-identification are based on information extraction metrics</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and do not address the real-world questions “how good are current systems ?” and “how good do they need to be?” Metrics</text>
+        <edit type="word order" crr="that quantify both the risk of re-identification and information preservation are needed." comments="">are needed that quantify both the risk of re-identification and information preservation.</edit>
+        <text>We review the challenges</text>
+        <edit type="grammar" crr="of" comments="">in</edit>
+        <text>de-identifying clinical texts and the current metrics for assessing clinical de-identification systems. We then introduce three areas</text>
+        <edit type="word choice;clarity" crr="of exploration" comments="">to explore</edit>
+        <text>that can lead to metrics that quantify re-identification risk and information preservation.</text>
+    </abstract>   
+    <introduction>
+        <text>Our current metrics do not address the questions “how good are current free-text de-identification systems?” and “how good do they need to be?” We need measures that quantify the risk of re-identification based on the type and amount of personal health identifier (PHI) leakage (PHI terms not redacted in the de-identification process) and measures that quantify information preservation or readability.</text>
+        <text>The metrics in current use were</text>
+        <edit type="word order" crr="originally developed" comments="">developed originally</edit>
+        <text>for entity extraction (the correct labeling of types of phrases in free text, such as person name, date</text>
+        <edit type="clarity" crr="and" comments="">,</edit>
+        <text>organization). Entity extraction performance is typically measured in terms of precision, recall and balanced f-measure at both the token (word) and phrase level. The top de-identification systems (Szarvas, Farkas, and BusaFekete, 2007; Wellner, et al., 2007) performed well on these measures, as reported at the first i2b2 De-identification challenge evaluation (Uzuner, Luo, and Szolovits, 2007), achieving accuracies of over 97% token-level f-measure with a recall (sensitivity) of over 95%. Over the past several years, these results have been extended to more record types and record formats; for example, (Friedlin and McDonald, 2008) reported that their MeDS system successfully removed 99.5% of HIPAA-specified identifiers from HL7 records. These are encouraging numbers</text>
+        <edit type="word choice" crr="; however" comments="word choice; but might be confusing here">, but</edit>
+        <text>recall and precision do not tell us how good a de-identification system needs to be for a particular intended use.</text>
+    </introduction>   
+</doc>

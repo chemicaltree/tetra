@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P18-1007" editor="A" format="Conf" position="NS" region="NN">
+    <title>
+        <text>Subword Regularization: Improving Neural Network Translation Models with Multiple Subword Candidates</text>
+    </title>
+    <abstract>
+        <text>Subword units are an effective way to alleviate the open vocabulary problems in neural machine translation (NMT). While sentences are usually converted into unique subword sequences, subword segmentation is potentially ambiguous</text>
+        <edit type="grammar;punctuation" crr="," comments="add comma - grammar/punctuation (run on sentence)"></edit>
+        <text>and multiple segmentations are possible even with the same vocabulary.</text>
+        <edit type="conciseness" crr="In this paper, we address" comments="">The question addressed in this paper is</edit>
+        <text>whether it is possible to harness the segmentation ambiguity as</text>
+        <edit type="word choice" crr="" comments="word choice - I think we mean noise generally and not a specific noise, so dropping 'a'. Full paper would help clarify this.">a</edit>    
+        <text>noise to improve the robustness of NMT. We present a simple regularization method, subword regularization, which trains the model with multiple subword segmentations</text>
+        <edit type="readability" crr="which are" comments="readability - sentence is grammatically correct but I found myself stumbling here."></edit>
+        <text>probabilistically sampled during training. In addition, for better subword sampling, we propose a new subword segmentation algorithm based on a unigram language model. We experiment with multiple corpora and report consistent improvements</text>
+        <edit type="punctuation" crr="," comments="add comma, punctuation - what follows is a non-restrictive clause so a comma is appropriate. This is somewhat discretionary."></edit>
+        <text>especially</text>
+        <edit type="grammar" crr="in" comments="">on</edit>
+        <edit type="hyphenation" crr="low resource" comments="hyphenation - compound adjective needs hyphenation here">low-resource</edit>                                         
+        <text>and out-of-domain settings.</text>
+    </abstract>   
+    <introduction>
+        <text>Neural Machine Translation (NMT) models (Bahdanau et al., 2014; Luong et al., 2015; Wu et al., 2016; Vaswani et al., 2017) often operate with fixed word vocabularies, as their training and inference depend heavily on the vocabulary size. However, limiting vocabulary size increases the</text>
+        <edit type="word choice" crr="number" comments="word choice - number is typically used with countable things, amount with uncountable. (number of words, amount of rainfall)">amount</edit>
+        <text>of unknown words, which makes the translation inaccurate, especially in an open vocabulary setting.</text>
+        <text>\n\n A common approach for dealing with the open vocabulary issue is to break up rare words into subword units (Schuster and Nakajima, 2012; Chitnis and DeNero, 2015; Sennrich et al., 2016; Wu et al., 2016).</text>
+        <edit type="hyphenation" crr="Byte Pair Encoding" comments="hyphenation - they are not necessary here and cursory search of literature doesn't show them in use for this term">Byte-Pair-Encoding</edit>
+        <text>(BPE) (Sennrich et al., 2016) is a de facto standard subword segmentation algorithm</text>
+        <edit type="readability" crr="which has been applied to many NMT systems and has achieved top translation quality in several shared tasks" comments="added 'which has been' before 'applied' and 'has' before achieved - grammar and style - :the two clauses around the 'and' were not parallel in form;also, I combined these two changes into one becuase they go together If you want it broken into individual changes I can do so.">applied to many NMT systems and achieving top translation quality in several shared tasks</edit>
+        <text>(Denkowski and Neubig, 2017; Nakazawa et al., 2017). BPE segmentation gives a good balance between</text>
+        <edit type="grammar" crr="" comments="conciseness and readability - 'the' is not needed here and makes the setence a bit awkward">the</edit>
+        <text>vocabulary size and</text>
+        <edit type="grammar" crr="" comments="conciseness and readability - 'the' is not needed here and makes the setence a bit awkward">the</edit>
+        <text>decoding efficiency</text>
+        <edit type="punctuation" crr="" comments="punctuation, comma not needed here.">,</edit>
+        <text>and also sidesteps the need for a special treatment of unknown words.</text>
+        <text>\n\n BPE encodes a sentence into a unique subword sequence. However, a sentence can be represented</text>        
+        <edit type="grammar" crr="by" comments="">in</edit>
+        <text>multiple subword sequences even with the same vocabulary. Table 1 illustrates an example. While these sequences encode the same input “Hello World”, NMT handles them as completely different inputs. This observation becomes more apparent when converting subword sequences into id sequences (right column in Table 1). These variants can be viewed as a spurious ambiguity, which might not always be resolved in</text>
+        <edit type="grammar" crr="the" comments="grammar - missing article"></edit>
+        <text>decoding process.</text>
+        <edit type="readability" crr="During the training phase" comments="readability, natural english">At training time</edit>
+        <text>of NMT, multiple segmentation candidates will make the model robust to noise and segmentation errors, as they can indirectly help the model to learn the compositionality of words</text>
+        <edit type="punctuation" crr=";" comments="punctuation - what follows e.g. is complete sentence, so semicolon is needed">,</edit>  
+        <text>e.g., “books” can be decomposed into “book” + “s”.</text>
+        <text>\n\n In this study, we propose a new regularization method for</text>        
+        <edit type="hyphenation" crr="open vocabulary" comments="punctuation - 'open vocabulary' seems to be common enough in this domain that hyphen is not needed, and most (but not all) usage I see in search omits it. If author chooses to include it, then all use of 'open vocabulary' as adjective should be hyphenated for consistency. This is, of course, discretionary.">open-vocabulary</edit>  
+        <text>NMT, called subword regularization, which employs multiple subword segmentations to make the NMT model accurate and robust. Subword regularization consists of the following two</text>
+        <edit type="hyphenation" crr="" comments="word choice - I wouldn't include the sub-prefix here as these are two separate contributions, not parts of a larger one. If author chooses to include the sub-prefix, then do not hyphenate.">sub-</edit>  
+        <text>contributions:</text>
+        <text>\n We propose a simple NMT training algorithm to integrate multiple segmentation candidates. Our approach is implemented as an on-the-fly data sampling, which is not specific to</text>
+        <edit type="clarity" crr="a given" comments="clarity - I think this more accurately reflects the author's meaning, but, again, I'd need the full paper to confirm."></edit>   
+        <text>NMT architecture. Subword regularization can be applied to any NMT system without changing the model structure.</text>
+        <text>\n We also propose a new subword segmentation algorithm based on a language model, which provides multiple segmentations with probabilities. The language model allows</text>
+        <edit type="word choice;natrural english" crr="emulation of" comments="word choice / natural english - if we say 'allows to' we need to say who/what we're allowing. alternate wording would be 'allows the algorithm to emulate'">to emulate</edit> 
+        <text>the noise generated during the segmentation of actual data.</text>
+        <text>\n\n Empirical experiments using multiple corpora with different sizes and languages show that subword regularization achieves significant improvements over the method using a single subword sequence. In addition, through experiments with out-of-domain corpora, we show that subword regularization improves the robustness of the NMT model.</text>
+    </introduction>   
+</doc>    

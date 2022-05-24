@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W07-1424" editor="B" format="WS" position="NS" region="N">
+    <title>
+        <text>Mutaphrase: Paraphrasing with FrameNet</text>
+    </title>
+    <abstract>
+        <text>We describe a preliminary version of Mutaphrase, a system that generates paraphrases of semantically labeled input sentences using the semantics and syntax encoded in FrameNet, a freely available lexico-semantic database. The algorithm generates a large number of paraphrases with a wide range of syntactic and semantic distances from the input. For example, given the input “I like eating cheese”, the system outputs the syntactically distant “Eating cheese is liked by me”, the semantically distant “I fear sipping juice”, and thousands of other sentences. The wide range of generated paraphrases makes the algorithm ideal for a range of statistical machine learning problems such as machine translation and language modeling as well as other semantics-dependent tasks such as query and language generation.</text>
+    </abstract>   
+    <introduction>
+        <text>A central tenet of statistical natural language processing (NLP) is “there's no data like more data</text>
+        <edit type="grammar" crr=".”" comments="">”.</edit>
+        <text>One method for generating more data is to restate each phrase in a corpus, keeping similar semantics while changing both the words and the word sequence. The efficacy of this approach has been well-established in many areas, including automated evaluation of machine translation systems (Kauchak and Barzilay, 2006), text summarization (Kittredge, 2002), question answering (Rinaldi et al., 2003), document retrieval (Zukerman and Raskutti, 2002), and many others.</text>
+        <text>\\ Most of the reported work on paraphrase generation from arbitrary input sentences uses machine learning techniques trained on sentences that are known or can be inferred to be paraphrases of each other (Bannard and Callison-Burch, 2005; Barzilay and Lee, 2003; Barzilay and McKeown, 2001; Callison-Burch et al., 2006; Dolan et al., 2004; Ibrahim et al., 2003; Lin and Pantel, 2001; Pang et al., 2003; Quirk et al., 2004; Shinyama et al., 2002). Mutaphrase instead generates paraphrases algorithmically using an input sentence and FrameNet, a freely available lexico-semantic resource (information regarding FrameNet, including relevant terminology, is presented in Section 2).</text>
+        <text>\\ Conceptually, the Mutaphrase algorithm takes a semantic specification of a sentence, provided by an automatic semantic parser such as Shalmaneser (Erk and Padó, 2006), and recursively replaces each semantically parsed phrase with a semantically similar phrase. To generate each new phrase, each of the semantic parts of the original phrase is mapped, using FrameNet data, onto a new word or phrase whose position and syntactic marking may be quite different.</text>
+        <text>\\ The Mutaphrase algorithm outputs a large set of paraphrases with a variety of distances from the input in terms of both syntax and semantics</text>
+        <edit type="readability" crr="(see Figure 1)." comments="">; see Figure 1.</edit>
+        <text>Depending on the needs of the application, filtering can be applied to limit the distance to a desired range. For example, language modeling may benefit from a wider variety of semantic outputs, since if I like eating cheese is in-domain, then I like sipping juice is</text>
+        <edit type="word order" crr="likely also" comments="also likely"></edit>
+        <text>in-domain. Other applications, e.g., Question Answering, require more stringent limits on semantic distance</text>
+        <edit type="readability" crr="(see Section 4)." comments="">. See Section 4.</edit>
+        <text>\\ The current implementation of Mutaphrase suffers from several limitations. Perhaps the most significant is that the input sentences must be semantically labeled using FrameNet annotations. Since no automated systems for FrameNet-specific annotation are currently incorporated into our algorithm, input is limited to hand-annotated sentences. Also, certain types of semantic ill-formedness are permitted (e.g., I like sipping meat), and some types of syntax are not well supported (e.g,. conjunctions, relative-clauses). We believe all these factors can be addressed; they are covered briefly in Future Work (Section 4). We confine ourselves in other sections to describing the core Mutaphrase algorithm as currently implemented.</text>        
+    </introduction>   
+</doc>

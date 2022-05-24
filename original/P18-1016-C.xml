@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P18-1016" editor="C" format="Conf" position="S" region="NN">
+    <title>
+        <text>Simple and Effective Text Simplification Using Semantic and Neural Methods</text>
+    </title>
+    <abstract>
+        <text>Sentence splitting is a major simplification operator. Here we present a simple and efficient splitting algorithm based on an automatic semantic parser. After splitting, the text is amenable</text>
+        <edit type="grammar" crr="to" comments="Grammar: 'to' is the correct preposition, following 'amenable'">for</edit>
+        <text>further</text>
+        <edit type="grammar" crr="fine-tune" comments="">fine-tuned</edit>
+        <text>simplification operations. In particular, we show that neural</text>
+        <edit type="capitalization" crr="machine translation" comments="">Machine Translation</edit>
+        <text>can be effectively used in this situation. Previous</text>
+        <edit type="clarity" crr="applications" comments="">application</edit>
+        <text>of</text>
+        <edit type="capitalization" crr="machine translation" comments="">Machine Translation</edit>
+        <text>for simplification</text>
+        <edit type="grammar" crr="suffer" comments="Grammar: singular">suffers</edit>
+        <text>rom a considerable disadvantage in that they are</text>
+        <edit type="style" crr="excessively conservative" comments="Consider two words rather than cumbersome 'overconservative'">overconservative</edit>
+        <edit type="grammar;flow" crr="and" comments="Grammar: conjunction, sentence flow">,</edit>
+        <text>often</text>
+        <edit type="grammar" crr="fail" comments="Grammar: agreement with previous">failing</edit>
+        <text>o modify the source in any way. Splitting based on semantic parsing, as proposed here, alleviates this issue. Extensive automatic and human evaluation shows that the proposed method compares favorably to the</text>
+        <edit type="hyphenation" crr="state of the art" comments="'State of the art' is used as a noun here, in which case, no hyphens are needed. Hyphenate only when used as an adjective, e.g. state-of-the-art automotive technology.">state-of-the-art</edit>
+        <text>in combined lexical and structural simplification.</text>
+    </abstract>   
+    <introduction>
+        <text>Text Simplification (TS) is generally defined as the conversion of a sentence into one or more simpler sentences. It has been</text>
+        <edit type="word usage;style" crr="demonstrated as" comments="">shown</edit>
+        <text>useful</text>
+        <edit type="readability" crr="," comments="long sentence"></edit>
+        <text>both as a preprocessing step for tasks such as Machine Translation (MT; Mishra et al., 2014; Štajner and Popović, 2016) and relation extraction (Niklaus et al., 2016), as well as for developing reading aids, e.g. for people with dyslexia (Rello et al., 2013) or non-native speakers (Siddharthan, 2002).</text>
+        <text>\n \n TS includes both structural and lexical operations. The main structural simplification</text>
+        <edit type="word usage;style" crr="methodology" comments="">operation</edit>
+        <text>is sentence splitting, </text>
+        <edit type="grammar;clarity" crr="which involves the rewriting of" comments="">namely rewriting</edit>
+        <text>a single sentence into multiple sentences while preserving its meaning. While recent</text>
+        <edit type="grammar" crr="improvements in TS have" comments="Grammar - plural">improvement in TS has</edit>
+        <text>been achieved</text>
+        <edit type="grammar;clarity" crr="through" comments="">by</edit>
+        <text>the use of neural MT (NMT) approaches (Nisioi et al., 2017; Zhang et al., 2017; Zhang and Lapata, 2017), where TS is considered a case of monolingual translation, the sentence splitting</text>
+        <edit type="word usage;style" crr="method" comments="">operation</edit>
+        <text>has not been addressed by these systems</text>
+        <edit type="readability" crr=". This is" comments="">,</edit>
+        <text>potentially due to the</text>
+        <edit type="word usage" crr="rareness" comments="">irregularity</edit>
+        <text>of this operation in the training corpora (Narayan and Gardent, 2014; Xu et al., 2015).</text>
+        <text>\n\n We show that the explicit integration of sentence splitting</text>
+        <edit type="grammar;clarity" crr="into" comments="">to</edit>
+        <text>the simplification system could also reduce conservatism, which is a grave limitation of NMT-based TS systems (Alva-Manchego et al., 2017). Indeed,</text>
+        <edit type="grammar;clarity" crr="when" comments=""></edit>
+        <text>experimenting with a state-of-the-art neural system (Nisioi et al., 2017), we find that 66% of the input sentences remain unchanged, while none of the corresponding references is identical to the source. Human and automatic evaluation of the references (against other references)</text>
+        <edit type="punctuation;flow" crr="" comments="">,</edit>
+        <text>confirm that the references are indeed simpler than the source, indicating that the observed conservatism is excessive. Our methods for performing sentence splitting as pre-processing allows the TS system to perform other structural (e.g. deletions) and lexical (e.g. word substitutions) operations, thus increasing both structural and lexical simplicity.</text>
+        <text>\n\n For combining linguistically-informed sentence splitting with data-driven TS, two main methods have been proposed. The first involves handcrafted syntactic rules, whose compilation and validation are laborious (Shardlow, 2014). For example, Siddharthan and Angrosh (2014) used 111 rules for relative clauses, appositions, subordination and coordination. Moreover, syntactic splitting rules, which form a substantial part of the rules, are usually language specific, requiring the development of new rules when ported to other languages (Alu´ısio and Gasperin, 2010; Seretan, 2012; Hung et al., 2012; Barlacchi and Tonelli, 2013, for Portuguese, French, Vietnamese, and Italian respectively). The second method uses linguistic information for detecting potential splitting points, while splitting probabilities are learned using a parallel corpus. For example, in the system of Narayan and Gardent (2014) (henceforth, HYBRID), the state-of-the-art for joint structural and lexical TS, potential splitting points are determined by event boundaries.</text>
+        <text>\n\n In this work, which is the first to combine structural semantics and neural methods for TS, we propose an intermediate way for performing sentence splitting</text>
+        <edit type="grammar;flow" crr="and" comments="">,</edit>
+        <edit type="readability" crr="present." comments="Long sentence. Split.">presenting</edit>
+        <text>Direct Semantic Splitting (DSS). This is, a simple and efficient algorithm based on a semantic parser which supports the direct decomposition of the sentence into its main semantic constituents. After splitting, NMT-based simplification is performed, using the NTS system. We show that the resulting system outperforms HYBRID in both automatic and human evaluation</text>
+        <edit type="punctuation" crr="." comments=""></edit>
+        <text>\n\n We use the UCCA scheme for semantic representation (Abend and Rappoport, 2013), where the semantic units are anchored in the text</text>
+        <edit type="readability;flow" crr=". This" comments="New sentence / improve flow">, which</edit>
+        <text>simplifies the splitting operation. We further leverage the explicit distinction in UCCA between types of Scenes (events), applying a specific rule for each of the cases. Nevertheless, the DSS approach can be adapted to other semantic schemes,</text>
+        <edit type="style" crr="such as" comments="">like</edit>
+        <text>AMR (Banarescu et al., 2013)</text>
+        <text>\n\n We collect human judgments for multiple variants of our system, its sub-components, HYBRID, and similar systems that use phrase-based MT. This results in a sizable human evaluation benchmark, which includes 28 systems totaling</text>
+        <edit type="grammar;word usage" crr="" comments="">at</edit>
+        <text>1960 complex-simple sentence pairs</text>
+        <edit type="flow" crr=". Each is annotated" comments="Syntax / split sentence">, each annotated</edit>
+        <text>by three annotators using four criteria.1 This benchmark will support the future analysis of TS systems</text>
+        <edit type="punctuation" crr="" comments="Not required when only two items 'listed' in the sentence.">,</edit>
+        <text>and evaluation practices.</text>
+        <text>\n\n Previous work is discussed in §2</text>
+        <edit type="flow" crr="and" comments="">,</edit> 
+        <text>the semantic and NMT components</text>
+        <edit type="word usage" crr="are presented" comments="">we use</edit>
+        <text>in §3 and §4 respectively. The experimental setup is detailed in §5. Our main results are</text>
+        <edit type="repetitiveness" crr="shown" comments="Repetition of 'shown'">presented</edit>
+        <text>in §6, while §7 presents a more detailed analysis of the system’s sub-components and related settings.</text>
+    </introduction>   
+</doc>

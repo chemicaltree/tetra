@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P01-1044" editor="B" format="Conf" position="NS" region="N">
+    <title>
+        <text>Parsing with Treebank Grammars: Empirical Bounds, Theoretical Models, and the Structure of the Penn Treebank</text>
+    </title>
+    <abstract>
+        <text>This paper presents empirical studies and closely corresponding theoretical models of the performance of a chart parser exhaustively parsing the Penn Treebank with the Treebank's own CFG grammar. We show how performance is dramatically affected by rule representation and tree transformations</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>but little</text>
+        <edit type="clarity" crr="affected" comments=""></edit>
+        <text>by top-down vs. bottom-up strategies. We discuss grammatical saturation, including analysis of the strongly connected components of the phrasal non-terminals in the Treebank and model how, as sentence length increases, the effective grammar rule size increases as regions of the grammar are unlocked, yielding super-cubic observed time behavior in some configurations.</text>
+    </abstract>   
+    <introduction>
+        <text>This paper originated</text>
+        <edit type="word choice" crr="in our examination of" comments="">from examining</edit>
+        <text>the empirical performance of an exhaustive active chart parser using an untransformed treebank grammar over the Penn Treebank. Our initial experiments yielded the surprising result that for many configurations empirical parsing speed was super-cubic in the sentence length. This led us to look more closely at the structure of the treebank grammar. The resulting analysis builds on the presentation of Charniak (1996) but extends it by elucidating the structure of non-terminal interrelationships in the Penn Treebank grammar. On the basis of these studies, we build simple theoretical models which closely predict observed parser performance and, in particular, explain the originally observed super-cubic behavior.</text>
+        <text>\\ We used treebank grammars induced directly from the local trees of the entire WSJ section of the Penn Treebank (Marcus et al., 1993) (release 3). For each length and parameter setting, 25 sentences evenly distributed through the treebank were parsed. Since</text>
+        <edit type="word order" crr="the sentences we were parsing" comments="">we were parsing sentences</edit>
+        <edit type="clarity" crr="were taken" comments=""></edit>
+        <text>from among those</text>
+        <edit type="clarity;word choice" crr="used to" comments="">from which</edit>
+        <edit type="word order" crr="derive our grammar" comments="">our grammar was derived</edit>
+        <text>, coverage was never an issue. Every sentence parsed had at least one parse - the parse with which it was originally observed.</text>
+        <text>The sentences were parsed using an implementation of the probabilistic chart-parsing algorithm presented in (Klein and Manning, 2001). In that paper, we present a theoretical analysis showing an O(n3) worst-case time bound for exhaustively parsing arbitrary context-free grammars. In what follows, we do not make use of the probabilistic aspects of the grammar or</text>
+        <edit type="clarity;grammar" crr="the" comments=""></edit>
+        <text>parser.</text>
+    </introduction>   
+</doc>

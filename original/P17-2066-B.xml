@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P17-2066" editor="B" format="Conf" position="NS" region="NN">
+    <title>
+        <text>STAIR Captions: Constructing a Large-Scale Japanese Image Caption Dataset</text>
+    </title>
+    <abstract>
+        <text>In recent years,</text>
+        <edit type="word order;redundancy" crr="image captioning, the automatic generation of image descriptions" comments="word order; redundant; caption is mentioned then captioning.">automatic generation of image descriptions (captions), that is, image captioning,</edit>
+        <text>has attracted a great deal of attention. In this paper, we</text>
+        <edit type="word order" crr="consider the generation of Japanese captions for images in particular." comments="">particularly consider the generation of Japanese captions for images.</edit>
+        <edit type="clarity" crr="Most" comments="logically odd because it suggests a causal relationship. The reason there are few Japanese datasets is not because most datasets are in English. It just means that not many people have created Japanese datasets.">Since most</edit>
+        <edit type="clarity" crr="of the" comments=""></edit>
+        <text>available caption datasets have been constructed for</text>
+        <edit type="consistency" crr="the" comments=""></edit>
+        <text>English language,</text>
+        <edit type="clarity" crr="and" comments=""></edit>
+        <text>there are few datasets for Japanese. To tackle this problem, we construct </text>
+        <edit type="word order" crr="STAIR Captions, a large-scale Japanese image caption dataset based on images from MS-COCO." comments="">a large-scale Japanese image caption dataset based on images from MS-COCO, which is called STAIR Captions.</edit>
+        <text>STAIR Captions consists of 820,310 Japanese captions for 164,062 images. In the experiment, we show that a neural network trained using STAIR Captions can generate</text>
+        <edit type="word order" crr="better and more natural" comments="">more natural and better</edit>
+        <text>apanese captions, compared to those generated using English-Japanese machine translation</text>
+        <edit type="word choice" crr="of previously generated" comments="">after generating</edit>
+        <text>English captions.</text>
+    </abstract>   
+    <introduction>
+        <text>Integrated processing of natural language and images has attracted attention in recent years. The Workshop on Vision and Language held in 2011 has since become an annual event. In this</text>
+        <edit type="word order" crr="area of research" comments="">research area</edit>
+        <text>, methods</text>
+        <edit type="grammar" crr="of" comments="to"></edit>
+        <edit type="word order" crr="image captioning, i.e., automatically generating image descriptions" comments="">automatically generating image descriptions (captions), (that is, image captioning)</edit>
+        <text>, have attracted a great deal of attention (Karpathy and Fei-Fei, 2015; Donahue et al., 2015; Vinyals et al., 2015; Mao et al., 2015).</text>
+        <text>\n\n Image captioning is</text>
+        <edit type="word choice" crr="the process of" comments="">to</edit>
+        <text>automatically</text>
+        <edit type="word choice" crr="generating" comments="">generate</edit>
+        <text>a caption for a given image. By improving the quality of image captioning, image</text>
+        <edit type="word choice" crr="searches" comments="word choice; need a plural noun here">search</edit>
+        <text>using natural sentences and image recognition support for visually impaired people by outputting captions as sounds can be  made available. Recognizing various images and generating appropriate captions for</text>
+        <edit type="word choice" crr="these" comments="">the</edit>
+        <text>images necessitates the compilation of a large number of image and caption pairs.</text>
+        <text>\n\n In this study, we consider</text>
+        <edit type="clarity" crr="the way" comments="word choice; having a gerund here may potentially be confusing"></edit>
+        <edit type="word order" crr="image captions are generated in Japanese. MSince most available caption datasets have been constructed for the Englis" comments="">generating image captions</edit>
+        <text>in Japanese.</text>
+        <edit type="clarity" crr="Most" comments="removed to avoid confusion">Since most</edit>
+        <text>available caption datasets have been constructed for</text>
+        <edit type="consistency" crr="the" comments=""></edit>
+        <text>English language,</text>
+        <edit type="clarity" crr="and" comments=""></edit>
+        <text>there are few datasets for Japanese. A straightforward solution is to translate English captions into Japanese</text>
+        <edit type="conciseness" crr="" comments="word choice; extraneous">ones by</edit>
+        <text>using machine translation</text>
+        <edit type="clarity" crr="applications" comments=""></edit>
+        <text>such as Google Translate. However, the translated captions may be literal and unnatural because image information cannot be reflected in the</text>
+        <edit type="grammar" crr="translations" comments="word choice; agreement">translation</edit>
+        <text>. Therefore, in this study, we construct a Japanese image caption dataset, and for given images, we aim to generate more natural Japanese captions than</text>
+        <edit type="clarity" crr="can be achieved through " comments=""></edit>
+        <text>translating the generated English captions into</text>
+        <edit type="consistency" crr="Japanese." comments="">the Japanese ones.</edit>
+        <text>\n\n The contributions of this paper are as follows</text>
+        <text>\n We</text>
+        <edit type="grammar" crr="construct" comments="word choice; present tense">constructed</edit>
+        <text>that quantitatively and qualitatively better Japanese captions than</text>
+        <edit type="consistency" crr="those" comments="">the ones</edit>
+        <edit type="clarity" crr="created by " comments=""></edit>
+        <edit type="clarity" crr="translating from previously generated" comments="">translating from</edit>
+        <text>English captions can be generated by applying a</text>
+        <edit type="hyphenation" crr="neural-network-based" comments="">neural network-based</edit>
+        <text>image caption generation model</text>
+        <edit type="word choice" crr="trained" comments="">learned</edit>
+        <text>on STAIR Captions (Section 5).</text>
+    </introduction>   
+</doc>

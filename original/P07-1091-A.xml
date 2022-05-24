@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P07-1092" editor="A" format="Conf" position="NS" region="NN">
+    <title>
+        <text>A Probabilistic Approach to Syntax-based Reordering for Statistical Machine Translation</text>
+    </title>
+    <abstract>
+        <text>Inspired by previous preprocessing approaches to</text>
+        <edit type="clarity" crr="statistical machine translation (SMT)" comments="clarity - unless space is at a premium, I'd spell this out here on first usage and again in intro as it already is. I recognize that this term is likely well known to audience so may not need expanded">SMT</edit>
+        <text>, this paper proposes a novel, probabilistic approach to reordering which combines the merits of</text>
+        <edit type="hyphenation" crr="syntax-" comments="hyphenation - need suspended hyphen here to go with -based">syntax</edit>
+        <text>and phrase-based SMT. Given a source sentence and its parse tree, our method</text>
+        <edit type="readability" crr="uses tree operations to generate" comments="readability - original was clumsy">generates, by tree operations,</edit>
+        <text>an n-best list of reordered inputs, which are then fed to</text>
+        <edit type="grammar" crr="a" comments="grammar - need article here"></edit>
+        <text>standard phrase-based decoder to produce the optimal translation. Experiments show that, for the NIST MT-05 task of Chinese-to-English translation, the proposal leads to a BLEU</text>
+        <edit type="clarity;readability" crr="score" comments="clarity / readability - possibly not needed but i feel it reads smoother"></edit>
+        <text>improvement of 1.56%</text>
+    </abstract>
+    <introduction>
+        <text>The phrase-based approach has been considered the default strategy</text>
+        <edit type="grammar" crr="for" comments="for is the appropriate preposition here">to</edit>
+        <edit type="capitalization" crr="statistical machine translation" comments="most usage I'm seeing on search uses this term lowercase, so treating it that way rather than as a proper noun">Statistical Machine Translation</edit>
+        <text>(SMT) in recent years. It is widely known that the phrase-based approach is powerful in local lexical choice and word reordering within short</text>
+        <edit type="grammar;clarity" crr="distances" comments="alternate choice is ':a short distance', but I think the plural fits better here.">distance</edit>
+        <text>. However, long-distance reordering is problematic in phrase-based SMT. For example, the distance-based reordering model (Koehn et al., 2003) allows a decoder to translate in</text>
+        <edit type="hyphenation" crr="nonmonotonous" comments="non doesn't need hyphen unless result is confusing">non-monotonous</edit>
+        <text>order</text>
+        <edit type="punctuation" crr="" comments="I think the clause following is restrictive, so comma is not appropriate">,</edit>
+        <text>under the constraint that the distance between two phrases translated consecutively does not exceed a limit known as</text>
+        <edit type="grammar" crr="the" comments=""></edit>
+        <text>distortion limit. In theory</text>
+        <edit type="punctuation" crr="," comments="comma after intro phrase"></edit>
+        <text>the distortion limit can be assigned a very large value so that all possible reorderings are allowed, yet in</text>
+        <edit type="spelling" crr="practice" comments="typical American usage is practice as both verb and noun, though practise is listed as an alternate. British usage has practice as a noun and practise as verb, per OED. So, here I'm correcting to practice.">practise</edit>
+        <text>, it</text>
+        <edit type="grammar" crr="has been" comments="switching to past tense here since I think this observation comes from the earlier study referenced, however I'd want to review the rest of paper and this cite to verify that and possibly find a better wording.">is</edit>
+        <text>observed that too high a distortion limit not only harms efficiency but also translation performance (Koehn et al., 2005). In our own</text>
+        <edit type="grammar" crr="experimental setting" comments="experimental is the adj form of experiment">experiment setting</edit>
+        <text>, the best distortion limit for</text>
+        <edit type="consistency" crr="Chinese-to-English translation" comments="switching to same usage used in abstract, which I think is more readable">Chinese English translation</edit>
+        <text>is 4. However, some ideal translations exhibit reorderings longer than</text>
+        <edit type="word choice" crr="that" comments="I think that works better than such here">such</edit>
+        <text>distortion limit. Consider the sentence pair in the NIST MT2005 test set shown in figure 1(a): after translating the word “修补/mend”, the decoder should “jump” across six words and translate the last phrase “关系 裂缝/fissures in the relationship”. Therefore, while short-distance reordering is under the scope of the distance-based model, long-distance reordering is simply out of the question.</text>
+        <text>\\ A terminological remark: In the rest of the paper, we will use the terms global reordering and local reordering in place of long-distance reordering and short-distance reordering</text>
+        <edit type="punctuation" crr="," comments="comma before closing adverb - this can be style specific"></edit>
+        <text>respectively. The distinction between</text>
+        <edit type="hyphenation;consistency" crr="long- and short-distance" comments="hyphenation/consistency - compound adjective needs hyphen . This is hyphenated elsewhere">long and short distance</edit>
+        <text>reordering is solely defined by the distortion limit.</text>
+        <text>\\ Syntax is certainly a potential solution to global reordering. For example, for the last two Chinese phrases in figure 1(a), simply swapping the two children of the NP node will produce the correct word order on the English side. However, there are also reorderings which do not agree with syntactic analysis. Figure 1(b) shows how our phrase-based decoder obtains a good English translation by reordering two blocks. It should be noted that the second Chinese block “结束时” and its English counterpart “at the end of” are not constituents at all.</text>
+        <text>\\ In this paper, our interest is the value of syntax in reordering, and the major statement is that syntactic information is useful in handling global reordering and</text>
+        <edit type="clarity" crr="using a syntax-based approach" comments="'it' here refers back to syntactic information, which doesn't fits with 'achieves'">it</edit>
+        <text>achieves better MT performance</text>
+        <edit type="readability;clarity" crr="when compared to" comments="readability/clarity - I think this is what the author means but would need to verify it with remainder of text or query to author">on the basis of</edit>
+        <text>the standard phrase-based model. To prove it, we developed a hybrid approach which</text>
+        <edit type="word choice;clarity" crr="combines" comments="word choice/clarity - I think the sense here is that the combined strength of the two approaches is what helps">preserves</edit>
+        <text>the strength of phrase-based SMT in local reordering</text>
+        <edit type="word choice;clarity" crr="with" comments="word choice / clarity - continuation of prior edit">as well as</edit>
+        <text>the strength of syntax in global reordering.</text>
+        <text>\\ Our method is inspired by previous preprocessing approaches like (Xia and McCord, 2004), (Collins et al., 2005), and (Costa-jussa and Fonollosà, 2006), which split translation into two stages: [MATH] where a sentence of the source language (SL), S, is first reordered with respect to the word order of the target language (TL),</text>
+        <edit type="readability;conciseness" crr="yielding S', which is then" comments="readability and conciseness - the original was a bit clumsy and this is slightly shorter.">and then the reordered SL sentence S' is</edit>
+        <text>translated</text>
+        <edit type="word choice" crr="to" comments="word choice - I think to works better in this context">as</edit>
+        <text>a TL sentence, T, by monotonous translation.</text>
+        <text>\\ Our first contribution is a new translation model as represented by formula 2: [MATH] where an n-best list of S', instead of only one S', is generated. The reason</text>
+        <edit type="word choice;readability" crr="for this" comments="this reads more naturally">of such</edit>
+        <text>change will be given in section 2. Note also that the translation process S' → T is not monotonous, since the distance-based model is needed for local reordering. Our second contribution is our definition of the best translation: [MATH] where Fi are the features in the standard phrase-based model and Pr(S → S’) is our new feature, viz. the probability of reordering S as S'. The details of this model are elaborated in sections 3 to 6. The settings and results of experiments on this new model are given in section 7.</text>               
+    </introduction>   
+</doc>

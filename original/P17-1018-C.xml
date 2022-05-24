@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P17-1018" editor="C" format="Conf" position="S" region="NN">
+    <title>
+        <text>Gated Self-Matching Networks for Reading Comprehension and Question Answering</text>
+    </title>
+    <abstract>
+        <text>In this paper, we present the gated self-matching networks for reading comprehension style question answering, which aims to answer questions from a given passage. We first match the question and passage with gated attention-based recurrent networks</text>
+        <edit type="clarity" crr="in order" comments="Register/insert to clarify"></edit>
+        <text>to obtain the question-aware passage representation. Then, we propose a self-matching attention mechanism to refine the representation by matching the passage against itself, which effectively encodes information from the whole passage.</text>
+        <edit type="word order" crr="Finally, we" comments="Word order/use time before manner before place when describing sequence">We finally</edit>
+        <text>finally employ the pointer networks to locate the positions of answers from the passages. We conduct extensive experiments on the SQuAD datasetn</text>
+        <edit type="readability" crr="and the" comments="">. The</edit>
+        <text>single model achieves 71.3% on the evaluation metrics of exact match on the hidden test set, while the ensemble model further boosts the results to 75.9%. At the time of</text>
+        <edit type="readability;repetitiveness" crr="paper submission" comments="Readability/change sentence structure/repetition of 'of'">submission of the paper</edit>
+        <text>, our model holds the first place on the SQuAD leaderboard for both single and ensemble</text>
+        <edit type="grammar" crr="models." comments="Grammar/plural">model.</edit>
+    </abstract>   
+    <introduction>
+        <text>In this paper, we focus on reading comprehension style question answering which aims to answer questions given a passage or document. We specifically focus on the Stanford Question Answering Dataset (SQuAD) (Rajpurkar et al., 2016), a large-scale dataset for reading comprehension and question answering which is manually created through crowdsourcing. SQuAD constrains answers to the space of all possible spans within the reference passage, which is different from cloze-style reading comprehension datasets (Hermann et al., 2015; Hill et al., 2016) in which answers are single words or entities. Moreover, SQuAD requires different forms of logical reasoning to infer the answer (Rajpurkar et al., 2016).</text>
+        <text>\\ Rapid progress has been made since the release of the SQuAD dataset. Wang and Jiang (2016b) build question-aware passage representation with match-LSTM (Wang and Jiang, 2016a), and predict answer boundaries in the passage with pointer networks (Vinyals et al., 2015). Seo et al. (2016) introduce bi-directional attention flow networks to model question-passage pairs at multiple levels of granularity. Xiong et al. (2016) propose dynamic co-attention networks which attend the question and passage simultaneously</text>
+        <edit type="word choice;repetitiveness" crr="as well as" comments="Word usage/repetition of 'and'">and</edit>
+        <text>iteratively refine answer predictions. Lee et al. (2016) and Yu et al. (2016) predict answers by ranking continuous text spans within passages.</text>
+        <text>\\ Inspired by Wang and Jiang (2016b), we introduce a gated self-matching network, illustrated in Figure 1, an end-to-end neural network model for reading comprehension and question answering. Our model consists of four parts: 1) the recurrent network encoder to build representation for questions and passages separately, 2) the gated matching layer to match the question and passage, 3) the self-matching layer to aggregate information from the whole passage, and 4) the pointernetwork based answer boundary prediction layer. The key contributions of this work are three-fold.</text>
+        <text>\\ First, we propose a gated attention-based recurrent network, which adds an additional gate to the</text>
+        <edit type="redundancy" crr="existing" comments="Word usage/consider inserting this to avoid duplication of 'attention...network'"></edit>
+        <text>attention-based recurrent networks (Bahdanau et al., 2014; Rocktäschel et al., 2015; Wang and Jiang, 2016a)</text>
+        <edit type="readability" crr=". This accounts" comments="Readability/end very long sentence">, to account</edit>
+        <text>for the fact that words in the passage are of different importance to answer a particular question for reading comprehension and question answering. In Wang and Jiang (2016a), words in a passage with their corresponding attention-weighted question context are encoded together to produce question-aware passage representation. By introducing a gating mechanism, our gated attention-based recurrent network assigns different levels of importance to passage parts depending on their relevance to the question,</text>
+        <edit type="style" crr="thereby" comments="Style/insert to amplify meaning"></edit>
+        <text>masking out irrelevant passage parts and emphasizing the important ones.</text>
+        <text>\\ Second, we introduce a self-matching mechanism, which can effectively aggregate evidence from the whole passage to infer the answer. Through a gated matching layer, the resulting question-aware passage representation effectively encodes question information for each passage word. However</text>
+        <edit type="readability" crr="in practice, recurrent networks can only memorize limited passage context," comments="Readability/insert here to amplify meaning">, recurrent networks can only memorize limited passage context in practice</edit>
+        <text>despite its theoretical capability. One answer candidate is often unaware of the clues in other parts of the passage. To address this problem, we propose a self-matching layer to dynamically refine passage representation with information from the whole passage. Based on question-aware passage representation, we employ gated attention-based recurrent networks on passage against passage itself, aggregating evidence relevant to the current passage word from every word in the passage. A gated attention-based recurrent network layer and self-matching layer dynamically enriches each passage representation with information aggregated from both question and passage, enabling subsequent networks to better predict answers.</text>
+        <text>\\ Lastly, the proposed method yields state-of-the-art results against strong baselines. Our single model achieves 71.3% exact match accuracy on the hidden SQuAD test set, while the ensemble model further boosts the result to 75.9%. At the time of</text>
+        <edit type="readability" crr="paper submission," comments="Readability/reduce words">submission of this paper,</edit>
+        <text>our model holds the first place on the SQuAD leader board.</text>
+    </introduction>   
+</doc>

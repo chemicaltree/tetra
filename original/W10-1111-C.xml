@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W10-1111" editor="C" format="WS" position="NS" region="N">
+    <title>
+        <text>Measuring Risk and Information Preservation: Toward New Metrics for De-identification of Clinical Texts</text>
+    </title>
+    <abstract>
+        <text>Current metrics for de-identification are based on</text>
+        <edit type="hyphenation" crr="information-extraction" comments="insert when qualifying noun that follows">information extraction</edit>
+        <text>metrics and do not address real-world questions</text>
+        <edit type="clarity" crr=", such as:" comments=""></edit>
+        <edit type="clarity" crr="“how good are current systems?”" comments="">“how good are current systems”</edit>
+        <text>, and “how good do they need to be?” Metrics are</text>
+        <edit type="style" crr="required" comments="Style / alternative is better for academic register">needed</edit>
+        <text>that quantify both the risk of re-identification and information preservation. We review the challenges</text>
+        <edit type="clarity" crr="involved" comments=""></edit>
+        <text> in de-identifying clinical texts</text>
+        <edit type="flow" crr="as well as" comments="Flow / 'and' is correct, but the alternative gives better flow to the sentence">and</edit>
+        <text>the current metrics for assessing clinical de-identification systems. We then introduce three areas</text>
+        <edit type="word choice" crr="of exploration" comments="alternative is better in this context">to explore</edit>
+        <text>that can lead to metrics</text>
+        <edit type="readability" crr="for quantifying reidentification risk and preserving information." comments="">that quantify reidentification risk and information preservation.</edit>
+    </abstract>   
+    <introduction>
+        <text>Our current metrics do not address the</text>
+        <edit type="clarity" crr="following two questions: “Hhow good are current free-text de-identification systems?”" comments="">questions “how good are current free-text de-identification systems”</edit>
+        <text>Also, “How good do they need to be?” We require measures that</text>
+        <edit type="clarity" crr="both" comments=""></edit>
+        <text>quantify risk of re-identification, based on type and amount of personal health identifier (PHI) leakage (PHI terms not redacted in the de-identification process),</text>
+        <edit type="flow" crr="as well as" comments="'and' is correct, but the alternative gives better flow to the sentence in this context">and</edit>
+        <text>measures that quantify information preservation or readability.</text>
+        <edit type="word choice;flow;style" crr="\\ Currently-used metrics were" comments="Word choice / replace to improve flow and style">\\ The metrics in current use were</edit>
+        <text>developed originally for entity extraction (the correct labeling of types of phrases in free text, such as person name, date, organization). Entity extraction performance is typically measured in terms of precision, recall, and balanced f-measure at both the token (word) and phrase level. The top de-identification systems (Szarvas, Farkas, and BusaFekete, 2007; Wellner, et al., 2007) performed well on these measures, as reported at the first i2b2</text>
+        <edit type="capitalization" crr="de-identification" comments="">De-identification</edit>
+        <text>challenge evaluation (Uzuner, Luo, and Szolovits, 2007), achieving accuracies of over 97% token-level f-measure, with recall (sensitivity) of over 95%. Over the past several years, these results have been extended to more record types and record formats</text>
+        <edit type="readability" crr=". For example" comments="">; for example</edit>
+        <text>, (Friedlin and McDonald, 2008) reported that their MeDS system successfully removed 99.5% of HIPAA-specified identifiers from HL7 records. These are encouraging numbers,</text>
+        <edit type="style" crr="however" comments="'but' is correct, but the alternative is better in academic register">but</edit>
+        <text>recall and precision do not tell us how good a de-identification system needs to be for a particular intended use.</text>
+    </introduction>   
+</doc>

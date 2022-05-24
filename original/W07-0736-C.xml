@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W07-0736" editor="C" format="WS" position="S" region="N">
+    <title>
+        <text>Sentence Level Machine Translation Evaluation as a Ranking Problem: one step aside from BLEU</text>
+    </title>
+    <abstract>
+        <text>The paper proposes formulating MT evaluation as a ranking problem, as is often</text>
+        <edit type="style" crr="the case" comments="Register / 'done' is correct but not appropriate in academic style">done</edit>
+        <text>in the practice of assessments carried out by humans. Under the ranking scenario, the study also investigates the relative utility of several features. The results show greater correlation with</text>
+        <edit type="clarity" crr="human-level" comments="Meaning / insert to clarify">human</edit>
+        <text>assessment at the sentence level, even when using an n-gram match score as a baseline feature. The feature</text>
+        <edit type="clarity" crr="that contributes" comments="">contributing</edit>
+        <text>the most to the rank order correlation between automatic ranking and</text>
+        <edit type="clarity" crr="human-level" comments="Meaning / insert to clarify">human</edit>
+        <text>assessment was the dependency- structure relation rather than BLEU score and reference language model feature.</text>
+    </abstract>   
+    <introduction>
+        <edit type="word order" crr="Alongside the growing body of research on Machine Translation (MT), automatic MT evaluation has become a critical problem for MT system developers in recent decades," comments="Meaning / change sentence structure">In recent decades, alongside the growing body of research on Machine Translation (MT), automatic MT evaluation has become a critical problem for MT system developers,</edit>
+        <text>who are interested in quick turnaround development cycles. The state-of-the-art automatic MT evaluation is an n-gram based metric represented by BLEU (Papineni et al., 2001) and its variants. Ever since its creation, the BLEU score has been</text>
+        <edit type="clarity" crr="regarded as" comments="Vocabulary / consider inserting to amplify meaning"></edit>
+        <text>the gauge of Machine Translation system evaluation. Nevertheless, the research community has been largely aware of</text>
+        <edit type="conciseness" crr="BLEU metric's deficiencies." comments="Wordiness / reduce">the deficiency of the BLEU metric.</edit>
+        <text>BLEU captures only a single dimension of the vitality of natural languages: a candidate translation</text>
+        <edit type="style" crr="is" comments="Register / 'get' is correct, but not appropriate in academic register">gets</edit>
+        <text>acknowledged only if it uses exactly the same lexicon as the reference translation. Natural languages, however, are characterized by their extremely rich mechanisms for reproduction via a large number of syntactic, lexical, and semantic rewriting rules. Although BLEU has</text>
+        <edit type="conciseness;word choice" crr="shown positive correlation" comments="">been shown to correlate positively</edit>
+        <text>with human assessments at the document level (Papineni et al., 2001), efforts to improve state-of-the-art MT require that human-level assessment be approximated at sentence level as well. Researchers report the BLEU score at document level in order to combat the sparseness of n-grams in BLEU scoring.</text>
+        <edit type="style" crr="However," comments="Register / 'but' is correct, but in academic style, not the best word at the beginning of a sentence">But,</edit>
+        <edit type="readability" crr="document-level MT evaluation ultimately" comments="Sentence re-structure / place elsewhere in the sentence to avoid two commas at the beginning which make the sentence clunky">ultimately, document-level MT evaluation</edit>
+        <text>has to be pinned down to the granularity of the sentence. Unfortunately,</text>
+        <edit type="clarity" crr="any" comments="Register / consider this as a more appropriate word in this context">the</edit>
+        <text>correlation between human assessment and BLEU score at sentence level is extremely low (Liu et al., 2005, 2006). While acknowledging the appealing simplicity of BLEU as a way to access one perspective of an MT candidate translation's quality, we observe the following facts of n-gram based MT metrics.</text>
+        <text>\\ First, they may not reflect the mechanism of how human beings evaluate sentence translation quality. More specifically, optimizing BLEU does not guarantee the optimization of sentence quality approved by human assessors. Therefore, BLEU is likely to have a low correlation with human assessment at sentence level for most candidate translations.</text>
+        <text>\\ Second, it is conceivable that human beings are more reliable</text>
+        <edit type="clarity" crr="when" comments=""></edit>
+        <text>ranking the quality of multiple candidate translations than assigning a numeric value to index the quality of the candidate translation, even with significant deliberation. Consequently, a more intuitive approach for automatic MT evaluation is to replicate the quality ranking ability of human assessors.</text>
+        <text>\\ Thirdly, the BLEU score is elusive and hard to interpret</text>
+        <edit type="flow" crr=". For example," comments="Start new sentence to improve flow">; for example,</edit>
+        <text>what can be concluded for a candidate translation's quality if the BLEU score is 0.0168, particularly when we are aware that even a human translation can receive an embarrassingly low BLEU score?</text>
+        <text>\\ In light of the discussion above, we propose an alternative scenario for MT evaluation, where, instead of assigning a numeric score to a candidate translation under evaluation, we predict its rank with regard to its peer candidate translations. This formulation of the MT evaluation task fills the gap between an automatic scoring function and human MT evaluation practice. The results from the current study will not only interest MT system evaluation moderators but will also inform the research community about which features are useful in improving the correlation between human</text>
+        <edit type="repetitiveness" crr="" comments="Vocabulary / not required / repetition of 'rankings'">rankings</edit>
+        <text>and automatic rankings.</text>
+    </introduction>   
+</doc>

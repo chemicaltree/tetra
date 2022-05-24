@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W15-5932" editor="C" format="WS" position="S" region="NN">
+    <title>
+        <text>Ruchi: Rating Individual Food Items in Restaurant Reviews</text>
+    </title>
+    <abstract>
+        <edit type="conciseness;readability" crr="Key criteria in restaurant recommendation systems include location, facilities, and price range." comments="Sentence structure / reduce wordiness">Restaurant recommendation systems are capable of recommending restaurants based on various aspects such as location, facilities, and price range.</edit>
+        <edit type="conciseness;readability" crr="Some research explores restaurant recommendation systems and highlights some of the more famous online recommendation systems such as Yelp." comments="">There exists some research that implements restaurant recommendation systems , as well as some famous online recommendation systems such as Yelp.</edit>
+        <text>However, the automatically rating of individual food items inof a restaurant based on online customer reviews is an area that has not received much attention. This paper presents Ruchi, a</text>
+        <edit type="word choice" crr="rating system of" comments="Wordiness / not required">system capable of rating</edit>
+        <text>individual food items in restaurants, which makes use of Named Entity Recognition (NER) techniques to identify food names in restaurant reviews. The typed dependency technique is used to identify opinions associated with different food names within a single sentence</text>
+        <edit type="readability" crr=". This made it" comments="End long and complex sentence">, thus it was</edit>
+        <text>possible to carry out entity-level sentiment analysis</text>
+        <edit type="word choice" crr="for rating" comments="">to rate</edit>
+        <text>individual food items instead of sentence-level sentiment analysis, as</text>
+        <edit type="style" crr="explored in" comments="Style / meaning / insert to amplify meanings">done by</edit>
+        <text>previous research.</text>
+    </abstract>   
+    <introduction>
+        <text>Today, many factors</text>
+        <edit type="word choice" crr="influence" comments="Vocabulary / 'affect' is correct, but 'influence' is more appropriate in this context">affect a</edit>
+        <text>person's selection of a particular restaurant</text>
+        <edit type="conciseness" crr=", and factors" comments="Register / wordiness / not required as it's already implied.">to dine in. People can find information on factors</edit>
+        <edit type="word choice;clarity" crr="such as price, availability of wifi and level of service can be found on a restaurant's website or other marketing materials." comments="Vocabulary / broaden, since it's probably not just a brochure where one can find additional info">such as price, wifi and service from a restaurant's website and/or brochures.</edit>
+        <text>However, information about some important factors is</text>
+        <edit type="clarity" crr="still lacking" comments="Meaning / consider this alternative to amplify meaning">not directly available</edit>
+        <edit type="readability" crr="and ratings" comments="">. Ratings</edit>
+        <text>of individual dishes in restaurants is one such factor that is not currently available.</text>
+        <edit type="conciseness;readability" crr="Nowadays, relying on ther customers' reviews and ratings on restaurant review sites is common practice." comments="">Therefore it is common nowadays for people to rely on the reviews and ratings in restaurant review sites given by other customers.</edit>
+        <text>However,</text>
+        <edit type="repetitiveness" crr="going through" comments="replace to avoid reptition of 'reading'">reading</edit>
+        <text>each customer review on restaurant review sites</text>
+        <edit type="word choice" crr="can be" comments="Register / 'is' is correct, but proposed alternative is more appropriate in this context, since you're talking about a situation in general">is</edit>
+        <text>time-consuming , boring and exhaustive. This task can become even more complex if someone wishes to search for ratings on a particular food item</text>
+        <edit type="redundancy" crr="." comments="Wordiness / not required">that he is interested in.</edit>
+        <text>\\ Existing restaurant recommendation systems such as Yelp do not have the facility to rate</text>
+        <edit type="conciseness" crr="individual restaurant food items." comments="Restructure to reduce wordiness">the individual food items of a restaurant.</edit>
+        <text>Moreover, as far as we are aware, existing research on restaurant recommendation systems has not focused on rating individual food items of restaurants, except for the work</text>
+        <edit type="word choice" crr="carried out by" comments="Rephrase / the alternative is more suitable in this context">of</edit>
+        <text>Trevisiol et al. (2014).</text>
+        <text>\\ This paper presents Ruchi</text>
+        <edit type="flow" crr=", a system for rating individual food and beverage items in restaurants by automatically analyzing customer reviews, and combines the techniques of machine learning, natural language processing, and information retrieval." comments="Consider joining both sentences to improve flow">(Ruchi means taste in Sinhala and Tamil, the two local languages in Sri Lanka), which is a system for rating individual food items (both food and beverages) in restaurants by automatically analyzing customer reviews. It combines the techniques of machine learning, natural language processing, and information retrieval.</edit>
+        <text>\\ In order to rate and recommend individual food items, it was necessary to identify food names in customer reviews,</text>
+        <edit type="word choice" crr="as well as" comments="Vocabulary / 'and' is correct, but in this context, alternative is better for flow">and</edit>
+        <text> the customer opinions associated with them. Food names in reviews are identified using a trained NER model. For this purpose, a corpus created from online customer reviews for restaurants was automatically annotated with food names extracted from various sources. As far as we are aware, this is the only freely-available comprehensive corpus annotated with food names. Opinions related to these identified food items are extracted using a typed dependency parser. We then perform entity-level sentiment analysis to find the polarity of these opinions. Finally, individual food items are rated based on the polarities of all the opinions received for each of those mentioned food items.</text>
+        <text>\\ The rest of the paper is organized as follows. The next section discusses related work. Section three</text>
+        <edit type="style" crr="provides" comments="Style / 'gives' is correct, but alternative is better in academic register">gives</edit>
+        <text>an overview of sentiment analysis. Section four discusses the data collection process. In Section five</text>
+        <edit type="repetitiveness" crr="illustrates" comments="Word choice / replace to avoid repetition of 'discuss'">discusses</edit>
+        <text>research and development work is illustrated.</text>
+        <edit type="readability;clarity" crr="An evaluation and discussion is covered in Section six. Finally, Section seven concludes the paper." comments="">Section six contains evaluation and discussion, and finally section seven concludes the paper.</edit>
+    </introduction>   
+</doc>

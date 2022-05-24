@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P17-2080" editor="B" format="Conf" position="S" region="NN">
+    <title>
+        <text>A Conditional Variational Framework for Dialog Generation</text>
+    </title>
+    <abstract>
+        <text>Deep latent variable models have been shown to facilitate the response generation for open-domain dialog systems. However, these latent variables are highly randomized, leading to uncontrollable generated responses. In this paper, we propose a framework</text>
+        <edit type="word choice;clarity;conciseness" crr="that allows" comments="word choice; changed for clarity and simplicity">allowing</edit>
+        <text>conditional response generation based on specific attributes. These attributes can be either manually assigned or automatically detected. Moreover, the dialog states for both speakers are modeled separately in order to reflect personal features. We validate this framework on two different scenarios, where the attribute refers to genericness</text>
+        <edit type="word choice" crr="or" comments="Word choice; this seems like an either/or distinction.">and</edit>
+        <text>sentiment states</text>
+        <edit type="punctuation" crr="" comments="respectively refers to something in the order previously mentioned. This is confusing because the two states have not been described.">, respectively</edit>
+        <text>. The experimental result</text>
+        <edit type="word choice;clarity" crr="provides evidence to support" comments="">testifiesd</edit>
+        <text>the potential of our model,</text>
+        <edit type="word choice" crr="in which" comments="">where</edit>
+        <text> meaningful responses can be generated in accordance with the specified attributes.</text>
+    </abstract>   
+    <introduction>
+        <edit type="readability;clarity" crr="Since they were first successfully introduced to applications in machine translation (Sutskever et al., 2014), Seq2seq neural networks" comments="">Seq2seq neural networks, ever since the successful applications in machine translation (Sutskever et al., 2014),</edit>
+        <text>have demonstrated impressive results</text>
+        <edit type="grammar" crr="with" comments="">on</edit>
+        <text>dialog generation and have spawned a</text>
+        <edit type="word choice" crr="large number" comments="">great deal</edit>
+        <text>of variants (Vinyals and Le, 2015; Yao et al., 2015; Sordoni et al., 2015; Shang et al., 2015). The vanilla seq2seq models</text>
+        <edit type="word choice" crr="have issues with" comments="">suffer from the problem of</edit>
+        <text>generating too many generic responses</text>
+        <edit type="clarity" crr="(i.e., safe, commonplace responses like ”I don't know”)." comments="added for clarity">(generic denotes safe, commonplace responses like ”I don't know”).</edit>
+        <text>One major reason is that the element-wise prediction models</text>
+        <edit type="grammar" crr="stochastic" comments="correction; the correct word is stochastic">stochastical</edit>
+        <edit type="word choice" crr="variation" comments="word choice; it seems like they're describing a general situation">variations</edit>
+        <text>only at the token level, seducing the system into</text>
+        <edit type="word choice" crr="achieving" comments="">gaining</edit>
+        <text>immediate</text>
+        <edit type="word choice;clarity" crr="short-term" comments="word choice / clarity - the rewords themselves aren't necessarily short, but rather the time period they apply to is.">short</edit>
+        <text>rewards and</text>
+        <edit type="word choice" crr="neglecting" comments="">neglect</edit>
+        <text>the long-term structure. To cope with this problem,</text>
+        <edit type="punctuation" crr="Serban et al. (2017)" comments="">(Serban et al., 2017)</edit>
+        <text>proposed a variational hierarchical encoder-decoder model (VHRED) that</text>
+        <edit type="word choice" crr="introduced" comments="">brought</edit>
+        <text>the idea of variational auto-encoders (VAE) (Kingma and Welling, 2013; Rezende et al., 2014) into dialog generation. For each utterance, VHRED samples a latent variable as a holistic representation so that the generative process will learn to maintain a coherent global sentence structure. However, the latent variable is learned purely in an unsupervised way and can only be explained vaguely as</text>
+        <edit type="clarity" crr="representing" comments="">added for clarity</edit>
+        <text>higher level decisions like topic or sentiment. Though effective in generating utterances with</text>
+        <edit type="word choice" crr="greater" comments="">more</edit>
+        <text>information content, it lacks the ability</text>
+        <edit type="word choice" crr="to explicitly controll the generation process." comments="">of explicitly controlling the generationng process.</edit>
+        <text>\\ This paper presents a conditional variational framework for generating specific responses, inspired by the semi-supervised deep generative model (Kingma et al., 2014). The principle idea is to generate the next response based on the dialog context, a stochastic latent variable, and an external label.</text>
+        <edit type="word choice" crr="In addition," comments="">Furthemore,</edit>
+        <text>the dialog context for both speakers is modeled separately because they have different</text>
+        <edit type="word choice;style" crr="speaking" comments="">talking</edit>
+        <text>styles, personalities and sentiments. The</text>
+        <edit type="word choice;clarity" crr="entire" comments="">whole</edit>
+        <text>network structure functions like a conditional VAE (Sohn et al., 2015; Yan et al., 2016). We test our framework on two scenarios. In the first scenario, the label serves as a signal to indicate whether</text>
+        <edit type="word order" crr="or not the response is generic ." comments="">the response is generic or not.</edit>
+        <text>By assigning different values to the label, either generic or non-generic responses can be generated. In the second scenario, the label represents an imitated sentiment tag. Before generating the next response, the appropriate sentiment tag is predicted to direct the generation process.</text>
+        <text>\\ Our framework is expressive and extendable. The generated responses agree with the predefined labels while maintaining</text>
+        <edit type="word choice" crr="meaning." comments="There might be a word missing here but I don't know what it is.">meaningful.</edit>
+        <text>By changing the definition of the label, our framework can be easily applied to other specific areas.</text>
+    </introduction>   
+</doc>

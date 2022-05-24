@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-7618" editor="A" format="WS" position="S" region="NN">
+    <title>
+        <text>Towards a dependency-annotated treebank for Bambara</text>
+    </title>
+    <abstract>
+        <text>In this paper, we describe a</text>
+        <edit type="hyphenation" crr="dependency-annotation" comments="hyphenation - need hyphen for compound adjective">dependency annotation</edit>
+        <text>scheme for Bambara, a Mande language spoken in Mali</text>
+        <edit type="clarity" crr="that" comments="clarity - original was confusing as to whether the language or the country has few CL resources">, which</edit>
+        <text>has few computational linguistic resources. The scheme is based on Universal Dependencies. We describe part-of-speech tags, morphological features and dependencies</text>
+        <edit type="readability" crr="," comments="serial comma is needed here for disambiguation"></edit>
+        <text>and how we performed a rule-based conversion of an existing</text>
+        <edit type="readability;clarity" crr="corpus of Bambara containing approximately 900,000 tokens and annotated with part-of-speech." comments="readability - in the original, we needed a hyphen in part-of-speech-annotated, but that's a bit clumsy, so I rearranged.; clarity - helps disambiguate whether the language or the corpus contains these tokens">part-of-speech annotated corpus of Bambara, which contains approximately 900,000 tokens.</edit>
+        <text>We also describe the annotation of a small treebank of 116</text>
+        <edit type="conciseness" crr="randomly selected sample sentences." comments="conciseness - 2 words instead of 4">sample sentences, which were picked randomly.</edit>
+    </abstract>   
+    <introduction>
+        <text>One of the basic language resources has, for a long time, been</text>
+        <edit type="grammar" crr="part-of-speech tagged (or morphologically disambiguated) corpora." comments="grammar - with the change of corpus to corpora, this article needs to go">a part-of-speech tagged (or morphologically disambiguated) corpus.</edit>
+        <text>In recent years, treebanks — collections of sentences annotated for syntactic structure — have become increasingly available and vital resources, both for natural-language processing and corpus linguistics. Current end-to-end pipelines like UDPipe (Straka et al., 2016), which perform each stage of the classic NLP pipeline from tokenisation to dependency parsing, make it easy to go from a situation where a language has no effective language resources to one where</text>
+        <edit type="repetitiveness" crr="it" comments="repetitiveness - don't need to repeat 'language' here, a pronoun will do">the language</edit>
+        <text>has a functional pipeline in a few months as opposed to a few years of work.</text>
+        <text>\\ A crucial prerequisite for building a treebank is to have a set of annotation guidelines which describe how particular syntactic structures are to be represented. In our work on creating a treebank for Bambara, we have chosen version 2.0 of the Universal Dependencies scheme (Nivre et al., 2016) as it provides ready-made recommendations on which to base annotation guidelines for part-of-speech tags, morphological features, and dependency relations. This reduces the amount of time needed to develop bespoke annotation guidelines for a given language as</text>
+        <edit type="readability" crr="the existing universal guidelines, where they are adequate," comments="readability - moving the 'where' closer to the qualifier makes the reading smoother">where the existing universal guidelines are adequate they</edit>
+        <text>can be imported wholesale into the language-specific guidelines. In addition, the Universal Dependencies project provides a free/open pool (in the terminology of Streiter et al. (2006)) which collects dependency corpora in a single place, allowing for economies of scale in maintenance and ensuring that resources can persist after any initial development effort.</text>
+        <text>\\ The remainder of the paper is laid out as follows: In Section 2, we give a short typological overview of Bambara</text>
+        <edit type="punctuation" crr=";" comments="punctuation - semi versus comma as what follows is independent clause">,</edit>
+        <text>in Section 3, we describe an existing annotated resource for Bambara, the Corpus Bambara de Référence (CBR). Section 4 describes the conversion process we used,</text>
+        <edit type="grammar" crr="and" comments="grammar - missing conjunction between independent clauses"></edit>
+        <text>Section 5 describes some constructions in Bambara, which are not typologically common, and how we intend to annotate them. Finally, Sections 6 and 7 describe future work and conclusions respectively.</text>
+    </introduction>   
+</doc>

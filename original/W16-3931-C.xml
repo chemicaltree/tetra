@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W16-3931" editor="C" format="WS" position="NS" region="NN">
+    <title>
+        <text>A Simple Scalable Neural Networks</text>
+        <edit type="capitalization" crr="Based" comments="title capitalization">based</edit>
+        <text>Model for Geolocation Prediction in Twitter</text>
+    </title>
+    <abstract>
+        <text>This paper describes a model that we submitted to W-NUT 2016</text>
+        <edit type="spelling;consistency" crr="Shared Task" comments="Spelling / use consistency and also you're referring to a document">Shared task</edit>
+        <text>#1: Geolocation Prediction in Twitter. Our model classifies a tweet or a</text>
+        <edit type="clarity" crr="Twitter" comments="Comprehension / probably best to insert this to avoid potential confusion"></edit>
+        <text>user to a city using a simple neural networks structure with fully-connected layers and average pooling processes. From the findings of previous geolocation prediction approaches, we integrated various user metadata</text>
+        <edit type="word choice" crr="alongside" comments="Vocabulary / your articulation is correct, but in this context, 'alongside' is tightens comprehension">along with</edit>
+        <text>message texts and trained the model with them. In the test run of the task, the model achieved</text>
+        <edit type="grammar;clarity" crr="an accuracy rating of 40.91% and a median distance error of 69.50 km in message-level prediction and an accuracy rating  of 47.55% and a" comments="Grammar / 'an' is better here;Vocabulary / the insertion is optional, but it clarifies">the accuracy rating of 40.91% and the median distance error of 69.50 km in message-level prediction and the accuracy rating of 47.55% and the</edit>
+        <text>median distance error of 16.13 km in user-level prediction. These results</text>
+        <edit type="word choice" crr="show" comments="Vocabulary / the alternative is more precise">are</edit>
+        <text>moderate performances in terms of accuracy and best performances in terms of distance. The results</text>
+        <edit type="clarity" crr="also" comments="Meaning / insert to clarify"></edit>
+        <text>show a promising extension of neural networks based models for geolocation prediction where recent advances in neural networks can be added to enhance our current</text>
+        <edit type="grammar" crr="simplified" comments="Vocabulary / 'simplified' might be more accurate here?">simple</edit>
+    </abstract>   
+    <introduction>
+        <text>The</text>
+        <edit type="clarity" crr="widespread acceptance and continued growth" comments="I suggest inserting this to provide a better argument / context fr your study">growth</edit>
+        <text>of social media has</text>
+        <edit type="word choice" crr="created" comments="">brought</edit>
+        <text>demand</text>
+        <edit type="readability" crr="for novel techniques for extracting information from social media messages" comments="Vocabulary / you can use 'demand' in the singular format here">to develop techniques to automatically extract a variety of information from it</edit>
+        <text>. A geolocation predictor is one such technique that has been widely studied</text>
+        <edit type="readability" crr="as a potential business support tool, in particular in the fields of" comments="">to strengthen business activities such as</edit>
+        <edit type="spelling" crr="advertising" comments="">advertisment</edit>
+        <text>and marketing. This paper describes a model that we developed to tackle this geolocation prediction task. The model is a neural networks based model that</text>
+        <edit type="style" crr="deploys" comments="alternative is better for academic narrative">uses</edit>
+        <text>various user metadata along with message texts.</text>
+        <edit type="clarity" crr="With this in mind, we" comments="">We participated</edit>
+        <edit type="grammar" crr="in" comments=""></edit>
+        <text>W-NUT 2016</text>
+        <edit type="spelling;consistency" crr="Shared Task" comments="Spelling / use consistency and also you're referring to a document">Shared task</edit>
+        <text>#1: Geolocation Prediction in Twitter (Rahimi et al., 2016) with this model.</text>
+        <text>\\ The architecture of our model is designed by</text>
+        <edit type="grammar" crr="the" comments="Grammar / insert here to clarify"></edit>
+        <text> following previous researches that have targeted geolocation prediction in Twitter. Cheng et al. (2010) proposed a probabilistic model based on local (location indicative) words</text>
+        <edit type="clarity" crr="in order" comments="Vocabulary / insert to clarify"></edit>
+        <text>to estimate city-level geolocation prediction of Twitter users.</text>
+        <edit type="clarity" crr="In addition," comments="Vocabulary / insert to clarify"></edit>
+        <text>Han et al. (2014) implemented a city-level geolocation prediction system for Twitter users and constructed a Naive Bayes learner using location indicative words and user metadata. We decided to use both message texts and user metadata, which have shown</text>
+        <edit type="clarity" crr="a high degree of" comments="Syntax / your use of the term is correct, but insert the additional words to amplify meaning"></edit>
+        <text>effectiveness in these past studies.</text>
+        <text>\\ Another characteristic of our model is</text>
+        <edit type="conciseness" crr="our use of" comments="paraphrase to cut down wordiness">that we decided to use</edit>
+        <text>neural networks as a machine learning method</text>
+        <edit type="grammar" crr="for training geolocation predictors" comments="">to train a geolocation predictor.</edit>
+        <text>Neural networks are being extensively applied to tasks of image</text>
+        <edit type="repetitiveness" crr=", speech, or text processing" comments="repetition of 'processing'">processing, speech processing, or text processing</edit>
+        <edit type="readability" crr="," comments="deploy comma here to improve flow"></edit>
+        <text>and have</text>
+        <edit type="word choice" crr="demonstrated" comments="not sure if you wanted to say 'proven' here, but 'demonstrate' is a better word in this context in order to clarify">shown</edit>
+        <text>the state of the performances (Goodfellow et al., 2016). In</text>
+        <edit type="grammar" crr="the" comments="Grammar / 'the' is more accurate here">a</edit>
+        <text>context of geolocation prediction, Liu and Inkpen (2015) have</text>
+        <edit type="style" crr="demonstrated" comments="the alternative is better for academic narrative">showed</edit>
+        <text>that a model based on stacked de-noising auto-encoders achieves a comparable performance to the state of the arts models. Although neural networks with deep complex layers have recently received</text>
+        <edit type="clarity" crr="notable" comments=" insert to add further specify"></edit>
+        <text>attention</text>
+        <edit type="grammar" crr="for thier achievement of" comments="">as achieving</edit>
+        <text>high performance, we designed our model to be a simple scalable neural networks-based model, considering the following two reasons:</text>
+        <text>\ 1. A city-level geolocation prediction of Twitter is a large scale task that requires a scalable machine learning method</text>
+        <edit type="style" crr="capable of handling" comments="you've used 'that' (which) already, so better to avoid in order to improve style">which can handle</edit>
+        <text>millions of</text>
+        <edit type="grammar" crr="tweets" comments="">tweet</edit>
+        <text>with thousands of classes (Han et al., 2014). \  2. A model based on shallow simple neural networks has recently marked close performance to deep models with high scalability on several tasks (Joulin et al., 2016).</text>
+        <text>\\ In the following sections of this paper, we first describe the specification of datasets to train and to test our model in Section 2. The detail of our neural networks based model is explained in Section 3</text>
+        <edit type="readability" crr=". Section 4 that" comments="Readability / end sentence here for clarity">, accompanying Section 4 that</edit>
+        <edit type="word choice" crr="highlights our" comments="your articulation is correct, but there are better words, since you're not explaining the reason, but showcasing your experiments (?)">explains</edit>
+        <text>experiments</text>
+        <edit type="conciseness" crr="" comments="not required here">and the</edit>
+        <text>test run which were performed</text>
+        <edit type="style" crr="for model evaluation." comments="Style / reworded to reduce wordiness">to evaluate the model.</edit>
+        <text>Finally, Section 5 summarizes and concludes the paper with some future</text>
+        <edit type="clarity" crr="recommendations and implications." comments="Comprehension / 'directions' is ambiguous, so I recommend you clarify here, using suggested (or other clearer) alternatives">directions.</edit>
+    </introduction>   
+</doc>

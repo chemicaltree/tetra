@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-0903" editor="A" format="WS" position="NS" region="NN">
+    <title>
+        <text>Quotations, Relevance</text>
+        <edit type="grammar" crr="," comments="punctuation - adding serial comma, though this can be style dependent."></edit>
+        <text>and Time Depth: Medieval Arabic Literature in Grids and Networks</text>
+    </title>
+    <abstract>
+        <text>This contribution deals with the use of quotations (repeated n-grams) in the works of medieval Arabic literature. The analysis is based on a</text>
+        <edit type="hyphenation" crr="420-million-word" comments="hyphenation / grammar - numbers with units used as adjectives need to be hyphenated. One alternate wording would be 'based on a historical corpus of Arabic consisting of 420 million words.'">420 millions of words</edit>
+        <text>historical corpus of Arabic. Based on repeated quotations from work to work, a network is constructed and used for interpretation of various aspects of Arabic literature. Two short case studies are presented, concentrating on the centrality and relevance of individual works and the analysis of</text>
+        <edit type="grammar;word choice" crr="the" comments="grammar/word choice - since we're talking about a specific work here, I think 'the' time depth is better than 'a' time depth, though I may change my mind after reading the full paper.">a</edit>
+        <text>time depth and resulting impact of a given work in various periods.</text>
+    </abstract>   
+    <introduction>
+        <text>The relevance of individual works in a given literature and the time depth of such relevance are of interest for many reasons</text>
+        <edit type="style" crr=", and there" comments="style - these sentences are closely related, so I would suggest joining them.">. There</edit>
+        <text>are many methods that can reveal such relevance.</text>
+        <text>\\ The current contribution is based on quotation extraction. Quotations, both covert and overt,</text>
+        <edit type="flow;readability" crr="from both" comments="flow / readability - this reads better with the words reversed because the modifier 'both' is more clearly associated with the two things its referring to. In the original place, I'd expect to see another prepositional phrase">both from</edit>
+        <text>written and oral sources, belong to the constitutive features of medieval Arabic literature.</text>
+        <text>\\ There are genres which heavily depend on establishing credible links among sources, especially the oral ones, where a trusty chain of tradents is crucial for the claims that such chains accompany. Other links may point to the importance of a given work (or its part) and may uncover previously unseen relations within a given literature or a given genre/register, or reveal connections among genres/registers within a given literature. As such, the results are interesting in a wide research range, from linguists or literature theorists to authors interested in the interactions of various subsets of a given literature.</text>
+        <text>\\ The research on quotations, their extraction</text>
+        <edit type="punctuation" crr="," comments="punctuation - adding serial comma, though this may be style specific"></edit>
+        <text>and detection is rich in the NLP</text>
+        <edit type="grammar" crr="field" comments="grammar - missing the noun that NLP, used here as an adjective, is modifying. Alternate choices include 'literature'."></edit>
+        <text>, but the</text>
+        <edit type="spelling" crr="algorithms" comments="">algorihms</edit>
+        <text>used are based mainly on quotation-marker recognition, e.g., Pareti et al. (2013), Pouliquen et al. (2007), and Fernandes et al. (2011), or on metadata processing (e.g., Shi et al. 2010), to name just a few examples. It can be said that most of the</text>
+        <edit type="style;redundancy" crr="previous works" comments="style - rewording to avoid using 'contribution' twice here">contributions</edit>
+        <text>focus on issues different from the one described in this contribution and choose a different approach.</text>
+        <text>\\ Our understanding of quotations in this project is limited to similar strings of words</text>
+        <edit type="punctuation" crr=";" comments="punctuation - need semicolon as what follows is an independent clause">,</edit>
+        <text>i.e., the quotations are very close to borrowings or repetition of verbatim or almost verbatim passages. Technically,</text>
+        <edit type="clarity" crr="a quotation" comments="clarity - it isn't totally clear what 'it' refers to. The obvious choice is 'quotations' but that would require the pronoun to be plural and would also require other changes for agreement later in the sentence.">it</edit>
+        <text>can be viewed as an n-gram that is being repeated in at least two works. These repeated n-grams create links that exhibit some hierarchy, e.g., on the chronological line. The only approach known to us that can be paralleled to ours is the one described in Kolak and Schilit (2008) for quotation mining within the Google Books corpus with</text>
+        <edit type="word choice" crr="algorithmic" comments="word choice - algorithmic is the adjective form">algorithm</edit>
+        <text>searching for verbatim quotations only.</text>
+        <text>\\ In a different context and without direct inspiration, we developed an algorithm that is tolerant to a certain degree of lexical and morphological variation and word order variability. The reason for this tolerance is both the type of the Arabic language (flective morphology and free word order)</text>
+        <edit type="grammar;word choice" crr=", but also" comments="grammar / word choice - since we use 'both' earlier, the second half of that list should be introduced by 'and' not 'but also'. If we'd used 'not only' instead of 'both', the 'but also' would be appropriate.">and</edit>
+        <text>the fact that the quotations in medieval Arabic literature tend not to be very strict. Despite</text>
+        <edit type="grammar" crr="" comments="grammar - 'of' is not appropriate here">of</edit>
+        <text>the fact that the matching is not so rigorous, we assume that the length of the n-grams we use drastically decreases</text>
+        <edit type="grammar;word choice" crr="the possibility" comments="grammar / word choice - singular 'possibility' I think is more appropriate here, though I may change my mind after reading entire paper.">possibilities</edit>
+        <text>of random matches.</text>
+        <text>\\ The frequency of such n-gram repetition in various literary works can point to several aspects</text>
+        <edit type="punctuation" crr=";" comments="punctuation - semicolon is needed because what follows is an independent clause">,</edit>
+        <text>however, in this contribution we will limit ourselves to interpreting such links in a rather cautious and not too far-reaching manner, mainly as pointers to the fact that the writer of the book where the quotations appear was also a reader of the book from which the quotations stem and that he was to a certain degree influenced by it.</text>
+        <text>\\ This does not necessarily mean that the lineage of quotations is complete in our picture, for we have to admit that there could be some author — member of the lineage — who is not involved in our corpus. In our graph, however, edges point to the first instance of a given n-gram in our data.</text>
+    </introduction>   
+</doc>

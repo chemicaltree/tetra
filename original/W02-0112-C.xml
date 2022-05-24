@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W02-0112" editor="C" format="WS" position="NS" region="NN">
+    <title>
+        <text>Teaching Computational Linguistics at the University of Tartu: Experience, Perspectives and Challenges</text>
+    </title>
+    <abstract>
+        <text>The paper</text>
+        <edit type="style" crr="provides" comments="'gives' is not incorrect, but the alternative is better in academic writing">gives</edit>
+        <text>a review of</text>
+        <edit type="word order" crr="Computational Linguistics (CL) teaching " comments="Sentence structure / reword the sentence">teaching Computational Linguistics (CL)</edit>
+        <text>at the University of Tartu. The current curriculum foresees the possibility of studying CL as an independent</text>
+        <edit type="spelling" crr="four" comments="Spelling / spell numbers as words, up to ten">4</edit>
+        <text>subject</text>
+        <edit type="grammar" crr="at" comments="">in</edit>
+        <text>the Faculty of</text>
+        <edit type="word choice" crr="Philosophy's on" comments="">Philosophy on</edit>
+        <text>the bachelor</text>
+        <edit type="style" crr="program" comments="alternative is better">stage</edit>
+        <text>. In</text>
+        <edit type="word choice" crr="line with" comments="">connection the</edit>
+        <text>higher education</text>
+        <edit type="grammar" crr="reforms" comments="">reform</edit>
+        <text>in Estonia,</text>
+        <edit type="clarity" crr="a new curriculum" comments="">new curricula</edit>
+        <text>will be introduced</text>
+        <edit type="word choice" crr="at the beginning of" comments="">from</edit>
+        <text>the next</text>
+        <edit type="word choice" crr="academic" comments="">study</edit>
+        <text>year</text>
+        <edit type="punctuation" crr="," comments="introducing new clause"></edit>
+        <text>where</text>
+        <edit type="grammar" crr="a" comments="'a' is better, since you're introducing a new subject">the</edit>
+        <edit type="spelling" crr="three year" comments="">3-year</edit>
+        <text>bachelor</text>
+        <edit type="word choice" crr="degree" comments="">stage</edit>
+        <text>will be followed by a</text>
+        <edit type="spelling" crr="two year" comments="">2-year</edit>
+        <text>master's </text>
+        <edit type="word choice" crr="degree" comments="">stage</edit>
+        <text>. It will then be possible to</text>
+        <edit type="style" crr="pursue two different paths of CL studies" comments="">study CL proceeding from two paths:</edit>
+        <edit type="word choice" crr="either through" comments="">in</edit>
+        <text>the Faculty of Philosophy,</text>
+        <edit type="word choice" crr="or" comments="">and</edit>
+        <text>additionally</text>
+        <edit type="word choice" crr="through" comments="">also in</edit>
+        <text>the Faculty of Mathematics and Computer Science.</text>
+        <edit type="word choice" crr="This way" comments="">In this manner</edit>
+        <text>two</text>
+        <edit type="word choice" crr="different of" comments="">types of</edit>
+        <edit type="word choice" crr="specializations" comments="">specialists</edit>
+        <edit type="word choice" crr="may be pursued" comments="">will be trained</edit>
+        <edit type="word choice" crr="leading to" comments="">who will hopefully be able to</edit>
+        <edit type="word choice" crr="complementary skillsets" comments="">complement</edit>
+        <edit type="word choice" crr="in collaborative environments." comments="">each other in team-work.</edit>      
+    </abstract>   
+    <introduction>
+        <edit type="word order" crr="\n\n In Estonia, Computational Linguistics is a specialized subject that can only be studied at the University of Tartu (UT)." comments="">\n\n Computational Linguistics is a specialized subject that can in Estonica only be studied at the University of Tartu (UT).</edit>
+        <text>\n\n Computational</text>
+        <edit type="spelling" crr="Linguistics" comments="">linguistics</edit>
+        <text>as an independent subject has been taught at UT</text>
+        <edit type="flow" crr="since academic" comments="">from the study</edit>
+        <text>year 1998/99,</text>
+        <edit type="word choice" crr="although" comments=""></edit>
+        <text>various</text>
+        <edit type="word choice" crr="discretionary" comments="">separate</edit>
+        <text>courses</text>
+        <edit type="word choice" crr="have been running since academic" comments="">from the study</edit>
+        <text>year 1996/97. The curriculum and various new courses were developed with</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>support provided by a number of HESP projects.</text>
+        <edit type="flow" crr="By benchmarking" comments="Reduce wordiness to improve flow">Based on the experience of</edit>
+        <text>Western universities,</text>
+        <edit type="word choice" crr="linguistics, computer science, mathematics and computational linguistics were selected as topics." comments="">the topics of linguistics, computer science, mathematics and computational linguistics were selected.</edit>
+        <text>As the subject was launched in the Department of Estonian and Finno-Ugric Linguistics</text>
+        <edit type="grammar" crr="and the" comments="use conjunction 'and' here"></edit>
+        <text>Faculty of Philosophy, then linguistic subjects prevail in the curriculum. However, But the tuition is provided jointly by two faculties:</text>
+        <edit type="clarity" crr="the" comments=""></edit>
+        <text>Faculty of Philosophy teaches linguistic subjects,</text>
+        <edit type="clarity" crr="and the" comments=""></edit>
+        <text>Faculty of Mathematics and Computer Science teaches mathematics and</text>
+        <edit type="word choice" crr="IT-related" comments="">informatics</edit>
+        <text>subjects</text>
+        <edit type="punctuation" crr="." comments="end sentence">,</edit>
+        <edit type="flow;clarity" crr="Fields of study relating to" comments="">the</edit> 
+        <text>computational linguistic subjects have been divided between</text>
+        <edit type="word choice" crr="both" comments="">these two</edit>
+        <text>faculties.</text>
+        <edit type="word choice" crr="The language" comments="">Language</edit>
+        <text>of instruction is Estonian.</text>
+        <edit type="word choice" crr="\n\n Lecture preparation" comments="">\n\n Preparing the lectures</edit>
+        <text>in</text>
+        <edit type="word choice" crr="these" comments=""></edit> 
+        <text>new subjects has been</text>
+        <edit type="word choice" crr="accompanied in large part" comments="">mostly accompanied</edit>
+        <text>by making available these materials on the web as well.</text>
+        <edit type="flow" crr="Several computer science and linguistics students can also listen to a number of computational linguistics lectures as" comments="">A number of students of computer science and linguistics also listen to several computational linguistics lectures as electives or</edit>
+        <text>optional subjects.</text>
+        <edit type="punctuation" crr="Therefore," comments="insert comma when introducing new clause">Therefore</edit>
+        <text>we face the problem</text>
+        <edit type="word choice" crr="of" comments=""></edit>
+        <text>how to make these subjects interesting and manageable for students with various qualifications.</text>
+        <edit type="word choice" crr="\n\n The new curriculum" comments="">\n\n New curricula</edit>
+        <text>will take effect as of the study year 2002/2003 at UT. According to</text>
+        <edit type="clarity" crr="the university" comments="">them</edit>
+        <text>, the</text>
+        <edit type="spelling" crr="three year Bachelors" comments="see rule above re: spelling numbers">3-year bachelor</edit>
+        <edit type="style" crr="program" comments="">study</edit>
+        <text>is followed by</text>
+        <edit type="spelling" crr="two year Masters" comments="">2-year master</edit>
+        <edit type="style" crr="program" comments="">study</edit>
+        <edit type="punctuation" crr="." comments=""></edit>
+        <edit type="conciseness" crr="This" comments="Start new sentence and reduce wordiness">which in turn</edit>
+        <text>may be followed by</text>
+        <edit type="spelling;style" crr="four year PhD" comments="">4-year doctoral</edit>
+        <text>studies</text>
+        <edit type="punctuation" crr="." comments=""></edit>
+        <edit type="punctuation;style" crr="So far, the “4+2+4” year model has been implemented." comments="">(so far, the “4+2+4” year model has been used).</edit>
+        <edit type="word choice" crr="The Bachelors degree" comments="">bachelor degree</edit>
+        <text>will provide</text>
+        <edit type="word choice" crr="a basic level of" comments="">the general basic</edit>
+        <text>higher education,</text>
+        <edit type="word choice;flow" crr="while the Masters" comments="">master</edit>
+        <text>studies will lead to a</text>
+        <edit type="clarity" crr="more specialized" comments=""></edit> 
+        <text>qualification</text>
+        <edit type="clarity" crr="that explores" comments="">in</edit>
+        <text>a specific subject. The new modified curriculum</text>
+        <edit type="word choice" crr="is based on" comments="Word choice / this is a little tighter">takes into account the</edit>
+        <edit type="flow" crr="teaching experience in the subject to date." comments="">experience obtained in the process of teaching so far.</edit>
+        <text>In addition</text> 
+        <edit type="conciseness" crr="" comments="">to that</edit>
+        <text>, the new curriculum for computer science</text>
+        <edit type="repetitiveness" crr="curriculum envisages" comments="repetition of 'foresee'">foresees</edit>
+        <text>the (new) possibility to major in language technology. In the following</text>
+        <edit type="word choice" crr="paper" comments=""></edit>
+        <text>, we will present the</text>
+        <edit type="clarity" crr="proposed" comments="consider inserting to clarify"></edit>
+        <text>structure of the curricula,</text>
+        <edit type="flow" crr="together with" comments="'and' isn't incorrect, but the alternative flows better, as your experience is critical to your insights">and</edit>
+        <edit type="flow" crr="our computational linguistics teaching experience to date." comments="">our experience so far in teaching the subjects of computational linguistics</edit>
+    </introduction>   
+</doc>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W15-5932" editor="A" format="WS" position="S" region="NN">
+    <title>
+        <text>Ruchi: Rating Individual Food Items in Restaurant Reviews</text>
+    </title>
+    <abstract>
+        <text>Restaurant recommendation systems are capable of</text>
+        <edit type="style" crr="providing recommendations" comments="style - the original was a tautology">recommending restaurants</edit>
+        <text>based on various aspects such as location, facilities, and price range.</text>
+        <edit type="readability" crr="There are research projects that implement restaurant" comments="readability - the original seemed awkward">There exists some research that implements restaurant</edit>
+        <text>recommendation systems, as well as some famous online recommendation systems such as Yelp. However, automatically rating</text>
+        <edit type="readability" crr="a restaurant's individual food items" comments="readability - this is smoother">individual food items of a restaurant</edit>
+        <text>based on online customer reviews is an area that has not received much attention. This paper presents Ruchi, a system capable of rating individual food items in restaurants. Ruchi makes use of Named Entity Recognition (NER) techniques to identify food names in restaurant reviews.</text>
+        <edit type="grammar" crr="A typed dependency technique" comments="">Typed dependency technique</edit>
+        <text>is used to identify opinions associated with different food names in a single sentence, thus it is possible to carry out entity-level sentiment analysis to rate individual food items instead of sentence-level sentiment analysis as done by previous research.</text>
+    </abstract>   
+    <introduction>
+        <text>Today, many factors affect a person's selection of a particular restaurant to dine in. People can find information on factors such as price,</text>
+        <edit type="spelling;clarity" crr="Wi-Fi availability," comments="spelling - Wi-Fi is the formal spelling;clarity - Wi-Fi is not a factor, it's availability is">wifi</edit>
+        <text>and service from a restaurant's website and/or brochures. However, information about some important factors is not directly available</text>
+        <edit type="style" crr=". Ratings" comments="style - joining the two closely related sentences.">; for example, ratings</edit>
+        <text>of individual dishes in restaurants</text>
+        <edit type="repetitiveness;conciseness" crr="." comments="repetitiveness and conciseness">is one such factor that is not directly available.</edit>
+        <text>Therefore, it is common nowadays for people to rely on the reviews and ratings</text>
+        <edit type="grammar;clarity" crr="given by other customers in restaurant review sites." comments="grammar and clarity - getting the phrase closer to what it modifies to clarify that it applies to the ratings, not the sites.">in restaurant review sites given by other customers.</edit>
+        <text>However, reading each customer review on</text>
+        <edit type="style;readability;repetitiveness" crr="restaurant review" comments="style and readability - original was repetitive">those</edit>
+        <text>sites is time consuming, boring, and exhaustive. This becomes more complex if someone wishes to search for a particular food item that</text>
+        <edit type="style" crr="they are" comments="style - using singular they for gender neutrality">he</edit>
+        <text>interested in.</text>
+        <text>\\ Existing restaurant recommendation systems such as Yelp do not have the facility to rate the individual food items of a restaurant. Moreover, as far as we are aware, existing research on restaurant recommendation systems has not focused on rating</text>
+        <edit type="readability" crr="restaurants' individual food items" comments="readability - this is less awkward">individual food items of restaurants</edit>
+        <text>, except for the work of Trevisiol et al. (2014).</text>
+        <text>\\ This paper presents Ruchi (Ruchi means taste in Sinhala and Tamil, the two local languages in Sri Lanka), which is a system for rating individual food items (both food and beverages) in restaurants by automatically analyzing customer reviews. It combines the techniques of machine learning, natural language processing and information retrieval.</text>
+        <text>\\ In order to rate and recommend individual food items, it is necessary to identify food names in customer reviews, and the customer opinions associated with them. Food names in reviews are identified using a trained NER model. For this purpose, a corpus created from online customer reviews for restaurants is automatically annotated with food names extracted from various sources. As far as we are aware, this is the only freely available comprehensive corpus annotated with food names. Opinions related to these identified food items are extracted using a typed dependency parser. We then perform entity-level sentiment analysis to find the polarity of these opinions. Finally, individual food items are rated based on the polarities of all the opinions received for each of these food items.</text>
+        <text>\\ The rest of the paper is organized as follows.</text>
+        <edit type="grammar" crr="The next" comments="grammar - missing article">Next</edit>
+        <text>section discusses related work. Section three gives an overview of sentiment analysis. Section four discusses the data collection process. Section five discusses research and development work. Section six contains evaluation and discussion, and finally, section seven concludes the paper.</text>
+    </introduction>   
+</doc>

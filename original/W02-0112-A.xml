@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W02-0112" editor="A" format="WS" position="NS" region="NN">
+    <title>
+        <text>Teaching Computational Linguistics at the University of Tartu: Experience, Perspectives</text>
+        <edit type="punctuation" crr="," comments="comma - adding serial comma, though thi scan be style specific"></edit>
+        <text>and Challenges</text>        
+    </title>
+    <abstract>
+        <edit type="word choice" crr="This" comments="word choice - 'this' because we're talking about this paper, not some other one">The</edit>
+        <text>paper gives a review of teaching</text>
+        <edit type="capitalization;consistency" crr="computational linguistics " comments="capitalization and consistency - author uses a mix of cases, choosing lower case as we're not referring to a specific course name">Computational Linguistics </edit>
+        <text>(CL) at the University of Tartu. The current curriculum</text>
+        <edit type="word choice" crr="allows for" comments="word choice more accurately reflects that the curriculum defines the study path">foresees the possibility of</edit>
+        <text>studying CL as an independent 4-year</text>
+        <edit type="conciseness;flow" crr="bachelor-level subject in the Faculty of Philosophy." comments="conciseness and flow - this reads more naturally">subject in the Faculty of Philosophy on the bachelor stage.</edit>
+        <text>In connection with</text>
+        <edit type="grammar" crr="" comments="grammar - article not needed here">the</edit>
+        <text>higher education reform in Estonia, new curricula will be introduced from the next study year where the 3-year bachelor stage will be followed by a 2-year master’s stage. It will then be possible to study CL</text>
+        <edit type="conciseness;readability" crr="along" comments="conciseness and readability - this is more natural English">proceeding from</edit>
+        <text>two paths: in the Faculty of Philosophy</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is not appropriate here">,</edit>
+        <edit type="word choice" crr="or" comments="word choice - I think this is an either/or thing, not an and thing, though the full paper could prove me wrong.">and additionally also</edit>
+        <text>in the Faculty of Mathematics and Computer Science. This way</text>
+        <edit type="punctuation" crr="," comments="punctuation - need comma after intro phrase"></edit>
+        <text>two types of specialists will be trained who will hopefully be able to complement each other in</text>
+        <edit type="hyphenation" crr="teamwork." comments="hyphenation - this is one word, no hyphen needed">team-work.</edit>
+
+    </abstract>   
+    <introduction>
+        <edit type="readability" crr="In Estonia, computational linguistics as a special subject can" comments="readability -- this flows better">computational linguistics as a special subject can in Estonia</edit>
+        <text>only be studied at the University of Tartu (UT).</text>
+        <text>\n\n Computational linguistics as an independent subject has been taught at UT from the study year 1998/99</text>
+        <edit type="grammar" crr="," comments="grammar - comma is inappropriate here, need the preposition instead">with</edit>
+        <text>various separate courses from the study year 1996/97. The curriculum and various new courses were developed with</text>
+        <edit type="grammar" crr="" comments="grammar - article not necessary here">the</edit>
+        <text>support provided by a number of HESP projects. Based on the experience of Western universities, the topics of linguistics, computer science, mathematics</text>
+        <edit type="punctuation" crr="," comments="punctuation - adding serial comma, though this can be style specific"></edit>
+        <text>and computational linguistics were selected. As the subject was launched in the Department of Estonian and Finno-Ugric Linguistics, Faculty of Philosophy,</text>
+        <edit type="redundancy" crr="" comments="redundancy - 'then' is redundant with 'as' here">then</edit>
+        <text>linguistic subjects prevail in the curriculum. But</text>
+        <edit type="punctuation" crr="," comments="punctuation - comma after intro conjunction"></edit>
+        <text>the tuition is provided jointly by two faculties:</text>
+        <edit type="grammar" crr="the" comments="grammar - missing article"></edit>
+        <text>Faculty of Philosophy teaches linguistic subjects</text>
+        <edit type="grammar" crr="and the" comments="grammar - comma is inappropriate here. Semicolon might work, but this flows better">,</edit>
+        <edit type="grammar" crr="Faculty of Mathematics and Computer Science teaches mathematics and informatics subjects. The computational linguistic subjects have been divided between these two faculties." comments="grammar - splitting this into two sentences to avoid the comma splice.">Faculty of Mathematics and Computer Science teaches mathematics and informatics subjects, the computational linguistic subjects have been divided between these two faculties.</edit>
+        <edit type="conciseness" crr="Instruction" comments="">Language of instruction</edit>
+        <text>is</text>
+        <edit type="readability" crr="given in" comments="readability - this is more natural English"></edit>
+        <text>Estonian.</text>
+        <text>\n\n Preparing the lectures in</text>
+        <edit type="clarity" crr="these" comments="clarity - need this to clarify we're talking about these specific subjects, not any new subjects"></edit>
+        <text>new subjects has been mostly accompanied by making</text>
+        <edit type="readability" crr="the materials available" comments="readability - this is more natural English">available these materials</edit>
+        <text>s well. A number of students of computer science and linguistics also listen to several computational linguistics lectures as electives or optional subjects. Therefore</text>
+        <edit type="punctuation" crr="," comments="punctuation - comma needed after intro word"></edit>     
+        <text>we face the problem</text>
+        <edit type="grammar" crr="of" comments="grammar - need the preposition here"></edit>
+        <text>how to make these subjects interesting and manageable for students with various qualifications.</text>
+        <text>\n\n New curricula will take effect</text>
+        <edit type="flow" crr="at UT as of the study year 2002/2003." comments="flow - this reads better">as of the study year 2002/2003 at UT.</edit>
+        <edit type="readability" crr="That curricula will provide for" comments="readability - part one of edits to rewrite this sentence to a more natural flow.">According to them,</edit>
+        <edit type="readability" crr="a" comments="readability - part two of edits to rewrite this sentence to a more natural flow.">the</edit>
+        <edit type="hyphenation" crr="3-year bachelor" comments="hyphenation - need hyphen in this compound adjective">3 year bachelor</edit>
+        <edit type="readability" crr="program" comments="readability - continuation of edtis to make this sentence flow better">study is</edit>
+        <text>followed by</text>
+        <edit type="readability" crr="a" comments="readability - part three of edits to rewrite this sentence to a more natural flow."></edit>
+        <edit type="readability" crr="2-year master’s program," comments="readability - continuation of edits to make this sentence flow better">2-year master studies,</edit>
+        <text>which in turn may be followed by 4-year doctoral studies (</text>
+        <edit type="word choice" crr="before now," comments="word choice - this is more natural English">so far,</edit>
+        <text>the 4+2+4 year model was used). Bachelor studies will provide the general basic higher education,</text>
+        <edit type="grammar" crr="while" comments="grammar - need either a conjunction or a semicolon here to avoid the comma splice"></edit>
+        <edit type="usage" crr="master’s studies " comments="usage - this is short for master's degree, so need the possessive form">master studies </edit>
+        <text>will lead to a qualification in a specific subject. The new modified curriculum takes into account the experience obtained in the process of teaching</text>
+        <edit type="clarity" crr="computational linguistics" comments="clarity - say what we're teaching"></edit>
+        <text>so far. In addition to that, the new curriculum for computer science</text>
+        <edit type="word choice" crr="provides" comments="word choice - as above, ascribe the ownership of this to the curriculum">foresees</edit>
+        <text>the (new) possibility to major in language technology. In the following, we will present the structure of the curricula and our experience so far in teaching the subjects of computational linguistics.</text>                               
+    </introduction>   
+</doc>

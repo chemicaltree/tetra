@@ -1,0 +1,8 @@
+# Correspondence between evaluation aspects and edit types (used in our experiment)
+'Grammaticality': 'grammar', 'spelling', 'capitalization', 'hyphenation','accuracy', 'agreement', 'tense', 
+'Fluency': 'word choice', 'word order', 'natrural english', 'usage', 'word usage'
+'Clarity': 'clarity'
+'Style': 'tone', 'style'
+'Readability': 'readability', 'parallelism', 'punctuation'
+'Redundancy': 'repetitiveness', 'redundancy', 'redundant', 'conciseness'
+'Consistency': 'consistency', 'flow'

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-4020" editor="C" format="Conf" position="NS" region="N">
+    <title>
+        <text>Multi-level Translation Quality Prediction with QUEST++</text>
+    </title>
+    <abstract>
+        <text>This paper presents QUEST++ , an open source tool for quality estimation which can predict</text>
+        <edit type="grammar;word choice" crr="text quality" comments="Grammar/sructure/this strucure is more accurate">quality for texts</edit>
+        <text>at word, sentence and document level. It also provides pipelined processing, whereby predictions made at a</text>
+        <edit type="word choice" crr="more granular" comments="Word usage/'lower' is correct, but the alternative might be more precise">lower</edit>
+        <text>level (e.g. for words) can be used as input to build models for predictions at a higher level (e.g. sentences). QUEST++ allows the extraction of a variety of features</text>
+        <edit type="punctuation" crr="" comments="Punctuation/comma not required">,</edit>
+        <text>and provides machine learning algorithms to build and test quality estimation models. Results on recent datasets show that QUEST++ achieves state-of-the-art performance.</text>
+    </abstract>   
+    <introduction>
+        <text>Quality Estimation (QE) of Machine Translation (MT)</text>
+        <edit type="grammar" crr="has" comments="Grammar/singular">have</edit>
+        <text>become increasingly popular over the last decade. With the goal of</text>
+        <edit type="conciseness" crr="predicting" comments="">providing a predict on</edit>
+        <text>the quality of a</text>
+        <edit type="hyphenation" crr="machine-translated" comments="Punctuation/use hyphen to qualify noun that follows">machine translated</edit>
+        <text>text, QE systems have the potential to make MT more useful in a number of scenarios</text>
+        <edit type="readability;repetitiveness" crr=". For example, they can improve post-editing efficiency (Specia, 2011), select high quality segments (Soricut and Echihabi, 2010), specify the best translation (Shah and Specia, 2014), and highlight" comments="Readability/start new sentence;Sentence structure/follow-on from previous sentence/verb agreement;Word usage/repetition of 'select'">, for example, improving post-editing efficiency (Specia, 2011), selecting high quality segments (Soricut and Echihabi, 2010), selecting the best translation (Shah and Specia, 2014), and highlighting</edit>
+        <text>words or phrases that need revision (Bach et al., 2011).</text>
+        <text>\\ Most recent work focuses on sentence-level QE. This variant is addressed as a supervised machine learning task using a variety of algorithms to induce models from examples of sentence translations annotated with quality labels (e.g. 1-5 likert scores). Sentence-level QE has been covered in shared tasks</text>
+        <edit type="spelling" crr="organized" comments="Spelling/US spelling">organised</edit>
+        <text>by the Workshop on Statistical Machine Translation (WMT) annually since 2012. While standard algorithms can be used to build prediction models, key to this task is the work of feature engineering. Two open source</text>
+        <edit type="hyphenation" crr="feature-extraction" comments="">feature extraction</edit>
+        <text>toolkits are available for that: ASIYA and QUEST (Specia et al., 2013). The latter has been used as the official baseline for the WMT shared tasks and extended by a number of participants, leading to improved results over the years (Callison-Burch et al., 2012; Bojar et al., 2013; Bojar et al., 2014).</text>
+        <text>\\ QE at other textual levels have received much less attention. Word-level QE (Blatz et al., 2004; Luong et al., 2014) is seemingly a more challenging task where a quality label</text>
+        <edit type="word choice" crr="needs" comments="Word use/'is' is correct, but the alternative is more precise">is</edit>
+        <text>to be produced for each target word. An additional challenge is the acquisition of sizable training sets. Although significant efforts have been made, there is considerable room for improvement. In fact, most WMT13-14 QE shared task submissions were unable to beat a trivial baseline.</text>
+        <text>\\ Document-level QE consists</text>
+        <edit type="grammar" crr="of" comments="agreement">in</edit>
+        <text>predicting a single label for entire documents, be it an absolute score (Scarton and Specia, 2014) or a relative ranking of translations by one or more MT systems (Soricut and Echihabi, 2010). While certain sentences are perfect in isolation, their combination in context may lead to an incoherent document. Conversely, while the meaning of a sentence can be poor in isolation, when put into context, it may benefit from information in surrounding sentences, leading to a good quality document. Feature engineering is a challenge given the little availability of tools to extract discourse-wide information. In addition, no datasets with human-created labels are available and thus scores produced by automatic metrics</text>
+        <edit type="style" crr="should be" comments="Register/alternative is better for academic writing">have to</edit>
+        <text>be used as approximation (Scarton et al., 2015).</text>
+        <text>\\ Some applications require fine-grained, word-level information on quality. For example, one may want to highlight words that need fixing. Document-level QE is</text>
+        <edit type="style" crr="required" comments="Style/register/alternative better for academic writing">needed</edit>
+        <text>particularly for gisting purposes where post-editing is not an option</text>
+        <edit type="readability" crr=", such as" comments="Readability/combine sentences as follow-on sentence was incomplete">. For example, for</edit>
+        <text> predictions on translations of product reviews in order to decide whether or not they are understandable by readers. We believe that the limited progress in word and document-level QA research is partially due to the lack of a basic framework that</text>
+        <edit type="grammar;word choice" crr="can be built upon and extended." comments="">one can be build upon and extend.</edit>
+        <text>QUEST++ is a significantly refactored and expanded version of an existing open source sentence-level toolkit, QUEST. Feature extraction modules for both word and document-level QE were added and the three levels of prediction were unified into a single pipeline, allowing for interactions between word, sentence, and document-level QE. For example, word-level predictions can be used as features for sentence-level QE. Finally, sequence-labelling learning algorithms for word-level QE were added. QUEST++ can be easily extended with new features at any textual level. The architecture of the system is described in Section 2. Its main component, the feature extractor, is presented in Section 3.</text>
+        <edit type="readability;consistency" crr="Finally," comments="Readability/insert to describe sequent."></edit>
+        <text>Section 4 presents experiments using the framework with various datasets.</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-2115" editor="A" format="Conf" position="S" region="N">
+    <title>
+        <text>Machine Comprehension with Syntax, Frames, and Semantics</text>
+    </title>
+    <abstract>
+        <text>We demonstrate significant improvement on the MCTest question answering task (Richardson et al., 2013) by augmenting baseline features with</text>
+        <edit type="repetitiveness" crr="ones" comments="repetitiveness - reducing the number of 'features' used close together">features</edit>
+        <text>based on syntax, frame semantics, coreference, and word embeddings, and combining them in a max-margin learning framework. We achieve the best results we are aware of on this dataset, outperforming</text>
+        <edit type="hyphenation" crr="concurrently published results." comments="hyphenation - adverbs ending in -ly don't need a hyphen in a compound adjective">concurrently-published results.</edit>
+        <edit type="clarity" crr="Our" comments="clarity - clarify which set of results we're talking about">These</edit>
+        <text>results demonstrate a significant performance gradient for the use of linguistic structure in machine comprehension.</text>
+    </abstract>   
+    <introduction>
+        <text>Recent question answering (QA) systems (Ferrucci et al., 2010; Berant et al., 2013; Bordes et al., 2014) have focused on open-domain factoid questions, relying on knowledge bases like Freebase (Bollacker et al., 2008) or large corpora of unstructured text. While clearly useful, this type of QA may not be the best way to evaluate natural language understanding capability. Due to the redundancy of facts expressed on the web, many questions are answerable with</text>
+        <edit type="readability" crr="information extraction using shallow techniques" comments="readability - The original was awkward. I believe this retains meaning but I would want to check the original reference to confirm.">shallow techniques from information extraction</edit>
+        <text>(Yao et al., 2014).</text>
+        <text>\n\n There is also recent work on QA based on synthetic text describing events in adventure games (Weston et al., 2015; Sukhbaatar et al., 2015). Synthetic text provides a cleanroom environment for evaluating QA systems</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not appropriate because what follows conjunction is not a complete sentence">,</edit>
+        <text>and has spurred development of powerful neural architectures for complex reasoning. However, the formulaic semantics underlying these synthetic texts</text>
+        <edit type="agreement" crr="allow" comments="agreement - needs to agree with the plural semantics">allows</edit>
+        <text>for the construction of perfect rule-based question answering systems, and may not reflect the patterns of natural linguistic expression.</text>
+        <text>\n\n In this paper, we focus on machine comprehension, which is</text>
+        <edit type="readability" crr=" QA task" comments="readability - original was awkward">QA</edit>
+        <text>in which the answer is contained within a provided passage. Several comprehension tasks have been developed, including Remedia (Hirschman et al., 1999), CBC4kids (Breck et al., 2001), and the QA4MRE textual question answering tasks in the CLEF evaluations (Peñas et al., 2011; Peñas et al., 2013; Clark et al., 2012; Bhaskar et al., 2012).</text>
+        <text>\n\n We consider the Machine Comprehension of Text dataset (MCTest; Richardson et al., 2013), a set of human-authored fictional stories with associated multiple-choice questions. Knowledge bases and web corpora are not useful for this task, and answers are typically expressed just once in each story. While simple baselines presented by Richardson et al. answer over 60% of questions correctly, many of the remaining questions require deeper analysis.</text>
+        <text>In this paper, we explore the use of dependency syntax, frame semantics, word embeddings, and coreference for improving performance on MCTest. Syntax, frame semantics, and coreference are essential for understanding who did what to whom</text>
+        <edit type="flow" crr=", while word" comments="flow - these two sentences seem to fit naturally together, so I joined them">. Word </edit>
+        <text>embeddings address variation in word choice between the stories and questions. Our added features achieve the best results we are aware of on this dataset, outperforming</text>
+        <edit type="hyphenation" crr="concurrently published results." comments="hyphenation - adverbs ending in -ly don't need a hyphen in a compound adjective">concurrently-published results.</edit>
+        <text>(Narasimhan and Barzilay, 2015; Sachan et al., 2015).</text>
+    </introduction>   
+</doc>

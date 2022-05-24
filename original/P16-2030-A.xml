@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P16-2030" editor="A" format="Conf" position="S" region="NN">
+    <title>
+        <text>Detecting Mild Cognitive Impairment by Exploiting Linguistic Information from Transcripts</text>
+    </title>
+    <abstract>
+        <text>Here we seek to automatically identify Hungarian patients suffering from mild cognitive impairment (MCI) based on linguistic features collected from their speech transcripts. Our system uses machine learning techniques and is based on several linguistic features like characteristics of spontaneous speech as well as features exploiting morphological and syntactic parsing. Our results suggest that it is primarily morphological and speech-based features that help distinguish MCI patients from healthy controls.</text>
+    </abstract>   
+    <introduction>
+        <text>Mild cognitive impairment (MCI) is a heterogeneous set of symptoms that are essential in the early detection of Alzheimer's</text>
+        <edit type="capitalization" crr="disease" comments="capitalization - 'disease' is typically not capitalized when the first part is a proper noun">Disease</edit>
+        <text>(AD) (Negash et al., 2007). Symptoms such as language dysfunctions may occur even nine years before the actual diagnosis (APA, 2000). Thus, the language use of the patient may often indicate MCI well before the clinical diagnosis of dementia.</text>
+        <text>\\ MCI is known to influence the (spontaneous) speech of the patient via three main aspects. First, verbal fluency declines, which results in longer hesitations and a lower speech rate (Roark et al., 2011). Second, the lexical frequency of words and part-of-speech tags may also change significantly as the patient has problems with finding words (Croot et al., 2000). Third, the emotional responsiveness of the patient</text>
+        <edit type="word choice" crr="has also been" comments="word choice - reworded to be more parallel with the prior item.">was also</edit>
+        <text>observed to change in many cases (Lopez-de Ipina et al., 2015).</text>
+        <text>\\ For many patients, MCI is never recognized</text>
+        <edit type="word choice" crr="because" comments="word choice - as and because are often interchangeable, but here, 'as' is confusing with 'recognized'">as</edit>
+        <text>in the early stage of the disease it is not trivial even for experts to detect cognitive impairment: according to Boise et al. (2004), up to 50% of MCI patients are never diagnosed with MCI. Although there are</text>
+        <edit type="hyphenation" crr="well-known" comments="hyphenation - well-known is typically hyphenated before noun"></edit>
+        <text>tests such as the Mini Mental Test, they are usually not sensitive enough to reliably filter out MCI in its early stage. Tests on linguistic memory prove more efficient in detecting MCI, but they tend to yield a relatively high number of false positive diagnoses (Roark et al., 2011).</text>
+        <text>\\ Although language abilities are impaired from an early stage of the disease, evaluating the language capacities of</text>
+        <edit type="grammar" crr="" comments="grammar - article not needed here when using plural form as a class. The earlier use of 'the patient' is ok as article+singular term is a (uncommon and somewhat stilted now) reference to a class.">the</edit>
+        <text>patients has only received marginal attention when diagnosing AD (Bayles, 1982). However, if diagnosed early, a proper medical treatment may delay the occurrence of other (more severe) symptoms of dementia to the latest</text>
+        <edit type="word choice" crr="time" comments="word choice - 'extent' really doesn't fit with 'latest' as it's a distance term, not temporal term.">extent</edit>
+        <text>possible (Kalman et al., 2013).</text>
+        <text>\\ Here we seek to automatically identify Hungarian patients suffering from mild cognitive impairment based on their speech transcripts. Our system uses machine learning techniques and is based on several features like linguistic characteristics of spontaneous speech as well as features exploiting morphological and syntactic parsing.</text>
+        <text>\\ Recently, several studies have reported results on identifying different types of dementia with NLP and speech recognition techniques. For instance, automatic speech recognition tools were employed in detecting aphasia (Fraser et al., 2013b; Fraser et al., 2014; Fraser et al., 2013a)</text>
+        <edit type="grammar" crr="," comments="grammar - 'and' would be ok here if there wasn't a comma after the next item in the list">and</edit>
+        <text>mild cognitive impairment (Lehr et al., 2012), and Alzheimer's</text>
+        <edit type="capitalization" crr="disease" comments="capitalization - 'disease' is typically not capitalized when the first part is a proper noun">Disease</edit>
+        <text>(Baldas et al., 2010; Satt et al., 2014). Jarrold et al. (2014) distinguished four types of dementia on the basis of spontaneous speech samples. Lexical analysis of spontaneous speech may also indicate different types of dementia (Bucks et al., 2000; Holmes and Singh, 1996) and may be exploited in the automatic detection of patients suffering from dementia (Thomas et al., 2005). As for analyzing written language, changes in the writing style of people may also refer to dementia (Garrard et al., 2005; Hirst and Wei Feng, 2012; Le et al., 2011).</text>
+        <text>Concerning the automatic detection of MCI in Hungarian subjects, Toth et al. (2015) experimented with speech recognition techniques. However, to the best of our knowledge,</text>
+        <edit type="clarity" crr="ours" comments="clarity - 'this' in the original is ambiguous - it's not clear if it refers to the current paper or Toth et al">this</edit>
+        <text>is the first attempt to identify MCI on the basis of written texts, i.e., speech transcripts for Hungarian.</text>
+        <text>\\ In the long run, we would like to develop a system that can automatically detect linguistic symptoms of MCI in its early stage, so that the person can get medical treatment as early as possible. It should be noted, however, that our goal cannot be an official diagnosis as diagnosing patients requires medical experience. All we can do is implement a test supported by methods used in artificial intelligence, which indicates whether the patient is at risk and if so,</text>
+        <edit type="word choice;style" crr="they" comments="word choice - 'they' is becoming a more preferred gender neutral option than h/she">s/he</edit>
+        <text>can turn to medical experts who will provide the clinical diagnosis.</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P01-1044" editor="C" format="Conf" position="NS" region="N">
+    <title>
+        <text>Parsing with Treebank Grammars: Empirical Bounds, Theoretical Models, and the Structure of the Penn Treebank</text>
+    </title>
+    <abstract>
+        <text>This paper presents empirical studies and</text>
+        <edit type="hyphenation" crr="closely-corresponding" comments="">closely corresponding</edit>
+        <text>theoretical models of the performance of a chart parser exhaustively parsing the Penn Treebank with the Treebank's own CFG grammar. We</text>
+        <edit type="style" crr="demonstrate" comments="'show' is correct, but 'demonstrate' more appropriate for academic style">show</edit>
+        <text>how</text>
+        <edit type="readability" crr="rule representation and tree transformations dramatically affect performance on the one hand" comments="Readability / add to clarify when comparing">performance is dramatically affected by rule representation and tree transformations</edit>
+        <text>, but</text>
+        <edit type="readability;clarity" crr="top-down vs. bottom-up strategies have little impact on performance on the other hand." comments="">litle by top-down vs. bottom-up strategies.</edit>
+        <text>We discuss grammatical saturation, including analysis of the</text>
+        <edit type="hyphenation" crr="strongly-connected components" comments="hyphenate when qualifying a noun that follows">strongly connected components</edit>
+        <text>of the phrasal nonterminals in the Treebank</text>
+        <edit type="flow" crr=". We also model" comments="End long and complex sentence">, and model</edit>
+        <text>where, as sentence length increases, the effective grammar rule size increases</text>
+        <edit type="clarity" crr="in parallel" comments="insert to clarify meaning"></edit>
+        <text>as</text>
+        <edit type="clarity" crr="specific aspects" comments="">regions</edit>
+        <text>of the grammar are unlocked, yielding super-cubic observed time behavior in some configurations</text>
+        <edit type="punctuation" crr="." comments="Punctuation / end sentence with full stop"></edit>
+    </abstract>   
+    <introduction>
+        <text>This paper</text>
+        <edit type="word usage;style" crr="is the result of an examination of" comments="alternative text more appropriate">originated from examining</edit>
+        <text>the empirical performance of an exhaustive active chart parser</text>
+        <edit type="punctuation" crr="," comments="">Punctuation / insert comma whenever clauses are separate</edit>
+        <text>using an untransformed treebank grammar over the Penn Treebank. Our initial experiments yielded</text>
+        <edit type="grammar" crr="a" comments="indefinite article more appropriate in this context">the</edit>
+        <text>surprising result</text>
+        <edit type="clarity" crr="which showed" comments="insert missing words to specify"></edit>
+        <text>that, for many configurations, empirical parsing speed was super-cubic in the sentence length. This led us to</text>
+        <edit type="style" crr="examine" comments="'look' is correct, but alternative is better for academic register">look</edit>
+        <text>more closely</text>
+        <edit type="grammar" crr="" comments="preposition not required">at</edit>
+        <text>the structure of the treebank grammar. The resulting analysis builds</text>
+        <edit type="word choice" crr="upon" comments="'on' is correct, but alternative is more precise in this context">on</edit>
+        <text>the presentation of Charniak (1996), but extends it by elucidating the structure of non-terminal interrelationships in the Penn Treebank grammar. On the basis of these studies, we build simple theoretical models which closely predict observed parser performance</text>
+        <edit type="readability;style" crr="and explain in detail" comments="Readability / join the sentences to improve flow;'in detail' is better than 'in particular'">, and, in particular, explain</edit>
+        <text>the</text>
+        <edit type="hyphenation" crr="originally-observed" comments="use hyphen when qualifying noun">originally observed</edit>
+        <text>super-cubic behavior.</text>
+        <text>\\ We used treebank grammars</text>
+        <edit type="clarity;word usage" crr="that were" comments="Word usage / whenever in doubt, specify with 'which', 'that' etc"></edit>
+        <text>induced directly from the local trees of the entire WSJ section of the Penn Treebank (Marcus et al., 1993) (release 3). For each length and parameter setting, 25</text>
+        <edit type="word usage" crr="evenly-distributed sentences" comments="">sentences evenly distributed</edit>
+        <text>through the treebank were parsed. Since we were parsing sentences from among those from which our grammar was derived, coverage was never an issue. Every sentence parsed had at least one parse - the parse with which it was originally observed.</text>
+        <text>\\ The sentences were parsed using an implementation of the probabilistic chart-parsing algorithm presented in (Klein and Manning, 2001). In that paper, we present a theoretical analysis showing an O(n3) worst-case time bound</text>
+        <edit type="clarity" crr="scenario for" comments="with the existing sentence structure, a noun is missing here. Specify further">or</edit>
+        <text>exhaustively parsing arbitrary context-free grammars. In what follows, we do not make use of the probabilistic aspects of the grammar or parser.</text>
+    </introduction>   
+</doc>

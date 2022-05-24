@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W16-3909" editor="B" format="WS" position="S" region="N">
+    <title>
+        <text>Name Variation in Community Question Answering Systems</text>
+    </title>
+    <abstract>
+        <text>Community question answering systems are forums where users can ask and answer questions in various categories. Examples</text>
+        <edit type="clarity;word choice" crr="include" comments="word choice; more specific">are</edit>
+        <text>Yahoo! Answers, Quora, and Stack Overflow. A common challenge with such systems is that a significant percentage of asked questions are left unanswered. In this paper, we propose an algorithm to reduce the number of unanswered questions in Yahoo! Answers by reusing the answers to the most similar past resolved questions</text>
+        <edit type="conciseness" crr="from the site as responses." comments="sentence simplification">to the unanswered question, from the site.</edit>
+        <text>Semantically similar questions</text>
+        <edit type="word choice" crr="may" comments="">could</edit>
+        <text>be worded differently, thereby making it difficult to</text>
+        <edit type="clarity;word choice" crr="identify" comments="">find</edit>
+        <text>questions that have shared needs. For example, Who is the best player for the Reds? and Who is currently the biggest star at Manchester United? have a shared need but are worded differently</text>
+        <edit type="flow" crr=". In addition," comments="sentence structure; shortening the previous sentence">; also,</edit>
+        <text>Reds and Manchester United are used to refer to the soccer team</text>
+        <edit type="clarity" crr="of the" comments="added for clarity"></edit>
+        <text>Manchester United football club. In this research, we focus on question categories that contain a large number of named entities and entity name variations. We show that in these categories, entity linking can be used to identify relevant past resolved questions</text>
+        <edit type="word choice" crr="that share needs with" comments="">with shared needs as</edit>
+        <text>a given question by disambiguating named entities and matching the questions based on the disambiguated entities, identified entities, and knowledge-base information related to these entities. We evaluated our algorithm on a new dataset constructed</text>
+        <edit type="clarity" crr="using data" comments="added for clarity"></edit>
+        <text>from Yahoo! Answers. The dataset contains annotated question pairs, (Qgiven, [Qpast, Answer]). We</text>
+        <edit type="conciseness;tense" crr="conduct" comments="word choice; one word in place of two; verb tense; less confusing if both are the same tense">carried out</edit>
+        <text>experiments on several question categories and show that an entity-based approach</text>
+        <edit type="style" crr="provides" comments="">gives</edit>
+        <text>good performance when searching for similar questions in entity-rich categories.</text>
+    </abstract>   
+    <introduction>
+        <text>In community question answering (CQA) systems, users prefer asking other users questions because</text>
+        <edit type="style" crr="(i) their questions are personal and require direct answers from users with similar experiences or users familiar with the questions, (ii) no single web page can answer their questions, and (iii)" comments="enumeration; caps aren't normally used for this">(I) their questions are personal and require direct answers from users with similar experiences or users familiar with the questions, (II) no single web page can answer their questions, and (III)</edit>
+        <text>users want to communicate and exchange ideas with other users. One of the challenges</text>
+        <edit type="clarity;word choice" crr="presented by" comments="">with</edit>
+        <text>such systems is that some questions are left unanswered</text>
+        <edit type="clarity" crr="for one or more of the following reasons:" comments="added for clarity">because:</edit>
+        <text>\ they are short and lack relevant content</text>
+        <edit type="flow" crr=", \ they are not clearly expressed, or" comments="">they are not clearly expressed</edit>
+        <text>\ they are not appropriately assigned to a user</text>
+        <edit type="clarity" crr="who" comments="">that</edit>
+        <text>is able to answer the question. Approximately 15% of incoming English questions in Yahoo! Answers do not receive</text>
+        <edit type="readability;grammar" crr="answers, leaving the users who asked these questions (askers)" comments="sentence structure">any answer, and leave the user that asked the question (asker)</edit>
+        <text>unsatisfied (Shtok et al., 2012). One approach to reducing the number of unanswered questions in a CQA is to direct an unanswered question to a user who is knowledgeable about the question (Dror et al., 2011). Another approach automatically extracts answers from a knowledge base (KB) such as Wikipedia, a text passage, or the web (Gyongyi et al., 2007).</text>
+        <edit type="readability" crr="" comments="Because approximately 25% of questions are recurrent in certain question categories in Yahoo! Answers">In certain question categories in Yahoo! Answers, approximately 25% of questions are recurrent</edit>
+        <text>Shtok et al., 2012)</text>
+        <edit type="flow" crr=", a third approach" comments="">. A third approach</edit>
+        <text>takes advantage of question recurrence by reusing past resolved questions (PARQs) from within Yahoo! Answers to satisfy unanswered questions. Shtok et al. (2012) used this third approach to satisfy unanswered questions in the Beauty and Style, Health, and Pets question categories by matching new questions to PARQs if they had a cosine similarity score above a given threshold (0.9); features were then extracted from the new question and the PARQs to train a classifier. Certain question categories such as Sports have a high occurrence of named entities and entity name variations. For example, a sports team can be referred to by its official name, the name of the city it plays in, or by any of several nicknames.</text>
+        <edit type="word choice;clarity" crr="In addition," comments="word choice; more specific">Also,</edit>
+        <text>the vocabulary in questions in these categories can be diverse and the questions are often very short (Klang and Nugues, 2014; Khalid et al., 2008).</text>
+        <text>\\ The contribution of this paper is to propose an alternative approach to reducing the number of unanswered questions in question categories that contain a large number of entities by taking advantage of the recent successes in entity linking. We now have systems that can disambiguate named entities to</text>
+        <edit type="clarity" crr="within" comments="added for clarity"></edit>
+        <text>a KB. Matching questions and answers based on these disambiguated entities, entities, and the KB information related to these entities finds most of the relevant answers to a given question.</text>
+        <text>We investigate the validity of using an entity-based approach in entity- rich categories by first analyzing 150 questions from each of the following categories Beauty and Style, Health, Pets, Sports, Entertainment and Music and Parenting.</text>
+        <text>\\ Table 1 shows that more questions in the Sports and Entertainment and Music categories contain named entities and/or entity variations</text>
+        <edit type="clarity" crr="than other Yahoo! Answers categories" comments="added for clarity"></edit>
+        <text>. We annotated 200 question pairs that each exhibit shared needs from the Sports and Entertainment and Music question categories. We observed that 82% of the relevant annotated question pairs contain either the same named entity or a variation of the entity. This percentage could</text>
+        <edit type="word choice" crr="be higher in" comments="">increase on</edit>
+        <text>a larger dataset. We also observed that the cosine similarity scores of the relevant question pairs varied, i.e., the cosine similarity, was high in some relevant question pairs and low in others. Hence, we propose</text>
+        <edit type="word choice" crr="use of" comments="">to use</edit>
+        <text>an entity-based approach in question categories with high entity usage.</text>
+    </introduction>   
+</doc>

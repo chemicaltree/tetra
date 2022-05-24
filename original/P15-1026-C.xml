@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-1026" editor="A" format="Conf" position="S" region="NN">
+    <title>
+        <text>Question Answering over Freebase with Multi-Column Convolutional Neural Networks</text>
+    </title>
+    <abstract>
+        <text>Answering natural language questions over a knowledge base is</text>
+        <edit type="style;word choice" crr="both" comments="Style / insert this word to tighten up the sentence"></edit>
+        <text>an important and challenging task. Most</text>
+        <edit type="grammar" crr="" comments="Grammar / not required. Either it's 'most of the existing systems' or 'most existing systems'">of</edit>
+        <text>existing systems typically rely on hand-crafted features and rules to conduct question understanding and/or answer ranking. In this paper, we introduce multi-column convolutional neural networks (MCCNNs) to understand questions from three different aspects</text>
+        <edit type="readability" crr=". These are namely, answer path, answer context, and answer type that" comments="Flow / end potentially long sentence here to improve readability">(namely, answer path, answer context, and answer type) and</edit>
+        <text>learn their distributed representations. Meanwhile, we jointly learn low-dimensional embeddings of entities and relations in the knowledge base. Question-answer pairs are used to train the model</text>
+        <edit type="clarity" crr="in order" comments="Vocabulary / insert to clarify"></edit>
+        <text>to rank candidate answers. We also leverage question paraphrases to train the column networks in a multi-task learning manner.</text>
+        <edit type="style;readability" crr="Additionally, we use" comments="Style / insert this word to improve readability (you're describing a sequence of events)">We use</edit>
+        <text>FREEBASE as the knowledge base and conduct extensive experiments on the WEBQUESTIONS dataset. Experimental results show that our method achieves</text>
+        <edit type="style" crr="improved" comments="Register / 'better' is correct, but the alternative is better for academic style">better</edit>
+        <text>or comparable performance</text>
+        <edit type="readability" crr="when" comments="Readability / insert either 'when' or ',' as you're introducing another clause ('compared with....)"></edit>
+        <text>compared with baseline systems. In addition, we develop a method to compute the salience scores of question words in different column networks. The results help us intuitively understand what MCCNNs</text>
+        <edit type="readability" crr="are able to" comments="Readability / your format is correct, but the proposed addition adds a little more context"></edit>
+        <text>learn.</text>
+    </abstract>   
+    <introduction>
+        <text>Automatic question answering systems return the direct and exact answers to natural language questions. In recent years, the development of large-scale knowledge bases</text>
+        <edit type="grammar" crr="" comments="Punctuation / not required in this instance as there is no clause">,</edit>
+        <text>such as FREEBASE (Bollacker et al., 2008)</text>
+        <edit type="grammar" crr="" comments="Punctuation / not required here as strictly there is no follow-on clause">,</edit>
+        <text>provides a rich resource</text>
+        <edit type="grammar;readability" crr="for answering open-domain questions. However, understanding question elements and bridging the gap between natural languages and structured semantics of knowledge bases is still very challenging." comments="Grammar / in this instance, the proposed alternative is correct">to answer open-domain questions. However, how to understand question elements and bridge the gap between natural languages and structured semantics of knowledge bases is still very challenging.</edit>
+        <edit type="style" crr="\\ Until now," comments="Vocabulary / use either 'until now' or 'up until now' (although the latter is less academic)">\\ Up to now,</edit>
+        <edit type="conciseness;grammar" crr="two mainstream methods have existed for this task." comments="Syntax / you're talking about the past ('until now') so you need to use past tense">there are two mainstream methods for this task.</edit>
+        <text>The first</text>
+        <edit type="consistency" crr="method" comments="Register / use 'method' to tighten comprehension">one</edit>
+        <text>is based on semantic parsing (Berant et al., 2013; Berant and Liang, 2014) and the</text>
+        <edit type="style;clarity" crr="second method" comments="Style / 'other' is correct, but in this case not appropriate for academic narrative">other</edit>
+        <text>relies on information extraction over the structured knowledge base (Yao and Van Durme, 2014; Bordes et al., 2014a; Bordes et al., 2014b).</text>
+        <edit type="readability" crr="First, the" comments="Readability / you're describing a sequence here so add 'first...'">The</edit>
+        <text>semantic parsers learn to understand natural language questions by converting them into logical forms. Then, the parse results are used to generate structured queries to</text>
+        <edit type="word choice" crr="query" comments="Register / 'search' is correct, but I think 'query' is a little more appropriate here?"></edit>
+        <text>knowledge bases and obtain the answers. Recent works mainly focus on using question-answer pairs, instead of annotated, logical forms of questions, as weak training signals (Liang et al., 2011; Krishnamurthy and Mitchell, 2012)</text>
+        <edit type="clarity" crr="in order" comments="Vocabulary / insert to clarify"></edit>
+        <text>to reduce annotation costs. However, some</text>
+        <edit type="clarity" crr="" comments="Comprehension / in this case, 'some of them' doesn't clarify what you are referring to...">of them</edit>
+        <text>still assume a fixed and pre-defined set of lexical triggers which limit their domains and scalability capability. In addition, they need to manually design features for semantic parsers.</text>
+        <edit type="readability" crr="\\ The second approach" comments="Readability / it's a good point to start a new paragraph to break up long paragraphs..">The second approach</edit>
+        <text>uses information extraction techniques for open question answering. These methods retrieve a set of candidate answers from the knowledge base, and then extract features for both the question and these candidates to rank them. However, the method proposed by Yao and Van Durme (2014) relies on rules and dependency parse results in order to extract hand-crafted features for questions. Moreover, some methods (Bordes et al., 2014a; Bordes et al., 2014b) use the summation of question-word embeddings to represent questions, which ignores word order information and cannot process complicated questions.</text>
+        <text>\\ In this paper, we introduce the</text>
+        <edit type="clarity" crr="theme of" comments="Vocabulary / insert to clarify"></edit>
+        <text>multi-column convolutional neural networks (MCCNNs) to automatically analyze questions from multiple aspects. Specifically, the model shares the same word embeddings to represent question words. MCCNNs use different column networks to extract answer types, relations, and context information from the input questions. The entities and relations in the knowledge base (namely, FREEBASE in our experiments) are also represented as low-dimensional vectors. Then, a score layer is employed to rank candidate answers according to the representations of questions and candidate answers. The proposed information extraction based method utilizes question-answer pairs to automatically learn the model without relying on manually annotated logical forms and hand-crafted features. We also do not use any</text>
+        <edit type="hyphenation" crr="predefined" comments="Spelling / it's ok not to use the hyphen here">pre-defined</edit>
+        <text>lexical triggers and rules. In addition, the question paraphrases are also used to train networks and generalize for the unseen words in a multi-task learning manner. We have conducted extensive experiments on WEBQUESTIONS. Experimental results illustrate that our method outperforms several baseline systems.</text>
+        <text>\\ The contributions of this paper are three-fold:</text>
+        <text>\ We introduce multi-column convolutional neural networks for question understanding without relying on hand-crafted features and rules, and</text>
+        <edit type="flow" crr="then" comments="Flow / insert when describing a sequence"></edit>
+        <text>use question paraphrases to train the column networks and word vectors in a multi-task learning manner. \ We jointly learn low-dimensional embeddings for the entities and relations in FREEBASE with question-answer pairs as supervision signals. \ We conduct extensive experiments on the WEBQUESTIONS dataset, and provide some intuitive interpretations for MCCNNs by developing a method to detect salient question words in the different column networks.</text>
+    </introduction>   
+</doc>

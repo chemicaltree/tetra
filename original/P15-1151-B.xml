@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-1151" editor="B" format="Conf" position="S" region="NN">
+    <title>
+        <text>A Convolutional Architecture for Word Sequence Prediction</text>
+    </title>
+    <abstract>
+        <text>We propose a convolutional neural network,</text>
+        <edit type="word choice;clarity" crr="which we call" comments="word choice; added for clarity">named</edit>
+        <text>genCNN, for word sequence prediction. Different from previous work on neural-network-based language modeling and generation (e.g., RNN or LSTM), we choose not to greedily summarize the history of words as a fixed-length vector. Instead, we use a convolutional neural network to predict the next word with a history of words of variable length. Also different from existing feedforward networks for language modeling, our model can effectively fuse the local correlation and global correlation in the word sequence</text>
+        <edit type="word choice" crr="using" comments="">with</edit>
+        <text>a convolution-gating strategy specifically designed for the task. We argue that our model can</text>
+        <edit type="style" crr="provide" comments="">give</edit>
+        <text>adequate representation of the history, and</text>
+        <edit type="word order" crr="can therefore " comments="">therefore can</edit>
+        <text>naturally exploit both the</text>
+        <edit type="hyphenation" crr="short- and long-range" comments="to create combined adjectives (the adjectives here are 'short-range' and 'long-range')">short and long range</edit>
+        <text>dependencies. Our model is fast, easy to train, and readily parallelized.</text>
+        <edit type="word choice;conciseness" crr="Extensive experimentation on text generation and n-best re-ranking in machine translation shows" comments="word choice; extraneous">Our extensive experiments on text generation and n-best re-ranking in machine translation show</edit>
+        <text> that genCNN outperforms the state-of-the-arts</text>
+        <edit type="style;word choice" crr="by a large margin." comments="">with big margins.</edit>
+    </abstract>   
+    <introduction>
+        <text>Both language modeling (Wu and Khudanpur, 2003; Mikolov et al., 2010; Bengio et al., 2003) and text generation (Axelrod et al., 2011) boil down to modeling the conditional probability of a word given the</text>
+        <edit type="word choice" crr="preceding" comments="word choice; this is a correction for a similar word the author appears to have confused with the correct one.">proceeding</edit>
+        <text>words. Previously,</text>
+        <edit type="word choice;clarity;style" crr="this was mostly accomplished" comments="">it is mostly done</edit>
+        <text>through purely memory-based approaches, such as n-grams, which cannot </text>
+        <edit type="word choice" crr="handle" comments="">deal with</edit>
+        <text>long sequences</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>and</text>
+        <edit type="word choice;clarity" crr="heuristics (known assmoothing) must be added to accommodate rare words." comments="word choice; word order; added for clarity;This is my best guess at what the author means.">has to use some heuristics (called smoothing) for rare ones.</edit>
+        <text>Another family of methods</text>
+        <edit type="grammar" crr="word choice; singular (it needs to agree with family, which is singular);is based on distributed representations of words, which are usually tied to a neural-network (NN)" comments="word choice; plural (it needs to agree with representations">are based on distributed representations of words, which is usually tied with a neural-network (NN)</edit>
+        <text>architecture for estimating the conditional probabilities of words.</text>
+        <text>\\ Two categories of neural networks have been used for language modeling: 1) recurrent neural networks (RNN), and 2) feedfoward</text>
+        <edit type="clarity" crr="neural" comments="added for clarity"></edit>
+        <edit type="grammar" crr="networks" comments="">network</edit>
+        <text>(FFN): \ The RNN-based models, including</text>
+        <edit type="conciseness" crr="" comments="">its</edit>
+        <text>variants like LSTM,</text>
+        <edit type="word choice" crr="are more popular" comments="word choice; this might be discretionary. This seems somewhat anthropomorphic">enjoy more popularity</edit>
+        <text>, mainly due to their flexible structures for processing word sequences of arbitrary lengths and their recent empirical success (Sutskever et al., 2014; Graves, 2013).</text>
+        <edit type="word order" crr="However, we argue" comments="">We however argue</edit>
+        <text>that RNNs, with their power built on the recursive use of relatively simple computation units, are forced to make greedy summarizations of the history</text>
+        <edit type="punctuation" crr=";" comments="">and</edit>
+        <text>consequently</text>
+        <edit type="word choice" crr=", they are inefficient at" comments="">not efficienct on</edit>
+        <text>modeling word sequences which clearly have bottom-up structures.</text>
+        <text>\ The FFN-based models, on the other hand, avoid this difficulty by feeding directly on the history. However, FFNs are built on fully-connected networks, rendering them inefficient at capturing the local structure of languages.</text>
+        <edit type="punctuation" crr="Moreover," comments="">Moreover</edit>
+        <text>their “rigid” architectures make</text>
+        <edit type="word order" crr="handling the great variety of patterns in long-range correlations of words futile." comments="">it futile to handle the great variety of patterns in long-range correlations of words.</edit>
+        <text>We propose a novel convolutional architecture,</text>
+        <edit type="word choice;clarity" crr="which we call" comments="word choice; added for clarity">named</edit>
+        <text>genCNN, as a model that can efficiently combine local and long-range structures of language for the purpose of modeling conditional probabilities.</text>
+        <edit type="clarity;grammar" crr="The genCNN architecture can" comments="added to avoid starting the sentence with a lowercase letter;added for clarity">genCNN</edit>
+        <text>can be directly used in generating a word sequence (i.e., text generation) or evaluating the likelihood of word sequences (i.e., language modeling). We also show the empirical superiority of genCNN on both tasks over traditional n-grams and its RNN or FFN counterparts.</text>
+    </introduction>   
+</doc>

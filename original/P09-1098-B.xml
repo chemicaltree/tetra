@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P09-1098" editor="B" format="Conf" position="NS" region="NN">
+    <title>
+        <text>Mining Bilingual Data from the Web with Adaptively Learnt Patterns</text>
+    </title>
+    <abstract>
+        <text>Mining bilingual data (including bilingual sentences and terms) from the Web can benefit many NLP applications, such as machine translation and cross language information retrieval. In this paper, based on the observation that bilingual data in many web pages appear collectively following similar patterns, an adaptive pattern-based bilingual data mining method is proposed. Specifically, given a web page, the method contains four steps: 1) preprocessing:</text>
+        <edit type="flow" crr="parsing the web page into a DOM tree and segmenting the inner text of each node into snippets; 2) seed mining: identifying potential translation pairs (seeds) using a word-based alignment model which takes both translation and transliteration into consideration; 3) pattern learning: learning generalized patterns with the identified seeds; 4) pattern based mining: extracting" comments="">parse the web page into a DOM tree and segment the inner text of each node into snippets; 2) seed mining: identify potential translation pairs (seeds) using a word-based alignment model which takes both translation and transliteration into consideration; 3) pattern learn: learning generalized patterns with the identified seeds; 4) pattern based mining: extract</edit>
+        <text>all bilingual data in the page using the learned patterns. Our experiments on Chinese web pages produced more than 7.5 million pairs of bilingual sentences and more than 5 million pairs of bilingual terms, both with over 80% accuracy.</text>
+    </abstract>   
+    <introduction>
+        <text>Bilingual data (including bilingual sentences and bilingual terms)</text>
+        <edit type="word choice;grammar" crr="is a critical resource" comments="ingular versus plural (data can be either)">are critical resources</edit>
+        <text>for building many applications, such as machine translation</text>
+        <edit type="clarity" crr="applications" comments="added for clarity"></edit>
+        <text>(Brown, 1993) and cross language information retrieval</text>
+        <edit type="clarity" crr="systems" comments="added for clarity"></edit>
+        <text>(Nie et al., 1999). However, most existing bilingual data sets are (i) not adequate for their intended uses, (ii)</text>
+        <edit type="hyphenation" crr="not up to date" comments="hyphens not necessary">not up-to-date</edit>
+        <text>, (iii) apply only to limited domains. Because it's very</text>
+        <edit type="style" crr="difficult" comments="">hard</edit>
+        <text>and expensive to create a</text>
+        <edit type="hyphenation" crr="large-scale" comments="">large scale</edit>
+        <text>bilingual dataset with human effort, recently, many researchers have turned to automatically mining</text>
+        <edit type="clarity" crr="data" comments="">them</edit>
+        <text>from the Web.</text>
+        <text>\\ If the content of a web page is written in two languages, we call the page a Bilingual Web Page. Many such pages exist</text>
+        <edit type="grammar" crr="on" comments="preposition choice">in</edit>
+        <text>non-English</text>
+        <edit type="spelling" crr="websites." comments="Spelling. Most common current spelling is 'website' (one word).">web sites.</edit>
+        <text>Most of them have a primary language (usually a non-English language) and a secondary language (usually English).</text>
+        <edit type="word order" crr="The secondary language content" comments="word order">The content in the secondary language</edit>
+        <text>is often a translation of some primary language text on the page.</text>
+        <text>\\ Since bilingual web pages are very common</text>
+        <edit type="grammar" crr="on" comments="preposition choice">in</edit>
+        <text>non-English</text>
+        <edit type="spelling" crr="websites," comments="Spelling. Most common current spelling is 'website' (one word).">web sites,</edit>
+        <text>mining bilingual data from them should be an important task. However,</text>
+        <edit type="style;word choice" crr="to our knowledge" comments="">as far as we know</edit>
+        <text>, there is no</text>
+        <edit type="word choice" crr="published study" comments="">publication</edit>
+        <text>available</text>
+        <edit type="word choice;clarity" crr="describing a method of" comments="">on</edit>
+        <text>mining bilingual sentences directly from bilingual web pages. Most existing methods for mining bilingual sentences from the Web, such as (Nie et al., 1999; Resnik and Smith, 2003; Shi et al., 2006),</text>
+        <edit type="style" crr="attempt" comments="word choice; discretionary">try</edit>
+        <text>to mine parallel web documents within bilingual</text>
+        <edit type="spelling;consistency" crr="websites" comments="Spelling. Most common current spelling is 'website' (one word).">web sites</edit>
+        <text>first and then extract bilingual sentences from mined parallel documents using sentence alignment methods.</text>
+        <text>\\ As to mining term translations from bilingual web pages, Cao et al. (2007) and Lin et al. (2008)</text>
+        <edit type="tense" crr="have" comments=""></edit>
+        <text>proposed two different methods to extract term translations based on the observation that authors of many bilingual web pages, especially those whose primary language is Chinese, Japanese or Korean, sometimes annotate terms with their English translations inside a pair of parentheses, like “c1c2...cn(e1 e2 ... em)” (c1c2...cn is a primary language term and e1 e2 ... em is its English translation).</text>
+        <text>\\ Actually, in addition to the parenthesis pattern,</text>
+        <edit type="conciseness" crr="another interesting phenomenon is that" comments="">there is another interesting phenomenon that</edit>
+        <text>in many bilingual web pages bilingual data appear collectively and follow similar surface patterns. Figure 1 shows an excerpt of a page which introduces different kinds of dogs. The page provides a list of dog names in both English and Chinese. Note that</text>
+        <edit type="word choice" crr="the" comments="">these</edit>
+        <text>bilingual names do not follow the parenthesis pattern. However, most of them are identically formatted as: “{Number}。{English name}{Chinese name}{EndOfLine}”. One exceptional pair (“1.Alaskan Malamute 啊拉斯加雪橇犬”) differs only slightly.</text>
+        <edit type="word choice" crr="In addition" comments="">Furthermore</edit>
+        <text>, there are also many pages containing consistently formatted bilingual sentences (see Figure 2). The page lists the (claimed) 200 most common oral sentences in English and their Chinese translations to facilitate English learning.</text>
+        <text>\\ People create such web pages for various reasons. Some online stores list their products in two languages to make them understandable to foreigners. Some pages aim to help readers with foreign language learning. And in some pages where foreign names or technical terms are mentioned, the authors provide translations for disambiguation. For easy reference,</text>
+        <edit type="readability;word choice" crr="we will henceforth" comments="word choice; higher level language">from now on we will</edit>
+        <edit type="style" crr="refer to" comments="">call</edit>
+        <text>pages which contain many consistently formatted translation pairs as Collective Bilingual Pages.</text>
+        <text>\\ According to our</text>
+        <edit type="readability" crr="estimates, there are at least tens of millions of collective bilingual pages in existence on Chinese websites." comments="">estimation, at least tens of millions of collective bilingual pages exist in Chinese web sites.</edit>
+        <text>This shows the great potential for bilingual data mining. However, the mining task is not straightforward, for the following reasons:</text>
+        <text>\ 1) The patterns vary on different pages, so it'‟s impossible to mine the translation pairs using predefined templates;</text>
+        <text>\ 2) Some pages contain consistently formatted texts in two languages but they are not translation pairs;</text>
+        <text>\ 3) Not all translations on a collective bilingual pages necessarily follow an exactly consistent format. As shown in Figure 1, the ten translation pairs are supposed to follow the same pattern; however, due to typos, the pattern of the first pair is slightly different.</text>
+        <text>Because of these difficulties, simply using a classifier to extract translation pairs from adjacent bilingual texts in a collective bilingual page may not achieve satisfactory results. Therefore, in this paper, we propose a pattern-based approach: learning patterns adaptively from collective bilingual pages instead of using the parenthesis pattern, then using the learned patterns to extract translation pairs from corresponding web pages. Specifically, our approach contains four steps:</text>
+        <edit type="flow" crr="\ 1) Preprocessing: parsing the web page into a DOM tree and segmenting the inner text of each node into snippets; \ 2) Seed mining: identifying potential translation pairs (seeds) using an alignment model, which takes both translation and transliteration into consideration; \ 3) Pattern learning: learning generalized patterns with the identified seeds; \ 4) Pattern based mining: extracting all bilingual data on the page using the learnt patterns." comments="flow"></edit>
+        <edit type="clarity" crr="\\ To illustrate how this approach works, let us take" comments="added for clarity">\\ Let us take</edit>
+        <text>mining bilingual data from the text shown in Figure 1 as an example. Our method identifies “Boxer 拳师” and “Eskimo Dog 爱斯基摩犬” as two potential translation pairs based on a dictionary and a transliteration model (Step 2 above). Then we learn the generalized pattern that both pairs follow as “{BulletNumber}{Punctuation}{English term}{Chinese term}{EndOfLine}”, (Step 3 above). Finally, we apply</text>
+        <edit type="word choice;clarity" crr="this pattern" comments="word choice; added for clarity">it</edit>
+        <text>to match in the entire text and get all translation pairs following the pattern (Step 4 above).</text>
+        <text>\\ The remainder of this paper is organized as follows. In Section 2, we list some related work. The overview of our mining approach is presented in Section 3. In Section 4, we give a detailed introduction to each of the four modules in our mining approach. The experimental results are reported in Section 5, followed by our conclusion and some future work in Section 6.</text>
+        <text>\\ Please note that in this paper we describe our method using example bilingual web pages in English and Chinese</text>
+        <edit type="punctuation" crr=";" comments="">,</edit>
+        <text>however, the method can be applied to extract bilingual data from web pages written in any other pair of languages, such as Japanese and English, Korean and English etc.</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P06-1124" editor="C" format="Conf" position="NS" region="NN">
+    <title>
+        <text>A Hierarchical Bayesian Language Model based on Pitman-Yor Processes</text>
+    </title>
+    <abstract>
+        <text>We propose a new hierarchical Bayesian n-gram model of natural languages. Our model makes use of a generalization of the commonly-used Dirichlet distributions called Pitman-Yor processes</text>
+        <edit type="readability" crr=". These processes" comments="Readability / introduce new (shorter) sentence">which</edit>
+        <text>produce power-law distributions more closely resembling those in natural languages. We show that an approximation to the hierarchical Pitman-Yor language model recovers the exact formulation of interpolated Kneser-Ney, accepted as one of the best smoothing methods for n-gram language models. Experiments verify that our model gives cross entropy results superior to interpolated Kneser-Ney and comparable to modified Kneser-Ney.</text>
+    </abstract>   
+    <introduction>
+        <text>Probabilistic language models are used extensively in a variety of linguistic applications, including speech recognition, handwriting recognition, optical character recognition, and machine translation. Most language models fall into the class of n-gram models, which approximate the distribution over sentences</text>
+        <edit type="clarity" crr="that use" comments="Clarify / consider using 'that' for emphasis">using</edit>
+        <text>the conditional distribution of each word given a context consisting of only the previous n - 1 words, [MATH] with n = 3 (trigram models) being typical. Even for such a modest value of n, the number of parameters is still tremendous due to the large vocabulary size. As a result direct maximum-likelihood parameter fitting severely overfits to the training data, and smoothing methods are</text>
+        <edit type="spelling" crr="indispensable" comments="">indispensible</edit>
+        <text>for proper training of n-gram models.</text>
+        <edit type="word choice;conciseness" crr="\\ Numerous" comments="Word choice / consider replacing to reduce wordiness">\\ A large number of</edit>
+        <text>smoothing methods have been proposed in the literature (see (Chen and Goodman, 1998; Goodman, 2001; Rosenfeld, 2000) for good overviews). Most methods take a rather ad hoc approach, where n-gram probabilities for various values of n are combined</text>
+        <edit type="redundancy" crr="" comments="Not required as you've already used the word 'combined'">together</edit>
+        <text>, using either interpolation or back-off schemes.</text>
+        <edit type="word choice" crr="Although" comments="'Although' is more appropriate">Though</edit>
+        <text>some of these methods are intuitively appealing, the main justification for these methods has always been empirical—better perplexities or error rates on test data.</text>
+        <edit type="repetitiveness" crr="And" comments="Repetition of 'though' / consider alternative">Though</edit>
+        <edit type="clarity" crr=" while" comments="Meaning / sentence restructure to clarify"></edit>
+        <text>arguably this should be the only real justification, it only</text>
+        <edit type="word choice;conciseness" crr="addresses" comments="Word choice / consider replacing to reduce wordiness">answers the question of</edit>
+        <text>whether a method performs better, not how</text>
+        <edit type="word choice" crr="or" comments="Word choice / not a case of 'neither'/'nor'">nor</edit>
+        <edit type="repetitiveness" crr="why." comments="Not required / repetition">why it performs better.</edit>
+        <text>This is unavoidable, given that most of these methods are not based on internally coherent Bayesian probabilistic models</text>
+        <edit type="readability" crr=". These models" comments="Readability / very long and complex sentence. Consider splitting">, which</edit>
+        <text>have explicitly-declared prior assumptions and</text>
+        <edit type="word choice;clarity" crr="thier" comments="Word choice / clarify">whose</edit>
+        <text>merits can be argued in terms of how closely they fit in with the known properties of natural languages. Bayesian probabilistic models also have additional advantages</text>
+        <edit type="readability" crr=". It" comments="Split long and complex sentence">-it</edit>
+        <text>is relatively straightforward to improve these models by incorporating additional knowledge sources</text>
+        <edit type="redundancy" crr="" comments="Not required / wordiness">and to includinge them</edit>
+        <text>into larger models in a principled manner. Unfortunately, the performance of previously-proposed Bayesian language models has been dismal, compared to other smoothing methods (Nadas, 1984; MacKay and Peto, 1994).</text>
+        <text>\\ In this paper, we propose a novel language model</text>
+        <edit type="word choice;clarity" crr="that is" comments="Word choice / consider inserting to clarify"></edit>
+        <text>based on a hierarchical Bayesian model (Gelman et al., 1995), where each hidden variable is distributed according to a Pitman-Yor process</text>
+        <edit type="readability" crr=". This process is a" comments="End long sentence;Insert to begin new paragraph and clarify">, a</edit>
+        <text>non-parametric generalization of the Dirichlet distribution that is widely studied in the statistics and probability theory communities (Pitman and Yor, 1997; Ishwaran and James, 2001; Pitman, 2002).</text>
+        <edit type="flow" crr="In contrast, our" comments="">Our</edit>
+        <text>model is a direct generalization of the hierarchical Dirichlet language model of (MacKay and Peto, 1994). Inference in our model is however not as straightforward, and we propose an efficient Markov chain Monte Carlo sampling scheme.</text>
+        <text>\\ Pitman-Yor processes produce power-law distributions that more closely resemble those seen in natural languages</text>
+        <edit type="readability" crr=". It" comments="">, and it</edit>
+        <text>has been argued that</text>
+        <edit type="conciseness" crr="," comments="">as a result</edit>
+        <text>they are</text>
+        <edit type="spelling" crr="consequently" comments="">consquently</edit>
+        <text>more suited to applications in natural language processing (Goldwater et al., 2006). We</text>
+        <edit type="word choice;conciseness" crr="demonstrate" comments="Insert and replace to reduce wordiness">show experimentally</edit>
+        <text>that our hierarchical Pitman-Yor language model does indeed produce results</text>
+        <edit type="clarity" crr="that are both" comments=""></edit>
+        <text>superior to interpolated Kneser-Ney and comparable to modified Kneser-Ney,</text>
+        <edit type="clarity" crr="which are" comments=""></edit>
+        <text>two of the currently best-performing smoothing methods (Chen and Goodman, 1998). In fact, we show a stronger result</text>
+        <edit type="clarity" crr="which shows" comments="">—</edit>
+        <text>that interpolated Kneser-Ney can be interpreted as a particular approximate inference scheme in the hierarchical Pitman-Yor language model. Our interpretation is more useful than past interpretations involving marginal constraints (Kneser and Ney, 1995; Chen and Goodman, 1998) or maximum-entropy models (Goodman, 2004) as it can recover the exact formulation of interpolated Kneser-Ney, and actually produces superior results. (Goldwater et al., 2006) has independently noted the correspondence between the hierarchical Pitman-Yor language model and interpolated Kneser-Ney, and conjectured improved performance in the hierarchical Pitman-Yor language model, which we verify here.</text>
+        <text>\\ Thus, the contributions of this paper are threefold:</text>
+        <edit type="flow;clarity" crr="first, we propose a language model with excellent performance and the accompanying advantages of Bayesian probabilistic models. Secondly, we introduce a novel and efficient inference scheme for the model. Finally, we establish a direct correspondence between interpolated Kneser-Ney and the Bayesian approach." comments="">in proposing a language model with excellent performance and the accompanying advantages of Bayesian probabilistic models, in proposing a novel and efficient inference scheme for the model, and in establishing a direct correspondence between interpolated Kneser-Ney and the Bayesian approach.</edit>
+        <text>\\ We describe the Pitman-Yor process in Section 2, and propose the hierarchical Pitman-Yor language model in Section 3. In Sections 4 and 5 we give a high-level description of our sampling-based inference scheme, leaving the details to a technical report (Teh, 2006). We also show how interpolated Kneser-Ney can be interpreted as approximate inference in the model.</text>
+        <edit type="flow;redundancy" crr="In Section 6, we demonstrate experimental comparisons to interpolated and modified Kneser-Ney, and the hierarchical Dirichlet language model. We lay out our conclusions in Section 7." comments="">We show experimental comparisons to interpolated and modified Kneser-Ney, and the hierarchical Dirichlet language model in Section 6 and conclude in Section 7.</edit>
+    </introduction>   
+</doc>

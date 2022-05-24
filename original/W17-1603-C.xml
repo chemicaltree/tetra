@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-1603" editor="C" format="WS" position="NS" region="NN">
+    <title>
+        <text>A Quantitative Study of Data in the NLP community</text>
+    </title>
+    <abstract>
+        <text>We present</text>
+        <edit type="grammar;clarity" crr="the" comments=""></edit>
+        <text>results</text>
+        <edit type="grammar" crr="off" comments="">on</edit>
+        <text>a quantitative analysis of</text>
+        <edit type="clarity" crr="a number of" comments=""></edit>
+        <text>publications in the NLP domain on</text>
+        <edit type="grammar;clarity" crr="the" comments=""></edit>
+        <edit type="spelling;word choice" crr="collection" comments="">collecting</edit>
+        <text>, publishing, and availability of research data. We find that,</text>
+        <edit type="clarity" crr="although a wide range of publications rely on data crawled from the web," comments="insert 'although' to strengthen your argument">a wide range of publications rely on data crawled from the web, but</edit>
+        <edit type="word choice" crr="publications provide" comments="w">give</edit>
+        <text>details</text>
+        <edit type="word choice" crr="of" comments="">on</edit>
+        <text>how potentially sensitive data was treated.</text>
+        <edit type="word choice" crr="In additional," comments="">Additionally,</edit>
+        <edit type="repetitiveness" crr="" comments="Not required / repetition /">we find that,</edit>
+        <text>while links to repositories of data are given, they often do not work</text>
+        <edit type="punctuation" crr="," comments="Punctuation / long sentence / use of clauses"></edit>
+        <text>even a short time after publication. We</text>
+        <edit type="style;word choice" crr="present" comments="Style / word choice / consider this term that is more consistent with academic style">put together</edit>
+        <text>several suggestions on how to improve this situation based on publications from the NLP domain,</text>
+        <edit type="style" crr="as well as" comments="">but</edit>
+        <text>also other research areas.</text>
+
+    </abstract>   
+    <introduction>
+        <text>\n\n The Natural Language Processing (NLP) community makes extensive use of resources available on the internet. And</text>
+        <edit type="word choice" crr="since" comments="">as</edit>
+        <text>research in NLP</text>
+        <edit type="tense" crr="is attracting" comments="Tense / 'is attracting' suggests it's still ongoing">attracts</edit>
+        <edit type="conciseness" crr="public attention" comments="">attention by the general public,</edit>
+        <edit type="style" crr="it’s necessary to ensure" comments="">we have to make sure,</edit>
+        <edit type="style" crr="the validity and reliability of our results" comments="">our results are solid and reliable</edit>
+        <text>, similar to</text>
+        <edit type="style" crr="areas such as" comments=""></edit>
+        <text>medicine and pharmacy. In the case of medicine, the general public is often too optimistic</text>
+        <edit type="clarity" crr="" comments="Lack of clarity. Needs some more specification">.</edit>
+        <text>In NLP</text>
+        <edit type="punctuation" crr="," comments="Punctuation, introduction of a clause"></edit>
+        <text>this</text>
+        <edit type="clarity" crr="excessive optimism" comments="Clarify here what the general public is over-optimistic about">over-optimism</edit>
+        <text>can have a negative impact, such as in articles on automatic speech recognition or personality profiling. Few point out</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>that the algorithms are not perfect and do not solve all the problems, as</text>
+        <edit type="grammar" crr="in" comments="">on</edit>
+        <text>terrorism prevention or sentiment analysis.</text>
+        <text>\n\n Therefore, important questions</text>
+        <edit type="clarity" crr="to pose" comments=""></edit>
+        <text>are</text>
+        <edit type="punctuation" crr=":" comments="">,</edit>
+        <edit type="punctuation" crr="What happens to the data?" comments="Start new sentence">what happens to the data</edit>
+        <edit type="punctuation" crr="And" comments="">and</edit>
+        <text>how reliable are</text>
+        <edit type="clarity" crr="the" comments=""></edit>
+        <text>results obtained through</text>
+        <edit type="punctuation" crr="this data?" comments="">them.</edit>
+        <text>\n\n We present a quantitative analysis of</text>
+        <edit type="flow" crr="what data types are being collected, how often data is being collected, and how data is published." comments="Paraphrase / logical order">how often data is being collected, and how data is published., and what data types are being collected. </edit>
+        <text>Taken together</text>
+        <edit type="clarity" crr=", the analysis" comments="it"></edit>
+        <edit type="style" crr="provides" comments="">gives</edit>
+        <text>insight into issues arising from</text>
+        <edit type="word choice" crr="the collection" comments="">collecting</edit> 
+        <edit type="conciseness" crr="and distribution of data" comments="Rephrase to shorten sentence">data and from distributing it</edit>
+        <text>via channels</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>that do not allow for</text>
+        <edit type="word choice" crr="the reproduction results," comments="">reproducting</edit>  
+        <text>even after a comparably short period of time. Based on this, we open a discussion about best practices on data collection, storage, and distribution in order to ensure</text>
+        <edit type="style" crr="high-qualit" comments="Consider this word, in line with academic style">robust</edit>
+        <text>research</text>
+        <edit type="redundancy" crr="methods, that" comments="">that is solid</edit> 
+        <text>and</text>
+        <edit type="word choice" crr="an be reproduced." comments="">reproducable.</edit>
+        <edit type="clarity" crr="This also ensures that" comments="Sentence unclear...needs more specification.">But also to make sure,</edit>
+        <text>users of</text>
+        <edit type="flow" crr="social media channels for example" comments="">, i.e., social media channels</edit>
+        <text>are treated according to general standards concerning sensitive data.</text>
+    </introduction>   
+</doc>

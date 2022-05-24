@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W08-0204" editor="C" format="WS" position="NS" region="N">
+    <title>
+        <text>Defining a Core Body of Knowledge for the Introductory Computational Linguistics Curriculum</text>
+    </title>
+    <abstract>
+        <text>Discourse in</text>
+        <edit type="readability;conciseness" crr="" comments="Readability / reduce wordiness">and about</edit>
+        <text>computational linguistics depends on a</text>
+        <edit type="repetitiveness" crr="distributed" comments="Word usage / repetition of 'share'">shared</edit>
+        <text>body of knowledge. However, little content is shared across the introductory courses in this field. Instead,</text>
+        <edit type="clarity" crr="the courses" comments="">they</edit>
+        <text>typically cover a diverse assortment of topics tailored to the capabilities of the students and the interests of the instructor. If the core body of knowledge could be agreed and incorporated into introductory courses, then several benefits would ensue</text>
+        <edit type="readability" crr=". These benefits would include a" comments="Readability / End potentially long and complex sentence">, such as the</edit>
+        <text>proliferation of instructional materials, software support, and extension modules</text>
+        <edit type="readability;clarity" crr="that all build on a common knowledge foundation." comments="">building on a common foundation.</edit>
+        <text>This paper argues that</text>
+        <edit type="word choice;flow" crr="the development of a core body of knowledge is a worthwhile investment" comments="Rephrase / refer to the development of the core body of knowledge first as this is the most importent element in the sentence">it is worthwhile to articulate a core body of knowledge,</edit>
+        <text>and proposes a starting point based on the ACM Computer Science Curriculum. A variety of issues specific to the multidisciplinary nature of computational linguistics are explored.</text>
+    </abstract>   
+    <introduction>
+        <text>Surveys of introductory courses in computational linguistics and natural language processing provide evidence of great</text>
+        <edit type="clarity" crr="subject diversity. Regional variation is stark: some courses" comments="Comprehension / specify what type of diversity;Comprehension / Are you referring to all or some of the courses?">diversity. Regional variation is stark: courses</edit>
+        <text>may</text>
+        <edit type="spelling" crr="emphasize" comments="Spelling / US style">emphasise</edit>
+        <text>theory over programming (or vice versa), rule-based approaches over statistical approaches (or vice versa), tagging and parsing over semantic interpretation (or vice versa), and so on.</text>
+        <edit type="consistency" crr="This" comments="'The' is not incorrect, but use 'this' to tighten up your argument which refers back to the previous sentence">The</edit>
+        <text>diversity is hardly surprising, given the particular background of a student cohort and the particular expertise of an instructor.</text>
+        <text>\\ In spite of this regional variation, an introductory course needs to</text>
+        <edit type="word choice;style" crr="fulfil some common, basic requirements." comments="Word choice / 'serve' is not incorrect, but the alternative fits better with 'requirements' (proposed later)">serve some common, basic needs.</edit>
+        <text>For some students, it will be the first step</text>
+        <edit type="word choice" crr="along" comments="Word choice / 'along' is better, since you're talking about a potential journey">in</edit>
+        <text>a pathway leading to</text>
+        <edit type="spelling" crr="specialized" comments="Spelling / US style">specialised</edit>
+        <text>courses, graduate research, or employment in this field. These students should be able to receive a solid technical foundation and</text>
+        <edit type="repetitiveness" crr="" comments="Not required / repetition of 'should'">should </edit>
+        <text>come away with an accurate picture of the many</text>
+        <edit type="clarity" crr="career opportunities that lie ahead. For students who do not continue their studies," comments="">opportunities that lie ahead. For students who do not continue,</edit>
+        <text>the introductory course will be their main exposure to the field. In addition to the technical content,</text>
+        <edit type="word choice" crr="" comments="Probably not required, since you're talking about students (of the subject) in general">these</edit>
+        <text>students need to understand how the field draws from and contributes back to its parent disciplines of linguistics and computer science</text>
+        <edit type="readability" crr="An understanding of relevant" comments="End potentially long and complex sentence to maintain flow.">, along with</edit>
+        <text>technological applications that are helping to shape the future information society</text>
+        <edit type="clarity" crr="is also important." comments="">.</edit>
+        <text>Naturally, this course</text>
+        <edit type="tense" crr="would also be" comments="Tense / use conditional, since the course is not yet in place">is also</edit>
+        <text>a prime opportunity to promote the field to newcomers</text>
+        <edit type="clarity" crr="to the subject and encourage them to pursue advanced studies in this area. In all cases, the introductory course needs to cover a core body of computational linguistics knowledge." comments="">and encourage them to pursue advanced studies in this area. In all cases, the introductory course needs to cover a core body of knowledge.</edit>
+        <text>\\ The fact that a core body of such knowledge exists in computational linguistics is demonstrated anecdotally</text>
+        <edit type="readability" crr=". For example," comments="Readability / very long and complex sentence. Break up into shorter sentences">:</edit>
+        <text>a doctoral student is told to curtail her extended discussions of basic POS tagging and CFG parsing algorithms, since they are part of the presumed knowledge of the audience</text>
+        <edit type="punctuation" crr=". Or," comments="Punctuation / insert comma when introducing new clause">;</edit>
+        <text>a researcher presenting work to a general linguistics or computer science audience discovers to his surprise that certain methodologies or algorithms need to be explicated and defended, even though they were uncontroversial when presented at a conference</text>
+        <edit type="readability" crr=". Similarly," comments="">;</edit>
+        <text>a keynote speaker at a computational linguistics conference could presume that certain theoretical programs and practical goals of the field are widely accepted. These three areas - terminology, methodology, ideology - constitute part of the core body of knowledge of computational linguistics. They provide us with the starting point for identifying the concepts and skills to be covered in the introductory course.</text>
+        <text>\\ Identifying a core body of knowledge would bring three major benefits. First, technical support would be consolidated: instructional materials, together with implementations of standard algorithms, would be available across several programming paradigms and languages. Second, colleagues without any research specialization in computational linguistics would have access to a non-controversial curriculum with external support, a standard course that could be promoted to a broad range of students as a mainstream option, in both linguistics and computer science. Similarly, new graduates beginning a teaching career would be better equipped to push for the adoption of a new computational linguistics or natural language processing course at institutions where it is not yet established. Third, employers and graduate schools would be able to make some assumptions about the level of knowledge and skills of a new graduate.</text>
+        <text>\\ The goal of this paper is to advocate</text>
+        <edit type="flow;conciseness" crr="a consensus around a core body of knowledge for an introductory computational linguistics curriculum, without mandating the structure of individual courses or the choice of textbooks." comments="Sentence restructure / simplify the sentence - this is probably your most important sentence in the abstract">the idea of consensus around a body of knowledge as a promising way to coordinate the introductory computational linguistics curriculum, without attempting to mandate the structure of individual courses or the choice of textbooks.</edit>
+        <text>\\ The paper is</text>
+        <edit type="spelling" crr="organized" comments="Spelling / US style">organised</edit>
+        <text>as follows</text>
+        <edit type="flow" crr=". Section 2 sets the scene by describing a variety of contexts in which computational linguistics is taught, drawing on the author's first-hand experience. Section 3 sets out a possible organization for the introductory topics in computational linguistics, modelled on the ACM Computer Science Curriculum. Section 4" comments="">: section 2 sets the scene by describing a variety of contexts in which computational linguistics is taught, drawing on the author's first-hand experience; section 3 sets out a possible organization for the introductory topics in computational linguistics, modelled on the ACM Computer Science Curriculum; section 4</edit>
+        <text>explores some implications of this approach for curriculum and assessment. The paper closes with remarks about next steps.</text>
+    </introduction>   
+</doc>

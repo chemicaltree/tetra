@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P07-1092" editor="C" format="Conf" position="NS" region="NN">
+    <title>
+        <text>A Probabilistic Approach to Syntax-based Reordering for Statistical Machine Translation</text>
+    </title>
+    <abstract>
+        <text>Inspired by previous preprocessing approaches to</text>
+        <edit type="clarity" crr="Statistical Machine Translation (SMT)" comments="Specify when using for the first time">SMT</edit>
+        <text>, this paper proposes a novel, probabilistic approach to reordering which combines the merits of syntax and phrase-based SMT. Given a source sentence and its parse tree, our method generates, by tree operations, an n-best list of reordered inputs, which are then fed to</text>
+        <edit type="grammar" crr="a" comments=""></edit>
+        <text>standard phrase-based decoder to produce</text>
+        <edit type="grammar" crr="an" comments="'an' is more appropriate for this context">the</edit>
+        <text>optimal translation. Experiments show that, for the NIST MT-05 task of Chinese-to-English translation, the proposal leads to</text>
+        <edit type="grammar" crr="a" comments="insert as you're specifying 'improvement'"></edit>
+        <text>BLEU improvement of 1.56%.</text>
+    </abstract>   
+    <introduction>
+        <text>The phrase-based approach has been considered the default strategy</text>
+        <edit type="grammar" crr="in" comments="">to</edit>
+        <text>Statistical Machine Translation (SMT) in recent years. It is widely known that the phrase-based approach is powerful in local lexical choice and word reordering within short </text>
+        <edit type="grammar;clarity" crr="distances." comments="to clarify, either use 'within a short distance' or 'within short distances.'">distance.</edit>
+        <text>However, long-distance reordering is problematic in phrase-based SMT. For example, the distance-based reordering model (Koehn et al., 2003) allows a decoder to translate in non-monotonous order, under the constraint that the distance between two phrases translated consecutively does not exceed a limit known as distortion limit. In theory</text>
+        <edit type="punctuation" crr="," comments="Punctuation / introducing clause"></edit>
+        <text>the distortion limit can be assigned a very large value so that all possible reorderings are allowed</text>
+        <edit type="readability" crr=". Yet" comments="end potentially long sentence / readability">, yet</edit>
+        <text>in practice</text>
+        <edit type="punctuation" crr="," comments="introduce clause"></edit>
+        <text>it is observed that too high a distortion limit</text>
+        <edit type="readability" crr=" harms both efficiency and also translation performance" comments="Readability / improve sentence structure">not only harms efficiency but also translation performance</edit>
+        <text>(Koehn et al., 2005). In our own</text>
+        <edit type="word usage;style" crr="experimental" comments="'experiment' is correct, but the suggested alternative is more precise">experiment</edit>
+        <text>setting, the best distortion limit for</text>
+        <edit type="hyphenation" crr="Chinese-English translation" comments="">Chinese English translation</edit>
+        <text>is 4. However, some ideal translations exhibit reorderings longer than such</text>
+        <edit type="grammar" crr="a" comments="insert to qualify with either definite or indefinite article"></edit>
+        <text>distortion limit. Consider the sentence pair in NIST MT2005 test set shown in figure 1(a): after translating the word “修补/mend”, the decoder should 'jump' across six words and translate the last phrase “关系 裂缝/fissures in the relationship”. Therefore, while short-distance reordering is under the scope of the distance-based model, long-distance reordering is simply out of the question.</text>
+        <text>\\ A terminological remark:</text>
+        <edit type="grammar" crr="in" comments="Grammar / no capital after colon">In</edit>
+        <text>the rest of the paper, we will use the terms global reordering and local reordering in place of long-distance reordering and short-distance reordering respectively. The distinction between</text>
+        <edit type="hyphenation" crr="long- and short-distance reordering" comments="hyphenate when qualifying noun that follows">long and short distance reordering</edit>
+        <text>is solely defined by distortion limit.</text>
+        <text>\\ Syntax is certainly a potential solution to global reordering. For example, for the last two Chinese phrases in figure 1(a), simply swapping the two children of the NP node will produce the correct word order on the English side. However, there are also reorderings which do not agree with syntactic analysis. Figure 1(b) shows how our phrase-based decoder obtains a good English translation by reordering two blocks. It should be noted that the second Chinese block “结束时” and its English counterpart “at the end of” are not constituents at all.</text>
+        <text>\\ In this paper, our interest is the value of syntax in reordering, and the major statement is that syntactic information is useful in handling global reordering and it achieves better MT performance on the basis of the standard phrase-based model. To prove</text>
+        <edit type="consistency" crr="this" comments="">it</edit>
+        <text>, we developed a hybrid approach which preserves the strength of phrase-based SMT in local reordering as well as the strength of syntax in global reordering.</text>
+        <text>\\ Our method is inspired by previous preprocessing approaches like (Xia and McCord, 2004), (Collins et al., 2005), and (Costa-jussa and Fonollosà, 2006), which split translation into two stages: [MATH] where a sentence of the source language (SL), S, is first reordered with respect to the word order of the target language (TL), and then the reordered SL sentence S' is translated as a TL sentence T by monotonous translation.</text>
+        <text>\\  Our first contribution is a new translation model as represented by formula 2: [MATH] where an n-best list of S', instead of only one S', is generated. The reason</text>
+        <edit type="grammar" crr="for such a change" comments="">of such change</edit>
+        <text>will be given in section 2. Note also that the translation process S' → T is not monotonous, since the distance-based model is needed for local reordering. Our second contribution is our definition of the best translation: [MATH] where Fi are the features in the standard phrase-based model and Pr(S → S’) is our new feature, viz. the probability of reordering S as S'. The details of this model are elaborated in sections 3 to 6. The settings and results of experiments on this new model are given in section 7.</text> 
+    </introduction>   
+</doc>

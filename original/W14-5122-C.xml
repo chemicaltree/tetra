@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-5122" editor="C" format="WS" position="NS" region="NN">
+    <title>
+        <edit type="capitalization" crr="Word Net Based Method for Determining Semantic Sentence Similarity through Various Word Senses" comments="">Word net based Method for Determining Semantic Sentence Similarity through various Word Senses</edit>
+    </title>
+    <abstract>
+        <text>Semantic similarity is a confidence score that replicates semantic equivalence between the meanings of two sentences.</text>
+        <edit type="word choice" crr="The ability to determine" comments="Word usage / consider inserting to amplify meaning">Determining</edit>
+        <text>the similarity among sentences is one of the critical tasks</text>
+        <edit type="conciseness" crr="with a" comments="consider replacing">with have a</edit>
+        <text>wide-ranging impact on recent NLP applications. This paper presents a method for identifying</text>
+        <edit type="repetitiveness" crr="" comments="Repetition of sentence; Terms used later / avoid repetition">semantic sentence</edit>
+        <text>similarity among sentences using semantic relation of word senses across the different synsets, using Wordnet for different part of speech of words.</text>
+        <edit type="word choice" crr="In the first instance, this method" comments="Word choice / consider inserting to introduce">This method firstly</edit>
+        <text>detects all the semantic relations (hypernym, hyponym, holonym, meronymy etc.) considering the word as a noun and all the sense relations considering word as a verb from Wordnet respectively. Then it uses common senses between the two sets as</text>
+        <edit type="capitalization" crr="noun and verb," comments="No need to capitalize">Noun and Verb,</edit>
+        <text>for two input words for the calculation of a semantic word similarity score. As</text>
+        <edit type="clarity" crr="each" comments=""></edit>
+        <text>sentence is made up of different words, these word-similarity scores have been used for calculation of semantic</text>
+        <edit type="repetitiveness" crr="" comments="Not required / repetition">sentence</edit>
+        <text>similarity among the sentences. It is difficult to achieve a high-precision score because the exact semantic meanings will not be</text>
+        <edit type="word choice" crr="clearly understood." comments="Word choice / consider inserting">understood simply.</edit>
+        <text>However, the proposed method outperforms in comparison with existing methods. The evaluation is</text>
+        <edit type="clarity;style" crr="carried out" comments="">done</edit>
+        <text>for sentences using SemEval-12 Task 6 (TestGold-Set) with respect to human ratings.</text>
+    </abstract>   
+    <introduction>
+        <edit type="word choice" crr="Today,the internet is the largest and most useful knowledge base for users, with a vast quantity of information available." comments="">Now-a-day web is the largest and utmost useful knowledge base for users, with bulky amount of information.</edit>
+        <edit type="grammar" crr="Additional sources" comments="">The additinal sources</edit>
+        <text>of information</text>
+        <edit type="word choice" crr="include" comments="">are</edit>
+        <text>newspapers, magazines, textbooks etc.</text>
+        <edit type="word choice" crr="The internet" comments="">Web</edit>
+        <text>consists of billions of text documents and</text>
+        <edit type="word choice;clarity" crr="enormous quantities of documents are added to it on a daily basis." comments="">daily many different documents are added to it.</edit>
+        <edit type="word choice" crr="In order to understand" comments="">For understanding</edit>
+        <text>these types of documents</text>
+        <edit type="word choice;style" crr="and" comments="">/</edit>
+        <edit type="style;word choice" crr="a wide range of" comments="">many</edit>
+        <text>applications have been</text>
+        <edit type="word choice" crr="conceived" comments="">made</edit>
+        <text>such as</text>
+        <edit type="capitalization" crr="text mining, storytelling, machine translation, deep question and answering, and text summarization" comments="Capitalization not required">Text Mining, Storytelling, Machine Translation, Deep Question and answering, and Text Summarization</edit>
+        <edit type="conciseness" crr="." comments="">etc.</edit>
+        <edit type="clarity;word choice" crr="In order to" comments="">To</edit>
+        <text>develop and understand</text>
+        <edit type="word choice" crr="these types" comments="">this kind</edit>
+        <text>of applications,</text>
+        <edit type="readability;word choice" crr="semantic similarity tools are is required." comments="Sentence structure / paraphrase">here is a requirement of semantic similarity utility.</edit>
+        <edit type="word choice" crr="\\ A number of" comments="">\\ Various</edit>
+        <text>techniques</text>
+        <edit type="clarity" crr="that measure" comments="Meaning / replace to clarify">for</edit>
+        <text>semantic similarity have been receiving</text>
+        <edit type="word choice" crr="increasing" comments="">escalating</edit>
+        <text>attention since their introduction by (Miller et al. 1997). Researchers have</text>
+        <edit type="word choice;clarity" crr="discovered" comments="Meaning / replace to clarify">investigated</edit>
+        <text>that finding semantic similarity in sentences is not an easy task since text documents can contain complex sentences. Most of these techniques are based on statistics which indirectly use corpus</text>
+        <edit type="readability" crr="and some techniques" comments="Readability / join both sentences">. Some of them</edit>
+        <text>use multiple information sources and lexical chains</text> 
+        <edit type="word choice" crr="by way of example" comments="">etc.</edit>
+        <text>(Jiang et al., 1997; Li et al., 2009). Some techniques are based on wordnet (Simpson et al., 2010; Pederson et al., 2004; Leacock et al., 1998; Budanitsky et al., 2006)</text>
+        <edit type="flow" crr=", which" comments="Paraphrase / join sentences / readability and flow">. WordNet</edit>
+        <text>is a lexical catalogue which is accessible online and provides a large source of English lexical items. The proposed approach incorporates the various senses of the words and their relations from Wordnet.</text>
+        <text>\\ This paper presents a method for identifying semantic sentence similarity among sentences, using Wordnet.</text>
+        <edit type="readability" crr="In the first instance, this method" comments="Sentence structure / rephrase entire sentence to improve readability">This method firstly</edit>
+        <text>identifies all the sense relations (hypernym, hyponym, holonym, meronymy etc.) that treats a word as a noun , as well as all elations that consider words as a verb from Wordnet respectively.</text>
+        <edit type="clarity;consistency" crr="The method then" comments="Paraphase / refer to 'it'">Then it</edit>
+        <text>uses common meanings between the two respective sets as</text>
+        <edit type="capitalization" crr="noun and verb" comments="No need to capitalize">Noun and Verb</edit>
+        <text>for two input words for the calculation of semantic word similarity score. Similar meanings and their respective</text>
+        <edit type="consistency" crr="scorers" comments="">counts</edit>
+        <text>are useful for the calculation of semantic similarity</text>
+        <edit type="clarity" crr="between" comments="replace to clarify">among the</edit>
+        <text>words. Then, these word to word values are used in order to calculate semantic sentence similarity.</text>
+        <text>\\ This paper is organized as follows: Section 2</text>
+        <edit type="word choice" crr="introduces" comments="">omprises</edit>
+        <text>various methods that are available for determining semantic sentence similarity. Section 3 provides the motivation for this work. Section 4 proposes a method for calculating semantic word similarity and sentence similarity.</text>
+        <edit type="readability" crr="Finally," comments=""></edit>
+        <text>Section 5 discusses experimental results of the proposed approach for identifying the semantic sentence similarity and comparisons with other methods. The paper ends with a parametric analysis</text>
+        <edit type="parallelism" crr="and concludes" comments=""></edit>
+        <text>by outlining research o be carried out in the future.</text> 
+    </introduction>   
+</doc>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P11-1148" editor="B" format="Conf" position="NS" region="N">
+    <title>
+        <text>Latent Semantic Word Sense Induction and Disambiguation</text>
+    </title>
+    <abstract>
+        <text>In this paper, we present a unified model for the automatic induction of word senses from text</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and the subsequent disambiguation of particular word instances using the automatically extracted sense inventory. The induction</text>
+        <edit type="conciseness" crr="" comments="word choice; extraneous">step</edit>
+        <text>and</text>
+        <edit type="grammar" crr="" comments="word choice; extraneous">the</edit>
+        <edit type="grammar" crr="disambiguation steps" comments="word choice; agreement">disambiguation step</edit>
+        <text>are based on the same principle: words and contexts are mapped to a limited number of topical dimensions in a latent semantic word space. The intuition is that a particular sense is associated with a particular topic, so that different senses can be discriminated through their association with particular topical dimensions; in a similar vein, a particular instance of a word can be disambiguated by determining its most important topical dimensions. The model is evaluated on the SEMEVAL-2010 word sense induction and disambiguation task, on which it reaches state-of-the-art results.</text>
+    </abstract>   
+    <introduction>
+        <text>Word sense induction (WSI) is the task of automatically identifying the senses of words in texts, without the need for handcrafted resources or manually annotated data. The manual construction of a sense inventory is a tedious and time-consuming job, and the result is highly dependent on the annotators and the domain at hand. By applying an automatic procedure, we are able to only extract the senses that are objectively present in a particular corpus, and</text>
+        <edit type="word choice" crr="this" comments="">it</edit>
+        <text>allows for the sense inventory to be straightforwardly adapted to a new domain.</text>
+        <text>\n\n Word sense disambiguation (WSD), on the other hand, is the closely related task of assigning a sense label to a particular instance of a word in context, using an existing sense inventory. The bulk of WSD algorithms</text>
+        <edit type="clarity" crr="that have been created" comments=""></edit>
+        <text>up</text>
+        <edit type="word choice" crr="untill" comments="">till</edit>
+        <text>now use pre-defined sense inventories (such as WordNet) that often contain fine-grained sense distinctions, which poses serious problems for computational semantic processing (Ide and Wilks, 2007). Moreover, most WSD algorithms take a supervised approach, which requires a significant amount of manually annotated training data</text>
+        <edit type="punctuation" crr="." comments=""></edit>
+        <text>\n\n The model presented here induces the senses of words in a fully unsupervised way, and subsequently uses the induced sense inventory for the unsupervised disambiguation of particular occurrences of words. The induction</text>
+        <edit type="conciseness" crr="" comments="word choice; extraneous">step</edit>
+        <text>and</text>
+        <edit type="conciseness" crr="" comments="word choice; extraneous">the</edit>
+        <edit type="grammar" crr="disambiguation steps" comments="word choice; agreement">disambiguation step</edit>
+        <text>are based on the same principle: words and contexts are mapped to a limited number of topical dimensions in a latent semantic word space. The key idea is that the model combines tight,</text>
+        <edit type="hyphenation" crr="synonym-like" comments="">synonym like</edit>
+        <text>similarity (based on dependency relations) with broad, topical similarity (based on a large ‘bag of words’ context window). The intuition</text>
+        <edit type="word choice" crr="behind" comments="word choice; this is somewhat discretionary, but it does smooth the readability ('in this is that' is a little clunky).">in</edit>
+        <text>this is that</text>
+        <edit type="conciseness" crr="" comments="word choice; extraneous; this seems like it's general rather than specific">the</edit>
+        <text>dependency features can be disambiguated</text>
+        <edit type="word choice" crr="using" comments="word choice; this is somewhat discretionary but it may be slightly clearer than having two instances of 'by' in succession">by</edit>
+        <text>the topical dimensions identified by the broad contextual features; in a similar vein, a particular instance of a word can be disambiguated by determining its most important topical dimensions (based on the instance’s context words).</text>
+        <text>The paper is organized as follows. Section 2 presents some previous research on distributional similarity and word sense induction. Section 3 gives an overview of our method for word sense induction and disambiguation. Section 4 provides a quantitative evaluation and comparison to other algorithms in the framework of the SEMEVAL-2010 word sense induction and disambiguation (WSI/WSD) task. The last section</text>
+        <edit type="style" crr="presents" comments="word choice; anthropomorphism;">draws</edit>
+        <text>conclusions</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and lays out a number of future research directions.</text>
+    </introduction>   
+</doc>

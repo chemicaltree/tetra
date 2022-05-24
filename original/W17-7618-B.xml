@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-7618" editor="B" format="WS" position="S" region="NN">
+    <title>
+        <text>Towards a dependency-annotated treebank for Bambara</text>
+    </title>
+    <abstract>
+        <text>In this paper, we describe a dependency annotation scheme for Bambara, a Mande language spoken in Mali, which has few computational linguistic resources. The scheme is based on Universal Dependencies. We describe part-of-speech tags, morphological features and dependencies</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>and</text>
+        <edit type="clarity" crr="detail" comments="verb added for clarity"></edit>
+        <text>how we performed a rule-based conversion of an existing part-of-speech annotated corpus of Bambara, which contains approximately 900,000 tokens. We also describe the annotation of a small treebank of 116 sample sentences, which were picked randomly.</text>
+    </abstract>   
+    <introduction>
+        <text>One of the basic language resources has</text>
+        <edit type="punctuation" crr="for a long time" comments="">, for a long time,</edit>
+        <text>been a part-of-speech tagged (or morphologically disambiguated) corpus. In recent years, treebanks — collections of sentences annotated for syntactic structure — have become increasingly available and vital resources, both for natural-language processing and corpus linguistics. Current end-to-end pipelines like UDPipe (Straka et al., 2016), which perform each stage of the classic NLP pipeline from tokenisation to dependency parsing, make it easy to go from</text>
+        <edit type="conciseness" crr="a language having a language having" comments="">a situation where a language has no effective language resources to one where</edit>
+        <edit type="clarity" crr="the same language" comments="">the language</edit>
+        <text>has a functional pipeline</text>
+        <edit type="word choice" crr="after" comments="">in</edit>
+        <text>a few months</text>
+        <edit type="word order" crr="of work, as opposed to a few years." comments="">as opposed to a few years of work.</edit>
+        <text>\\ A crucial prerequisite for building a treebank is to have a set of annotation guidelines which describe how particular syntactic structures are to be represented. In our work on creating a treebank for Bambara, we have chosen version 2.0 of the Universal Dependencies scheme (Nivre et al., 2016) as it provides ready-made recommendations on which to base annotation guidelines for part-of-speech tags, morphological features, and dependency relations. This reduces the amount of time needed to develop bespoke annotation guidelines for a given language</text>
+        <edit type="clarity;word choice" crr="because in situations" comments="word choice; in this case, the meaning of 'a' can be confused">as</edit>
+        <text>where the existing universal guidelines are adequate, they can be imported wholesale into the language-specific guidelines. In addition, the Universal Dependencies project provides a free/open pool (in the terminology of Streiter et al. (2006)), which collects dependency corpora in a single place</text>
+        <edit type="clarity;word choice" crr="; this allows for economies of scale in maintenance and ensures" comments="">, allowsing or economies of scale in maintenance and ensuing</edit>
+        <text>that resources can persist after any initial development effort.</text>
+        <text>\\ The remainder of the paper is laid out as follows</text>
+        <edit type="punctuation" crr="." comments="">:</edit>
+        <text>In Section 2, we give a short typological overview of Bambara</text>
+        <edit type="readability" crr=". In Section" comments="">, in Section 3</edit>
+        <text>, we describe an existing annotated resource for Bambara, the Corpus Bambara de Référence (CBR). Section 4 describes the conversion process we used</text>
+        <edit type="punctuation" crr="." comments="">,</edit>
+        <text>Section 5 describes some constructions in Bambara, which are not typologically common, and how we intend to annotate them. Finally, Sections 6 and 7 describe future work and conclusions</text>
+        <edit type="grammar" crr="," comments=""></edit>
+        <text>respectively.</text>
+    </introduction>   
+</doc>

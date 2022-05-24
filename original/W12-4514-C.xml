@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W12-4514" editor="C" format="WS" position="S" region="NN">
+    <title>
+        <text>Hybrid Rule-based Algorithm for Coreference Resolution</text>
+    </title>
+    <abstract>
+        <text>This paper describes our coreference resolution system for the CoNLL-2012 shared task. Our system is based on the Stanford dcoref deterministic system, which applies multiple sieves</text>
+        <edit type="word choice;repetitiveness" crr="that are ranked" comments="Word usage / consider replacing / repetition of 'order'">with the order</edit>
+        <text>from high precision to low precision</text>
+        <edit type="clarity" crr="in order to" comments="Word usage / insert to clarify">to</edit>
+        <text>generate coreference chains. We introduce the newly-added constraints and sieves</text>
+        <edit type="punctuation" crr="," comments="Punctuation / adding clause"></edit>
+        <text>and discuss the improvement on the original system. We evaluate the system using he OntoNotes data set and report our results of average F-score 58.25 in the closed track.</text>
+     </abstract>   
+    <introduction>
+        <text>In this paper, our coreference resolution system for CoNLL-2012 shared task (Pradhan et al., 2012) is summarized. Our system is an extension of Stanford's multi-pass sieve system, (Raghunathan et al., 2010) and (Lee et al., 2011), by adding novel constraints and sieves. In the original model, sieves are sorted in decreasing order of precision. Initially each mention is</text>
+        <edit type="clarity" crr="placed" comments="Consider inserting to amplify meaning"></edit>
+        <text>in its own cluster. Mention clusters are combined by satisfying the condition of each sieve in the scan pass. Through empirical studies, we proposed some extensions and algorithms for</text>
+        <edit type="word choice" crr="further" comments="">furthermore</edit>
+        <text>enhancing performance.</text>
+        <text>\\ Many other existing systems applied</text>
+        <edit type="clarity" crr="either" comments="Consider inserting to amplify meaning"></edit>
+        <text>supervised or unsupervised (Haghighi and Klein, 2010) learning models. The classical resolution algorithm was proposed by (Soon et al., 2001). Semantic knowledge like word associations was involved by (Kobdani et al., 2011). Most of the supervised learning models in CoNLL-2011 shared task (Chang et al., 2011)(Björkelund and Nugues, 2011) used classifiers (Maximum Entropy or SVM) to train the models for obtaining the pairwise mention scores. However, the training process usually takes a much longer time than unsupervised or deterministic systems. In contrast, (Raghunathan et al., 2010) proposed a rule-based model which obtained competitive results with less time.</text>
+        <text>\\ Two considerable extensions to the Stanford model in this paper are made to guarantee higher precision and recall. First, we recorded error patterns from outputs of the original Stanford system and found that the usual errors are mention boundary mismatches, pronoun mismatches and so on. To avoid the irrational coreference errors, we added some constraints to the mention detection for eliminating</text>
+        <edit type="conciseness" crr="" comments="">some</edit>
+        <text>unreasonable mention boundary mismatches. Second, we added</text>
+        <edit type="redundancy" crr="various" comments="">some</edit>
+        <text>constraints in the coreference sieves, based on errors</text>
+        <edit type="clarity" crr="found" comments=""></edit>
+        <text>on the training set and the development set.</text>
+        <text>\\ We participated in the closed track and received an official F-score (unweighted mean of MUC, BCUBED and CEAF(E) metric) of 58.25 for English. The system with our extensions is briefly introduced in Section 2. We report our evaluation results and discuss in Section 3.</text>
+    </introduction>   
+</doc>

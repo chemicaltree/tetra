@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-7618" editor="C" format="WS" position="S" region="NN">
+    <title>
+        <text>Towards a dependency-annotated treebank for Bambara</text>
+    </title>
+    <abstract>
+        <text>In this paper</text>
+        <edit type="punctuation" crr="," comments="Punctuation/insert comma when introducing something"></edit>
+        <text>we describe a dependency annotation scheme for Bambara, a Mande language spoken in Mali</text>
+        <edit type="readability" crr="with" comments="Readability/sentence structure/avoid multiple clauses where possible. The conjunction 'with' is more practical as it reduces overall word length.">, which has</edit>
+        <text>few computational linguistic resources. </text>
+        <edit type="consistency" crr="This" comments="Vocabulary/'this' is more precise and ties back to previous sentence">The</edit>
+        <text>scheme is based on Universal Dependencies. We</text>
+        <edit type="style" crr="explore" comments="Register/'describe' is correct, but 'examine' or 'explore' might be more appropriate for academic writing">describe</edit>
+        <text>part-of-speech tags</text>
+        <edit type="readability" crr="as well as" comments="Readability/sentence construction/insert this here and then refer to next note for reason">,</edit>
+        <text>morphological features and dependencies</text>
+        <edit type="readability" crr=". We also show" comments="Readability/split sentence as it's very long">and</edit>
+        <text>how we performed a rule-based conversion of an existing part-of-speech annotated corpus of Bambara, which contains approximately 900,000 tokens.</text>
+        <edit type="repetitiveness" crr="Finaly, we" comments="Vocabulary/insert this when describing a sequence/list/series and avoid repetition of 'also'">We</edit>
+        <text>describe the annotation of a small treebank of 116 sample sentences</text>
+        <edit type="punctuation" crr="" comments="Punctuation/comma not required in this instance">,</edit>
+        <text>which were picked randomly.</text>
+    </abstract>   
+    <introduction>
+        <edit type="readability;conciseness" crr="For a long time, a basic language resource has" comments="Readability/sentence structure/use formula time before manner before place when constructing a sentence or describing things - it's a basic storytelling technique">One of the basic language resources has, for a long time,</edit>
+        <text>been a part-of-speech tagged (or morphologically disambiguated) corpus. In recent years, treebanks — collections of sentences annotated for syntactic structure — have become increasingly available</text>
+        <edit type="word choice" crr="as" comments="Comprehension/alternative is more appropriate in this instance">and</edit>
+        <text>vital resources</text>
+        <edit type="word order;readability" crr="for both" comments="Readability/better used here">, both for</edit>
+        <text>natural-language processing and corpus linguistics. Current end-to-end pipelines</text>
+        <edit type="style" crr="such as" comments="Register/'such as' is more appropriate in academic writing">like</edit>
+        <text>UDPipe (Straka et al., 2016), which perform each stage of the classic NLP pipeline from tokenisation to dependency parsing</text>
+        <edit type="readability" crr=". This makes" comments="Readability/the sentence is long and cumbersome. Consider splitting">, make</edit>
+        <text>it easy to go from a situation where a language has no effective language resources to one where</text>
+        <edit type="consistency" crr="a" comments="Consistency/you've used 'a language' before, so it has to be the same here">the</edit>
+        <text>language has a functional pipeline in a few months as opposed to a few years of work.</text>
+        <text>\\ A crucial prerequisite for building a treebank is to have a set of annotation guidelines which describe how particular syntactic structures are to be represented. In our work on creating a treebank for Bambara, we have chosen version 2.0 of the Universal Dependencies scheme (Nivre et al., 2016) as it provides ready-made recommendations on which to base annotation guidelines for part-of-speech tags, morphological features, and dependency relations. This reduces the amount of time needed</text>
+        <edit type="readability" crr="for developing" comments="Readability/consider alternative">to develop</edit>
+        <text>bespoke annotation guidelines for a given language</text>
+        <edit type="readability" crr="- in those areas" comments="Readability/try this construction ('as' in this instance is a bit cumbersome)">as</edit>
+        <text>where the existing universal guidelines are adequate they can be imported wholesale into the language-specific guidelines. In addition, the Universal Dependencies project provides a free/open pool (in the terminology of Streiter et al. (2006)) which collects dependency corpora in a single place</text>
+        <edit type="readability" crr=". This allows for economies of scale in maintenance and ensures" comments="Readability/split long sentence">, alllowing for economies of scale in maintenance and ensuring</edit>
+        <text>that resources can persist after any initial development effort.</text>
+        <text>\\ The remainder of the paper is laid out as follows: In Section 2, we</text>
+        <edit type="style" crr="provide" comments="Register/'give' is correct, but the alternative is more appropriate for academic writing">give</edit>
+        <text>a short typological overview of Bambara</text>
+        <edit type="readability" crr=", In Section 3," comments="Readability/end long sentence here">, in Section 3,</edit>
+        <text>we describe an existing annotated resource for Bambara, the Corpus Bambara de Référence (CBR). Section 4 describes the conversion process we used,</text>
+        <edit type="readability" crr="while" comments="Readability/insert to improve sentence flow"></edit>
+        <text>Section 5 describes some constructions in Bambara, which are not typologically common, and</text>
+        <edit type="readability;clarity" crr="highlights" comments="Readability/insert to clarify"></edit>
+        <text>how we intend to annotate them. Finally, Sections 6 and 7 describe future work and conclusions respectively.</text>
+    </introduction>   
+</doc>

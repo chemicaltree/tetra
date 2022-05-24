@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P01-1044" editor="A" format="Conf" position="NS" region="N">
+    <title>
+        <text>Parsing with Treebank Grammars: Empirical Bounds, Theoretical Models, and the Structure of the Penn Treebank</text>
+    </title>
+    <abstract>
+        <text>This paper presents empirical studies and closely corresponding theoretical models of</text>
+        <edit type="conciseness;readability" crr="a chart parser's performance while" comments="conciseness, readability - this is smoother and slightly less wordy">the performance of a chart parser</edit>
+        <text>exhaustively parsing the Penn Treebank with the Treebank's own</text>
+        <edit type="redundancy;clarity" crr="context-free grammar (CFG)." comments="redundancy, clarity - CFG grammar is redundant.">CFG grammar.</edit>
+        <text>We show how performance is dramatically affected by rule representation and tree transformations, but little by top-down vs. bottom-up strategies. We discuss grammatical saturation</text>
+        <edit type="readability" crr=", provide an" comments="readability - this is smoother, though I need to see remaining paper to ensure the reading is now accurate.">, including</edit>
+        <text>analysis of the strongly connected components of the phrasal nonterminals in the Treebank, and model how, as sentence length increases,</text>
+        <edit type="readability" crr="regions of the grammar are unlocked, increasing the effective grammar rule size" comments="readability - the original was choppy">the effective grammar rule size increases as regions of the grammar are unlocked,</edit>
+        <edit type="readability" crr="and" comments="readability - continuation of prior edit"></edit>
+        <text>yielding</text>
+        <edit type="hyphenation" crr="supercubic" comments="hyphenation - no hyphen needed after super unless result would be confusing">super-cubic</edit>
+        <text>observed time behavior in some configurations.</text>
+    </abstract>   
+    <introduction>
+        <text>This paper originated from</text>
+        <edit type="clarity" crr="our examination of" comments="clarity - make it clear whose examination this is.">examining</edit>
+        <text>the empirical performance of an exhaustive active chart parser using an untransformed treebank grammar over the Penn Treebank. Our initial experiments yielded the surprising result that</text>
+        <edit type="readability" crr="empirical parsing speed was supercubic in the sentence length for many configurations." comments="the sentence flows better with this phrase at the end. Where it was, it really needed commas around it but that would demote it to a non-restrictive clause which seems to not be the case here.">for many configurations empirical parsing speed was super-cubic in the sentence length.</edit>
+        <text>This led us to look more closely at the structure of the treebank grammar. The resulting analysis builds on the presentation of Charniak (1996), but extends it by elucidating the structure of nonterminal interrelationships in the Penn Treebank grammar. On the basis of these studies, we build simple theoretical models which closely predict observed parser performance, and, in particular, explain the originally observed supercubic behavior.</text>
+        <text>\\ We used treebank grammars induced directly from the local trees of the entire</text>
+        <edit type="clarity" crr="Wall Street Journal (WSJ)" comments="clarity - expanding acronym on first usage">WSJ</edit>
+        <text>section of the Penn Treebank (Marcus et al., 1993) (release 3). For each length and parameter setting, 25 sentences evenly distributed through the treebank were parsed. Since we were parsing sentences from among those</text>
+        <edit type="readability" crr="our grammar was derived from" comments="readability - the original was a bit awkward, as text often is when the author is avoiding using a preposition at the end.">from which our grammar was derived</edit>
+        <text>, coverage was never an issue. Every sentence parsed had at least one parse— the parse with which it was originally observed.</text>
+        <text>The sentences were parsed using an implementation of the probabilistic chart-parsing algorithm presented in (Klein and Manning, 2001). In that paper, we present a theoretical analysis showing an O(n3) worst-case time bound for exhaustively parsing arbitrary context-free grammars</text>
+        <edit type="style" crr="(CFGs)" comments="style - I assume we'll use this acronym in remainder of paper. My edit above defines it in the abstract, but it can't hurt to define it in the body as well."></edit>
+        <text>In what follows, we do not make use of the probabilistic aspects of the grammar or parser.</text>
+    </introduction>   
+</doc>

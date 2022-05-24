@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-5122" editor="A" format="WS" position="NS" region="NN">
+    <title>
+        <edit type="spelling;capitalization" crr="WordNet-Based" comments="spelling/capitalization - this is how the database is styled on their site. also hyphenation - need hyphen in this compound adjective">Word net based</edit>
+        <text>Method for Determining Semantic Sentence Similarity through</text>
+        <edit type="capitalization" crr="Various" comments="capitalization - adjectives are capitalized in headline/title case">various</edit>
+        <text>Word Senses</text>
+    </title>
+    <abstract>
+        <text>Semantic similarity is a confidence score that</text>
+        <edit type="word choice" crr="measures" comments="word choice - I think 'measures' is the sense needed here rather than 'replicates'">replicates</edit>
+        <text>semantic equivalence between the meanings of two sentences. Determining the similarity among sentences is one of the critical tasks which have a wide-ranging impact in recent NLP applications. This paper presents a method for identifying semantic sentence similarity among sentences using</text>
+        <edit type="grammar" crr="semantic relations" comments="spelling/grammar - need the plural form here">semantic relation</edit>
+        <text>of word senses across</text>
+        <edit type="grammar" crr="" comments="grammar - article isn't needed here">the</edit>
+        <text>different synsets using WordNet for different</text>
+        <edit type="grammar" crr="parts" comments="spelling/grammar - need the plural here since we're talking about more than one PoS">part</edit>
+        <text>of speech</text>
+        <edit type="redundancy" crr="" comments="redundancy - I think 'of words' is implied by parts of speech here.">of words.</edit>
+        <text>This method firstly detects all the semantic relations (hypernym, hyponym, holonym, meronymy</text>
+        <edit type="grammar;punctuation" crr="," comments="punctuation - need comma before 'and others' , though this could be style specific"></edit>
+        <text>etc.) considering the word as a noun and all the sense relations considering word as a verb from WordNet respectively. Then, it uses common senses between the two sets as Noun and Verb, for two input words for the calculation of semantic word similarity score. As</text>
+        <edit type="grammar" crr="sentences are" comments="grammar - I'm fairly certain we need the plural here, but I may change my mind after reading the whole paper">sentence is</edit>
+        <text>made up of different words, these word similarity scores have been used for</text>
+        <edit type="readability" crr="calculating" comments="readability - 'calculation of' works, but this is a bit smoother.">calculation of</edit>
+        <text>semantic sentence similarity among the sentences. It is difficult to achieve a high precision score because the exact semantic meanings will not be understood simply. However, the proposed method outperforms in comparison with existing methods. The evaluation is done for sentences using SemEval-12 Task 6 (TestGold-Set) with respect to human ratings.</text>
+    </abstract>   
+    <introduction>
+        <edit type="hyphenation" crr="Nowadays," comments="hyphenation - this is in MW unabridged in closed form, does not need hyphenation also punctuation - need a comma after intro word">Now-a-days</edit>
+        <edit type="grammar" crr="the Web" comments="grammar - needs an article also capitalization - MW has web capitalized, though this could be style dependent">web</edit>
+        <text>is the largest and</text>
+        <edit type="word choice" crr="most" comments="word choice - utmost is clumsy here">utmost</edit>
+        <text>useful knowledge base for users with bulky</text>
+        <edit type="grammar" crr="amounts" comments="grammar - this needs plural form">amount</edit>
+        <text>of information. The additional sources of information are newspapers, magazines, textbooks, etc. The Web consists of billions of text documents and</text>
+        <edit type="readability" crr="many different documents are added to it daily." comments="readability - this reads better at the end of the sentence, closer to the verb its modifying">daily many different documents are added to it.</edit>
+        <text>For understanding these types of documents</text>
+        <edit type="clarity" crr="and" comments="clarity - slash could be 'and' or 'or' so better to avoid">/</edit>
+        <text>texts, many applications have been</text>
+        <edit type="style" crr="developed" comments="style - this is a bit more formal for a published paper">made</edit>
+        <text>such as</text>
+        <edit type="capitalization" crr="text mining, storytelling, machine translation, deep question and answering, and text summarization, etc." comments="capitalization - I don't see these capitalized in literature.">Text Mining, Storytelling, Machine Translation, Deep Question and answering, and Text Summarization, etc.</edit>
+        <text>To develop and understand</text>
+        <edit type="grammar" crr="these kinds" comments="grammar - need plural form here">this kinds</edit>
+        <text>of applications, there is a requirement of semantic similarity utility.</text>
+        <text>\\ Various techniques for semantic similarity have been receiving</text>
+        <edit type="word choice" crr="growing" comments="word choice - escalating brings a sense of urgency or emergency with it which I don't feel fits here.">escalating</edit>
+        <text>attention since their introduction by (Miller et al. 1997). Researchers have</text>
+        <edit type="word choice;style" crr="found" comments="word choice - this sounds more like a conclusion ('found') than the research topic ('investigated')">investigated</edit>
+        <text>that finding semantic similarity for the sentences is not an easy task as text documents may contain complex sentences. Most of these techniques are based on statistics which indirectly use</text>
+        <edit type="grammar" crr="corpus." comments="grammar - need the plural form here">corpora.</edit>
+        <text>Some of them use multiple information sources, lexical chains, etc. (Jiang et al., 1997; Li et al., 2009)</text>
+        <edit type="flow" crr=", and some" comments="flow - joining these sentences for better flow">. Some of them</edit>
+        <text>are based on WordNet (Simpson et al., 2010; Pederson et al., 2004; Leacock et al., 1998; Budanitsky et al., 2006). WordNet is a lexical catalogue which is accessible online and provides a large source of English lexical items. The proposed approach incorporates the various senses of the words and</text>
+        <edit type="spelling" crr="their" comments="">there</edit>
+        <text>relations from WordNet.</text>
+        <text>\\ This paper presents a method for identifying semantic sentence similarity among sentences using WordNet. This method firstly identifies all the sense relations (hypernym, hyponym, holonym, meronymy etc.) considering the word as a noun and all the sense relations considering word as a verb from WordNet respectively. Then it uses common senses between the two respective sets as Noun and Verb for two input words for the calculation of semantic word similarity score. The similar senses and their respective counts are useful for the calculation of semantic similarity among the words. Then these</text>
+        <edit type="capitalization;hyphenation" crr="word-to-word" comments="capitalization and hyphenation - needs hyphenated as compound adjective, and I don't think we're using it as a proper noun here.">Word to Word</edit>
+        <text>values will be used for the calculation of semantic sentence similarity.</text>
+        <text>\\ This paper is organized as follows: Section 2 comprises various methods which are available for determining</text>
+        <edit type="capitalization" crr="semantic sentence similarity." comments="capitalization - this shouldn't be capitalized unless for some reason we're using it as a proper noun, which doesn't seem to be the case">Semantic sentence Similarity.</edit>
+        <text>with other methods. The paper ends with parametric analysis, conclusion, and work to be carried out in future.</text>
+    </introduction>   
+</doc>

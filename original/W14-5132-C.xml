@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-5132" editor="C" format="WS" position="S" region="NN">
+    <title>
+        <text>Discriminating Neutral and Emotional Speech using Neural Networks</text>
+    </title>
+    <abstract>
+        <text>In this paper, we address the issue of speaker-specific emotion detection (neutral vs emotion),</text>
+        <edit type="clarity" crr="comparing" comments="Comprehension / it's not clear here if you're comparing as you've used the word 'with' later in the sentence">from</edit>
+        <text>peech signals with models for neutral speech as reference. As emotional speech is produced by the human speech production mechanism, the emotion information is expected to lie within the features of both excitation source and the vocal tract system.</text>
+        <edit type="capitalization;consistency" crr="Linear Prediction Residual" comments="Punctuation / capitalize to make consistent">Linear Prediction residual</edit>
+        <text>is used as the excitation source component and Linear Prediction Coefficients as the vocal tract system component. A pitch synchronous analysis is performed. Separate Autoassociative Neural Network models are developed to capture the information specific to neutral speech</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>from both the excitation and the vocal tract system components. Experimental results show that the excitation source carries more information than the vocal tract system. The accuracy neutral vs emotion classification using excitation source information is 91%, which is 8% higher than the accuracy obtained using vocal tract system information. The Berlin EMO-DB database is used in this study. It is observed that, the proposed emotion detection system provides an improvement of approximately 10% using excitation source features</text>
+        <edit type="readability" crr=". There is also a 3% improvement" comments="Readability / split very long sentence to improve flow">and 3%</edit>
+        <text>using vocal tract system features over the recently proposed emotion detection which uses the energy and pitch contour modeling with functional data analysis.</text>
+    </abstract>   
+    <introduction>
+        <text>Speech is produced by the human speech-production mechanism</text>
+        <edit type="readability" crr=". It" comments="Punctuation / readability / split very long sentence">, it</edit>
+        <text>carries the signature of the speaker, message, language, dialect, age, gender, context, culture, and state of the speaker such as emotions or expressive states. Extraction of these elements of information from the speech signal depends on identification and extraction of relevant acoustic parameters. Information present in the speech signal, including emotional state of a speaker, has its impact on the performance of speech systems (Athanaselis et al., 2005).</text>
+        <text>\\ In this study, emotion detection refers to the identification of whether speech is neutral or emotional. Emotion recognition refers to determining the category of emotion, i.e., anger,</text>
+        <edit type="grammar" crr="happiness, sadness, etc." comments="Grammar / the noun form is better">happy, sad, etc.</edit>
+        <text>The focus of this study is the detection of any presence of the emotional state of a speaker using reference models for neutral speech. Motivated by a broad range of commercial applications, automatic emotion recognition from speech has gained increasing research attention over the past few years.</text>
+        <edit type="readability;conciseness" crr="Some" comments="Readability / reduce wordiness">Some of</edit>
+        <text>applications for emotion recognition system</text>
+        <edit type="clarity" crr="can be found" comments="Vocabulary / insert to clarify">are</edit>
+        <text>in the fields of health care, call centre services</text>
+        <edit type="readability" crr=". They can" comments="Readability / start new sentence">and</edit>
+        <text>also</text>
+        <edit type="word choice" crr="be used in the development of" comments="">for developing</edit>
+        <text>speech systems such as</text>
+        <edit type="capitalization;consistency" crr="automatic speech recognition" comments="Consistency / you've capitalized linguistic terms previously, so capitalize here to be consistent">Automatic Speech Recognizer</edit>
+        <text>(ASR) to improve the performance of dialogue systems (Athanaselis et al., 2005; Mehu and Scherer, 2012; Cowie et al., 2001; Morrison et al., 2007).</text>
+        <edit type="grammar" crr="\\ The extraction" comments="Grammar / insert 'the' here to clarify">\\ Extraction</edit>
+        <text>of features from speech signals that characterize the emotional content of speech</text>
+        <edit type="readability;conciseness" crr="whilst depending on" comments="Readability / reduce wordiness">, and at the same time do not depend on</edit>
+        <text>the lexical content, is an important issue in emotion recognition (Schuller et al., 2010; Luengo et al., 2010; Scherer, 2003; Williams and Stevens, 1972; Murray and Arnott, 1993; Lee and Narayanan, 2005). From (Schuller et al., 2010; Hassan and Damper, 2012; Schuller et al., 2013; Schuller et al., 2011), it is observed that there is no clear understanding off what</text>
+        <edit type="readability;conciseness" crr="" comments="Readability / reduce wordiness">types of</edit>
+        <text>features can be used for emotion recognition tasks. Brute force approaches involve extracting as many features as possible and using these in the experiments, sometimes using feature selection mechanisms to choose appropriate subsets of features (Schuller et al., 2013; Schuller et al., 2011; Schuller et al., 2009; Zeng et al., 2009). These features can be broadly classified as prosodic features (pitch, intensity, duration), voice quality features (jitter, shimmer, harmonic to noise ratio (HNR)), spectral features (Mel Frequency Cepstral Coefficients (MFCCs), Linear Prediction Cepstral Coefficients (LPCCs)), and their statistics such as mean, variance, minimum, maximum,</text>
+        <edit type="readability" crr="and" comments="Vocabulary / insert conjunction as the final component when using serial commas"></edit>
+        <text> range (Zeng et al., 2009; Schuller et al., 2011; Schuller et al., 2009; ?; Eyben et al., 2012). A limitation of this approach is the assumption that every segment in the utterance is equally important.</text>
+        <edit type="clarity" crr="For example, studies" comments="Vocabulary / insert to clarify">studies</edit>
+        <text>have shown that emotional information is not uniformly distributed over time (Jeon et al., 2011; Lee et al., 2011; Shami and Verhelst, 2007).</text>
+        <text>\\ In (Busso et al., 2009; Bulut and Narayanan, 2008; Arias et al., 2014; Arias et al., 2013; Busso et al., 2007), the authors observed that robust neutral speech models can be useful in contrasting different emotions expressed in speech. An emotion detection study was</text>
+        <edit type="word choice" crr="created" comments="">made</edit>
+        <text>by creating acoustic spectral features of neutral speech with HMMs (Busso et al., 2007). In (Busso et al., 2009), the authors used the pitch features of neutral speech to discriminate emotions using the Kullback-Leibler distance. It was observed that gross pitch contour statistics such as mean, minimum, maximum, and range are more prominent than pitch shape. Recently, emotion detection is performed using functional data analysis (FDA) (Arias et al., 2014; Arias et al., 2013). In this approach, pitch and energy contours of neutral speech utterance are modeled using FDA. In testing, pitch, and energy contours are projected onto the reference bases, and their projections are used to discriminate neutral and emotional speech. Similar studies were</text>
+        <edit type="style" crr="carried out" comments="Register / 'made' is correct, but the proposed alternative is better in academic writing">made</edit>
+        <text>to model the shape of pitch contour of emotional speech by analyzing the rising and falling movements (Astrid and Sendlmeier, 2010). One limitation with the studies (Arias et al., 2014; Arias et al., 2013) is that all the utterances should be temporally aligned with Dynamic Time Warping and it may not be realistic for most</text>
+        <edit type="readability;conciseness" crr="" comments="Readability / delete to reduce wordiness">of the</edit>
+        <text>situations.</text>
+        <text>\\ Here, we propose an approach based on AANN (Yegnanarayana and Kishore, 2002) to detect whether a given utterance is either neutral or emotional speech. The detection of emotional segments or</text>
+        <edit type="readability;repetitiveness" crr="" comments="">emotion</edit>
+        <text>events may help current approaches in automatic emotion recognition. This approach avoids the interrelations among the lexical content used</text>
+        <edit type="word choice;readability;clarity" crr="as well as" comments="Word choice / readability / insert to clarify"></edit>
+        <text>language and emotional states across varying acoustic features. The discrimination capabilities of AANN models are exploited in various areas of speech, such as speaker identification, speaker verification, speaker recognition, language identification, throat microphone processing,</text>,
+        <edit type="flow" crr="and" comments="Flow / insert conjunction and when using series and after serial comma"></edit>
+        <text>audio clip classification etc (Reddy et al., 2010; Murty and Yegnanarayana, 2006; Yegnanarayana et al., 2001; Mary and Yegnanarayana, 2008; Bajpai and Yegnanarayana, 2008; Shahina and Yegnanarayana, 2007).</text>
+        <edit type="word choice" crr="\\ The current" comments="Vocabulary / 'current' is more appropriate in this context">\\ This present</edit>
+        <text>work is based on our previous work (Gangamohan et al., 2013)</text>
+        <edit type="word choice" crr="exploring the capture of" comments="">for capturing</edit>
+        <text>deviations of emotional speech from neutral speech. In this paper (Gangamohan et al., 2013), it was shown that the excitation source features extracted in the high signal-to-noise to noise ratio (SNR) regions of the speech signal (around the glottal closure) capture the deviations of emotional speech from neutral speech. This paper presents a framework for characterizing the high SNR regions of the speech signal using the knowledge of speech production mechanisms. In (Reddy et al., 2010; Murty and Yegnanarayana, 2006; B. Yegnanarayana and S. R. Mahadeva Prasanna and K. Sreenivasa Rao, 2002), the authors showed the importance of processing the high SNR regions of speech signals for various applications such as speaker recognition (Reddy et al., 2010; Murty and Yegnanarayana, 2006), speech enhancement (B. Yegnanarayana and S. R. Mahadeva Prasanna and K. Sreenivasa Rao, 2002),</text>
+        <edit type="readability" crr="and" comments="Readability / insert conjunction 'and' here when describing series in a sentence"></edit>
+        <text>emotion analysis (Gangamohan et al., 2013), etc. Hence, in this study, our focus is on the processing of high SNR regions of speech.</text>
+        <text>\\ The remaining part of the paper is organized as follows: Section 2 describes the basis for the present study. Databases used and feature extraction procedures are described in Section 3. In Sections 4 and 5, descriptions of the AANN models for capturing the excitation source and vocal tract system information are given. Emotion detection experiments and discussion on results are given in Section 6. Finally, Section 7</text>
+        <edit type="style" crr="provides" comments="Register / 'gives' is correct, but the proposed alternative is better for academic writing">gives</edit>
+        <text>a summary and scope for further study.</text>
+    </introduction>   
+</doc>

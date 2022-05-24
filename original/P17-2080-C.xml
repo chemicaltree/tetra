@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P17-2080" editor="C" format="Conf" position="S" region="NN">
+    <title>
+        <text>A Conditional Variational Framework for Dialog Generation</text>
+        <edit type="" crr="" comments=""></edit>
+    </title>
+    <abstract>
+        <text>Deep latent variable models have been shown to facilitate</text>
+        <edit type="grammar" crr="" comments="Grammar / not required, since you're talking about a theme in general, which you're just about to introduce">the</edit>
+        <text>response generation for open-domain dialog systems. However, these latent variables are highly</text>
+        <edit type="readability;clarity" crr="randomized, and they lead" comments="Meaning / your structure is correct, however, the proposed alternative is slightly more specific (latent variables ..lead to)">randomized and, leading</edit>
+        <text>to uncontrollable generated responses. In this paper, we propose a framework</text>
+        <edit type="clarity" crr="that allows" comments="Meaning / insert to clarify">allowing</edit>
+        <text>conditional response generation based on specific attributes. These attributes can be either manually assigned or automatically detected. Moreover, the dialog states for both speakers</text>
+        <edit type="clarity" crr="in a conversation" comments="Meaning / insert to clarify"></edit>
+        <text>are modeled separately in order to reflect personal features. We validate this framework ion two different scenarios, where the attribute refers to genericness and sentiment states respectively.</text>
+        <edit type="style" crr="Experimental results" comments="Style / 'The' not required in this case">The experiment result</edit>
+        <edit type="word choice" crr="gave credence to" comments="Word usage / the proposed alternative is tighter">testified</edit>
+        <text>the potential of our model, where meaningful responses can be generated in accordance with specified attributes.</text>
+    </abstract>   
+    <introduction>
+        <edit type="flow" crr="Eever since their successful application in machine translation, (Sutskever et al., 2014), Seq2seq neural networks" comments="">Seq2seq neural networks, ever since their successful application in machine translation, (Sutskever et al., 2014),</edit>
+        <text>have demonstrated impressive results on dialog generation and spawned a great deal of variants (Vinyals and Le, 2015; Yao et al., 2015; Sordoni et al., 2015; Shang et al., 2015).</text>
+        <edit type="grammar" crr="Vanilla" comments="Grammar / 'the' not required here as you're introducing the theme in general">The vanilla</edit>
+        <text>seq2seq models suffer from the problem of generating too many generic responses (generic denotes safe, commonplace responses</text>
+        <edit type="style" crr="such as" comments="Register / 'like' is correct, but not appropriate for academic style">like</edit>
+        <text>”I don't know”). One major reason</text>
+        <edit type="clarity" crr="for this is that the process of element-wise prediction can model stochastical variations only at the token level, thereby seducing the system to gain immediate short-term rewards" comments="">is that the element-wise prediction models stochastical variations only at the token level, seducing the system to gain immediate short rewards</edit>
+        <text>neglect the long-term structure. To cope with this problem, (Serban et al., 2017) proposed a variational hierarchical encoder-decoder model (VHRED) that</text>
+        <edit type="word choice" crr="introduced" comments="Vocabulary / your word is correct, but 'introduce' might be more appropriate in this context">brought</edit>
+        <text>the idea of variational auto-encoders (VAE) (Kingma and Welling, 2013; Rezende et al., 2014) into dialog generation. For each utterance, VHRED samples a latent variable as a holistic representation so that the generative process will learn to maintain a coherent global sentence structure. However, the latent variable is learned purely in an unsupervised</text>
+        <edit type="style" crr="manner" comments="Register / your choice is correct, but alternative is better for academic style">way</edit>
+        <text>and can only be explained vaguely as higher-level decisions</text>
+        <edit type="style" crr="such as" comments="Register / 'like' is correct, but not appropriate for academic style">like</edit>
+        <text>opic or sentiment. Though effective in generating utterances with more information content, it lacks the ability of explicitly controlling the generating process.</text>
+        <text>\\ This paper presents a conditional variational framework for generating specific responses,</text>
+        <edit type="clarity" crr="which is" comments=""></edit>
+        <text>inspired by the semi-supervised deep generative model (Kingma et al., 2014). The principle idea is to generate the next response based on dialog context, a stochastical latent variable and an external label. Furthermore, the dialog context for both speakers is modeled separately because they have different talking styles, personality, and sentiment. The</text>
+        <edit type="style" crr="entire" comments="Register / your choice is correct, but the alternative is better in academic writing">whole</edit>
+        <text>network structure functions</text>
+        <edit type="style" crr="as" comments="Register / consider alternative for academic writing">like</edit>
+        <text>a conditional VAE (Sohn et al., 2015; Yan et al., 2016). We test our framework</text>
+        <edit type="grammar" crr="in" comments="">on</edit>
+        <text>two scenarios.</text>
+        <edit type="grammar" crr="In" comments="">For</edit>
+        <text>he second scenario, the label represents an imitated sentiment tag. Before generating the next response, the appropriate sentiment tag is predicted to direct the generating process.</text>
+        <text>\\ Our framework is expressive and extendable. The generated responses agree with the predefined labels while maintaining</text>
+        <edit type="clarity" crr="meaning." comments="">meaningful.</edit>
+        <text>By changing the definition of the label, our framework can be easily applied to other specific areas.</text>
+    </introduction>   
+</doc>

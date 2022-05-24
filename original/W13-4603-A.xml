@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W13-4603" editor="A" format="WS" position="S" region="NN">
+    <title>
+        <text>Developing ML-based Systems to Extract Medical Information from Japanese Medical History Summaries</text>
+    </title>
+    <abstract>
+        <text>With the increase of the number of medical records written in an electronic format, natural language processing techniques in the medical domain have become more and more important. For the purpose of</text>
+        <edit type="conciseness;readability" crr="developing and evaluating" comments="conciseness and readability - this seems less stilted to me">the development and evaluation of</edit>
+        <text>machine learning-based systems to extract medical information, we recently participated in the NTCIR-10 MedNLP task. The task focused on Japanese medical records and</text>
+        <edit type="readability" crr="was" comments="readability - not strictly necessary, but this aids the flow"></edit>
+        <text>aimed at evaluating different information extraction techniques on the common data set provided by the organizers. We implemented our baseline system based on</text>
+        <edit type="grammar" crr="the" comments="">grammar - need an article here since we're referring to a specific model/structure</edit>
+        <text>structured perceptron and have developed</text>
+        <edit type="readability" crr="extensions for it" comments="readability - this is more natural English and also more clear as the previous implies the authors developed the only extensions for the model.. I would really need to review the whole paper to be sure this is the correct wording, but I think it makes sense.">its extensions</edit>
+        <text>. In this paper, we describe our systems and report on the evaluation</text>
+        <edit type="conciseness;word choice" crr="and analysis of" comments="conciseness and word choice - 'of' is better than 'on' for 'analysis' and that lets us consolidate the wording somewhat.">and the analysis on </edit>
+        <text>their performance.</text>
+    </abstract>   
+    <introduction>
+        <text>In recent years, medical records have been increasingly written in an electronic format, which leads to a growing need for natural language processing (NLP) techniques in the medical domain. Specifically, information extraction (IE) techniques, such as named entity recognition (NER), are crucial as they serve as the basis of more intellectual and/or application-oriented tasks, including information retrieval and question answering.</text>
+        <text>\n\n Given</text>
+        <edit type="word choice;clarity" crr="this" comments="word choice and clarity - make it more clear that we're referring to the background in prior para">the</edit>
+        <text>background, the NTCIR-10 MedNLP task (Morita et al., 2013) was recently held as a shared task to foster</text>
+        <edit type="grammar" crr="" comments="grammar - no article needed here.">the</edit>
+        <text>NLP research for medical texts, specifically targeting Japanese. The participants of the task were provided with an annotated corpus consisting of 50 fictional medical history summary reports. The intended task was a type of NER and required the participants to identify patients’ personal and medical information from the reports.</text>
+        <text>\n\n For the MedNLP task, we took part in</text>
+        <edit type="readability" crr="two subtasks: 1) deidentification and 2) complaint and diagnosis, which are summarized below" comments="readability - rewrote this sentence for better flow">the deidentification subtask and the complaint and diagnosis subtask summarized shortly</edit>
+        <text>by adapting an NER model to the medical domain. The model is based on</text>
+        <edit type="grammar" crr="the" comments="grammar - as above, need an article here"></edit>
+        <text>structured perceptron (Collins, 2002) and was previously developed for the biomedical domain (Higashiyama et al., to appear).</text>
+        <text>\n\n This paper reports on the results of the structured perceptron-based model for the MedNLP task and presents</text>
+        <edit type="clarity;readability" crr="an analysis of those results." comments="clarity and readability - it took me a while to figure out what 'their' referred to.">their analysis.</edit>
+        <text>Additionally, conditional random fields (CRFs) (Lafferty et al., 2001), a popular model adopted by many participants of the task, are applied for comparison.</text>                
+    </introduction>   
+</doc>

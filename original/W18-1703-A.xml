@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W18-1703" editor="A" format="WS" position="NS" region="N">
+    <title>
+        <edit type="hyphenation" crr="Multi hop" comments="hyphenation - multi- doesn't need a hyphen unless result is awkward. This could be style specific.">Multi-hop</edit>
+        <text>Inference for Sentence-level TextGraphs: How Challenging is Meaningfully Combining Information for Science Question Answering?</text>
+    </title>
+    <abstract>
+        <edit type="capitalization" crr="Question answering" comments="">Question Answering</edit>
+        <text>for complex questions is often modelled as a graph construction or traversal task</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not appropriate here because the following clause is needed to fully understand the prior one.">,</edit>
+        <text>where a solver must build or traverse a graph of facts that answer and explain a given question. This</text>
+        <edit type="hyphenation" crr="“multi hop”" comments="hyphenation - multi- doesn't need a hyphen unless result is awkward. This could be style specific.">“multi-hop”</edit>
+        <text>inference has been shown to be extremely challenging, with few models able to aggregate more than two facts before being overwhelmed by</text>
+        <edit type="punctuation" crr="“semantic drift,”" comments="punctuation - in US usage, comma typically goes within the quote unless confusion would result. UK usage is different.">“semantic drift”,</edit>
+        <edit type="clarity" crr="which is" comments="clarity - while 'or' is often used as an intro to a definition like this, it can be confusing when the definition is long.">or</edit>
+        <text>the tendency for long chains of facts to quickly drift off topic. This is a major barrier to current inference models, as even elementary science questions require an average of 4 to 6 facts to answer and explain.</text>
+        <edit type="conciseness" crr="We" comments="conciseness - This is the abstract, we don't need to say 'in this work' as it's implied.">In this work, we</edit>
+        <text>empirically characterize the difficulty of building or traversing a graph of sentences connected by lexical overlap</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>by evaluating chance sentence aggregation quality through 9,784</text>
+        <edit type="hyphenation" crr="manually annotated" comments="hyphenation - adverbs ending in ly do not take a hyphen">manually-annotated</edit>
+        <edit type="spelling" crr="judgments" comments="spelling - US spelling is typically without the 'e' - though this can be style dependent.">judgements</edit>        
+        <text>across knowledge graphs built from three</text>
+        <edit type="hyphenation" crr="free-text" comments="hyphenation - this isn't in MW as a closed word, and a brief search in Google Scholar doesn't show it in wide use as closed.">free text</edit>
+        <text>corpora (including study guides and Simple Wikipedia). We demonstrate</text>
+        <edit type="readability" crr="that" comments="readability - without this the sentence would initially be parsed as we are demonstrating semantic drift"></edit>
+        <text>semantic drift tends to be high and aggregation quality low,</text>
+        <edit type="redundancy" crr="" comments="redundancy - 'at' is superfluous here with 'between'">at</edit>
+        <text>between 0.04% and 3%, and highlight scenarios that maximize the likelihood of meaningfully combining information.</text>
+    </abstract>   
+    <introduction>
+        <text>Question answering (QA) is a task where models must find answers to natural language questions, either by retrieving these answers from a corpus</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not needed in either/or unless confusion would result without it">,</edit>
+        <text>or inferring them by some</text>
+        <edit type="redundancy" crr="" comments="redundancy - if we're inferring something then we're using an inference process">inference</edit>
+        <text>process. Retrieval methods model QA as an</text>
+        <edit type="hyphenation" crr="nswer-sentence" comments="hyphenation - required here for clarity as well as grammar rules">answer sentence</edit>
+        <text>selection task, where a solver must find a sentence or short continuous passage of text in a corpus that answers the question (Moschitti et al., 2007; Severyn and Moschitti, 2012, inter alia). These methods often fall short for questions requiring complex inference, such as those in the science domain, where nearly 80% of even</text>
+        <edit type="punctuation" crr="4th" comments="punctuation - no space between the number and the 'th', though this could potentially be style dependent">4 th</edit>
+        <text>grade science exam questions require some form of causal, model-based, or otherwise complex inference to answer and explain (Clark et al., 2013; Jansen et al., 2016)</text>
+        <edit type="punctuation;clarity" crr="" comments="punctuation and clarity - comma is not needed here in a list of two items and including it makes the sentence ambiguous by making it unclear where 'a single continuous...' applies">,</edit>
+        <text>and a single continuous passage of text rarely describes the reasoning required to move from question to correct answer. In these cases, multiple sentences, often from different parts of a text, different documents, or different knowledge bases</text>
+        <edit type="punctuation" crr="," comments="punctuation - comma needed to close out the 'often...' phrase"></edit>        
+        <text>must be aggregated together to build a complete answer and explanation.</text>
+        <text>\n\n Aggregating knowledge to support inference and complex question answering is often framed as a graph construction or traversal problem (</text>  
+        <edit type="punctuation" crr="e.g.," comments="punctuation - comma needed after e.g.">e.g.</edit>
+        <text>Khashabi et al., 2016), where the solver must find paths that link sentences that contain question terms with sentences that contain answer terms through some number of intermediate sentences (see Figure 1). In these knowledge graphs, nodes represent facts or single sentences</text>
+        <edit type="punctuation" crr="" comments="punctuation - this can be tricky. What follows the and is a complete sentence which would normally require a comma before the conjunction. However, the intro phrase turns this into a list of two items, which does not take a comma. The meaning is subtly different between the two. With the comma, the intro phrase may be read to not apply to the clause following 'and'.">,</edit>
+        <text>and edges between nodes represent some signal that the facts are interrelated, such as</text>
+        <edit type="grammar;readability" crr="by" comments="grammar, readability - need a preposition here to tie to 'interrelated'"></edit>
+        <text>having lexical overlap.</text>
+        <text>\n\n Information aggregation or</text>        
+        <edit type="punctuation" crr="multi-hop" comments="punctuation - we used the quotes to introduce this word the first time. It's unnecessary and distracting to continue using them.">“multi-hop”</edit>
+        <text>graph traversal has been shown to be extremely challenging, with QA solvers generally showing only modest performance benefits when aggregating information</text>
+        <edit type="punctuation;clarity" crr="" comments="punctuation -and clarity - comma is inappropriate here as the and joins two items in teh list of 'showing'. But it's also confusing because with the comma, it's unclear whether 'diminishing returns' applies to 'showing' or 'has been shown', the latter of which makes little sense.">,</edit>    
+        <text>and diminishing returns as the amount of aggregation increases. In the elementary science domain, current estimates suggest that an average of 4 to 6 sentences are required to answer and explain a given question (Jansen et al., 2016, 2018), while recent QA solvers generally struggle to meaningfully aggregate more than two</text>   
+        <edit type="hyphenation" crr="free-text" comments="hyphenation - see above comment">free text</edit>
+        <text>sentences (Jansen et al., 2017), even when using alternate representations including semistructured tables (Khashabi et al., 2016) or graphs of words or syntactic dependencies traversed using monolingual alignment or PageRank variants in open-domain QA (Fried et al., 2015). Fried et al. (2015) suggest these performance limitations are due to</text>
+        <edit type="punctuation" crr="semantic drift" comments="punctuation, continuation of previous change">“semantic drift”</edit>
+        <text>, </text>
+        <edit type="spelling" crr="whereas" comments="spelling - whereas is one word">where as</edit>
+        <text> the number of sentences being aggregated increases, so do the chances of making a misstep in the aggregation – for example, aggregating a sentence about seed funding for a company when making an inference about the stages of plant growth. This appears to occur across a variety of solvers, representations, and methods for aggregation</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is in appropriate here">,</edit>
+        <text>and is leading to both the development of datasets specifically designed for</text>
+        <edit type="hyphenation" crr="multi hop" comments="hyphenation - see above">multi-hop</edit>    
+        <text>QA (Jansen et al., 2016, 2018; Welbl et al., 2017)</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma not needed before as well as">,</edit>
+        <text>as well as methods of controlling for semantic drift in knowledge graphs constructed from (for example) OpenIE triples using either support graphs (Khot et al., 2017) or drift-sensitive random walks (Kwon et al., 2018).</text>
+        <text>\n\n In an effort to better understand the challenges of inference and explanation construction for QA,</text>
+        <edit type="redundant" crr="" comments="redundant - this is the intro to the paper, not necessary to say 'here', it's implied">here</edit>
+        <text>we characterize the</text>
+        <edit type="spelling" crr="difficulty" comments="">difficultly</edit>
+        <text>of the information aggregation task in the context of science exams. The contributions of this work are</text>
+        <edit type="grammar;style" crr="as follows:" comments="grammar, style - lead in for a list like this is better as a complete sentence followed by colon">:</edit> 
+        <text>\n We provide the first empirical characterization of the difficulty of information aggregation by manually evaluating sentence aggregation quality using 9,784 annotated</text>
+        <edit type="spelling" crr="judgments" comments="spelling - US spelling is typically without the 'e' - though this can be style dependent.">judgements</edit>        
+        <text>across 14 representative exam questions, highlighting specific patterns of lexical overlap between question, answer, and candidate</text>
+        <edit type="grammar" crr="sentences" comments="grammar - we have three sentences, so plural is needed">sentence</edit>
+        <text>that maximize the chances of successful aggregation.</text>
+        <text>\n We evaluate aggregation difficulty across three knowledge resources</text>        
+        <edit type="punctuation" crr="" comments="punctuation - comma not needed here.">,</edit>
+        <text>and empirically demonstrate that while moving to</text>
+        <edit type="hyphenation" crr="open domain" comments="">open-domain</edit>  
+        <text>resources increases knowledge coverage, it also increases the difficulty of the information aggregation task by more than an order of magnitude.</text>
+        <text>\n We evaluate aggregating up to three sentences that connect terms in the question to terms in the answer</text>        
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>and show that this suffers both from sparsity (even on Wikipedia-scale corpora)</text>
+        <edit type="punctuation" crr="" comments="punctuation - comma is inappropriate here">,</edit>
+        <text>as well as a very low probability </text>
+        <edit type="clarity" crr="(0.04% to 3%) of producing meaningful aggregations through lexical overlap alone." comments="clarity - moving the parenthetical to where it applies"> of producing meaningful aggregations (0.04% to 3%) through lexical overlap alone.</edit>
+    </introduction>   
+</doc>

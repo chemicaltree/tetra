@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W02-0112" editor="B" format="WS" position="NS" region="NN">
+    <title>
+        <text>Teaching Computational Linguistics at the University of Tartu: Experience, Perspectives and Challenges</text>
+    </title>
+    <abstract>
+        <edit type="style" crr="This" comments="">The</edit>
+        <text>paper</text>
+        <edit type="style" crr="presents" comments="">gives</edit>
+        <text>a review of teaching Computational Linguistics (CL) at the University of Tartu. The current curriculum</text>
+        <edit type="style" crr="anticipates" comments="">foresees</edit>
+        <text>the possibility of</text>
+        <edit type="word choice" crr="offering" comments="word choice; I think they mean they're anticipating that the university will offer this as an option in the future but that it doesn't have a program like this in place.">studying</edit>
+        <text>CL as an independent 4-year subject in the Faculty of Philosophy</text>
+        <edit type="word choice" crr="at" comments="">on</edit>
+        <edit type="style;word choice" crr="the bachelor's level" comments="">the bachelor stage</edit>
+        <text>. In connection with</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>higher education reform in Estonia, new curricula will be introduced</text>
+        <edit type="word choice" crr="in" comments="">from</edit>
+        <text>the next study year</text>
+        <edit type="word choice" crr=", in which" comments="">where</edit>
+        <text>the 3-year</text>
+        <edit type="style;word choice" crr="bachelor's level" comments="">bachelor stage</edit>
+        <text>will be followed by a 2-year master's</text>
+        <edit type="style" crr="degree" comments="">stage</edit>
+        <text>. It will then be possible to study CL</text>
+        <edit type="word choice" crr="by following either one of" comments="">proceeding from</edit>
+        <text>two paths:</text>
+        <edit type="clarity;word choice" crr="i) by pursuing a degree" comments=""></edit>
+        <text>in the Faculty of Philosophy</text>
+        <edit type="conciseness" crr="" comments="">, and additionally also</edit>
+        <edit type="clarity;word choice" crr="or ii) by pursuing a degree" comments=""></edit>
+        <text>in the Faculty of Mathematics and Computer Science.</text>
+        <edit type="word choice" crr="In this way," comments="">This way</edit>
+        <text>two types of specialists will be trained who will hopefully be able to complement each other in</text>
+        <edit type="hyphenation" crr="team work." comments="">team-work.</edit>
+    </abstract>   
+    <introduction>
+        <edit type="word order" crr="\n\n In Estonia, computational linguistics can only be studied as a special subject at the University of Tartu (UT)." comments="">\n\n Computational Linguistics as a special subject can in Estonia only be studied at the University of Tartu (UT).</edit>
+        <text>\n\n Computational linguistics as an independent subject has been</text>
+        <edit type="style" crr="offered" comments="">taught</edit>
+        <text>at UT</text>
+        <edit type="style" crr="since" comments="">from</edit>
+        <text>the study year 1998/99,</text>
+        <edit type="clarity" crr="and" comments=""></edit>
+        <text>various</text>
+        <edit type="style" crr="related" comments="">separate</edit>
+        <text>courses</text>
+        <edit type="style;clarity" crr="have been offered since" comments="">from</edit>
+        <text>the study year 1996/97. The curriculum and</text>
+        <edit type="style" crr="an variety of" comments="">various</edit>
+        <text>new courses were developed with</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>support provided by a number of HESP projects. Based on the experience of Western universities, the topics of linguistics, computer science, mathematics and computational linguistics were selected.</text>
+        <edit type="word choice" crr="Because" comments="">As</edit>
+        <text>the subject was launched in the Department of Estonian and Finno-Ugric Linguistics,</text>
+        <edit type="clarity" crr="which is in the" comments=""></edit>
+        <text>Faculty of Philosophy,</text>
+        <edit type="word choice" crr="" comments="">then</edit>
+        <text>linguistic subjects</text>
+        <edit type="word choice" crr="are predominant" comments="">prevail</edit>
+        <text>in the curriculum.</text>
+        <edit type="style" crr="However," comments="">But</edit>
+        <text>the</text>
+        <edit type="word choice" crr="courses are taught" comments="">tuition is provided</edit>
+        <text>jointly by</text>
+        <edit type="clarity" crr="instructors from" comments=""></edit>
+        <text>two faculties:</text>
+        <edit type="clarity" crr="instructors from the" comments=""></edit>
+        <text>Faculty of Philosophy</text>
+        <edit type="grammar" crr="teach" comments="">teaches</edit>
+        <text>linguistic subjects,</text>
+        <edit type="clarity" crr="instructors from the" comments=""></edit>
+        <text>Faculty of Mathematics and Computer Science</text>
+        <edit type="grammar" crr="teach" comments="">teaches</edit>
+        <text>mathematics and informatics subjects,</text>
+        <edit type="clarity" crr="and" comments=""></edit>
+        <text>the computational linguistic subjects</text>
+        <edit type="grammar" crr="are" comments="">have been</edit>
+        <text>divided between</text>
+        <edit type="clarity" crr="instructors from" comments=""></edit>
+        <text>these two faculties.</text>
+        <edit type="grammar" crr="The language" comments="">Language</edit>
+        <text>of instruction is Estonian.</text>
+        <edit type="word choice" crr="\n\n Preparation of" comments="">\n\n Preparing the</edit>
+        <text>lectures in new subjects has</text>
+        <edit type="word order" crr="generally been" comments="">been mostly</edit>
+        <text>accompanied by</text>
+        <edit type="clarity" crr="efforts to" comments=""></edit>
+        <edit type="word order" crr="make these materials available" comments="">making available these materials</edit>
+        <text>on the web as well. A number of students</text>
+        <edit type="grammar" crr="in" comments="">of</edit>
+        <text>computer science and linguistics also</text>
+        <edit type="word choice" crr="take" comments="">listen to</edit>
+        <text>several computational linguistics lectures as electives or</text>
+        <edit type="word choice" crr="as" comments=""></edit>
+        <text>optional subjects. Therefore</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>we face the</text>
+        <edit type="style" crr="issue of" comments="">problem</edit>
+        <text>how to make these subjects interesting and manageable for students with</text>
+        <edit type="word choice" crr="different backgrounds" comments="">various qualifications</edit>
+        <edit type="grammar" crr="\n\n The new" comments="">\n\n New</edit>
+        <text>curricula will take effect</text>
+        <edit type="word choice" crr="in" comments="">as of</edit>
+        <text>the 2002/2003 study year at UT. According to</text>
+        <edit type="clarity" crr="the new program" comments="">them</edit>
+        <text>, the</text>
+        <edit type="punctuation" crr="3-year" comments="">3 year</edit>
+        <edit type="style" crr="bachelor's program" comments="">bachelor study</edit>
+        <text>is followed by a 2-year</text>
+        <edit type="style" crr="master's program" comments="">master study</edit>
+        <text>which in turn may be followed by a 4-year doctoral studies</text>
+        <edit type="clarity" crr="program " comments=""></edit>
+        <text>(up until now, the 4+2+4-year model was used).</text>
+        <edit type="grammar" crr="The bachelor's studies" comments="">Bachelor studies</edit>
+        <text>will provide</text>
+        <edit type="word choice" crr="a general," comments="">the gneral basis</edit>
+        <edit type="clarity" crr="foundational program of" comments=""></edit>
+        <text>higher education</text>
+        <edit type="punctuation" crr=";" comments="">,</edit>
+        <edit type="grammar" crr="the master's studies program" comments="">master studies program</edit>
+        <text>will lead to a qualification in a specific subject. The new modified curriculum takes into account the experience</text>
+        <edit type="clarity;word choice" crr="we've achieved" comments="">obtained</edit>
+        <text>in the process of teaching</text>
+        <edit type="clarity" crr="computational linguistics at our institution" comments=""></edit>
+        <text>so far. In addition</text>
+        <edit type="conciseness" crr="" comments="">to that</edit>
+        <text>, the new curriculum for computer science</text>
+        <edit type="style" crr="anticipates" comments="">foresees</edit>
+        <edit type="word choice" crr="the potential" comments="">the (new) possibility</edit>
+        <edit type="clarity" crr="for students" comments=""></edit>
+        <text>to major in language technology. In the following, we will present the structure of</text>
+        <edit type="consistency" crr="our" comments="">the</edit>
+        <text>curricula and</text>
+        <edit type="clarity" crr="recount what" comments=""></edit>
+        <text>our experience</text>
+        <edit type="word order" crr="of teaching subjects in computational linguistics has been so far." comments="">so far in teaching the subjects of computational linguistics.</edit>                                                 
+    </introduction>   
+</doc>

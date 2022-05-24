@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P16-1136" editor="C" format="Conf" position="NS" region="N">
+    <title>
+        <text>Compositional Learning of Embeddings for Relation Paths in Knowledge Bases and Text</text>
+    </title>
+    <abstract>
+        <text>Modeling relation paths</text>
+        <edit type="redundancy;style" crr="provides" comments="Register: 'has' is a little redundant. It's correct, but consider using alternative in line with academic style">has offered</edit>
+        <text>significant gains in embedding models for knowledge base (KB) completion. However, enumerating paths between two entities is very expensive, and existing approaches typically resort to approximation with a sampled subset. This problem is particularly acute when text is jointly modeled with KB relations and used to provide direct evidence for facts mentioned in it. In this paper, we propose the first exact dynamic programming algorithm</text>
+        <edit type="readability" crr="," comments="Add comma to break up the sentence and improve readability (it's a long sentence)."></edit>
+        <text>which enables efficient incorporation of all relation paths of bounded length, while modeling both relation types and intermediate nodes in the compositional path representations. We</text>
+        <edit type="word usage;clarity" crr="then" comments=""></edit>
+        <text>conduct a theoretical analysis of the efficiency gain from the approach. Experiments on two datasets show that it addresses representational limitations in prior</text>
+        <edit type="repetitiveness" crr="methods" comments="You've used 'method' previously. Try a different word to avoid sounding repetitive.">approaches</edit>
+        <text>and improves accuracy in KB completion.</text>
+    </abstract>   
+    <introduction>
+        <text>Intelligent applications benefit from structured knowledge about the entities and relations in their domains. For example, large-scale knowledge bases (KB), such as Freebase (Bollacker et al., 2008) or DBPedia (Auer et al., 2007), have proven to be important resources for supporting open-domain question answering (Berant et al., 2013; Sun et al., 2015; Yih et al., 2015). In biomedicine, KBs such as the Pathway Interaction Database (NCI-PID) (Schaefer et al., 2009) are crucial for understanding complex diseases such as cancer and for advancing precision medicine.</text>
+        <text>\n\n While these knowledge bases are often carefully curated, they are far from complete. In non-static domains, new facts become true or are discovered at a fast pace,</text>
+        <edit type="style" crr="rendering" comments="">making</edit>
+        <text>the manual expansion of knowledge bases impractical. Extracting relations from a text corpus (Mintz et al., 2009; Surdeanu et al., 2012; Poon et al., 2015) or inferring facts from the relationships among known entities (Lao and Cohen, 2010) are thus</text>
+        <edit type="repetitiveness;style" crr="essential" comments="">important</edit>
+        <text>approaches for populating existing knowledge bases.</text>
+        <text>Originally proposed as an alternative statistical relational learning method, the knowledge base embedding approach has gained a significant amount of attention</text>
+        <edit type="punctuation" crr="" comments="Not necessary">,</edit>
+        <text>due to its simple prediction time computation and strong empirical performance (Nickel et al., 2011; Chang et al., 2014). In this framework, entities and relations in a knowledge base are represented in a continuous space, such as vectors and matrices.</text>
+        <edit type="word usage;clarity" crr="Ascertaining whether or not" comments="Word usage / clarify / potentially unclear sentence">Whether</edit>
+        <text>two entities have a previously unknown relationship can be predicted by simple functions of their corresponding vectors or matrices. Early work in this direction focuses on exploring various kinds of learning objectives and frameworks</text>
+        <edit type="readability" crr=". However" comments="Split potentially long sentence to improve readability">, but</edit>
+        <text>the model is learned solely from known direct relationships between two entities (e.g., “father”(barack, sasha)) (Nickel et al., 2011; Socher et al., 2013; Bordes et al., 2013; Chang et al., 2014; Yang et al., 2015). In contrast, using multi-step relation paths (e.g., “husband” (barack, michelle) ∧ “mother”(michelle, sasha)) to train KB embeddings has been proposed very recently (Guu et al., 2015; Garcia-Duran et al., 2015; Lin et al., 2015; Neelakantan et al., 2015).</text>
+        <text>\n\n While using relation paths improves model performance, it also poses a critical technical challenge. As the number of possible relation paths between pairs of entities grows exponentially with path length, the training complexity increases sharply. Consequently, existing methods need to make approximations by sampling or pruning. The problem is worsened when the input is augmented with unlabeled text, which has been shown to improve performance (Lao et al., 2012; Gardner et al., 2013; Riedel et al., 2013; Gardner et al., 2014; Toutanova and Chen, 2015). Moreover, none of the prior methods distinguish relation paths that differ in the intermediate nodes they pass through (e.g., “michelle” in our example); all represent paths as a sequence of relation types.</text>
+        <text>\n\n In this work, we aim to develop a KB completion model that can incorporate relation paths efficiently. We start from analyzing the procedures in existing approaches, focusing on their time and space complexity. Based on the observation that compositional representations of relation paths are in fact decomposable, we propose a novel dynamic programming method that enables efficient modeling of all possible relation paths, while also representing both relation types and nodes on the paths.</text>
+        <text>\n\n We evaluated our approach on two datasets. The first is from the domain of gene regulatory networks. Apart from its obvious significance in biomedicine, it offers an excellent testbed for learning joint embedding of KBs and text, as it features existing knowledge bases such as NCIPID and an even larger body of text that grows rapidly (over one million new articles per year). By modeling intermediate nodes on relation paths, we improve the model by</text>
+        <edit type="consistency" crr="three" comments="Made consistent. Some numbers appear in sentences as digits, but other are spelled out.">3</edit>
+        <text>points in mean average precision compared to previous work, while also providing a more efficient algorithm. The second dataset is based on a network derived from WordNet and previously used in work on knowledge base completion. On that dataset</text>
+        <edit type="punctuation" crr="," comments="Punctuate / long sentence"></edit>
+        <text>we demonstrate the ability of the model to effectively handle longer relation paths composed of a</text>
+        <edit type="word usage;repetitiveness" crr="more extensive" comments="Word usage / replace to avoid repetition">larger</edit>
+        <text>set of knowledge base relation types, with</text>
+        <edit type="word usage" crr="reduced" comments="Word usage / replace to avoid common use">smaller</edit>
+        <text>positive impact of modeling intermediate nodes.</text>
+    </introduction>   
+</doc>

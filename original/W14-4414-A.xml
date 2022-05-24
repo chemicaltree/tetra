@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-4414" editor="A" format="WS" position="S" region="N">
+    <title>
+        <text>Two-Stage Stochastic Email Synthesizer</text>
+    </title>
+    <abstract>
+        <text>This paper presents the design and implementation details of an email synthesizer using two-stage stochastic natural language generation</text>
+        <edit type="flow" crr=". The" comments="flow - this sentence was a bit unwieldy, breaking it up">, where the</edit>
+        <text>first stage structures the emails according to sender style and topic structure, and the second stage synthesizes text content based on the particulars of an email structure element and the goals of a given communication for surface realization. The synthesized emails reflect sender style and the</text>
+        <edit type="conciseness;parallelism" crr="communication intent" comments="conciseness and parallelism - eliminate the 'of' and put in same form as the first half of the list.">intent of communication</edit>
+        <text>,</text>
+        <edit type="clarity" crr="and thus" comments="clarity - I think this clause refers to the emails, not the communication intent, meaning that because of the properties of the email it can be used for this purpose. But, I need the rest of the paper to confirm.">which</edit>
+        <text>can be further used as synthetic evidence for developing other applications.</text>
+    </abstract>   
+    <introduction>
+        <text>This paper focuses on synthesizing emails that reflect sender style and</text>
+        <edit type="conciseness;parallelism" crr="communication intent" comments="conciseness and parallelism - eliminate the 'of' and put in same form as the first half of the list.">the intent of the communication</edit>
+        <text>. Such a process might be used for generatingthe generation of common messages (for example, a request for a meeting without direct intervention from the sender). It can also be used in situations where naturalistic emails are needed for other applications. For instance, our email synthesizer was developed to provide emails to be used as part of synthetic evidence of insider threats for purposes of training, prototyping, and evaluating anomaly detectors (Hershkop et al., 2011).</text>
+        <text>\\ Oh and Rudnicky (2002) showed that stochastic generation benefits from two factors: 1) it takes advantage of the practical language of a domain expert instead of the developer and 2) it restates the problem in terms of classification and labeling, where expertise is not required for developing a rule-based generation system. In the present work, we investigate the use of stochastic techniques for generation of a different class of communications, and whether global structures can be convincingly created. Specifically, we investigate whether stochastic techniques can be used to acceptably model longer texts and individual sender characteristics in the email domain, both of which may require higher cohesion to be acceptable (Chen and Rudnicky, 2014).</text>
+        <text>\\ Our proposed system involves two-stage stochastic generation, shown in Figure 1, in which the first stage models email structures according to sender style and topic structure (high-level generation), and the second stage synthesizes text content based on the particulars of a given communication (surface-level generation).</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-0903" editor="B" format="WS" position="NS" region="NN">
+    <title>
+        <text>Quotations, Relevance and Time Depth: Medieval Arabic Literature in Grids and Networks</text>
+    </title>
+    <abstract>
+        <text>This contribution deals with the use of quotations (i.e., repeated n-grams) in the works of medieval Arabic literature. The analysis is based on a</text>
+        <edit type="hyphenation" crr="420-millions-word" comments="combined adjective">420 millions of words</edit>
+        <text>historical corpus of Arabic. Based on</text>
+        <edit type="word order" crr="quotations repeated" comments="">repeated quotations</edit>
+        <text>from work to work, a network is constructed and used for interpretation of various aspects of Arabic literature. Two short case studies are presented, concentrating on the centrality and relevance of individual works,</text>
+        <edit type="readability" crr="" comments="word choice; seems extraneous">and</edit>
+        <text>the analysis of a time depth and</text>
+        <edit type="consistency" crr="the" comments=""></edit>
+        <text>resulting impact of a given work in various periods.</text>
+    </abstract>   
+    <introduction>
+        <text>The relevance of individual works in a given literature and the time depth of such relevance are of interest for many reasons. There are</text>
+        <edit type="redundancy" crr="several" comments="word variety; many was used in the previous sentence.">many</edit>
+        <text>methods that can reveal such relevance.</text>
+        <text>\\ The current contribution is based on quotation extraction. Quotations, both covert and overt,</text>
+        <edit type="word order" crr=" from both" comments="">both from</edit>
+        <text>written and oral sources, belong to</text>
+        <edit type="grammar" crr="the" comments=""></edit>
+        <text>constitutive features of medieval Arabic literature.</text>
+        <text>\\ There are genres which heavily depend on establishing credible links among sources, especially the oral ones, where a</text>
+        <edit type="word choice" crr="trusted" comments="">trusty</edit>
+        <text>chain of tradents is crucial for the claims that such chains accompany. Other links may point to the importance of a given work</text>
+        <edit type="word choice" crr="(or part of it)" comments="">(or its part)</edit>
+        <text>and may uncover previously unseen relations within a given literature or a given genre/register, or</text>
+        <edit type="clarity" crr="they may" comments="added for clarity"></edit>
+        <text>reveal connections among genres/registers within a given literature. As such, the results are interesting</text>
+        <edit type="grammar" crr="to" comments="">in</edit>
+        <text>a wide</text>
+        <edit type="word choice" crr="range of researchers" comments="">research range</edit>
+        <text>, from linguists</text>
+        <edit type="consistency" crr="and" comments="">or</edit>
+        <text> literature theorists to authors interested in the interactions of various subsets of a given literature.</text>
+        <text>\\ The research on quotations</text>
+        <edit type="readability" crr="and" comments="">,</edit>
+        <text>their extraction and detection is rich in the NLP, but the algorithms used are based mainly on the quotation-marker recognition (e.g., Pareti et al., 2013; Pouliquen et al., 2007; and Fernandes et al., 2011 or</text>
+        <edit type="conciseness" crr="" comments="extraneous">on the</edit>
+        <text>metadata processing (e.g., Shi et al., 2010), to name just a few examples. It can be said that most of the contributions focus on issues different from the one described in this</text>
+        <edit type="word choice" crr="paper" comments="">contribution</edit>
+        <text>and choose a different approach.</text>
+        <text>\\ Our understanding of quotations in this project is limited to similar strings of words, i.e., the quotations are very close to borrowings or repetitions of verbatim or almost verbatim passages. Technically,</text>
+        <edit type="grammar;consistency" crr="these" comments="word choice; plural rather than singular">it</edit>
+        <text>can be viewed as</text>
+        <edit type="grammar" crr="n-grams that are" comments="">an n-gram that is</edit>
+        <text>being repeated in at least two works. These repeated n-grams create links that exhibit some hierarchy, e.g., on the chronological line. The only approach known to us that can be paralleled to ours is the one described in Kolak and Schilit (2008) for quotation mining within the Google Books corpus</text>
+        <edit type="clarity;word choice" crr="that use" comments="">with</edit>
+        <text>algorithm searching for verbatim quotations only.</text>
+        <text>\\ In a different context and without direct inspiration, we developed an algorithm that is tolerant to a certain degree of lexical and morphological variation and word order variability.</text>
+        <edit type="grammar;consistency" crr="The reasons for this tolerance are" comments="">The reason for this tolerance is</edit>
+        <edit type="clarity" crr="related to" comments="added for clarity"></edit>
+        <text>both the type of Arabic language (flective morphology and free word order)</text>
+        <edit type="flow" crr="and" comments=""> but also</edit>
+        <text>the fact that the quotations in medieval Arabic literature tend not to be very strict. Despite</text>
+        <edit type="grammar" crr="" comments="">of</edit>
+        <text>the fact that the matching is not</text>
+        <edit type="word choice;style" crr="very" comments="">so</edit>
+        <text>rigorous, we assume that the length of the n-grams we use drastically decreases the possibilities of random matches.</text>
+        <text>\\ The frequency of such n-gram repetition in various literary works can</text>
+        <edit type="word choice" crr="indicate a number of things" comments="">point to several aspects</edit>
+        <edit type="punctuation" crr=";" comments="">,</edit>
+        <text>however, in this contribution we will limit ourselves to interpreting such links in a rather cautious and not too far-reaching manner,</text>
+        <edit type="clarity" crr="and we view them" comments="added for clarity"></edit>
+        <text>mainly as pointers to the fact that the writer of the book</text>
+        <edit type="word choice" crr="in which" comments="">where</edit>
+        <text>the quotations appear was also a reader of the book from which the quotations stem and that he was to a certain degree influenced by it.</text>
+        <text>This does not necessarily mean that the lineage of quotations is complete in our picture, for we have to admit that there could be some author —</text>
+        <edit type="clarity" crr="a" comments="added for clarity"></edit>
+        <text>member of the lineage — who is not involved in our corpus. In our graph, however, edges point to the first instance of a given n-gram in our data.</text>
+    </introduction>   
+</doc>

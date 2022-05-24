@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P17-2080" editor="A" format="Conf" position="S" region="NN">
+    <title>
+        <text>A Conditional Variational Framework for Dialog Generation</text>
+    </title>
+    <abstract>
+        <text>Deep latent variable models have been shown to facilitate</text>
+        <edit type="flow" crr="" comments="it's not strictly wrong to have the article here, but it's not necessary and it flows better without it.">the</edit>
+        <text>response generation for open-domain dialog systems. However, these latent variables are highly randomized, leading to uncontrollable</text>
+        <edit type="clarity;word order" crr="response generation." comments="clarity - it seems to me that it's not the response itself that's uncontrollable, it's the generation of the responses, hence the rewording">generated responses.</edit>
+        <text>In this paper, we propose a framework allowing conditional response generation based on specific attributes. These attributes can be either manually assigned or automatically detected. Moreover, the dialog states for both speakers are modeled separately in order to reflect personal features. We validate this framework on two different scenarios, where the attribute refers to genericness and sentiment states respectively. The</text>
+        <edit type="grammar" crr="experiment's result testifies to" comments="">experiment result testified</edit>
+        <text>the potential of our model, where meaningful responses can be generated in accordance with the specified attributes.</text>
+    </abstract>   
+    <introduction>
+        <edit type="flow;readability" crr="Ever since their successful application in machine translation (Sutskever et al., 2014), seq2seq neural networks," comments="Flow / readability - the original was a bit awkward, this flows better. Also changed the 'the successful application' to 'their successful applicaiton' for clarity to ensure it ties to the S2S neural networks">Seq2seq neural networks, ever since the successful application in machine translation (Sutskever et al., 2014),</edit>
+        <text>have demonstrated impressive results on dialog generation and spawned a great deal of variants (Vinyals and Le, 2015; Yao et al., 2015; Sordoni et al., 2015; Shang et al., 2015). The vanilla seq2seq models suffer from the problem of generating too many generic responses</text>
+        <edit type="clarity;readability" crr="(here, “generic” denotes safe, commonplace responses like ”I don't know”)" comments="clarity / readability - added the 'here' to make it clear that this meaning is specific to this contact and enclosed generic in quotes as we're using that word as a noun representing the word.">(generic denotes safe, commonplace responses like ”I don't know”)</edit>
+        <text>. One major reason is that the element-wise prediction models stochastical variations only at the token level, seducing the system to gain immediate</text>
+        <edit type="word choice;clarity" crr="short-term" comments="word choice / clarity - the rewords themselves aren't necessarily short, but rather the time period they apply to is.">short</edit>
+        <text>rewards and neglect the long-term structure. To cope with this problem, (Serban et al., 2017) proposed a variational hierarchical encoder-decoder model (VHRED) that brought the idea of variational auto-encoders (VAE) (Kingma and Welling, 2013; Rezende et al., 2014) into dialog generation. For each utterance, VHRED samples a latent variable as a holistic representation so that the generative process will learn to maintain a coherent global sentence structure. However, the latent variable is learned purely in an unsupervised way and can only be explained vaguely as</text>
+        <edit type="clarity" crr="being due to" comments="clarity - i think this is the intended meaning, but i would need to review the rest of the paper and perhaps the references cited to be certain."></edit>
+        <text>higher level decisions like topic or sentiment. Though effective in generating utterances with more information content, it lacks the ability of explicitly controlling the generating process.</text>
+        <text>This paper presents a conditional variational framework for generating specific responses, inspired by the semi-supervised deep generative model (Kingma et al., 2014). The</text>
+        <edit type="word choice" crr="principal" comments="word choice - principal is the adjective form meaning most important etc">principle</edit>
+        <text>idea is to generate the next response based on the dialog context, a</text>
+        <edit type="spelling" crr="stochastic" comments="">stochastical</edit>
+        <text>latent variable and an external label. Furthermore, the dialog context for both speakers is modeled separately because they have different talking styles, personality, and sentiment. The whole network structure functions like a conditional VAE (Sohn et al., 2015; Yan et al., 2016). We test our framework on two scenarios. For the first scenario, the label serves as a signal to indicate whether the response is generic or not. By assigning different values to the label, either generic or non-generic responses can be generated. For the second scenario, the label represents an imitated sentiment tag. Before generating the next response, the appropriate sentiment tag is predicted</text>
+        <edit type="clarity" crr="and used" comments="clarity - i believe this is the intended meaning, however i would have to review the rest of the paper to be certain."></edit>
+        <text>to direct the generating process.</text>
+        <text>\\ Our framework is expressive and extendable. The generated responses agree with the predefined labels while maintaining</text>
+        <edit type="word choice" crr="meaningfulness" comments="word choice - meaningfulness is the noun form. However, a better choice may be 'the intended meaning' or 'the desired meaning'. I would need to review the rest of the paper to be certain.">meaningful</edit>
+        <text>. By changing the definition of the label, our framework can be easily applied to other specific areas.</text>
+    </introduction>   
+</doc>

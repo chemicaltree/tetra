@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-2620" editor="C" format="WS" position="S" region="NN">
+    <title>
+        <text>Transfer Learning for Speech Recognition on a Budget</text>
+    </title>
+    <abstract>
+        <text>End-to-end training of automated speech recognition (ASR) systems requires massive data and</text>
+        <edit type="grammar" crr="computing" comments="">compute</edit>
+        <text>resources. We explore</text>
+        <edit type="clarity" crr="the theme of" comments="consider inserting to amplify meaning"></edit>
+        <text>transfer learning based on model adaptation as an approach for training ASR models under constrained GPU memory, throughput</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>and training data. We</text>
+        <edit type="clarity" crr="then" comments="consider inserting to amplify meaning"></edit>
+        <text>conduct several systematic experiments, adapting a Wav2Letter convolutional neural network</text>
+        <edit type="clarity" crr="that was" comments=""></edit>
+        <text>originally trained for English ASR to the German language.</text>
+        <edit type="repetitiveness" crr="Demonstration of" comments="repetition of 'we' / consider alternative">We show</edit>
+        <text>this technique allows faster training on consumer-grade resources while requiring less training data in order to achieve the same accuracy, thereby lowering the cost of training ASR models in other languages. Model introspection revealed that small adaptations to the network's weights were sufficient for good performance, especially for inner layers.</text>
+    </abstract>   
+    <introduction>
+        <text>Automated speech recognition (ASR) is the task of translating spoken language to text in</text>
+        <edit type="hyphenation" crr="real time" comments="hyphenation not required">real-time</edit>
+        <text>. Recently, end-to-end deep learning approaches have surpassed previously predominant solutions based on Hidden Markov Models. In an influential paper, Amodei et al. (2015) used convolutional neural networks (CNNs) and recurrent neural networks (RNNs) to redefine the state of the art. However, Amodei et al. (2015) also highlighted the shortcomings of the deep-learning approach. Performing forward and backward propagation on complex deep networks in a reasonable amount of time requires expensive specialized hardware. Additionally, in order to set the large number of parameters of a deep network properly, one needs to train on large amounts of audio recordings. Most of the time, the recordings need to be transcribed by hand. Such data in adequate quantities is currently</text>
+        <edit type="clarity" crr="only" comments="consider inserting to amplify meaning"></edit>
+        <text>available for</text>
+        <edit type="word choice" crr="a limited number of" comments="'few' is correct, but alternative amplifes what you want to say">few</edit>
+        <text>languages other than English.</text>
+        <text>\\ We propose an approach</text>
+        <edit type="word choice" crr="that combines" comments="">combining</edit>
+        <text>two methodologies to address these shortcomings. Firstly, we</text>
+        <edit type="style" crr="deploy" comments="'use' is correct, but consider alternative in academic style">use</edit>
+        <text>a simpler model with a lower resource footprint. Secondly, we apply a technique called transfer learning</text>
+        <edit type="clarity" crr="in order to" comments="insert to amplify meaning">to</edit>
+        <text>ignificantly reduce the amount of non-English training data</text>
+        <edit type="style" crr="required" comments="'needed' is correct, but the alternative is better in academic style">needed</edit>
+        <text>to achieve competitive accuracy in an ASR task. We investigate the efficacy of this approach on the specific example of adapting a CNN-based end-to-end model that was originally trained on English to recognize German speech. In particular, we freeze the parameters of its lower layers while retraining the upper layers on a German corpus which is smaller than its English counterpart.</text>
+        <text>We expect this approach to yield the following three improvements.</text>
+        <edit type="flow" crr="First, talking advantage of the representation learned by the English model will lead to shorter training times, compared to training from scratch.  Second, the model trained using transfer learning requires fewer data for an equivalent score than a German-only model. Finally, the more layers we freeze, the fewer layers we need to back-propagate during training. Therefore, we" comments="">Taling advantage of the representation learned by the English model will lead to shorter training times, compared to training from scratch. Relatedly the model trained using transfer learning requires fewer data for an equivalent score than a German-only model. Finally, the more layers we freeze, the fewer layers we need to back-propagate through during training. Thus we</edit>
+        <text>expect to see a decrease in GPU memory usage since we do not have to maintain gradients for all layers.</text>
+        <text>\\ This paper is structured as follows. Section 2</text>
+        <edit type="conciseness" crr="illustrates" comments="consider replacing to reduce wordiness">gives an overview of</edit>
+        <text>other transfer learning approaches to ASR tasks. Details about our implementation of the Wav2Letter model and how we trained it can be found in Section 3. The data we used, and how we preprocessed it, is described in Section 4. After a short introduction of the performed experiments in Section 5, we present and discuss the results in Section 6, followed by a conclusion in Section 7.</text>
+    </introduction>   
+</doc>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W08-0402" editor="C" format="WS" position="S" region="N">
+    <title>
+        <text>A Scalable Decoder for Parsing-based Machine Translation with Equivalent Language Model State Maintenance</text>
+    </title>
+    <abstract>
+        <text>We describe a scalable decoder for parsing-based machine translation. The decoder is written in JAVA and implements all the essential algorithms described in Chiang (2007): chart-parsing, m-gram language model integration, beam- and cube-pruning, and unique k-best extraction. Additionally, parallel and distributed computing techniques are exploited to make</text>
+        <edit type="clarity" crr="the translation" comments="Comprehension/'it' is confusing - it's not sure what you are referring to">it</edit>
+        <text>scalable. We also propose an algorithm to maintain equivalent language model states that exploits the back-off property of m-gram language models</text>
+        <edit type="readability" crr=". Instead" comments="Syntax/readability - best to end the sentence here, as it's a long sentence">: instead</edit>
+        <text>of maintaining a separate state for each distinguished sequence of “state” words, we merge multiple states that can then be made equivalent for language model probability calculations due to back-off. We demonstrate experimentally that our decoder is more than 30 times faster than a baseline decoder written in PYTHON. We propose to release our decoder as an open-source toolkit.</text>
+    </abstract>   
+    <introduction>
+        <text>Large-scale parsing-based statistical machine translation (MT) has made remarkable progress in the last few years. The systems being developed differ in whether they use source- or target-language syntax. For instance, the hierarchical translation system of Chiang (2007) extracts a synchronous grammar from pairs of strings</text>
+        <edit type="punctuation" crr="." comments="Punctuation/I think you intended to end the sentence here?">,</edit>
+        <text>Quirk et al. (2005), Liu et al. (2006)</text>
+        <edit type="style;grammar" crr="," comments="Style/use serial comma in US English"></edit>
+        <text>and Huang et al. (2006) perform syntactic analyses in the source-language,</text>
+        <edit type="word choice" crr="whereas" comments="Comprehension/'and' is acceptable, although the alternative is more appropriate, since there's an element of comparison here">and</edit>
+        <text>Galley et al. (2006) use target-language syntax.</text>
+        <edit type="flow;readability" crr="\\ The decoder, which is complex to implement and scale up, is a critical component in parsing-based MT systems." comments="Syntax/I've re-arranged the sentence to make it easier to understand">\\ A critical component in parsing-based MT systems is the decoder, which is complex to implement and scale up.</edit>
+        <text>Most of the systems described above employ tailor-made, dedicated decoders that are not open-source</text>
+        <edit type="word choice" crr="and represent" comments="">, which resultings in</edit>
+        <text>a high barrier to entry for other researchers in the field. However, with the algorithms proposed in (Huang and Chiang, 2005; Chiang, 2007; Huang and Chiang, 2007), it is possible to develop a general-purpose decoder that can be used by all the parsing-based systems. In this paper, we describe an important first -step towards an extensible, general-purpose, scalable, and open-source parsing-based MT decoder.</text>
+        <edit type="flow" crr="This" comments="Vocabulary/'our' is correct, but in this instance, I suggest using 'this' to tie back to the previous sentence">Our</edit>
+        <text>decoder is written in JAVA and</text>
+        <edit type="word choice" crr="can implement" comments="Vocabulary/'implements' is correct, but this flows better">implements</edit>
+        <text>all the essential algorithms described in Chiang (2007): chart-parsing, m-gram language model integration, beam- and cube-pruning, and unique k-best extraction. Additionally, parallel and distributed computing techniques are exploited to make it scalable.</text>
+        <text>\\ Straightforward integration of an m-gram language model (LM) into a parsing-based decoder substantially increases its computational complexity. Therefore, it is important to develop efficient methods for LM integration. We propose an algorithm to maintain equivalent LM states by exploiting the back-off property of m-gram LMs. Specifically, instead of maintaining a separate state for each distinguished sequence of “state” words, we merge multiple states that can be made equivalent for LM calculations by anticipating such back-off.</text>
+        <text>\\ We demonstrate experimentally that our decoder is 38 times faster than a previous decoder written in PYTHON. Furthermore, the distributed computing permits</text>
+        <edit type="grammar" crr="improve" comments="">improveing</edit>
+        <text>translation quality via large-scale LMs. We have successfully</text>
+        <edit type="grammar" crr="used" comments="Grammar/past tense">use</edit>
+        <text>our decoder to translate about a million sentences in a parallel corpus for large-scale discriminative training experiments.</text>
+    </introduction>   
+</doc>

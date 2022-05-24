@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P10-1105" editor="C" format="Conf" position="NS" region="N">
+    <title>
+        <text>Finding Cognate Groups using Phylogenies</text>
+    </title>
+    <abstract>
+        <text>A central problem in historical linguistics is the identification of</text>
+        <edit type="hyphenation" crr="historically-related" comments="">historically related</edit>
+        <text>cognate words.</text>
+        <edit type="word choice" crr="This paper presents" comments="Word choice / might help to be a little more specific">We present</edit>
+        <text>a generative phylogenetic model for automatically inducing</text>
+        <edit type="clarity;style" crr="a" comments="It's not incorrect to leave out the indefinite article, but it helps to insert it here to clarify. It's also better for style"></edit>
+        <text>cognate group structure from unaligned word lists. Our model represents the process of transformation and transmission</text>
+        <edit type="style" crr="from the ancestor word to the daughter word" comments="Style / again, it's not incorrect to leave the definite article out, but in this context it reads better if left in">from ancestor word to daughter word</edit>
+        <edit type="readability" crr=". It also shows" comments="Readability / end sentence. The sentence is starting to get long and in this case, reads better if you split the sentence">, as well as</edit>
+        <text>the alignment between the word lists of the observed languages.</text>
+        <edit type="repetitiveness" crr="In addition, we" comments="avoiding repetition">We also</edit>
+        <text>present a novel method for simplifying complex and weighted automata that is created during inference</text>
+        <edit type="clarity" crr="in order to" comments="Meaning / insert here to clarify">to</edit>
+        <text>counteract the otherwise exponential growth of message sizes.</text>
+        <edit type="conciseness" crr="When tasked with" comments="Sentence structure / restructure to tighten up the message">On the task of</edit>
+        <text>identifying cognates in a dataset of Romance words, our model significantly outperforms a baseline approach, increasing accuracy by as much as 80%. Finally, we demonstrate that our</text>
+        <edit type="hyphenation" crr="automatically-induced" comments="">automatically induced</edit>
+        <text>groups can be used to successfully reconstruct ancestral words.</text>
+    </abstract>   
+    <introduction>
+        <text>A crowning achievement of historical linguistics is the comparative method (Ohala, 1993), wherein linguists use word similarity to elucidate the hidden phonological and morphological processes which govern historical descent. The comparative method requires reasoning about three important hidden variables: the overall phylogenetic guide tree among languages, the evolutionary parameters of the ambient changes at each branch, and the cognate group structure that specifies which words share common ancestors.</text>
+        <edit type="readability" crr="\\ Since all three variables interact and inform each other," comments="Sentence structure / restructure to improve readability; Readability / not required as you explained them earlier very clearly">\\ All three of these variables interact and inform each other, and so</edit>
+        <text>historical linguists often consider them jointly. However, linguists are currently required to make qualitative judgments regarding the relative likelihood of certain sound changes, cognate groups, and so on. Several recent statistical methods have been introduced to provide increased quantitative</text>
+        <edit type="style" crr="support for" comments="better words for academic style">backing to</edit>
+        <text>the comparative method (Oakes, 2000; Bouchard-Côté et al., 2007; Bouchard-Côté et al., 2009); others have modeled the spread of language changes and speciation (Ringe et al., 2002; Daumé III and Campbell, 2007; Daumé III, 2009; Nerbonne, 2010).</text>
+        <edit type="flow" crr="Although these automated methods provide robustness and scale in the induction of ancestral word forms and evolutionary parameters, they assume that cognate groups are already known. In this work, we address this limitation and present a model in which cognate groups can be discovered automatically." comments="Readability / your sentence is correct, however to increase flow, avoid the structure 'these methods..while...assume...' as it splits the sentence and makes it hard to read.">These automated methods, while providing robustness and scale in the induction of ancestral word forms and evolutionary parameters, assume that cognate groups are already known. In this work, we address this limitation, presenting a model in which cognate groups can be discovered automatically.</edit>
+        <text>\\ Finding cognate groups is not an easy task, because underlying morphological and phonological changes can obscure relationships between words</text>
+        <edit type="flow" crr=". This is especially the case for" comments="Flow / Consider ending the sentence here and starting new sentence">, especially for</edit>
+        <text>distant cognates, where simple string overlap</text>
+        <edit type="clarity" crr="can be regarded as" comments="Meaning / 'is' isn't incorrect, but as you're introducing something here, insert the words so that it doesn't come across as too abrupt">like</edit>
+        <text>an inadequate measure of similarity. Indeed, a standard string similarity metric</text>
+        <edit type="style" crr="such as" comments="Register / the alternative is more appropriate for academic style and register"></edit>
+        <text>Levenshtein distance can lead to false positives. Consider the often cited example of Greek /ma:ti/ and Malay /mata/, both meaning “eye” (Bloomfield, 1938). If we were to rely on Levenshtein distance, these words would seem to be a</text>
+        <edit type="hyphenation" crr="highly-attractive" comments="">highly attractive</edit>
+        <text>match as cognates: they are nearly identical,</text>
+        <edit type="redundancy" crr="" comments="Not required / redundant word in this case">essentially</edit>
+        <text>differing in only a single character. However, no linguist would posit that these two words are related. To correctly learn that they are not related, linguists typically rely on two kinds of evidence. First, because sound change is largely regular, we would need to commonly see /i/ in Greek wherever we see /a/ in Malay (Ross, 1950). Second, we should look at languages that are closely related to Greek and Malay</text>
+        <edit type="punctuation" crr="to see if similar patterns hold there too." comments="Punctuation / not required here">, to see if similar patterns hold there, too.</edit>
+        <text>\\ Some authors have attempted to automatically detect cognate words (Mann and Yarowsky, 2001; Lowe and Mazaudon, 1994; Oakes, 2000; Kondrak, 2001; Mulloni, 2007), but these methods typically work on language pairs rather than on larger language families. To fully automate the comparative method, it is necessary to consider multiple languages, and</text>
+        <edit type="readability;word choice" crr="with" comments="Readability / wordiness">to do so</edit>
+        <text>in a model which couples cognate detection with similarity learning.</text>
+        <text>\\ In this paper, we present a new generative model for the automatic induction of cognate groups, given only (1) a known family tree of languages and (2) word lists from those languages. A prior on word survival generates a number of cognate groups and decides which groups are attested in each modern language. An evolutionary model captures how each word is generated from its parent word. Finally, an alignment model maps the flat word lists to cognate groups. Inference requires a combination of message-passing in the evolutionary model and iterative bipartite graph matching in the alignment model.</text>
+        <text>\\ In the message-passing phase, our model encodes distributions over strings as weighted finite state automata (Mohri, 2009). Weighted automata have been successfully applied to speech processing (Mohri et al., 1996) and more recently to morphology (Dreyer and Eisner, 2009). Here, we present a new method for automatically compressing our message automata in a way that can take into account prior information about the expected outcome of inference.</text>
+        <text>\\ In this paper, we focus on a transcribed word list of 583 cognate sets from three Romance languages (Portuguese, Italian and Spanish), as well as their common ancestor Latin (Bouchard-Côté et al., 2007). We consider both the case where we know that all cognate groups have a surface form in all languages,</text>
+        <edit type="clarity" crr="well as the case" comments="Clarify / your structure wasn't incorrect, but it's useful here to insert something that clarifies">and</edit>
+        <text>where we do not know that.</text>
+        <edit type="grammar" crr="In the former" comments="">On the former</edit>
+        <edit type="clarity" crr="case" comments=""></edit>
+        <text>, easier task we achieve identification accuracies of 90.6%.</text>
+        <edit type="grammar" crr="In the latter task," comments="Grammar / preposition / better to use 'in'">On the latter task,</edit>
+        <text>we achieve F1 scores of 73.6%. Both substantially beat baseline performance.</text>
+    </introduction>   
+</doc>

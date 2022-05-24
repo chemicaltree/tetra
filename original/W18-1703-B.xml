@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W18-1703" editor="B" format="WS" position="NS" region="N">
+    <title>
+        <text>Multi-hop Inference for Sentence-level TextGraphs: How Challenging is</text>
+        <edit type="clarity;readability" crr="is to" comments="added for clarity and readability"></edit>
+        <text>Meaningfully</text>
+        <edit type="readability" crr="Combine" comments="">Combining</edit>
+        <text>Information for Science Question Answering?</text>
+    </title>
+    <abstract>
+        <edit type="capitalization" crr="Question answering" comments="unnecessary capitalization; capital omitted">Question Answering</edit>
+        <text>for complex questions is often modelled as a graph construction or traversal task</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <edit type="word choice" crr="in which" comments="">where</edit>
+        <text>a solver must build or traverse a graph of facts that answer and explain a given question.</text>
+        <edit type="clarity" crr="Previous studies have shown that this" comments="">This</edit>
+        <text>“multi-hop” inference</text>
+        <edit type="readability" crr="is" comments="sentence construction; 'has been shown to be' is difficult to read">has been shown to be</edit>
+        <text>extremely challenging,</text>
+        <edit type="word choice" crr="and" comments="">with</edit>
+        <text>few models</text>
+        <edit type="clarity" crr="has been" comments=""></edit>
+        <text>able to aggregate more than two facts before being overwhelmed by “semantic drift”,</text>
+        <edit type="clarity" crr="which is" comments="">or</edit>
+        <text>he tendency for long chains of facts to quickly drift off topic. This is a major barrier to current inference models, as even elementary science questions require an average of 4 to 6 facts to answer and explain. In this work</text>
+        <edit type="punctuation" crr="," comments=""></edit>        
+        <text>we empirically characterize the difficulty of building or traversing a graph of sentences connected by lexical overlap</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>by evaluating chance sentence aggregation quality through 9,784 manually-annotated judgements across knowledge graphs built from three</text>
+        <edit type="hyphenation" crr="free-text" comments="punctuation; added for clarity to create compound adjective">free text </edit>
+        <text>corpora (including study guides and Simple Wikipedia). We demonstrate</text>
+        <edit type="grammar" crr="that" comments=""></edit>
+        <text>semantic drift tends to be high and aggregation quality low</text>
+        <edit type="punctuation" crr="(between 0.04% and 3%)" comments="">, at between 0.04% and 3%</edit>
+        <edit type="clarity" crr="when we examined lexical overlap alone" comments=""></edit>
+        <text>, and</text>
+        <edit type="clarity" crr="we" comments="added for clarity, and to make this a complete clause"></edit>
+        <text>highlight scenarios that maximize the likelihood of meaningfully combining information.</text>
+    </abstract>   
+    <introduction>
+        <text>\n\n Question answering (QA) is a task where models must find answers to natural language questions, either by retrieving</text>
+        <edit type="word choice" crr="the" comments="">these</edit>
+        <text>answers from a corpus</text>
+        <edit type="punctuation" crr="" comments="punctuation; no comma necessary here">,</edit>
+        <text>or</text>
+        <edit type="clarity" crr="by" comments="added for clarity; this is somewhat discretionary"></edit>
+        <text>inferring them</text>
+        <edit type="word choice" crr="through" comments="">by</edit>
+        <text>some inference process. Retrieval methods model QA as an answer sentence selection task, where a solver must find a sentence or short continuous passage of text in a corpus that answers the question (Moschitti et al., 2007; Severyn and Moschitti, 2012, inter alia). These methods often fall short for questions requiring complex inference, such as those in the science domain, where nearly 80% of even 4th grade science exam questions require some form of causal, model-based, or otherwise complex inference to</text> 
+        <edit type="grammar" crr="be answered and explained" comments="added for clarity; the questions need to be answered, not to answer">answer and explain</edit>
+        <text>(Clark et al., 2013; Jansen et al., 2016), and a single continuous passage of text rarely describes the reasoning required to move from</text>
+        <edit type="grammar" crr="the question to the correct answer." comments="">question to correct answer.</edit>
+        <text>In these cases, multiple sentences, often from different parts of a text, different documents, or different knowledge bases must be aggregated</text>
+        <edit type="redundancy" crr="" comments="redundant; aggregate already means to group">together</edit>
+        <text>to build a complete answer and explanation.</text>
+        <text>\n\n Aggregating knowledge to support inference and complex question answering is often framed as a graph construction or traversal problem</text>
+        <edit type="punctuation" crr="(e.g., Khashabi et al., 2016)" comments="">(e.g. Khashabi et al., 2016),</edit>
+        <text>where the solver must find paths</text>
+        <edit type="readability" crr="linking" comments="added for clarity; too many that's may be confusing">that link</edit>
+        <text>sentences that contain question terms with sentences that contain answer terms through some number of intermediate sentences (see Figure 1). In these knowledge graphs, nodes represent facts or single sentences, and edges between nodes represent some signal that the facts are interrelated, such as</text>
+        <edit type="word choice" crr="the presence of" comments="">having</edit>
+        <text>lexical overlap.</text>
+        <text>\n\n Information aggregation or “multi-hop” graph traversal has been shown to be extremely challenging, with QA solvers generally showing only modest performance benefits when aggregating information</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and diminishing returns as the amount of aggregation increases. In the elementary science domain, current estimates suggest that an average of 4 to 6 sentences are required to answer and explain a given question (Jansen et al., 2016, 2018),</text>
+        <edit type="word choice" crr="whereas" comments="">while</edit>
+        <text>recent QA solvers generally struggle to meaningfully aggregate more than two</text>
+        <edit type="hyphenation" crr="free-text" comments="punctuation; added for clarity to create compound adjective">free text </edit>
+        <text>sentences (Jansen et al., 2017)</text>
+        <edit type="clarity" crr=". This is true" comments="added for clarity and to break up an overly long sentence.">,</edit>
+        <text>even when using alternate representations</text>
+        <edit type="readability" crr="that include" comments="">including</edit>
+        <edit type="hyphenation" crr="semi-structured" comments="">semi structured</edit>
+        <text>tables (Khashabi et al., 2016) or graphs of words or syntactic dependencies traversed using monolingual alignment or PageRank variants in open-domain QA (Fried et al., 2015). Fried et al. (2015) suggest these performance limitations are due to “semantic drift”</text>
+        <edit type="punctuation" crr=":" comments="">, where</edit>
+        <text>as the number of sentences being aggregated increases, so do the chances of making a misstep in the aggregation</text>
+        <edit type="punctuation" crr=". (for example, aggregating a sentence about seed funding for a company when making an inference about the stages of plant growth)." comments="">– for example, aggregating a sentence about seed funding for a company when making an inference about the stages of plant growth. </edit>
+        <text>This appears to occur across a variety of solvers, representations, and methods</text>
+        <edit type="word choice" crr="of" comments="">for</edit>
+        <text>aggregation, and</text>
+        <edit type="clarity" crr="the desire to solve this issue" comments=""></edit>
+        <text>is leading to both the development of datasets specifically designed for multi-hop QA (Jansen et al., 2016, 2018; Welbl et al., 2017)</text>
+        <edit type="word choice" crr="and" comments="">, as well as</edit>
+        <text>methods of controlling for semantic drift in knowledge graphs constructed from (for example) OpenIE triples using either support graphs (Khot et al., 2017) or drift-sensitive random walks (Kwon et al., 2018).</text>
+        <text>\n\n In</text>
+        <edit type="clarity" crr="this study, in" comments=""></edit> 
+        <text>an effort to better understand the challenges of inference and explanation construction for QA, </text>
+        <edit type="conciseness" crr="" comments="">here</edit>
+        <text>we characterize the</text>
+        <edit type="spelling" crr="difficulty" comments="">difficultly</edit>
+        <edit type="clarity" crr="posed by" comments="">by</edit>
+        <text>the information aggregation task in the context of science exams. The contributions of this work are</text>
+        <edit type="style;clarity" crr="as follows" comments="added to complete clause">:</edit>
+        <text>\n We provide the first empirical characterization of the difficulty of information aggregation by manually evaluating sentence aggregation quality using 9,784 annotated judgements across 14 representative exam questions, highlighting specific patterns of lexical overlap between</text>
+        <edit type="consistency" crr="the" comments=""></edit>
+        <text>question, answer, and candidate sentence that maximize the</text>
+        <edit type="grammar" crr="chance" comments="">chances</edit>
+        <text>of successful aggregation.</text>
+        <text>\n We evaluate aggregation difficulty across three knowledge resources</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and empirically demonstrate that while moving to open domain resources increases knowledge coverage, it also increases the difficulty of the information aggregation task by more than an order of magnitude.</text>
+        <text>\n We evaluate</text>
+        <edit type="word choice" crr="aggregation" comments="">aggregating</edit>
+        <edit type="word choice" crr="of" comments=""></edit> 
+        <text>up to three sentences that connect terms in the question to terms in the answer and show that</text>
+        <edit type="word choice" crr="aggregation" comments="">this</edit> 
+        <text>suffers both from sparsity (even on Wikipedia-scale corpora)</text>
+        <edit type="word choice" crr=", as well as" comments="word choice; the word both is already present">and</edit>
+        <edit type="grammar" crr="the" comments="This seems like a specific probability rather than a general one.">a</edit>
+        <text>very low probability of producing meaningful aggregations (0.04% to 3%) through lexical overlap alone.</text>
+    </introduction>   
+</doc>

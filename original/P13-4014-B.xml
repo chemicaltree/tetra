@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P13-4014" editor="B" format="Conf" position="NS" region="N">
+    <title>
+        <text>QuEst - A translation quality estimation framework</text>
+    </title>
+    <abstract>
+        <text>We describe QuEst, an open source framework for machine translation quality estimation. The framework allows the extraction of several quality indicators from source segments, their translations, external resources (corpora, language models, topic models, etc.),</text>
+        <edit type="word choice" crr="and" comments="">as well as</edit>
+        <text>language tools (parsers, part-of-speech tags, etc.). It also provides machine learning algorithms to build quality estimation models. We benchmark the framework on a number of datasets and discuss the efficacy of</text>
+        <edit type="clarity" crr="its" comments="added for clarity"></edit>
+        <text>features and algorithms.</text>
+    </abstract>   
+    <introduction>
+        <text>As Machine Translation (MT) systems become widely adopted, both for gisting purposes and</text>
+        <edit type="word choice" crr="for producing" comments="">to produce</edit>
+        <text>rofessional quality translations, automatic methods are needed for predicting the quality of</text>
+        <edit type="word choice" crr="translated segments" comments="word choice; plural rather than singula">a translated segment</edit>
+        <text>This is referred to as Quality Estimation (QE). Different from standard MT evaluation metrics, QE metrics do not have access to reference (human) translations; they are aimed at MT systems in use. QE has a number of applications, including</text>
+        <edit type="punctuation" crr="" comments="">:</edit>
+        <edit type="word choice" crr="\ Deciding which segments need to be revised by a translator (quality assurance)" comments="">\ Deciding which segments need revision by a translator (quality assurance);</edit>
+        <edit type="word choice" crr="\ Deciding whether a reader is able to get a reliable gist of the text" comments="">\ Deciding whether a reader gets a reliable gist of the text;</edit>
+        <edit type="conciseness" crr="\ Estimating how much effort will be needed to post-edit a segment" comments="extraneous">\ Estimating how much effort it will be needed to post-edit a segment;</edit>
+        <text>\ Selecting among alternative translations produced by different MT systems</text>
+        <edit type="grammar" crr="; \ Deciding whether a translation can be used for self-training of MT systems." comments="">; \ Deciding whether the translation can be used for self-training of MT systems.</edit>
+        <text>\\ Work in QE for MT started in the early 2000's, inspired by the confidence scores used in Speech Recognition</text>
+        <edit type="clarity" crr=", which were mainly used in" comments="">: mostrly</edit>
+        <text>the estimation of word posterior probabilities. Back then, this was called confidence estimation, which we believe is a narrower term. A 6-week workshop on the topic at John Hopkins University in 2003 (Blatz et al., 2004) had</text>
+        <edit type="punctuation" crr=", as goal," comments="">as goal</edit>
+        <edit type="word choice" crr="estimating" comments="">to estimate</edit>
+        <text>automatic metrics such as BLEU (Papineni et al., 2002) and WER. These metrics are difficult to interpret, particularly at the sentence-level, and the results of their</text>
+        <edit type="style" crr="numerous" comments="">very many</edit>
+        <text>trials proved unsuccessful. The overall quality of MT was considerably lower at the time, and therefore, pinpointing the very few good quality segments was a</text>
+        <edit type="style" crr="difficult" comments="">hard</edit>
+        <text>problem. No software</text>
+        <edit type="word choice" crr="or" comments="">nor</edit>
+        <text>datasets were made available after the workshop.</text>
+        <edit type="word choice" crr="\\ There has been a new surge in" comments="">\\ A new surge of</edit>
+        <text>interest in the field</text>
+        <edit type="conciseness" crr="" comments="">started</edit>
+        <text>recently, motivated by the widespread used of MT systems in the translation industry, as a consequence of better translation quality, more user-friendly tools, and higher demand for translation. In order to make MT maximally useful in this scenario, a quantification of the quality of translated segments similar to the “fuzzy match scores” from translation memory systems is needed. QE work addresses this problem by using more complex metrics that go beyond matching the source segment with previously translated data. QE can also be useful for end-users reading translations for gisting, particularly those who cannot read the source language.</text>
+        <edit type="readability" crr="\\ These days, QE" comments="">\\ QE nowadays</edit>
+        <text>focuses on estimating more interpretable metrics. “Quality” is defined according to the application: post-editing, gisting, etc. A number of positive results have been reported. Examples include improving post-editing efficiency by filtering out low quality segments which would require more</text>
+        <edit type="word order" crr="time and effort" comments="">effort or time</edit>
+        <text>to correct than translating them from scratch (Specia et al., 2009; Specia, 2011); selecting high quality segments to be published as they are, without post-editing (Soricut and Echihabi, 2010); selecting a translation from either an MT system or a translation memory for post-editing (He et al., 2010); selecting the best translation from multiple MT systems (Specia et al., 2010); and highlighting sub-segments that need revision (Bach et al., 2011).</text>
+        <text>\\ QE is generally addressed as a supervised machine learning task using a variety of algorithms to induce models from examples of translations described through a number of features and annotated for quality. For an overview of various algorithms and features, we refer the reader to the WMT12 shared task on QE (Callison-Burch et al., 2012). Most of the research work lies in deciding which aspects of quality are more relevant for a given task and designing feature extractors for them. While simple features such as counts of tokens and language model scores can be easily extracted, feature engineering for more advanced and useful information can be quite labour -intensive. Different language pairs or optimisation</text>
+        <edit type="clarity" crr="of competing factors that influence" comments="Added for clarity. I think this is in the neighbourhood of what the author meant.">against specific</edit>
+        <text>quality scores (e.g., post-editing time vs translation adequacy) can benefit from very different feature sets.</text>
+        <text>\\ QuEst, our framework for quality estimation, provides a wide range of feature extractors from source and translation texts and external resources and tools (Section 2). These go from simple, language-independent features, to advanced, linguistically motivated features. They include features that rely on information from the MT system that generated the translations and features that are oblivious to the way translations were produced (Section 2.1). In addition, by integrating a well-known machine learning toolkit, scikit-learn, and algorithms that are known to perform well on this task, QuEst provides a simple and effective way of experimenting with techniques for feature selection and model building, as well as parameter optimisation through grid search (Section 2.2). In Section 3, we present experiments using the framework with nine QE datasets.</text>
+        <text>\\ In addition to providing a practical platform for quality estimation, by freeing researchers from feature engineering, QuEst will facilitate work on the learning aspect of the problem. Quality estimation poses several machine learning challenges, such as the fact that it can exploit a large, diverse, but often noisy set of information sources with a relatively small number of annotated data points, and it relies on human annotations that are often inconsistent due to the subjectivity of the task (quality judgements). Moreover, QE is highly non-linear: unlike many other problems in language processing, considerable improvements can be achieved using non-linear kernel techniques. Also, different applications for the quality predictions may benefit from different machine learning techniques, an aspect that has been mostly neglected so far. Finally, the framework will also facilitate research into ways of using quality predictions in novel extrinsic tasks, such as self-training of statistical machine translation systems</text>
+        <edit type="readability" crr="and" comments="">, and for</edit>
+        <text>estimating quality in other text output applications such as text summarisation.</text>
+    </introduction>   
+</doc>

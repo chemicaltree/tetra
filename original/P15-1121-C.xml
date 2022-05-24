@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-1121" editor="C" format="Conf" position="S" region="N">
+    <title>
+        <text>Machine Comprehension with Discourse Relations</text>
+    </title>
+    <abstract>
+        <text>This paper proposes a novel approach for incorporating discourse information into machine comprehension applications. Traditionally, such information is computed using off-the-shelf discourse analyzers. This design provides limited opportunities for guiding the discourse parser, based on the requirements of the target task. In contrast, our model induces relations between sentences while optimizing a task-specific objective. This approach enables the model to benefit from discourse information without relying on explicit annotations of discourse structure during training. The model jointly identifies relevant sentences, establishes relations between them, and predicts an answer. We implement this idea in a discriminative framework with hidden variables that capture relevant sentences and relations</text>
+        <edit type="clarity;style" crr="that are" comments="Style / your wording is correct, but here the addition tightens up comprehension and flow"></edit>
+        <text>unobserved during training. Our experiments demonstrate that the</text>
+        <edit type="hyphenation" crr="discourse-aware" comments="hyphenate when qualifying noun that follows">discourse aware</edit>
+        <text>model outperforms state-of-the-art machine comprehension systems.</text>
+    </abstract>   
+    <introduction>
+        <text>The task of machine comprehension concerns the automatic extraction of answers from a given passage. Often, the relevant information required to answer a question is distributed across multiple sentences</text>
+        <edit type="style;readability" crr="and understanding" comments="Style / your sentence use is correct. However, in this case where you have two short sentences, you can improve flow by joining them.">. Understanding</edit>
+        <text>the relation(s) between these sentences is key to finding the correct answer. Consider the example in</text>
+        <edit type="capitalization" crr="Fig. 1." comments="Spelling / probably best to capitalize">fig. 1.</edit>
+        <text>To answer the question about why Sally put on her shoes, we need to infer that She put on her shoes and She went outside to walk are connected by a causality relation.</text>
+        <text>\\ Prior work has demonstrated the value of discourse relations in related applications such as question answering (Jansen et al., 2014). Traditionally, however, these approaches rely on outputs from off-the-shelf discourse analyzers, using them as features for target applications. Such pipeline designs provide limited opportunities for guiding the discourse parser based on the requirements of the end task. Given a wide spectrum of discourse frameworks (Mann and Thompson, 1988; Prasad et al., 2008; Wolf and Gibson, 2005), it is not clear a priori what the optimal set of discourse annotations is for the task. Moreover, a generic discourse parser may introduce additional errors due to the mismatch between its training corpus and a dataset used in an application. In fact, the largest discourse treebanks are based on newspaper corpora (Prasad et al., 2008; Carlson et al., 2002), which differ significantly in style from text used in machine comprehension corpora (Richardson et al., 2013).</text>
+        <text>\\ In this paper, we propose a novel approach for incorporating discourse structure into machine comprehension applications. Rather than using a standalone parser that is trained on external supervised data to annotate discourse relations, the model induces relations between sentences while optimizing a task-specific objective. This design biases the model to learn relations at a granularity</text>
+        <edit type="clarity" crr="that is" comments="insert to clarify"></edit>
+        <text>optimized for the machine comprehension task. In contrast to a generic discourse analyzer, our method</text>
+        <edit type="style" crr="is alos able to" comments="Style / 'can' is correct but try to avoid for academic narrative">can also</edit>
+        <text>utilize additional information available in the machine comprehension context. For instance, question types provide valuable cues for determining discourse relations, and thus can facilitate learning.</text>
+        <text>\\ We implement these ideas in a discriminative log-linear model with hidden variables. The model jointly identifies relevant sentences, establishes relations between them</text>
+        <edit type="grammar" crr="," comments=""></edit>
+        <text>and predicts an answer. Since the same set of sentences can give rise to multiple questions, we do not limit the model to a single discourse relation, but rather model a distribution over possible relations. During training, we only have access to questions and gold answers. Since relevant sentences and their relations are not known, we model them as hidden variables. To guide the model towards linguistically plausible discourse relations, we add a few seed markers that are typical of each relation. The model predicts relations, not only based on the sentences, but also incorporates information about the question. By decomposing the dependencies between model components, we can effectively train the model using a standard gradient descent approach.</text>
+        <text>\\ We evaluate our model using a recently released machine comprehension dataset (Richardson et al., 2013). In this corpus, roughly half of the questions rely on multiple sentences in the passage to generate the correct answer. For baselines, we use the best published results on this dataset. Our results demonstrate that our relation-aware model outperforms the individual baselines by up to 5.7% and rivals the performance of a state-of-the-art combination system. Moreover, we show that the discourse relations it predicts for sentence pairs exhibit considerable overlap with relations identified by human annotators.</text>
+    </introduction>   
+</doc>

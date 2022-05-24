@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P13-1148" editor="C" format="Conf" position="S" region="N">
+    <title>
+        <text>A joint model of word segmentation and phonological variation for English word-final /t/-deletion</text>
+    </title>
+    <abstract>
+        <text>Word-final /t/-deletion refers to a common phenomenon in spoken English where words such as /wEst/ “west” are pronounced as [wEs] “wes” in certain contexts. Phonological variation like this is common in</text>
+        <edit type="hyphenation" crr="naturally-occurring" comments="">naturally occurring</edit>
+        <text>speech. Current computational models of unsupervised word segmentation usually assume idealized input that is devoid of these kinds of variation. We</text>
+        <edit type="clarity" crr="therefore" comments="Insert to clarify meaning"></edit>
+        <text>extend a non-parametric model of word segmentation by adding phonological rules</text>
+        <edit type="readability" crr=". These rules" comments="Split sentences to improve readability">that</edit>
+        <text>map from underlying forms to surface forms</text>
+        <edit type="clarity" crr="in order to" comments="Insert to clarify">to</edit>
+        <text>produce a mathematically well-defined joint model as a first step towards handling variation and segmentation</text>
+        <edit type="clarity" crr="within" comments="Consider replacing to clarify">in</edit>
+        <text>a single model. We analyse how our model handles /t/-deletion on a large corpus of transcribed speech, and show that the joint model</text>
+        <edit type="style" crr="is able to" comments="Style / consider replacing">can</edit>
+        <text>perform word segmentation and recover underlying /t/s. We find that Bigram dependencies are important for performing well on real data and for learning appropriate deletion probabilities</text>
+        <edit type="repetitiveness" crr="within" comments="Paraphrase / 'for' used 3 times in one sentence"></edit>
+        <text>different contexts.</text>
+    </abstract>   
+    <introduction>
+        <text>Computational models of word segmentation try to solve one of the first</text>
+        <edit type="word choice" crr="challenges for" comments="">problems</edit>
+        <text>language learners</text>
+        <edit type="clarity" crr="" comments="Paraphrase/shorten to clarify">have to face</edit>
+        <text>: breaking an unsegmented stream of sound segments into individual words. Currently, most such models assume that the input consists of sequences of phonemes with no pronunciation variation across different occurrences of the same word type. In this paper, we describe an extension of the Bayesian models of Goldwater et al. (2009) that incorporates phonological rules to “explain away” surface variation. As a concrete example, we focus on word-final /t/- deletion in English</text>
+        <edit type="readability" crr=", Although" comments="">, although</edit>
+        <text>our approach is not limited to this</text>
+        <edit type="clarity" crr="particular use" comments="Consider inserting to clarify"></edit>
+        <text>case</text>
+        <edit type="clarity;readability" crr=". We" comments="makes for stronger argument as part of the same sentence">, we</edit>
+        <text>choose /t/-deletion because it is a very common and well-studied phenomenon (see Coetzee (2004, Chapter 5) for a review) and segmental deletion is an interesting test-case for our architecture. Recent work has found that /t/-deletion (among other things) is indeed common in child-directed speech (CDS) and, importantly, that its distribution is similar to that in adult-directed speech (ADS) (Dilley et al., to appear). This justifies our</text>
+        <edit type="word choice" crr="use of" comments="">using</edit>
+        <text>ADS to evaluate our model, as discussed below.</text>
+        <text>\\ Our experiments are consistent with</text>
+        <edit type="spelling" crr="long-standing" comments="">ling-tanding</edit>
+        <text>and recent findings in linguistics, in particular that /t/-deletion heavily depends on the immediate context and that models ignoring context work poorly on real data. We also examine</text>
+        <edit type="style" crr="the efficacy of our models when identifying" comments="">how well our models dentify</edit>
+        <text>the probability of /t/-deletion in different contexts. We find that models that capture bigram dependencies between underlying forms provide considerably more accurate estimates of those probabilities than corresponding unigram or “bag of words” models of underlying forms.</text>
+        <edit type="capitalization" crr="\\ In Section 2" comments="">\\ In section 2</edit>
+        <text>we discuss related work on the handling of variation in computational models and on /t/- deletion. Section 3 describes our computational model and</text>
+        <edit type="capitalization" crr="Section 4" comments="">section 4</edit>
+        <text>discusses its performance for recovering deleted /t/s. We look at both a situation where word boundaries are pre-specified and</text>
+        <edit type="clarity" crr="where" comments="Clarify / insert to clarify"></edit>
+        <text>only inference for underlying forms has to be performed; and the problem of jointly finding the word boundaries and recovering deleted underlying /t/s. Section 5 discusses our findings</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and</text>
+        <edit type="capitalization" crr="Section 6" comments="">section 6</edit>
+        <text>concludes with directions for further research.</text>
+    </introduction>   
+</doc>

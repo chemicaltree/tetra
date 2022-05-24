@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W16-3931" editor="B" format="WS" position="NS" region="NN">
+    <title>
+        <text>A Simple Scalable Neural Networks based Model for Geolocation Prediction in Twitter</text>
+    </title>
+    <abstract>
+        <text>This paper describes a</text>
+        <edit type="clarity" crr="proposed" comments=""></edit>
+        <text>model that we submitted</text>
+        <edit type="clarity" crr="in response" comments=""></edit>
+        <text>to W-NUT 2016 Shared Task #1: Geolocation Prediction in Twitter. Our model classifies a tweet or a user</text>
+        <edit type="word choice" crr="as being located in" comments="">to</edit>
+        <text>a city using a simple neural networks structure with fully connected layers and average pooling processes.</text>
+        <edit type="word choice" crr="Using" comments="">From</edit>
+        <text>the findings of previous geolocation prediction approaches, we integrated various user metadata along with message texts and trained the model with them. In the test run of the task, the model achieved the accuracy of 40.91% and the median distance error of 69.50 km in message-level prediction and the accuracy of 47.55% and the median distance error of 16.13 km in user-level prediction. These results</text>
+        <edit type="word choice;clarity" crr="represent" comments="">are</edit>
+        <text>moderate performance in terms of accuracy and best performances in terms of distance. The results show a promising extension of neural network based models for geolocation prediction where recent advances in neural networks can be</text>
+        <edit type="word choice;style" crr="incorporated" comments="a bit more advanced word choice">addded</edit>
+        <text>to enhance our current simple model.</text>
+    </abstract>   
+    <introduction>
+        <text>The growth of social media has</text>
+        <edit type="word choice" crr="resulted in increased" comments="">brought</edit>
+        <edit type="word choice" crr="for the development of" comments="">demands to develop</edit>
+        <text>techniques to automatically extract a variety of information from</text>
+        <edit type="clarity" crr=" social media sources." comments="">it.</edit>
+        <edit type="word choice" crr="Geolocation predictors are an approach" comments="">A geolocation predictor is one such technique</edit>
+        <text>that has been widely studied to</text>
+        <edit type="word choice" crr="facilitate" comments="">strengthen</edit>
+        <text>business activities such as</text>
+        <edit type="word choice" crr="advertising" comments="">advertisement</edit>
+        <text>and marketing. This paper describes a</text>
+        <edit type="flow;conciseness" crr="neural-network-based model we developed to tackle the geolocation prediction task that" comments="Sentence structure; combining two short sentences and removing extraneous text">model that we developed to tackle this geolocation prediction task. The model is a neural network based model that</edit>
+        <text>uses various user metadata along with message texts. We participated W-NUT 2016 Shared Task #1: Geolocation Prediction in Twitter (Rahimi et al., 2016) with this model.</text>
+        <text>\\ The architecture of our model is designed</text>
+        <edit type="word choice;conciseness" crr="using" comments="">by following</edit>
+        <text>previous</text>
+        <edit type="conciseness" crr="research targeting" comments="">researches that have targeted</edit>
+        <text>geolocation prediction in Twitter. Cheng et al. (2010) proposed a probabilistic model based on local (location indicative) words to estimate city-level geolocation prediction of Twitter users. Han et al. (2014) implemented a city-level geolocation prediction system for Twitter users, and constructed a Naive Bayes learner using location indicative words and user metadata. We decided to use both message texts and user metadata</text>
+        <edit type="word choice" crr="that were" comments="">which have</edit>
+        <text>shown</text>
+        <edit type="clarity" crr="to be" comments=""></edit>
+        <edit type="conciseness" crr="effective in" comments="">effectiveness in these</edit>
+        <text>past studies.</text>
+        <text>\\ Another</text>
+        <edit type="word choice" crr="aspect" comments="">characteristic</edit>
+        <text>of our model is that we decided to use neural networks as a machine learning method to train a geolocation predictor. Neural networks are being extensively applied to tasks of image processing, speech processing, and text processing and have shown the state of the performances (Goodfellow et al., 2016). In a the context of</text>
+        <edit type="word order" crr="predictive geolocation," comments="">geolocation prediction,</edit>
+        <text>Liu and Inkpen (2015) have shown that a model based on stacked denoising auto-encoders achieves a comparable performance to the</text>
+        <edit type="hyphenation;usage" crr="state-of-the-art" comments="hyphenation and usage - missing hyphens in the adjective form, and 'art' is usually not plural in this usage">state of the arts</edit>
+        <text>models. Although neural networks with deep complex layers have recently received attention as achieving high performance, we designed our model to be a simple, scalable neural network based model considering the following two reasons:</text>
+        <edit type="conciseness" crr="\\ 1. City-level" comments="">\\ 1. A city-level</edit>
+        <text>geolocation prediction of Twitter</text>
+        <edit type="clarity" crr="users" comments=""></edit>
+        <text>is a</text>
+        <edit type="hyphenation" crr="large-scale task" comments="hyphenation - missing hyphen inn compound adjective">large scale task</edit>
+        <edit type="word choice" crr="requiring" comments="">that requires</edit>
+        <text>a scalable machine learning method</text>
+        <edit type="word choice" crr="capable of handle milions of tweets" comments="">which can handle milions of tweet</edit>
+        <text>with thousands of classes (Han et al., 2014).</text>
+        <text>\\ 2. A model based on shallow simple neural networks has recently</text>
+        <edit type="style" crr="achieved comparable" comments="">marked close</edit>
+        <text>performance to deep models</text>
+        <edit type="readability" crr="and shows" comments="">with</edit>
+        <text>high scalability on several tasks (Joulin et al., 2016).</text>
+        <text>\\ In the</text>
+        <edit type="conciseness" crr="" comments="">following sections of this</edit>
+        <text>paper, we first describe the specification of datasets to train and test our model in Section 2. The details of our neural networks based model are explained in Section 3</text>
+        <edit type="readability" crr="." comments="">, accompanying</edit>
+        <text>Section 4 explains the experiments and the test run</text>
+        <edit type="conciseness" crr="" comments="">which were</edit>
+        <text>performed to evaluate the model. Finally, Section 5 summarizes and concludes the paper</text>
+        <edit type="word choice" crr="and outlines" comments="">with some</edit>
+        <text>future directions.</text>
+    </introduction>   
+</doc>

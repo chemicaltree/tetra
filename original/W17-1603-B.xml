@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W17-1603" editor="B" format="WS" position="NS" region="NN">
+    <title>
+        <text>A Quantitative Study of Data in the NLP community</text>
+    </title>
+    <abstract>
+        <text>We present</text>
+        <edit type="clarity" crr="the" comments="article; added for specificity"></edit>
+        <text>results</text>
+        <edit type="grammar" crr="of" comments="word choice: preposition">on</edit>
+        <text>a quantitative analysis of publications in the NLP domain</text>
+        <edit type="clarity" crr="focusing" comments="added for clarity"></edit>
+        <text>on</text>
+        <edit type="clarity" crr="the" comments="dded for clarity"></edit>
+        <edit type="word choice" crr="collection, publication" comments="">collecting, publishing</edit>
+        <text>and availability of research data. We find that a wide range of publications rely on data</text>
+        <edit type="word choice;clarity" crr="collected by crawling" comments="word choice; crawled is a bit informal and grammatically uncertain.">crawled from</edit>
+        <text>the web, but few</text>
+        <edit type="style" crr="provide" comments="">give</edit>
+        <text>details on how potentially sensitive data was treated. Additionally, we find tha</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>while links to repositories of data are given,</text>
+        <edit type="clarity" crr="these links" comments="added for clarity">they</edit>
+        <text>often</text>
+        <edit type="word choice" crr="fail to" comments="">do not</edit>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>even</text>
+        <edit type="clarity" crr="when consulted" comments="added for clarity"></edit>
+        <text>a short time after publication. We put together several suggestions on how to improve this situation based on publications from the NLP domain, but</text>
+        <edit type="clarity" crr="our survey" comments="added for clarity"></edit>
+        <text>also</text>
+        <edit type="clarity" crr="included publications from" comments="added for clarity"></edit>
+        <text>other research areas.</text>
+    </abstract>   
+    <introduction>
+        <text>\n\n The Natural Language Processing (NLP) community makes extensive use of resources available on the internet.</text>
+        <edit type="conciseness" crr="As" comments="Omitting extraneous word">And as</edit>
+        <text>research in NLP attracts</text>
+        <edit type="word choice" crr="greater" comments="">more</edit>
+        <text>attention</text>
+        <edit type="grammar" crr="from" comments="">by</edit>
+        <text>the general public, we</text>
+        <edit type="word choice" crr="need" comments="">have</edit>
+        <edit type="word choice" crr="to ensure" comments="">to make sure</edit>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>our results are solid and reliable, similar to</text>
+        <edit type="clarity" crr="the approach taken in fields such as" comments=""></edit>
+        <text>medicine and pharmacy. In the case of medicine, the general public</text>
+        <edit type="word choice" crr="may" comments="">is</edit>
+        <text>often</text>
+        <edit type="clarity" crr="view the potential for certain findings in a way that is overly" comments="">too</edit>
+        <text>optimistic. In NLP</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <edit type="word choice" crr="such" comments="">this</edit>
+        <text>over-optimism</text>
+        <edit type="word choice" crr="may" comments="">can</edit>
+        <text>have a negative impac</text>
+        <edit type="clarity" crr="on how the general public understands the potential for certain applications" comments=""></edit>
+        <text>, such as in articles on automatic speech recognition or personality profiling. Few</text>
+        <edit type="clarity" crr="studies clearly" comments=""></edit>
+        <text>point out</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>that the algorithms</text>
+        <edit type="clarity" crr="used" comments=""></edit>
+        <text>are not perfect and do not solve all</text>
+        <edit type="clarity" crr="" comments="">the</edit>
+        <text>problems,</text>
+        <edit type="clarity" crr="for instance, when they are applied to" comments="">as on</edit>
+        <text>terrorism prevention or sentiment analysis</text>
+        <text>\n\n Therefore, important questions</text>
+        <edit type="clarity;grammar" crr="include the following" comments="text added for clarity and grammar (text preceding a colon needs to be able to stand on its own as a clause).">are,</edit>
+        <edit type="punctuation" crr=":" comments=""></edit>
+        <text>what happens to the data</text>
+        <edit type="clarity" crr="collected" comments=""></edit>
+        <text>and how reliable are</text>
+        <edit type="clarity" crr="the" comments=""></edit>
+        <text>results obtained</text>
+        <edit type="word choice" crr="using" comments="">through</edit>   
+        <edit type="word choice" crr="this data?" comments="">them.</edit>
+        <text>We present a quantitative analysis of how</text>
+        <edit type="style" crr="frequently" comments="word choice; this is somewhat discretionary">often</edit>
+        <text>data is</text>
+        <edit type="word choice" crr="" comments="word choice; verb choice; it's better to go with a simpler tense">being</edit>
+        <text>collected, how data is published, and what data types are being collected. Taken together</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <edit type="word choice" crr="the findings" comments="">information gatheredit</edit>
+        <edit type="style" crr="provide" comments="">gives</edit>
+        <text>insight into issues arising from</text>
+        <edit type="word choice" crr="data collection" comments="word choice; noun rather than verb">collecting data</edit>
+        <text>and</text>
+        <edit type="word choice" crr="distribution" comments="">from distributing it</edit>
+        <text>via channels</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>that do not allow for</text>
+        <edit type="word choice" crr="reproduction of" comments="word choice; noun versus verb">reproducing</edit>
+        <text>results, even after a comparably short</text>
+        <edit type="conciseness" crr="" comments="word choice; omitting extraneous words">period of</edit> 
+        <text>time. Based on this, we open a discussion about best practices</text>
+        <edit type="grammar" crr="for" comments="">on</edit>
+        <edit type="word order" crr="collecting, storing and distributing data" comments="">data collecting, storing and distributing</edit>
+        <edit type="conciseness" crr="" comments="word choice; extraneous words">in order</edit>
+        <text>to ensure high-quality research</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>that is solid and</text>
+        <edit type="spelling" crr="reproducible." comments="">reproducable.</edit>
+        <edit type="clarity" crr="A further goal is to" comments="">But</edit>
+        <text>also</text>
+        <edit type="style" crr="ensure" comments="">to make sure</edit>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>users of</text>
+        <edit type="clarity" crr="internet resources from which such data is gathered" comments=""></edit>
+        <text>, i.e., social media channels</text>
+        <edit type="punctuation" crr="," comments=""></edit> 
+        <text>are treated according to general standards concerning sensitive data.</text>
+    </introduction>   
+</doc>

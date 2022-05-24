@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P16-2030" editor="C" format="Conf" position="S" region="NN">
+    <title>
+        <text>Detecting Mild Cognitive Impairment by Exploiting Linguistic Information from Transcripts</text>
+    </title>
+    <abstract>
+        <edit type="style" crr="This paper seeks" comments="Register/the proposed alternative better for academic writing">Here we seek</edit>
+        <text> to automatically identify Hungarian patients suffering from mild cognitive impairment (MCI) based on linguistic features collected from their speech transcripts. Our system uses machine learning techniques and is based on several linguistic features</text>
+        <edit type="style" crr="such as" comments="Register/see above">like</edit>
+        <text>characteristics of spontaneous speech</text>
+        <edit type="readability" crr="and" comments="Flow/use conjunction 'and' to reduce the words as it's a long sentence">as well as</edit>
+        <text>features exploiting morphological and syntactic parsing. Our results suggest that it is primarily morphological and speechbased features that help distinguish MCI patients from healthy controls.</text>
+    </abstract>   
+    <introduction>
+        <text>Mild cognitive impairment (MCI) is a heterogeneous set of symptoms that are essential in the early detection of Alzheimer's Disease (AD) (Negash et al., 2007). Symptoms such as language dysfunctions may occur</text>
+        <edit type="word choice" crr="as far out as" comments="Vocabulary/I think you're describing a range here rather than a specific moment in time, so the proposed alternative is more correct">even</edit>
+        <text>nine years before the actual diagnosis (APA, 2000). Thus,</text>
+        <edit type="style" crr="how a patient uses language may often be an indicator of MCI well before a clinical diagnosis of dementia." comments="Style/your choice is correct, but the proposed alternative places more emphasis on the difference between 'how a patient....' and 'how long before the patient is diagnosed...'">the language use of the patient may often indicate MCI the clinical diagnosis of dementia.</edit>
+        <text>\\ MCI is known to influence</text>
+        <edit type="readability;conciseness" crr="a patient's (spontaneous) speech" comments="Flow/change word order to reduce wordiness">the (spontaneous) speech of the patient</edit>
+        <text>via three main aspects. First, verbal fluency declines,</text>
+        <edit type="readability;conciseness" crr="resulting" comments="Flow/reduce wordiness">which rsults</edit>
+        <text>in longer hesitations and a slower speech rate (Roark et al., 2011). Second, the lexical frequency of words and part-of-speech tags may also change significantly</text>
+        <edit type="word choice" crr="since" comments="Vocabulary/alternative might be more appropriate here">as</edit>
+        <text>the patient has problems with finding words (Croot et al., 2000). Third, the emotional responsiveness of the patient was also observed to change in many cases (Lopez-de Ipina et al., 2015).</text>
+        <text>\\ For many patients, MCI is never</text>
+        <edit type="flow" crr="diagnosed. In fact, according to Boise et al. (2004), up to 50% of MCI patients are never diagnosed with MCI. In the early stage of the disease, detecting cognitive impairment is not an easy task, even for experts." comments="Flow/you need to restructure the sentence, since you started talking about fact A (MCI is never diagnosed), then talked about B (it's not easy), and then went back to talking about A (backing up with a statistic).">recognized as in the early stage of the disease it is not trivial even for experts to detect cognitive impairment: according to Boise et al. (2004), up to 50% of MCI patients are never diagnosed with MCI.</edit>
+        <text>Although</text>
+        <edit type="clarity" crr="a number of well-known tests exist" comments="Syntax/amplify and clarify this sentence">there are well-known tests</edit>
+        <edit type="readability" crr="(e.g., the Mini Mental Test)," comments="">such as the Mini Mental Test,</edit>
+        <text>they are usually not sensitive enough to reliably filter out MCI in its early stage. Tests on linguistic memory</text>
+        <edit type="clarity" crr="have proven to be a more efficient method for" comments="Meaning/insert to clarify">prove more efficient in</edit>
+        <text>detecting MCI, but they tend to yield a relatively high number of false positive diagnoses (Roark et al., 2011).</text>
+        <text>\\ Although</text>
+        <edit type="clarity" crr="speech and" comments="Meaning/consider the proposed alternative to further clarify"></edit>
+        <edit type="readability;clarity" crr="impairment can arise at an early stage of the disease, evaluating a patient's language capacities" comments="Meaning/you can also use the singular here (i.e., 'a patient's vs. patients')">abilities are impaired from an early stage of the disease, evaluating the language capacities of the patients</edit>
+        <text>has only received marginal attention</text>
+        <edit type="clarity" crr="during MCI diagnosis" comments="Meaning/add further clarification">when diagnoisng</edit>
+        <text>AD (Bayles, 1982). However,</text>
+        <edit type="clarity" crr="effective medical treatment following early diagnosis could actually" comments="Vocabulary/'effective' gives greater clarification;Meaning/'may' is correct, but the proposed alternative gives a greater degree of clarity in this context">if diagnosed early, a proper medical treatment may</edit>
+        <text>delay the occurrence of other</text>
+        <edit type="clarity" crr="(potentially more severe)" comments="Comprehension/insert to clarify">(more severe)</edit>
+        <text>symptoms of dementia to the atest extent possible (Kalman et al., 2013).</text>
+        <edit type="style;word choice" crr="\\ In this paper" comments="Vocabulary/reword">\\ Here</edit>
+        <text>we seek to automatically identify Hungarian patients suffering from mild cognitive impairment, based on their speech transcripts. Our system uses machine learning techniques and is based on several features</text>
+        <edit type="style" crr="such as" comments="Register/see above">like</edit>
+        <text> linguistic characteristics of spontaneous speech as well as features exploiting morphological and syntactic parsing.</text>
+        <text>\\ Recently, several studies have reported</text>
+        <edit type="clarity" crr="positive" comments="Meaning/you'll need to clarify whether the results are positive or negative when introducing this paragraph"></edit>
+        <text>results on identifying different types of dementia with NLP and speech recognition techniques. For instance, automatic speech recognition tools were employed in detecting aphasia (Fraser et al., 2013b; Fraser et al., 2014; Fraser et al., 2013a), and mild cognitive impairment (Lehr et al., 2012), and Alzheimer's Disease (Baldas et al., 2010; Satt et al., 2014). Jarrold et al. (2014) distinguished four types of dementia on the basis of spontaneous speech samples. Lexical analysis of spontaneous speech may also indicate different types of dementia (Bucks et al., 2000; Holmes and Singh, 1996) and may be</text>
+        <edit type="word choice" crr="used for" comments="Register/in this context, 'exploit' is not correct">exploited in</edit>
+        <text>automatic detection of</text>
+        <edit type="readability;word choice" crr="" comments="Comprehension/it's not used for the early detection of patients, but the early detection of dementia in patients">patients suffering from</edit>
+        <text>dementia (Thomas et al., 2005).</text>
+        <edit type="flow;readability" crr="In addition, written language analysis that throws up potential clues about in a an individual's writing style can also serve as an early warning indicator of" comments="Sentence restructure/rephrase to clarify meaning">As for analyzing written language, changes in the writing style of people may also refer to</edit>
+        <text>dementia (Garrard et al., 2005; Hirst and Wei Feng, 2012; Le et al., 2011).</text>
+        <text>\\ Concerning the automatic detection of MCI in Hungarian subjects, Toth et al. (2015) experimented with speech recognition techniques. However, to the best of our knowledge, this is the first attempt to identify MCI</text>
+        <edit type="conciseness" crr="using" comments="Flow/reduce number of words using alternative">on the basis of</edit>
+        <text>written texts</text>
+        <edit type="clarity" crr="such as" comments="Meaning/insert this to clarify meaning">, i.e.</edit>
+        <text>speech transcripts</text>
+        <edit type="clarity" crr="in the Hungarian language" comments="">for Hungarian.</edit>
+        <text>\\ In the long run, we would like to develop a system that can automatically detect linguistic symptoms of MCI in its early stage, so that the</text>
+        <edit type="word choice" crr="patient" comments="Vocabulary/alternative is a better word here">person</edit>
+        <text>can</text>
+        <edit type="word choice" crr="receive" comments="Register/'get' is often considered a 'clumsy' word at school. As a general rule, avoid as much as possible, unless you really need it (e.g., 'get out'), especially in an academic context. 'Receive,' 'gain' 'obtain' are always better words">get</edit>
+        <text>medical treatment as early as possible.</text>
+        <edit type="readability" crr="However, it should be noted" comments="Syntax/insert at the beginning of the sentence to avoid over-use of commas">It should be noted, however,</edit>
+        <text>that our goal</text>
+        <edit type="word choice" crr="is" comments="">cannot be</edit>
+        <text>an official diagnosis</text>
+        <edit type="flow;word choice" crr=", since this would require experienced medical intervention" comments="Meaning/restructure the sentence">as diagnosing patients requires medical experience.</edit>
+        <text>All we can do is</text>
+        <edit type="flow;word choice" crr="support that invervention by implementing a test using AI-based methods to indicate whether patients are at risk and providing medical experts with the evidence to support the clinical diagnosis." comments="">implement a test supported by methods used in artificial intelligence, which indicates whether the patient is at risk and if so, s/he can turn to medical experts who will provide the clinical diagnosis.</edit>
+    </introduction>   
+</doc>

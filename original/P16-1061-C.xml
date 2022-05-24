@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P16-1061" editor="C" format="Conf" position="S" region="N">
+    <title>
+        <text>Improving Coreference Resolution by Learning Entity-Level Distributed Representations</text>
+    </title>
+    <abstract>
+        <text>A long-standing challenge in coreference resolution has been the incorporation of entity-level information - features defined over clusters of mentions instead of mention pairs. We present a neural</text>
+        <edit type="spelling;hyphenation" crr="network-based" comments="Spelling / use of hyphenation">network based</edit>
+        <text>coreference system that produces high-dimensional vector representations for pairs of coreference clusters. Using these representations, our system learns when</text>
+        <edit type="word order;clarity" crr="it is desirable to combine clusters." comments="Rephrase to emphasize and clarify">combining clusters is desirable.</edit>
+        <text>We train the system with a learning-to-search algorithm that teaches it which local decisions (cluster merges) will lead to a high-scoring final coreference partition. The system substantially outperforms the current</text>
+        <edit type="hyphenation" crr="state of the art" comments="No need to hyphenate when 'state of the art' is used as a noun.">state-of-the-art</edit>
+        <text>on the English and Chinese portions of the CoNLL 2012 Shared Task dataset, despite using few hand-engineered features.</text>
+    </abstract>   
+    <introduction>
+        <text>Coreference resolution,</text>
+        <edit type="word usage;clarity" crr="which is" comments=""></edit>
+        <text>the task of identifying which mentions in a text refer to the same real-world entity, is fundamentally a clustering problem. However, many recent state-of-the-art coreference systems operate solely by linking pairs of mentions together (Durrett and Klein, 2013; Martschat and Strube, 2015; Wiseman et al., 2015).</text>
+        <text>\n\n An alternative approach is to use agglomerative clustering, treating each mention as a singleton cluster at the outset</text>
+        <edit type="readability" crr="," comments="Use comma to break up long sentence."></edit>
+        <text>and then repeatedly merging clusters of mentions</text>
+        <edit type="word usage;clarity" crr="that are" comments=""></edit>
+        <text>deemed to</text>
+        <edit type="grammar" crr="reffer" comments="">be referring</edit>
+        <text>o the same entity. Such systems can take advantage of entity-level information,</text>
+        <edit type="punctuation" crr="i.e." comments="">i.e.,</edit>
+        <text>features between clusters of mentions instead of between just two mentions.</text>
+        <edit type="word usage;conciseness" crr="To illustrate" comments="Word use / tighten up to shorten sentence">As an example for</edit>
+        <text>why this is useful, it is clear that the clusters {Bill Clinton} and {Clinton, she} are not referring to the same entity</text>
+        <edit type="readability" crr=". However," comments="potentially long sentence. Split.">, but</edit>
+        <text>t is ambiguous whether the pair of mentions Bill Clinton and Clinton are coreferent.</text>
+        <text>\n\n  Previous work has incorporated entity-level information through features that capture hard constraints</text>
+        <edit type="word usage" crr="such as containing" comments="">like having</edit>
+        <text>gender or number agreement between clusters (Raghunathan et al., 2010; Durrett et al., 2013). In this work, we instead train a deep neural network to build distributed representations of pairs of coreference clusters. This captures entity-level information with a large number of learned, continuous features, instead of a small number of hand-crafted categorical ones.</text>
+        <text>\n\n Using the cluster-pair representations, our network learns when combining two coreference clusters is desirable. At test time</text>
+        <edit type="readability" crr="," comments="Use comma to break up potentially long sentence."></edit>
+        <text>it builds up coreference clusters incrementally, starting with each mention in its own cluster</text>
+        <edit type="readability" crr="," comments="Use comma to break up potentially long sentence."></edit>
+        <text>and then merging a pair of clusters</text>
+        <edit type="word usage" crr="at" comments=""></edit>
+        <text>each step. It makes these decisions with a novel easy-first cluster-ranking procedure that combines the strengths of cluster-ranking (Rahman and Ng, 2011) and easy-first (Stoyanov and Eisner, 2012) coreference algorithms.</text>
+        <text>\n\n Training incremental coreference systems is challenging because the coreference decisions facing a model depend on previous decisions it has already made. We address this by using a learning-to-search algorithm inspired by SEARN (Daumé III et al., 2009) to train our neural network. This approach allows the model to learn which</text>
+        <edit type="word order" crr="available action (a cluster merge)" comments="">action (a cluster merge) available</edit>
+        <text>from the current state (a partially completed coreference clustering) will eventually lead to a high-scoring coreference partition.</text>
+        <text>\n\n Our system uses little manual feature engineering, which means it is easily extended to multiple languages. We evaluate our system on the English and Chinese portions of the CoNLL 2012 Shared Task dataset. The cluster-ranking model significantly outperforms a mention-ranking model that does not use entity-level information. We also show that</text>
+        <edit type="word usage" crr="the use of" comments="">using</edit>
+        <text>an easy-first strategy improves the performance of the cluster-ranking model. Our final system achieves CoNLL F1 scores of 65.29 for English and 63.66 for Chinese, substantially outperforming other state-of-the-art systems.</text>
+    </introduction>   
+</doc>

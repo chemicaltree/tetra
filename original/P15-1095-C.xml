@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-1095" editor="C" format="Conf" position="S" region="N">
+    <title>
+        <text>Robust Subgraph Generation Improves Abstract Meaning Representation Parsing</text>
+    </title>
+    <abstract>
+        <text>The Abstract Meaning Representation (AMR) is a representation for open-domain rich semantics, with potential use in fields</text>
+        <edit type="style" crr="such as" comments="Register/'like' is correct, but not appropriate for academic writing">like</edit>
+        <text>event extraction and machine translation. Node generation, typically</text>
+        <edit type="style" crr="carried out" comments="Register/see above">done</edit>
+        <text>using a simple dictionary lookup, is currently an</text>
+        <edit type="word choice" crr="substantial" comments="Comprehension/'important' potentially contradicts 'limiting factor' so consider using an alternative">important</edit>
+        <text>limiting factor in AMR parsing. We propose a small set of actions that derive AMR subgraphs by transformations on spans of text</text>
+        <edit type="readability" crr=". This" comments="Readability/start new sentence">, which</edit>
+        <text>allows for more robust learning of this stage. Our set of construction actions generalize better than the previous approach, and can be learned with a simple classifier. We improve on the previous state-of-the-art result for AMR parsing, boosting end-to-end performance by 3 F1 on both the LDC2013E117 and LDC2014T12 datasets.</text>
+    </abstract>   
+    <introduction>
+        <text>The Abstract Meaning Representation (AMR) (Banarescu et al., 2013) is a rich, graph-based language for expressing semantics over a broad domain. The formalism is backed by a large data-labeling effort, and it holds promise for enabling a new</text>
+        <edit type="word choice" crr="generation" comments="Register/'breed' is correct, but 'generation' is more applicable in this context">breed</edit>
+        <text>of natural language applications, ranging from semantically aware MT to rich broad-domain QA over text-based knowledge bases. Figure 1</text>
+        <edit type="word choice" crr="illustrates" comments="Register/'shows' is correct, but the alternative is better in academic writing">shows</edit>
+        <text>an example AMR for “he gleefully ran to his dog Rover,” and we give a brief introduction to AMR in Section 2. This paper focuses on AMR parsing, the task of mapping a natural language sentence</text>
+        <edit type="spelling" crr="onto" comments="Spelling/'onto' is more precise">into</edit>
+        <text>an AMR graph.</text>
+        <text>We follow previous work (Flanigan et al., 2014) in dividing AMR parsing into two steps. The first step</text>
+        <edit type="style" crr="involves" comments="Word usage/'is' is correct, but 'involves' is better for academic writing">is</edit>
+        <text>concept identification, which generates AMR nodes from text, and which we'll refer to as NER++ (Section 3.1). The second step</text>
+        <edit type="style" crr="encompasses" comments="Word usage/see above">is</edit>
+        <text>relation identification, which adds arcs to link these nodes into a fully connected AMR graph, which we'll call SRL++ (Section 3.2).</text>
+        <text>\\ We observe that SRL++ is not the</text>
+        <edit type="word choice" crr="most difficult" comments="Word usage/'hard' is correct, but in this context, 'most difficult' gives greater depth">hard</edit>
+        <text>part of AMR parsing</text>
+        <edit type="readability" crr=". Instead" comments="Readability and punctuation/try to avoid semi-colons. End sentence instead.">; rather</edit>
+        <text>, much of the difficulty in AMR</text>
+        <edit type="repetitiveness" crr="involves the generation of" comments="Register/see above re: use of 'is'">is generating</edit>
+        <text>high accuracy concept subgraphs from the NER++ component. For example, when the existing AMR parser JAMR (Flanigan et al., 2014) is given a gold NER++ output, and must only perform SRL++ over given subgraphs, it scores 80 F1.</text>
+        <edit type="readability" crr="That's nearly the inter-annotator agreement of 83, and far higher than its" comments="Readability/start new sentence">- nearly the inter-annotator agreement of 83 F1, and far higher than its</edit>
+        <edit type="hyphenation" crr="end-to-end" comments="">end to end</edit>
+        <text>accuracy of 59 F1.</text>
+        <text>\\ SRL++ within AMR is relatively easy given a perfect NER++ output, because so much pressure is put on the output of NER++ to carry meaningful information. For example, there's a strong typecheck feature for the existence and type of any arc just by looking at its end-points, and syntactic dependency features are very informative for removing any remaining ambiguity. If a system is considering how to link the node run-01 in Figure 1, the verb-sense frame for “run-01” leaves very little uncertainty for what we could assign as an ARG0 arc. It must be a noun, which leaves either “he” or “dog,” and this is easily decided in favor of “he” by looking for an nsubj arc in the dependency parse.</text>
+        <text>\\ The primary contribution of this paper is a novel approach to the NER++ task, illustrated in Figure 2. We notice that the subgraphs aligned to lexical items can often be generated from a small set of generative actions which generalize across tokens. For example, most verbs generate an AMR node corresponding to the verb sense of the appropriate PropBank frame - e.g., run generates run-01 in Figure 1. This allows us to frame the NER++ task as the task of classifying one of a small number of actions for each token, rather than choosing a specific AMR subgraph for every token in the sentence.</text>
+        <text>\\ Our approach to the end-to-end AMR parsing task is therefore as follows: we define an action space for generating AMR concepts, and create a classifier for classifying lexical items into one of these actions (Section 4). This classifier is trained from automatically generated alignments between the gold AMR trees and their associated sentences (Section 5), using an objective</text>
+        <edit type="repetitiveness;grammar" crr="favoring" comments="Word usage/repetition of 'which'/avoid;Verb agreement/see above">which favors</edit>
+        <text>alignment mistakes which are least harmful to the NER++ component. Finally, the concept subgraphs are combined into a coherent AMR parse using the maximum spanning connected subgraph algorithm of Flanigan et al. (2014).</text>
+        <text>\\ We</text>
+        <edit type="style" crr="demonstrate" comments="Register/'show' is correct, but 'demonstrate' more appropriate for academic writing">show</edit>
+        <text>that our approach provides a large boost to recall over previous approaches, and that end to end performance is improved from 59 to 62 smatch (an F1 measure of correct AMR arcs; see Cai and Knight (2013)) when incorporated into the SRL++ parser of Flanigan et al. (2014). When evaluating the performance of our action classifier in isolation, we obtain an action classification accuracy of 84.1%.</text>
+    </introduction>   
+</doc>

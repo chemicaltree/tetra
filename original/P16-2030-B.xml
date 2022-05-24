@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P16-2030" editor="B" format="Conf" position="S" region="NN">
+    <title>
+        <text>Detecting Mild Cognitive Impairment by Exploiting Linguistic Information from Transcripts</text>
+    </title>
+    <abstract>
+        <edit type="style" crr="In this paper," comments="">Here</edit>
+        <text>we seek to</text>
+        <edit type="word choice" crr="automate identification of" comments="word choice; ESL use">automatically identify</edit>
+        <text> Hungarian patients suffering from mild cognitive impairment (MCI) based on linguistic features collected from</text>
+        <edit type="word order" crr="transcripts of their speech" comments="">their speech transcripts</edit>
+        <text>. Our system uses machine learning techniques and</text>
+        <edit type="word choice" crr="focuses" comments="">is based</edit>
+        <text>on several linguistic features</text>
+        <edit type="style" crr=", such as" comments="more formal">like</edit>
+        <text>characteristics of spontaneous speech as well as features exploiting morphological and syntactic parsing. Our results suggest</text>
+        <edit type="word order" crr="morphological and speech-based features are the primary characteristics" comments="word choice; word order">that it is primarily morphological and speech-based features</edit>
+        <text>that help distinguish MCI patients from healthy controls.</text>
+    </abstract>   
+    <introduction>
+        <text>Mild cognitive impairment (MCI) is</text>
+        <edit type="clarity" crr="identified using" comments=""></edit>
+        <text>a heterogeneous</text>
+        <edit type="word order" crr="symptom set" comments="">set of symptoms</edit>
+        <text>that</text>
+        <edit type="grammar" crr="is" comments="">are</edit>
+        <edit type="clarity" crr="an essential tool" comments="">essential</edit>
+        <text>in the early detection of Alzheimer's Disease (AD) (Negash et al., 2007). Symptoms such as language dysfunction may occur</text>
+        <edit type="clarity" crr="as early as" comments="added for clarity">even</edit>
+        <text>nine years</text>
+        <edit type="word choice" crr="prior to" comments="">before</edit>
+        <text>he actual diagnosis (APA, 2000). Thus, the language use of the patient may often indicate MCI well before the clinical diagnosis of dementia.</text>
+        <text>\\ MCI is known to influence the (spontaneous) speech of the patient via three main</text>
+        <edit type="word choice" crr="processes" comments="">aspects</edit>
+        <text>. First, verbal fluency declines, which results in longer hesitations and a lower speech rate (Roark et al., 2011). Second, the lexical frequency of words and part-of-speech tags may also change significantly as the patient </text>
+        <edit type="grammar" crr="begins to have problems finding words (Croot et al., 2000). Third, the emotional responsiveness of the patient has also been" comments="">has problems finding words (Croot et al., 2000). Third, the emotional responsiveness of the patient with was also</edit>
+        <text>observed to change in many cases (Lopez-de-Ipina et al., 2015).</text>
+        <text>\\ For many patients, MCI is never recognized</text>
+        <edit type="word choice" crr="" comments="extraneous">as</edit>
+        <text>in the early stage of the disease it is not trivial even for experts to detect cognitive impairment: according to Boise et al. (2004), up to 50% of MCI patients are never diagnosed with MCI. Although there are well known tests such as the Mini Mental Test, they are usually not sensitive enough to reliably filter out MCI in its early stage. Tests on linguistic memory prove more efficient in detecting MCI, but they tend to yield a relatively high number of false positive diagnoses (Roark et al., 2011).</text>
+        <text>\\ Although language abilities are impaired from an early stages of the disease, evaluating the language capacities of</text>
+        <edit type="consistency" crr="these" comments="">the</edit>
+        <text>patients has</text>
+        <edit type="word order" crr="eceived only" comments="">only received</edit>
+        <text>marginal attention when diagnosing AD (Bayles, 1982). However, if diagnosed early, a proper medical treatment may delay the occurrence of other (more severe) symptoms of dementia to the latest extent possible (Kalman et al., 2013).</text>
+        <edit type="style" crr="In this paper," comments="">Here</edit>
+        <text>we seek to</text>
+        <edit type="word choice" crr="automate identification of" comments="word choice; ESL use">automatically identify</edit>
+        <text>Hungarian patients suffering from mild cognitive impairment based on their speech transcripts. Our system uses machine learning techniques and is based on</text>
+        <edit type="word choice;style" crr="several" comments="">a range of</edit>
+        <edit type="style" crr=", such as" comments="more formal">like</edit>
+        <text>linguistic characteristics of spontaneous speech, as well as features exploiting morphological and syntactic parsing.</text>
+        <text>\\ Recently, several studies have reported results on identifying different types of dementia with NLP and speech recognition techniques. For instance, automatic speech recognition tools were employed in detecting aphasia (Fraser et al., 2013b; Fraser et al., 2014; Fraser et al., 2013a) and mild cognitive impairment (Lehr et al., 2012), and Alzheimer's Disease (Baldas et al., 2010; Satt et al., 2014). Jarrold et al. (2014) distinguished four types of dementia on the basis of spontaneous speech samples. Lexical analysis of spontaneous speech may also</text>
+        <edit type="clarity" crr="be useful in" comments=""></edit>
+        <edit type="word choice" crr="identifying" comments="">indicate</edit>
+        <text>different types of dementia (Bucks et al., 2000; Holmes and Singh, 1996) and may be exploited in the automatic detection of patients suffering from dementia (Thomas et al., 2005). As for analyzing written language, changes in the writing style of people may also refer to dementia (Garrard et al., 2005; Hirst and Wei Feng, 2012; Le et al., 2011).</text>
+        <text>\\ Concerning the automatic detection of MCI in Hungarian subjects, Toth et al. (2015) experimented with speech recognition techniques. However, to the best of our knowledge, this is the first attempt to identify MCI on the basis of written texts, i.e., speech transcripts</text>
+        <edit type="grammar" crr="in" comments="">for</edit>
+        <text>Hungarian.</text>
+        <text>\\ In the long run, we would like to develop a system that can automatically detect linguistic symptoms of MCI in its early</text>
+        <edit type="grammar;punctuation" crr="stages" comments="">stage,</edit>
+        <text>so that the</text>
+        <text>the person can get medical treatment as early as possible. It should be noted, however, that our goal cannot be an official diagnosis as diagnosing patients requires medical experience. All we can do is implement a test supported by methods used in artificial intelligence, which indicates whether the patient is at risk and if so, s/he can turn to medical experts who will provide the clinical diagnosis.</text>
+    </introduction>   
+</doc>

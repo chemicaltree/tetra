@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W16-3931" editor="A" format="WS" position="NS" region="NN">
+    <title>
+        <text>A Simple Scalable Neural Networks based Model for Geolocation Prediction in Twitter</text>
+    </title>
+    <abstract>
+        <text>This paper describes a model that we submitted to W-NUT 2016 Shared task #1: Geolocation Prediction in Twitter. Our model classifies a tweet or a user to a city using a simple neural</text>
+        <edit type="usage" crr="network" comments="usage - this is typically not plural in this usage">networks</edit>
+        <text>structure with</text>
+        <edit type="hyphenation" crr="fully connected" comments="hyphenation - no hyphen with adverbs ending in ly">fully-connected</edit>
+        <text>layers and average pooling processes. From the findings of previous geolocation prediction approaches, we integrated various user metadata along with message texts and trained the model with them. In the test run of the task, the model achieved the accuracy of 40.91% and the median distance error of 69.50 km in message-level prediction and the accuracy of 47.55% and the median distance error of 16.13 km in user-level prediction. These results are moderate performances in terms of accuracy and best performances in terms of distance. The results show a promising extension of neural</text>
+        <edit type="usage" crr="network" comments="usage - this is typically not plural in this usage">networks</edit>
+        <text>based models for geolocation prediction where recent advances in neural networks can be added to enhance our current simple model.</text>
+    </abstract>   
+    <introduction>
+        <text>The growth of social media has brought demands to develop techniques to automatically extract a variety of information from it. A geolocation predictor is one such technique that has been widely studied to strengthen business activities such as</text>
+        <edit type="style" crr="advertising" comments="style - changed for parallelism with marketing">advertisement</edit>
+        <text>and marketing. This paper describes a model that we developed to tackle this geolocation prediction task</text>
+        <edit type="flow" crr=", using" comments="flow - combined these two sentences for better flow">. The model is</edit>
+        <text>a neural network based</text>
+        <edit type="style;repetitiveness" crr="approach" comments="style - reducing repetitive use of 'model'">model</edit>
+        <text>that uses various user metadata along with message texts. We participated</text>
+        <edit type="grammar" crr="in" comments="grammar - missing preposition"></edit>
+        <text>W-NUT 2016 Shared task #1: Geolocation Prediction in Twitter (Rahimi et al., 2016) with this model.</text>
+        <text>\\ The architecture of our model is designed by following previous</text>
+        <edit type="word choice" crr="research" comments="word choice - researches can be use as the plural of research, but typically the plural is also 'research'">researches</edit>
+        <text>that have targeted geolocation prediction in Twitter. Cheng et al. (2010) proposed a probabilistic model based on local (location indicative) words to estimate city-level geolocation prediction of Twitter users. Han et al. (2014) implemented a city-level geolocation prediction system for Twitter users, and constructed a Naive Bayes learner using location-indicative words and user metadata. We decided to use both message texts and user metadata which have shown effectiveness in these past studies.</text>
+        <text>\\ Another characteristic of our model is that we decided to use neural networks as a machine learning method to train a geolocation predictor. Neural networks are being extensively applied to tasks of image processing, speech processing,</text>
+        <edit type="word choice" crr="and" comments="word choice - it's all of these so we want 'and': here, not 'or'">or</edit>
+        <text>text processing and have</text>
+        <edit type="style;readability" crr="shown state-of-the-art performance" comments="style /readability - I think this is what the author is trying to say, but I would need to review the original cite and query the author to be sure.">shown the state of the performances</edit>
+        <text>(Goodfellow et al., 2016). In a context of geolocation prediction, Liu and Inkpen (2015) have</text>
+        <edit type="word choice" crr="show" comments="word choice - showed is a valid past tense form, but shown works better here">showed</edit>
+        <text>that a model based on stacked denoising auto-encoders achieves a comparable performance to the</text>
+        <edit type="hyphenation;usage" crr="state-of-the-art" comments="hyphenation and usage - missing hyphens in the adjective form, and 'art' is usually not plural in this usage">state of the arts</edit>
+        <text>models. Although neural networks with deep complex layers have recently received attention as achieving high performance, we designed our model to be a simple, scalable neural network based model considering the following two reasons:</text>
+        <text>\\ 1. A city-level geolocation prediction of Twitter is a</text>
+        <edit type="hyphenation" crr="large-scale" comments="hyphenation - missing hyphen inn compound adjective">large scale</edit>
+        <text>task that requires a scalable machine learning method which can handle millions of</text>
+        <edit type="grammar" crr="tweets" comments="grammar - need plural form here">tweet</edit>
+        <text>with thousands of classes (Han et al., 2014).</text>
+        <text>\\ 2. A model based on shallow simple neural networks has recently marked close performance to deep models with high scalability on several tasks (Joulin et al., 2016).</text>
+        <text>\\ In the following sections of this paper, we first describe the specification of datasets to train and to test our model in Section 2. The detail of our neural network based model is explained in Section 3, accompanying Section 4 that explains experiments and the test run which were performed to evaluate the model. Finally, Section 5 summarizes and concludes the paper with some future directions.</text>
+    </introduction>   
+</doc>

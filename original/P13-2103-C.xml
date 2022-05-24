@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P13-2103" editor="C" format="Conf" position="NS" region="NN">
+    <title>
+        <edit type="grammar" crr="A Unified Morphosyntactic Scheme of Stanford Dependencies" comments="">A Unified Morpho-Syntactic Scheme of Stanford Dependencies</edit>
+    </title>
+    <abstract>
+        <text>Stanford Dependencies (SD) provide a functional characterization of the grammatical relations in syntactic parse-trees. The SD representation is useful for parser evaluation, for downstream applications, and, ultimately, for natural language understanding</text>
+        <edit type="readability" crr=". However" comments="Readability / split sentence here">, however</edit>
+        <text>, the design of SD focuses on structurally-marked relations and</text>
+        <edit type="clarity" crr="it" comments=""></edit>
+        <text>under-represents morphosyntactic realization patterns observed in</text>
+        <edit type="capitalization;consistency" crr="morphologically rich languages" comments="capitalization not required">Morphologically Rich Languages</edit>
+        <text>(MRLs). We present a novel extension of SD, called Unified-SD (U-SD), which unifies the annotation of structurally- and morphologically-marked relations via an inheritance hierarchy. We create a new resource composed of U-SD-annotated constituency and dependency treebanks for the MRL Modern Hebrew</text>
+        <edit type="readability" crr=". We then" comments="Readability / end long sentence">, and</edit>
+        <text>present two systems</text>
+        <edit type="readability;clarity" crr="with high baseline accuracy that can automatically predict U-SD annotations - gold-segmented input as well as raw texts." comments="Sentence structure / add to clarify">that can automatically predict U-SD annotations, for gold segmented input as well as raw texts, with high baseline accuracy.</edit>
+    </abstract>   
+    <introduction>
+        <text>Stanford Dependencies (SD) provide a functional characterization of the grammatical relations in syntactic trees, capturing the predicate-argument structure of natural language sentences (de Marneffe et al., 2006). The SD representation has been proven useful in a range of downstream tasks, including</text>
+        <edit type="capitalization;consistency" crr="textual entailments" comments="">Textual Entailments</edit>
+        <text>(Dagan et al., 2006) and BioNLP (Fundel and Zimmer., 2007), and in recent years SD structures have also become a de facto standard for parser evaluation in English (de Marneffe and Manning, 2008a; Cer et al., 2010; Nivre et al., 2010). Efforts</text>
+        <edit type="conciseness;readability" crr="to extend SD for cross-lingual annotation and evaluation (McDonald et al., 2013; Che et al., 2012; Haverinen et al., 2011) have now commenced." comments="">now commence towards extending SD for cross-lingual annotation and evaluation (McDonald et al., 2013; Che et al., 2012; Haverinen et al., 2011).</edit>
+        <edit type="flow" crr="By and large, although these efforts aim to remain as close as possible to the original SD scheme, the original SD design emphasizes word-tokens and configurational structures. Consequently," comments="">By and large, these efforts aim to remain as close as possible to the original SD scheme. However, the original SD design emphasizes word-tokens and configurational structures, and consequently,</edit>
+        <text>these schemes overlook properties and realization patterns observed in a range of languages known as</text>
+        <edit type="capitalization;consistency" crr="morphologically rich languages" comments="capitalization not required">Morphologically Rich Languages</edit>
+        <text>(MRLs) (Tsarfaty et al., 2010).</text>
+        <text>\\ MRLs use word-level affixes to express grammatical relations that are typically indicated by structural positions in English. By virtue of word-level morphological marking, word-order in MRLs may be flexible. MRLs have been a focal point for the parsing community due to the challenges that these phenomena pose for systems</text>
+        <edit type="readability;clarity" crr="that were" comments="Word choice / insert to improve flow and meaning"></edit>
+        <text>originally developed for English.1 Here we argue that the SD hierarchy and design principles similarly emphasize English-like structures and</text>
+        <edit type="hyphenation" crr="under-represent" comments="">underrepresent</edit>
+        <text>morphosyntactic argument-marking alternatives. We define an extension of SD, called Unified-SD (U-SD), which unifies the annotation of</text>
+        <edit type="hyphenation" crr="structurally- and morphologically-marked relations" comments="Hyphenation / hyphenate in serial cases before qualifying noun">structurally and morphologically marked relations</edit>
+        <text>via an inheritance hierarchy. We extend SD with a functional branch</text>
+        <edit type="punctuation" crr="" comments="Punctuation / not required in a sentence with two follow-on clauses.">,</edit>
+        <text>and provide a principled treatment of morpho-syntactic argument marking.</text>
+        <text>\\ Based on the U-SD scheme, we create a new parallel resource for the MRL Modern Hebrew, whereby aligned constituency and dependency trees reflect equivalent U-SD annotations (cf. Rambow (2010)) for the same set of sentences. We present two systems that can automatically learn U-SD annotations, from the dependency and the constituency versions respectively, delivering high- baseline accuracy on the prediction task.</text>
+    </introduction>   
+</doc>

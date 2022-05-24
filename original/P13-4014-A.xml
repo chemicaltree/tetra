@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P13-4014" editor="A" format="Conf" position="NS" region="N">
+    <title>
+        <text>QuEst - A translation quality estimation framework</text>
+    </title>
+    <abstract>
+        <text>We describe QuEst, an open source framework for machine translation quality estimation. The framework allows the extraction of several quality indicators from source segments, their translations,</text>
+        <edit type="grammar" crr="and" comments="grammar - missing conjunction before last list item. 'as well as' doesn't count."></edit>
+        <text>external resources (corpora, language models, topic models, etc.)</text>
+        <edit type="punctuation" crr="" comments="punctuation - no comma before as well as unless required for other grammar reasons">,</edit>
+        <text>as well as language tools (parsers, part-of-speech tags, etc.). It also provides machine learning algorithms to build quality estimation models. We benchmark the framework on a number of datasets and discuss the efficacy of features and algorithms.</text>
+    </abstract>   
+    <introduction>
+        <text>As</text>
+        <edit type="capitalization;consistency" crr="machine translation" comments="capitalization/consistency - this is usually seen as lowercase and is lower elsewhere in the text">Machine Translation</edit>
+        <text>(MT) systems become widely adopted both for gisting purposes and</text>
+        <edit type="grammar;style" crr="for producing" comments="grammar / style - reworded for parallelism">to produce</edit>
+        <edit type="hyphenation" crr="professional-quality" comments="">professional quality</edit>
+        <text>ranslations, automatic methods are needed for predicting the quality of a translated segment. This is referred to as</text>
+        <edit type="capitalization;consistency" crr="quality estimation" comments="capitalization/consistency - this is usually seen as lowercase and is lower elsewhere in the paper">Quality Estimation</edit>
+        <text>(QE). Different from standard MT evaluation metrics, QE metrics do not have access to reference (human) translations; they are aimed at MT systems in use. QE has a number of applications, including</text>
+        <edit type="punctuation" crr="" comments="punctuation: list formatted as sentence doesn't take colon unless what precedes is a full sentence.">:</edit>
+        <edit type="capitalization" crr="\ deciding which segments need revision by a translator (quality assurance); \ deciding whether a reader gets a reliable gist of the text; \ estimating how much effort it will be needed to post-edit a segment; \ selecting among alternative translations produced by different MT systems; and \ deciding whether the translation can be used for self-training of MT systems." comments="capitalization - list formatted as sentence has items starting with lowercase">\ Deciding which segments need revision by a translator (quality assurance); \ Deciding whether a reader gets a reliable gist of the text; \ Estimating how much effort it will be needed to post-edit a segment; \ Selecting among alternative translations produced by different MT systems; \ Deciding whether the translation can be used for self-training of MT systems.</edit>
+        <text>Work in QE for MT started in the early 2000's, inspired by the confidence scores used in</text>
+        <edit type="capitalization" crr="speech recognition" comments="capitalization - this is typically lowercase">Speech Recognition</edit>
+        <text>: mostly the estimation of word posterior probabilities. Back then it was called confidence estimation, which we believe is a narrower term. A 6-week workshop on the topic at John Hopkins University in 2003 (Blatz et al., 2004) had</text>
+        <edit type="grammar" crr="a" comments="grammar - need either an article or pronoun here - “a” would imply there is more than one goal, “its” would imply this is the only goal. I would need to review the reference to determine which is correct. also - “as” here doesn't work with “to estimate.” Alternately, can leave “as” and change “to estimate” to “estimating”">as</edit>
+        <text>goal to estimate automatic metrics such as BLEU (Papineni et al., 2002) and WER. These metrics are difficult to interpret, particularly at the sentence-level, and results of their very many trials proved unsuccessful. The overall quality of MT was considerably lower at the time, and therefore, pinpointing the very few good quality segments was a hard problem. No software</text>
+        <edit type="word choice" crr="or" comments="word choice - 'nor' typically is used with 'neither'. 'or' is a better choice here.">nor</edit>
+        <text>datasets were made available after the workshop.</text>
+        <text>\\ A new surge of interest in the field started recently, motivated by the widespread used of MT systems in the translation industry, as a consequence of better translation quality, more user-friendly tools, and higher demand for translation. In order to make MT maximally useful in this scenario, a quantification of the quality of translated segments similar to “fuzzy match scores” from translation memory systems is needed. QE work addresses this problem by using more complex metrics that go beyond matching the source segment with previously translated data. QE can also be useful for end-users reading translations for gisting, particularly those who cannot read the source language.</text>
+        <text>\\ QE nowadays focuses on estimating more interpretable metrics. “Quality” is defined according to the application: post-editing, gisting, etc. A number of positive results have been reported. Examples include improving post-editing efficiency by filtering out low-quality segments which would require more effort or time to correct than translating from scratch (Specia et al., 2009; Specia, 2011); selecting high-quality segments to be published as they are, without post-editing (Soricut and Echihabi, 2010); selecting a translation from either an MT system or a translation memory for post-editing (He et al., 2010); selecting the best translation from multiple MT systems (Specia et al., 2010); and highlighting sub-segments that need revision (Bach et al., 2011).</text>
+        <text>\\ QE is generally addressed as a supervised machine learning task using a variety of algorithms to induce models from examples of translations described through a number of features and annotated for quality. For an overview of various algorithms and features, we refer the reader to the WMT12 shared task on QE (Callison-Burch et al., 2012). Most of the research work lies on deciding which aspects of quality are more relevant for a given task and designing feature extractors for them. While simple features such as counts of tokens and language- model scores can be easily extracted, feature engineering for more advanced and useful information can be quite labour-intensive. Different language pairs or optimisation against specific quality scores (e.g., post-editing time vs translation adequacy) can benefit from very different feature sets.</text>
+        <text>\\ QuEst, our framework for quality estimation, provides a wide range of feature extractors from source and translation texts and external resources and tools (Section 2). These</text>
+        <edit type="word choice;style" crr="range" comments="word choice - opting for slightly more formal">go</edit>
+        <text>from simple, language-independent features</text>
+        <edit type="punctuation" crr="" comments="punctuation - no comma usually needed in from / to">,</edit>
+        <text>to advanced, linguistically motivated features. They include features that rely on information from the MT system that generated the translations</text>
+        <edit type="punctuation" crr="" comments="punctuation - no comma needed in list of two items">,</edit>
+        <text>and features that are oblivious to the way translations were produced (Section 2.1). In addition, by integrating a well-known machine learning toolkit, scikit-learn, and algorithms that are known to perform well on this task, QuEst provides a simple and effective way of experimenting with techniques for feature selection and model building</text>
+        <edit type="punctuation" crr="" comments="punctuation - no comma needed before as well as">,</edit>
+        <text>as well as parameter optimisation through grid search (Section 2.2). In Section 3, we present experiments using the framework with nine QE datasets.</text>
+        <text>\\ In addition to providing a practical platform for quality estimation, by freeing researchers from feature engineering, QuEst will facilitate work on the learning aspect of the problem. Quality estimation poses several machine learning challenges, such as the fact that it can exploit a large, diverse, but often noisy set of information sources, with a relatively small number of annotated data points, and</text>
+        <edit type="grammar" crr="that" comments="grammar - added for parallelism with first item in the list and to go with 'the fact'"></edit>
+        <text> it relies on human annotations that are often inconsistent due to the subjectivity of the task (quality judgements). Moreover, QE is highly non-linear: unlike many other problems in language processing, considerable improvements can be achieved using non-linear kernel techniques. Also, different applications for the quality predictions may benefit from different machine learning techniques, an aspect that has been mostly neglected so far. Finally, the framework will also facilitate research on ways of using quality predictions in novel extrinsic tasks, such as self-training of statistical machine translation systems</text>
+        <edit type="punctuation" crr="" comments="punctuation - no comma needed in list of two things">,</edit>
+        <text>and</text>
+        <edit type="grammar;style" crr="" comments="grammar / style - drop the 'for' for parallelism with first item in the list.">for</edit>
+        <text>estimating quality in other text output applications such as text summarisation.</text>
+    </introduction>   
+</doc>

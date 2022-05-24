@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P06-1005" editor="C" format="Conf" position="S" region="N">
+    <title>
+        <text>Bootstrapping Path-Based Pronoun Resolution</text>
+    </title>
+    <abstract>
+        <text>We present an approach to pronoun resolution based on syntactic paths. Through a simple bootstrapping procedure, we learn the likelihood of coreference between a pronoun and a candidate noun, based on the path in the parse tree between the two entities. This path information enables us to handle previously-challenging resolution instances</text>
+        <edit type="readability" crr=". The path" comments="Readability / end sentence. What follows reads better as a separate sentence">, and</edit>
+        <text>also robustly addresses traditional syntactic coreference constraints. Highly coreferent paths also allow mining of precise probabilistic gender/number information. We combine statistical knowledge with well-known features in a Support Vector Machine pronoun resolution classifier. Significant gains in performance are observed</text>
+        <edit type="word choice" crr="across" comments="Vocabulary / 'on' is correct, but 'across' might be more specific">on</edit>
+        <text>several datasets.</text>
+    </abstract>   
+    <introduction>
+        <text>Pronoun resolution is a difficult but vital</text>
+        <edit type="style" crr="component" comments="Register / 'part' is correct, but the alternative is better for academic writing">part</edit>
+        <text>of the overall coreference resolution task. In each of the following sentences, a pronoun resolution system must determine what the pronoun his refers to: \ (1) John needs his friend. \ (2) John needs his support. In (1), John and his corefer. In (2), his refers to some other, perhaps previously- evoked entity. Traditional pronoun resolution systems are not designed to distinguish between these cases. They lack the specific world knowledge required in the second instance - the knowledge that a person does not usually explicitly need his own support.</text>
+        <text>\\ We collect statistical path-coreference information from a large, automatically-parsed corpus to address this limitation. A dependency path is defined as the sequence of dependency links between two potentially coreferent entities in a parse tree. A path does not include the terminal entities</text>
+        <edit type="punctuation" crr=". For example," comments="Punctuation / end sentence">; for example,</edit>
+        <edit type="clarity" crr="consider the following sentences:" comments=""></edit>
+        <edit type="flow;readability" crr="\ (1) John needs his support. \ He needs their support. Both expressions" comments="Readability / change sentence structure to improve flow">“John needs his support” and  “He needs their suppor”</edit>
+        <text>have the same syntactic path. Our algorithm determines that the dependency path linking the Noun and pronoun</text>
+        <edit type="word choice" crr="will very likely" comments="">is very likely to</edit>
+        <text>connect coreferent entities for the path “Noun needs pronoun's friend,” while it is rarely coreferent for the path “Noun needs pronoun's support.”</text>
+        <text>\\ This likelihood can be learned by simply counting how often we see a given path in text with an initial Noun and a final pronoun that are from the same/different gender/number classes. Cases such as “John needs her support” or “They need his support” are much more frequent in text than cases where the subject noun and pronoun terminals agree in gender/number. When there is agreement, the terminal nouns are likely to be coreferent. When they disagree, they refer to different entities. After a sufficient number of occurrences of agreement or disagreement, there is a strong statistical indication of whether the path is coreferent (terminal nouns tend to refer to the same entity) or non-coreferent (nouns refer to different entities).</text>
+        <text>\\ We show that including path coreference information enables significant performance gains on three third-person pronoun resolution experiments. We also</text>
+        <edit type="redundancy" crr="demonstrate" comments="Vocabulary / repetition of 'show' / avoid">show</edit>
+        <text>that coreferent paths can provide the seed information for bootstrapping other, even more important information, such as the gender/number of noun phrases.</text>
+    </introduction>   
+</doc>

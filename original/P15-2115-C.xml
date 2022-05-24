@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P15-2115" editor="C" format="Conf" position="S" region="N">
+    <title>
+        <text>Machine Comprehension with Syntax, Frames, and Semantics</text>
+    </title>
+    <abstract>
+        <text>We demonstrate</text>
+        <edit type="clarity" crr="a" comments=""></edit>
+        <text>significant improvement</text>
+        <edit type="spelling" crr="upon" comments="">on</edit>
+        <text>the MCTest</text>
+        <edit type="hyphenation" crr="question-answering" comments="">question answering</edit>
+        <text>task (Richardson et al., 2013) by augmenting baseline features with features based on syntax, frame semantics, coreference, and word embeddings, and</text>
+        <edit type="readability" crr="then" comments="Readability / consider inserting when describing a sequence"></edit>
+        <text>combining them in a max-margin learning framework. We achieve the best results</text>
+        <edit type="clarity" crr="" comments="Not required as this makes creates doubt">we are aware of</edit>
+        <text>on this dataset, outperforming concurrently-published results. These results demonstrate a significant performance</text>
+        <edit type="word choice;clarity" crr="improvement" comments="">gradient</edit>
+        <edit type="grammar" crr="in" comments="Grammar / change preposition">for</edit>
+        <text>the use of linguistic structure in machine comprehension.</text>
+    </abstract>   
+    <introduction>
+        <text>Recent</text>
+        <edit type="hyphenation" crr="question-answering" comments="">question answering</edit>
+        <text>(QA) systems (Ferrucci et al., 2010; Berant et al., 2013; Bordes et al., 2014) have focused on open-domain factoid questions</text>
+        <edit type="readability" crr=". They rely" comments="Readability / end sentence and start new one">, relying</edit>
+        <text>on knowledge bases</text>
+        <edit type="style" crr="such as" comments="Word usage / 'like' isn't incorrect, but alternative is better for academic style">like</edit>
+        <text>Freebase (Bollacker et al., 2008) or large corpora of unstructured text. While clearly useful, this type of QA may not be the best way to evaluate natural language understanding capability. Due to the</text>
+        <edit type="word choice;clarity" crr="absence" comments="redundancy"></edit>
+        <text>of facts expressed on the web, many questions are answerable with</text>
+        <edit type="flow" crr="shallow information extraction techniques (Yao et al., 2014)." comments="Reduce wordiness">shallow techniques from information extraction techniques (Yao et al., 2014).</edit>
+        <edit type="conciseness" crr="\n\n Recent" comments="">\n\n There is also recent</edit>
+        <text>work on QA</text>
+        <edit type="flow" crr="has also examined" comments="Comprehension / reduce wordiness to improve flow">based on</edit>
+        <text>synthetic text describing events in electronic adventure games (Weston et al., 2015; Sukhbaatar et al., 2015). Synthetic text provides a</text>
+        <edit type="spelling" crr="clean room" comments="">cleanroom</edit> 
+        <text>environment for evaluating QA systems, and has spurred development of powerful neural architectures for complex reasoning. However, the formulaic semantics underlying these synthetic texts allows for the construction of perfect rule-based question answering systems, and may not reflect the patterns of natural linguistic expression.</text>
+        <text>\n\n In this paper, we focus on</text>
+        <edit type="clarity" crr="QA as an aspect of" comments=""></edit>
+        <text>machine comprehension,</text>
+        <edit type="conciseness" crr="where" comments="">which is QA in which</edit>
+        <text>the answer is contained within a provided passage. Several comprehension tasks have been developed, including Remedia (Hirschman et al., 1999), CBC4kids (Breck et al., 2001), and the QA4MRE textual question answering tasks in the CLEF evaluations (Peñas et al., 2011; Peñas et al., 2013; Clark et al., 2012; Bhaskar et al., 2012).</text>
+        <text>\n\n We consider the Machine Comprehension of Text dataset (MCTest; Richardson et al., 2013), </text>
+        <edit type="clarity" crr="which is" comments=""></edit>
+        <text>a set of human-authored fictional stories with associated multiple-choice questions. Knowledge bases and web corpora are not useful for this task, and answers are typically expressed just once in each story. While simple baselines presented by Richardson et al. answer over 60% of questions correctly, many of the remaining questions require deeper analysis.</text>
+        <text>In this paper, we explore the use of dependency syntax, frame semantics, word embeddings, and coreference for improving performance on MCTest. Syntax, frame semantics, and coreference are essential for understanding who did what to whom?. Word embeddings address variation in word choice between the stories and questions. Our added features achieve the best results we are aware of on this dataset</text>
+        <edit type="punctuation" crr="and" comments="Puncation / comma not required in a sentence with two clauses">,</edit>
+        <text>outperforming concurrently-published results (Narasimhan and Barzilay, 2015; Sachan et al., 2015).</text>
+    </introduction>   
+</doc>

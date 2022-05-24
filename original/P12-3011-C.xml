@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P12-3011" editor="C" format="Conf" position="NS" region="N">
+    <title>
+        <edit type="grammar" crr="" comments="Grammar/'the' not required here">The</edit>
+        <edit type="capitalization" crr="OpenGrm Open-Source Finite-State Grammar Software Libraries" comments="Punctuation/always capitalize titles for good academic writing">OpenGrm open-source finite-state grammar software libraries</edit>
+    </title>
+    <abstract>
+        <text>In this paper, we present a new collection of open-source software libraries that provides command line binary utilities and library classes and functions for compiling regular expression and context-sensitive rewrite rules into finite-state transducers, and for n-gram language modeling.</text>
+        <edit type="grammar" crr="" comments="Grammar/'the' not required here">The</edit>
+        <text>OpenGrm libraries use the OpenFst library to provide an efficient encoding of grammars and general algorithms for building, modifying, and applying models.</text>
+    </abstract>   
+    <introduction>
+        <edit type="grammar" crr="" comments="Grammar/'the' not required here">The</edit>
+        <text>OpenGrm libraries are a (growing) collection of open-source software libraries for building and applying various kinds of formal grammars.</text>
+        <edit type="grammar" crr="" comments="Grammar/'the' not required here">The</edit>
+        <text>C++ libraries use the OpenFst library for the underlying finite-state representation</text>
+        <edit type="readability" crr=". This" comments="Readability/this sentence is long, so I recommend splitting sence to improve flow.">, which</edit>
+        <text>allows for easy inspection of the resulting grammars and models, as well as straightforward combination with other finite-state transducers. Like OpenFst, there are easy-to-use command line binaries for frequently used operations, as well as a C++ library interface, allowing library users to create their own algorithms from the basic classes and functions provided.</text>
+        <edit type="consistency;word choice" crr="\\ These" comments="Comprehension/'the' is correct, but in this instance, 'these' is more accurate">\\ The</edit>
+        <text>libraries can be used for a range of common string processing tasks, such as text normalization</text>
+        <edit type="readability" crr=". They can also be used" comments="Readability/start new sentence">, as well as</edit>
+        <text>for building and using large statistical models for applications</text>
+        <edit type="style" crr="such as" comments="Register/'like' is correct, but the proposed alternative is better suited for academic writing">like</edit>
+        <text>peech recognition. In the rest of</text>
+        <edit type="consistency;word choice" crr="this" comments="Vocabulary/see above">the</edit>
+        <text>paper, we will present each of the two libraries, starting with the Thrax grammar compiler and then</text>
+        <edit type="style;consistency" crr="with" comments="Style/consistency/you used 'with' before, so you should repeat here"></edit>
+        <text>the NGram library.</text>
+        <edit type="word choice" crr="However, we will start off by briefly presenting some" comments="Vocabulary/what you wrote was correct, but here's a possible alternative">First, though, we will briefly present some preliminary</edit>
+        <text>(informal) background on weighted finite-state transducers (WFST),</text>
+        <edit type="conciseness" crr="" comments="Vocabulary/not required">just</edit>
+        <text>as</text>
+        <edit type="style" crr="required" comments="Register/proposed alternative is more suited to academic writing">needed</edit>
+        <text>for this paper.</text>
+    </introduction>   
+</doc>

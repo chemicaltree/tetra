@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W14-4012" editor="C" format="WS" position="NS" region="N">
+    <title>
+        <text>On the Properties of Neural Machine Translation: Encoder-Decoder Approaches</text>
+    </title>
+    <abstract>
+        <text>Neural machine translation is a relatively new approach to statistical machine translation</text>
+        <edit type="clarity" crr="that is" comments=""></edit>
+        <text>based purely on neural networks.</text>
+        <edit type="grammar" crr="Neural machine translation" comments="">The neural machine translation</edit>
+        <text>models often consist of an encoder and a decoder. The encoder extracts a fixed-length representation from a variable-length input sentence, and the decoder generates a correct translation from this representation. In this paper, we focus on analyzing the properties of</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>neural machine translation using two models</text>
+        <edit type="punctuation" crr=":" comments="">;</edit>
+        <text>RNN Encoder-Decoder and a</text>
+        <edit type="hyphenation" crr="newly-proposed" comments="Punctuation / hyphenate when qualifying a noun">newly proposed</edit>
+        <text>gated recursive convolutional neural network. We</text>
+        <edit type="style" crr="demonstrate" comments="Style / 'show' isn't incorrect, but the alternative is better for academic style">show</edit>
+        <text>that</text>
+        <edit type="conciseness" crr="" comments="">the</edit>
+        <text>neural machine translation performs relatively well on short sentences</text>
+        <edit type="word choice" crr="with known words," comments="">without unknown words</edit>
+        <edit type="style" crr="however" comments="Vocabulary / 'but' isn't incorrect, but alternative is better in academic writing">but</edit>
+        <text>its performance degrades rapidly as the length of the sentence and the</text>
+        <edit type="word choice" crr="quantity" comments="">number</edit>
+        <text>of unknown words increases. Furthermore, we find that the proposed gated recursive convolutional network learns a grammatical structure of a sentence automatically.</text>
+    </abstract>   
+    <introduction>
+        <text>A new approach for statistical machine translation based purely on neural networks has recently been proposed (Kalchbrenner and Blunsom, 2013; Sutskever et al., 2014). This new approach, which we refer to as neural machine translation, is inspired by the recent trend of deep representational learning. All the neural network models used in (Sutskever et al., 2014; Cho et al., 2014) consist of an encoder and a decoder. The encoder extracts a fixed-length vector representation from a variable-length input sentence</text>
+        <edit type="readability" crr="." comments="Readability / end long sentence and start new sentence">,</edit>
+        <edit type="readability" crr="The decoder then generates a correct, variable-length target translation from this representation." comments="">from this representation the decoder generates a correct, variable-length target translation.</edit>
+        <text>\n\n The emergence of</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>neural machine translation is highly significant, both practically and theoretically. Neural machine translation models require only a fraction of the memory needed by traditional statistical machine translation (SMT) models. The models we trained for this paper require only 500</text>
+        <edit type="spelling;consistency" crr="megabytes" comments="Spelling / made consistent when spelling gigabytes">MB</edit>
+        <text>of memory in total. This stands in stark contrast with existing SMT systems, which often require tens of gigabytes of memory. This makes the neural machine translation appealing in practice. Furthermore, unlike conventional translation systems, each and every component of the neural translation model is trained jointly to maximize the translation performance.</text>
+        <text>\n\n As this approach is relatively new,</text>
+        <edit type="style" crr="not much work has been carried out" comments="">there has not been much work</edit>
+        <text>on analyzing the properties and behavior of these models</text>
+        <edit type="clarity" crr="and a number of questions arise" comments="Word use / consider inserting as you're about to introduce questions"></edit>
+        <text>. For instance</text>
+        <edit type="readability" crr=", what" comments="Combine both sentences">: What</edit>
+        <text>are the properties of sentences on which this approach performs better? How does the choice of source/target vocabulary affect the performance? </text>
+        <edit type="word choice" crr="And in" comments="Word usage / rule of three">In</edit>
+        <text>which cases does</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>neural machine translation fail?</text>
+        <text>\n\n It is crucial to understand the properties and behavior of this new neural machine translation approach in order to determine future research directions. Also, understanding</text>
+        <edit type="word order" crr="the strengths and weaknesses" comments="in general 'strengths' is used before 'weaknesses' in phrases">the weaknesses and strengths</edit>
+        <text>of neural machine translation might lead to</text>
+        <edit type="style" crr="improved" comments="Vocabulary / 'better' isn't incorrect, but the alternative is better for academic style">better</edit>
+        <text>ways of integrating SMT and neural machine translation systems.</text>
+        <text>\n\n In this paper, we analyze two neural machine translation models.</text>
+        <edit type="flow;clarity" crr="The first" comments="Sequencing / introduce the first model">One of them</edit>
+        <text>is the RNN Encoder-Decoder that was proposed recently in (Cho et al., 2014).</text>
+        <edit type="clarity" crr="The second" comments="Word choice / specifically refer to the second model">other</edit>
+        <text>model replaces the encoder in the RNN Encoder-Decoder model with a novel neural network, which we call a gated recursive convolutional neural network (grConv). We evaluate these two models</text>
+        <edit type="clarity" crr="through the task" comments=""></edit>
+        <text>on the task of translation from French to English.</text>
+        <text>\n\n Our analysis shows that the performance of the neural machine translation model degrades quickly as the length of a source sentence increases. Furthermore, we find that the vocabulary size has a high impact on the translation performance. Nonetheless, qualitatively</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>we find that</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>both models are able to generate correct translations most of the time. Furthermore, the</text>
+        <edit type="hyphenation" crr="newly-proposed" comments="Punctuation / hyphenate when qualifying a noun">newly proposed</edit>
+        <text>grConv model is able to learn, without supervision, a kind of syntactic structure over the source language.</text>
+    </introduction>   
+</doc>

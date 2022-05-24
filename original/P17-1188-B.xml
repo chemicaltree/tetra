@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P17-1188" editor="B" format="Conf" position="S" region="N">
+    <title>
+        <text>Learning Character-level Compositionality with Visual Features</text>
+    </title>
+    <abstract>
+        <text>Previous work</text>
+        <edit type="style" crr="" comments="simple past is usually best for science articles">has</edit>
+        <text>modeled the compositionality of words by creating character-level models of meaning, reducing problems of sparsity for rare words. However, in many writing systems compositionality has an effect</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>even</text>
+        <edit type="grammar" crr="at" comments="">on</edit>
+        <text>the character-level: the meaning of a character is derived</text>
+        <edit type="grammar" crr="from" comments="">by</edit>
+        <text>the sum of its parts. In this paper, we model this effect by creating embeddings for characters based on their visual characteristics</text>
+        <edit type="clarity;readability" crr="by" comments="">,</edit>
+        <text>creating an image for the character and running it through a convolutional neural network to produce a visual character embedding. Experiments on a text classification task demonstrate that</text>
+        <edit type="clarity;word choice" crr="this type of" comments="">such</edit>
+        <text>model allows for better processing of instances</text>
+        <edit type="grammar" crr="of" comments="">with</edit>
+        <text>rare characters in languages such as Chinese, Japanese, and Korean. Additionally, qualitative analyses demonstrate that our proposed model learns to focus on the parts of characters that carry semantic content, resulting in embeddings that are coherent in visual space.</text>
+    </abstract>   
+    <introduction>
+        <text>Compositionality—the fact that the meaning of a complex expression is determined by its structure and the meanings of its constituents—is a hallmark of every natural language (Frege and Austin, 1980; Szabó, 2010). Recently, neural models have provided a powerful tool for learning how to compose words</text>
+        <edit type="redundancy" crr="" comments="together seems redundant">together</edit>
+        <text>into a meaning representation of whole sentences for many downstream tasks. This is done using models with various levels of sophistication, from simpler bag-of-words (Iyyer et al., 2015) and linear recurrent neural network (RNN) models (Sutskever et al., 2014; Kiros et al., 2015) to more sophisticated models using tree-structured (Socher et al., 2013) or convolutional networks (Kalchbrenner et al., 2014).</text>
+        <text>\\ In fact, a growing body of evidence shows that it is essential to look below the word-level and consider compositionality within words themselves. For example, several works have proposed models that represent words by composing the characters into a representation of the word itself (Ling et al., 2015; Zhang et al., 2015; Dhingra et al., 2016). Additionally, for languages with productive word formation (such as agglutination and compounding), models calculating morphology-sensitive word representations have been found effective (Luong et al., 2013; Botha and Blunsom, 2014). These models</text>
+        <edit type="word choice" crr="are helpful for learning" comments="">help to learn</edit>
+        <text>more robust representations for rare words by exploiting morphological patterns, as opposed to models that operate purely on the lexical level as</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>atomic units.</text>
+        <text>\\ For many languages, compositionality stops at the character-level: characters are atomic units of meaning or pronunciation in the language, and no further decomposition can be </text>
+        <edit type="clarity" crr="performed." comments="">done.</edit>
+        <text>However, for other languages, character-level compositionality,</text>
+        <edit type="word choice" crr="in which" comments="">where</edit>
+        <text>a character's meaning or pronunciation can be derived from the sum of its parts, is very much a reality. Perhaps the most compelling example of compositionality of sub-character units can be found in logographic writing systems such as the Han and Kanji characters used in Chinese and Japanese, respectively. As shown on the left side of Fig. 1, each part of a Chinese character (called a “radical”) potentially contributes to the meaning (i.e., Fig. 1(a)) or pronunciation (i.e., Fig. 1(b)) of the overall character. This is similar to</text>
+        <edit type="word choice" crr="the way" comments="">how</edit>
+        <text>English characters</text>
+        <edit type="clarity;word choice" crr="are combined in" comments="">combine into</edit>
+        <text>the meaning or pronunciation of an English word. Even in languages with phonemic orthographies, in which each character corresponds to a pronunciation instead of a meaning, there are cases in which composition occurs. Fig. 1(c) and (d) show examples of Korean and German, respectively, where morphological inflection can cause single characters to make changes in which some but not all of the component parts are shared.</text>
+        <text>\\ In this paper, we investigate the feasibility of modeling the compositionality of characters in a</text>
+        <edit type="word choice" crr="manner" comments="">way</edit>
+        <text>similar to</text>
+        <edit type="word choice;clarity" crr="way humans do this" comments="">how humans do</edit>
+        <text>: by visually observing the character and using the features of its shape to learn a representation encoding its meaning. Our method is relatively simple, and generalizable to a wide variety of languages: we first transform each character from its Unicode representation to a rendering of its shape as an image, then calculate a representation of the image using Convolutional Neural Networks (CNNs) (Cun et al., 1990). These features then serve as inputs to a down-stream processing task and</text>
+        <edit type="clarity" crr="are" comments=""></edit>
+        <text>trained in an end-to-end manner which first calculates a loss function, then back-propagates the loss back to the CNN.</text>
+        <text>\\ As demonstrated by our motivating examples in Fig. 1, in logographic languages character-level semantic or phonetic similarity is often indicated by visual cues; we conjecture that CNNs can appropriately model these visual patterns. Consequently, characters with similar visual appearances will be biased</text>
+        <edit type="word choice" crr="towards having" comments="">to have</edit>
+        <text>similar embeddings, allowing our model to handle rare characters effectively, just as character-level models have been effective for rare words.</text>
+        <text>To evaluate our model's ability to learn representations, particularly for rare characters, we perform experiments on a downstream task of classifying Wikipedia titles for three Asian languages: Chinese, Japanese, and Korean. We show that our proposed framework outperforms a baseline model that uses standard character embeddings for instances containing rare characters. A qualitative analysis of the characteristics of the learned embeddings of our model demonstrates that visually similar characters share similar embeddings. We also show that the learned representations are particularly effective under low-resource scenarios and complementary with standard character embeddings; combining the two representations</text>
+        <edit type="word choice" crr="using" comments="">through</edit>
+        <text>three different fusion methods (Snoek et al., 2005; Karpathy et al., 2014) leads to consistent improvements over the strongest baseline without visual features.</text>
+    </introduction>   
+</doc>

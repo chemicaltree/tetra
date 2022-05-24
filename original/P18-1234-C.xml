@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P18-1234" editor="C" format="Conf" position="S" region="N">
+    <title>
+        <text>Aspect Based Sentiment Analysis with Gated Convolutional Networks</text>
+    </title>
+    <abstract>
+        <text>Aspect based sentiment analysis (ABSA) can provide more detailed information than general sentiment analysis, because it aims to predict the sentiment polarities of</text>
+        <edit type="grammar" crr="" comments="Grammar/in this instance, 'the' is not required">the</edit>
+        <text>given aspects or entities in text. We summarize previous approaches</text>
+        <edit type="clarity" crr="around" comments="Vocabulary/meaning - either it's 'summarize...around' or 'we DIVIDE into' - it's not clear which one you meant">into</edit>
+        <text>two subtasks: aspect-category sentiment analysis (ACSA) and aspect-term sentiment analysis (ATSA). Most previous approaches employ long short-term memory and attention mechanisms to predict the sentiment polarity of the concerned targets, which are often complicated and</text>
+        <edit type="style" crr="requre" comments="Register/'need' is correct, but 'require' is better in academic writing">need</edit>
+        <text>more training time. We propose a model based on convolutional neural networks and gating mechanisms, which is</text>
+        <edit type="clarity" crr="a more accurate and efficient method." comments="Meaning/your use is correct, but the addition of 'method' amplifies the meaning a little">more accurate and efficient</edit>
+        <text>First, the novel Gated Tanh-ReLU Units can selectively output the sentiment features according to the given aspect or entity. The architecture is much simpler than the attention layer used in the existing models. Second, the computations of our model</text>
+        <edit type="word choice;clarity" crr="can" comments="Meaning/slightly ambiguous, since 'could' implies 'potentially.' Was that your intention? It's not clear">could</edit>
+        <text>be easily parallelized during training, because convolutional layers do not have time dependency as in LSTM layers</text>
+        <edit type="punctuation" crr="" comments="Punctuation/flow - comma not required here">,</edit>
+        <text>because convolutional layers do not have time dependency as in LSTM layers, and gating units also work independently. The experiments on SemEval datasets demonstrate the efficiency and effectiveness of our models.</text>
+    </abstract>   
+    <introduction>
+        <text>Opinion mining and sentiment analysis (Pang and Lee, 2008) on user-generated reviews can provide valuable information for providers and consumers. Instead of predicting the overall sentiment polarity, fine-grained aspect based sentiment analysis (ABSA) (Liu and Zhang, 2012) is proposed to</text>
+        <edit type="word choice" crr="further" comments="Vocabulary/register - 'better' is correct, but 'further' is more appropriate here">better</edit>
+        <text>understand reviews</text>
+        <edit type="clarity" crr="in ways that traditional sentiment analysis cannot." comments="Sentence construction/meaning - something is missing here, so I inserted these words. Is this what you meant?">than traditional sentiment analysis.</edit>
+        <text>Specifically, we are interested in the sentiment polarity of aspect categories or target entities in the text. Sometimes,</text>
+        <edit type="clarity" crr="the sentiment polarity" comments="Meaning/the use of 'is' is ambiguous and the reader doesn't know what you are referring to exactly">it</edit>
+        <text>is coupled with aspect term extractions (Xue et al., 2017). A number of models have been developed for ABSA, but there are two different subtasks, namely aspect-category sentiment analysis (ACSA) and aspect-term sentiment analysis (ATSA). The goal of ACSA is to predict the sentiment polarity with regard to the given aspect, which is one of a few predefined categories. On the other hand, the goal of ATSA is to identify the sentiment polarity concerning the target entities that appear in the text instead, which could be a multi-word phrase or a single word. The number of distinct words contributing to aspect terms could be more than a thousand. For example, in the sentence “Average to good Thai food, but terrible delivery.”, ATSA would ask the sentiment polarity towards the entity Thai food; while ACSA would ask the sentiment polarity toward the aspect service, even though the word service does not appear in the sentence.</text>
+        <text>\\ Many existing models use LSTM layers (Hochreiter and Schmidhuber, 1997) to distill sentiment information, from embedding vectors</text>
+        <edit type="punctuation" crr="" comments="Punctuation/remove here to improve flow">,</edit>
+        <edit type="consistency" crr="and applying attention mechanisms (Bahdanau et al., 2014) to enforcing models to focusing" comments="Consistency, use ending '-ing' to keep consistent">and apply attention mechanisms (Bahdanau et al., 2014) to enforce models to focus</edit>
+        <text>on the text spans related to the given aspect/entity. Such models include</text>
+        <edit type="consistency;capitalization" crr="Attention-based" comments="Consistency/capitalize throughout to maintain consistency">Attention-Based</edit>
+        <text>LSTM with Aspect Embedding (ATAE-LSTM) (Wang et al., 2016b) for ACSA; Target-Dependent Sentiment Classification (TD-LSTM) (Tang et al., 2016a), Gated Neural Networks (Zhang et al., 2016), and Recurrent Attention Memory Network (RAM) (Chen et al., 2017) for ATSA. Attention mechanisms</text>
+        <edit type="grammar" crr="have" comments="Grammar/plural is correct">has</edit>
+        <text>been successfully used</text>
+        <edit type="word choice" crr="across" comments="'In' is correct, but 'across' provides a better level of meaning">in</edit>
+        <text>many NLP tasks. It first computes the alignment scores between context vectors and the target vector</text>
+        <edit type="readability" crr="and" comments="Syntax/using the conjunction 'and' is better here as it's a relatively short sentence, and ';' makes readability a bit clumsy">;</edit>
+        <text> then</text>
+        <edit type="grammar" crr="carries" comments="">carry</edit>
+        <text>out a weighted sum with both the scores and the context vectors. However, the context vectors</text>
+        <edit type="style" crr="should" comments="Register/'to have to' is correct, but not appropriate for academic writing">have to</edit>
+        <text>encode both the aspect and sentiment information</text>
+        <edit type="readability" crr=". The" comments="Start new sentence to improve flow">and the</edit>
+        <text>alignment scores are then applied across all feature dimensions, regardless of the differences between these two types of information. Both the LSTM and the attention layer are very time-consuming during training. LSTM processes one token in a step.</text>
+        <edit type="grammar" crr="The attention" comments="">Attention</edit>
+        <text>layer involves exponential operation and normalization of</text>
+        <edit type="repetitiveness" crr="" comments="Flow/avoid repetition of 'all'">all</edit>
+        <text>alignment scores of all</text>
+        <edit type="grammar" crr="" comments="">the</edit>
+        <text>words in</text>
+        <edit type="grammar" crr="a" comments="">the</edit>
+        <text>sentence (Wang et al., 2016b). Moreover, some models</text>
+        <edit type="grammar;style" crr="requre" comments="Grammar/style/agreement with plural/'needs' is not apt for academic writing">needs</edit>
+        <text>the positional information between words and targets in order to produce weighted LSTM (Chen et al., 2017)</text>
+        <edit type="readability" crr=". This" comments="Flow/end long sentence here to improve flow;Start new sentence here">, which</edit>
+        <text>can be unreliable in noisy review text.</text>
+        <edit type="flow" crr="Although it is certainly" comments="Flow/revise sentence structure in order to improve flow and clarify">Certainly, it is</edit>
+        <text>possible to achieve</text>
+        <edit type="clarity" crr="a higher degree of" comments="Insert to amplify meaning">higher</edit>
+        <text>accuracy by building more and more complicated LSTM cells and sophisticated attention mechanisms</text>
+        <edit type="word choice" crr=", more parameters need to be held in memory in order to obtain" comments="">; but one has to hold more parameters in memory, get</edit>
+        <text>more hyper-parameters to tune and spend more time in training. In this paper, we propose a fast and effective neural network for ACSA and ATSA based on convolutions and gating mechanisms, which has much less training time than LSTM- based networks, but with better accuracy.</text>
+        <text>\\ For</text>
+        <edit type="grammar" crr="the" comments=""></edit>
+        <text>task, our model has two separate convolutional layers on the top of the embedding layer, whose outputs are combined by novel gating units. Convolutional layers with multiple filters can efficiently extract n-gram features at many granularities on each receptive field. The proposed gating units have two nonlinear gates, each of which is connected to one convolutional layer. With the given aspect information, they can selectively extract aspect-specific sentiment information for sentiment prediction. For example, in the sentence “Average to good Thai food, but terrible delivery.”, when the aspect food is provided, the gating units automatically ignore the negative sentiment of aspect delivery from the second clause, and only output the positive sentiment from the first clause. Since each component of the proposed model could be easily parallelized, it has much less training time than the models based on LSTM and attention mechanisms. For ATSA task, where the aspect terms consist of multiple words, we extend our model to include another convolutional layer for the target expressions. We evaluate our models on the SemEval datasets, which contains restaurants and laptops reviews with labels on aspect level. To the best of our knowledge, no CNNbased model has been proposed for aspect based sentiment analysis so far.</text>
+    </introduction>   
+</doc>

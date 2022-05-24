@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W15-5932" editor="B" format="WS" position="S" region="NN">
+    <title>
+        <text>Ruchi: Rating Individual Food Items in Restaurant Reviews</text>
+    </title>
+    <abstract>
+        <text>Restaurant recommendation systems are capable of recommending restaurants based on various</text>
+        <edit type="word choice" crr="factors" comments="">aspects</edit>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>such as</text>
+        <edit type="clarity" crr="an establishment's" comments="added for clarity"></edit>
+        <text>location, facilities and price range.</text>
+        <edit type="word choice" crr="Research exists on implementing restaurant" comments="">There exists some research that implements restaurant</edit>
+        <text>recommendation systems,</text>
+        <edit type="word choice" crr="in addition to studies of some famous" comments="">s well as some famous</edit>
+        <text>online recommendation systems such as Yelp. However, automatically rating</text>
+        <edit type="clarity" crr="the" comments=""></edit>
+        <text>individual food items</text>
+        <edit type="word choice" crr="a restaurant offers" comments="">of a restaurant</edit>
+        <text>based on online customer reviews is an area that has not received much attention. This paper presents Ruchi, a system capable of rating individual food items in restaurants. Ruchi makes use of Named Entity Recognition (NER) techniques to identify food names in restaurant reviews. The typed dependency technique is used to identify opinions associated with different food names in a single sentence</text>
+        <edit type="punctuation" crr="; thus," comments="">, thus</edit>
+        <text>it was possible to carry out entity-level sentiment analysis to rate individual food items instead of</text>
+        <edit type="clarity" crr="using" comments=""></edit>
+        <text>sentence-level sentiment analysis</text>
+        <edit type="punctuation" crr="," comments=""></edit>
+        <text>as done</text>
+        <edit type="grammar" crr="in" comments="">by</edit>
+        <text>previous research.</text>
+    </abstract>   
+    <introduction>
+        <text>Today, many factors affect a person's selection of a particular restaurant to dine in. People can find information on factors such as price,</text>
+        <edit type="spelling;clarity" crr="Wi-Fi availability" comments="spelling - Wi-Fi is the formal spelling;clarity - Wi-Fi is not a factor, it's availability is">wifi</edit>
+        <text>and service from a restaurant's website and/or brochures. However, information about some important factors is not directly available. Ratings of individual dishes in restaurants</text>
+        <edit type="word choice" crr="constitute" comments="">is</edit>
+        <text>one such factor</text>
+        <edit type="redundancy" crr="" comments="extraneous -- this is included in the previous sentences">that is not directly available</edit>
+        <text>. Therefore, it is common nowadays for people to rely on the reviews and ratings</text>
+        <edit type="readability" crr="provided by other customers on restaurant review sites." comments="">in restaurant review sites given by other customers.</edit>
+        <text>However, reading</text>
+        <edit type="word choice" crr="all of the customer reviews" comments="">each customer review</edit>
+        <text>n restaurant review sites is time consuming, boring and</text>
+        <edit type="word choice" crr="exhausting." comments="">exhaustive.</edit>
+        <text>This</text>
+        <edit type="clarity" crr="task" comments=""></edit>
+        <text>becomes more complex if someone</text>
+        <edit type="word choice" crr="wants" comments="word choice; simpler option">wishes</edit>
+        <text>to search for a particular food item that he is interested in.</text>
+        <text>\\ Existing restaurant recommendation systems such as Yelp do not have the</text>
+        <edit type="word choice" crr="capacity" comments="">facility</edit>
+        <text>to rate the individual food items of a restaurant. Moreover, as far as we are aware, existing research on restaurant recommendation systems has not focused on rating the individual food items of restaurants,</text>
+        <edit type="word choice" crr="with the exception of" comments="">except for</edit>
+        <text>the work of Trevisiol et al. (2014).</text>
+        <text>\\ This paper presents Ruchi (Ruchi means taste in Sinhala and Tamil, the two local languages in Sri Lanka), which is a system for rating individual food items (both food and beverages) in restaurants by automatically analyzing customer reviews. It combines the techniques of machine learning, natural language processing and information retrieval.</text>
+        <text>\\ In order to rate and recommend individual food items, it is necessary to identify food names in customer reviews, and the customer opinions associated with them. Food names in reviews are identified using a trained NER model. For this purpose, a corpus created from online customer reviews for restaurants is automatically annotated with food names extracted from various sources. As far as we are aware, this is the only freely available comprehensive corpus annotated with food names. Opinions related to these identified food items are extracted using a typed dependency parser. We then perform entity-level sentiment analysis to find the polarity of these opinions. Finally, individual food items are rated based on the polarities of all the opinions received for each of these food items.</text>
+        <text>\\ The rest of the paper is organized as follows.</text>
+        <edit type="style;word choice" crr="The following" comments="">Next</edit>
+        <text>section discusses related work. Section three gives an overview of sentiment analysis. Section four discusses the data collection process. Section five discusses research and development work. Section six contains evaluation and discussion, and finally, section seven concludes the paper.</text>
+    </introduction>   
+</doc>

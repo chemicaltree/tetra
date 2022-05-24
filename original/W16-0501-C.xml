@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="W16-0501" editor="C" format="WS" position="S" region="N">>
+    <title>
+        <text>The Effect of Multiple Grammatical Errors on Processing Non-Native Writing</text>
+    </title>
+    <abstract>
+        <text>In this work, we estimate the deterioration of NLP processing given an estimate of</text>
+        <edit type="clarity" crr="both" comments="consider inserting to amplify meaning"></edit>
+        <text>the amount and nature of grammatical errors in a text. From a corpus of essays written by English-language learners, we extract ungrammatical sentences, controlling the number and types of errors in each sentence</text>
+        <edit type="clarity" crr="in the process" comments="consider inserting to amplify meaning"></edit>
+        <text>. We focus on six categories of errors that are commonly made by English-language learners</text>
+        <edit type="punctuation" crr="" comments="">,</edit>
+        <text>and consider sentences containing one or more of these errors. To evaluate the effect of grammatical errors, we measure the deterioration of ungrammatical dependency parses using the labeled F-score,</text>
+        <edit type="clarity" crr="whic is" comments="Consider inserting to clarify"></edit>
+        <text>an adaptation of the labeled attachment score. We find notable differences between the influence of individual error types on the dependency parse, as well as interactions between multiple errors.</text>
+    </abstract>   
+    <introduction>
+        <text>With the</text>
+        <edit type="word choice" crr="huge" comments="">large</edit>
+        <text>number of English-language learners and the</text>
+        <edit type="word choice" crr="extensive use" comments="">prevalence</edit>
+        <text>informal web text, noisy text containing grammatical errors is widespread. However, the majority of</text>
+        <edit type="clarity" crr="current" comments=""></edit>
+        <text>NLP tools are developed and trained over clean, grammatical text, and the performance of these tools may be negatively affected when processing errorful text. One possible workaround is to adapt tools for noisy text, e.g. (Foster et al., 2008; Cahill et al., 2014). However, it is often preferable to use tools</text>
+        <edit type="clarity" crr="that are" comments=""></edit>
+        <text>.g. (Foster et al., 2008; Cahill et al., 2014). However, it is often preferable to use tools that are trained on clean text, mainly because of the amount of resources necessary for training and the limited availability of large-scale annotated corpora</text>
+        <edit type="readability" crr=". This is" comments="Readability / split sentence">, but</edit>
+        <text>also because tools should work correctly in the presence of well-formed text.</text>
+        <text>\n\n Our goal is to measure the performance degradation of an automatic NLP task, based on an estimate of grammatical errors in a text. For example, if we are processing student responses within an NLP application, and the responses contain a mix of native and non-native texts, it would be useful to be able to estimate the difference in performance (if any) of the NLP application on both types of texts.</text>
+        <text>\n\n We choose dependency parsing as our prototypic task because it is often one of the first complex downstream tasks in NLP pipelines. We will consider six common grammatical errors made by non-native speakers of English and systematically control the number and types of errors present in a sentence. As errors are introduced to a sentence, the degradation of the dependency parse is measured by the decrease in the F-score over dependency relations.</text>
+        <text>\n In this work, we will show that</text>
+        <edit type="punctuation" crr=":" comments=""></edit>
+        <text>\n increasing the number of errors in a sentence decreases the accuracy of the dependency parse (Section 4.1);</text>
+        <text>\n the distance between errors does not affect the accuracy (Section 4.2);</text>
+        <text>\n some types of grammatical errors have a greater impact, alone or in combination with other errors (Section 4.3).</text>
+        <text>While these findings may seem self-evident, they have not previously been quantified on a large corpus of</text>
+        <edit type="punctuation;hyphenation" crr="naturally-occurring" comments="">naturally occurring</edit>
+        <text>errors. Our analysis will serve as the first step</text>
+        <edit type="word choice;clarity" crr="toward" comments="">to</edit>        
+        <text>understanding what happens to a NLP pipeline when confronted with grammatical errors.</text>
+    </introduction>   
+</doc>

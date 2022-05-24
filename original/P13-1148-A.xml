@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P13-1148" editor="A" format="Conf" position="S" region="N">
+    <title>
+        <text>A joint model of word segmentation and phonological variation for English word-final /t/-deletion</text>
+    </title>
+    <abstract>
+        <text>Word-final /t/-deletion refers to a common phenomenon in spoken English where words such as /wEst/ “west” are pronounced as [wEs] “wes” in certain contexts. Phonological variation like this is common in naturally occurring speech. Current computational models of unsupervised word segmentation usually assume idealized input that is devoid of these kinds of variation. We extend a non-parametric model of word segmentation by adding phonological rules that map from underlying forms to surface forms to produce a mathematically well-defined joint model as a first step towards handling variation and segmentation in a single model. We analyse how our model handles /t/-deletion on a large corpus of transcribed speech</text>
+        <edit type="punctuation" crr="" comments="punctuation - no comma is needed here as what follows is not a full sentence">,</edit>
+        <text>and show that the joint model can perform word segmentation and recover underlying /t/s. We find that</text>
+        <edit type="capitalization" crr="bigram" comments="capitalization - lowercase for consistency, (it is used below lowercase) plus I don't know of any reason without reading full paper that this should be treated as a proper noun">Bigram</edit>
+        <text>dependencies are important for performing well on real data and for learning appropriate deletion probabilities for different contexts.</text>
+    </abstract>   
+    <introduction>
+        <text>Computational models of word segmentation try to solve one of the first problems language learners have to face: breaking an unsegmented stream of sound segments into individual words. Currently, most such models assume that the input consists of sequences of phonemes with no pronunciation variation across different occurrences of the same word type. In this paper we describe an extension of the Bayesian models of Goldwater et al. (2009) that incorporates phonological rules to “explain away” surface variation. As a concrete example, we focus on word-final /t/-deletion in English, although our approach is not limited to this case. We choose /t/-deletion because it is a very common and well-studied phenomenon (see Coetzee (2004, Chapter 5) for a review) and segmental deletion is an interesting test case for our architecture. Recent work has found that /t/-deletion (among other things) is indeed common in child-directed speech (CDS) and, importantly, that its distribution is similar to that in adult-directed speech (ADS) (Dilley et al., to appear). This justifies our using ADS to evaluate our model, as discussed below.</text>
+        <text>\\ Our experiments are consistent with</text>
+        <edit type="clarity;readability" crr="both" comments="clarity/readability - avoids momentary misreading of 'longstanding and recent' as a combined adjective modifying 'findings', which is clearly not the meaning."></edit>
+        <text>longstanding and recent findings in linguistics, in particular that /t/-deletion heavily depends on the immediate context and that models ignoring context work poorly on real data. We also examine how well our models identify the probability of /t/-deletion in different contexts. We find that models that capture bigram dependencies between underlying forms provide considerably more accurate estimates of those probabilities than corresponding unigram or “bag of words” models of underlying forms.</text>
+        <text>\\ In section 2</text>
+        <edit type="punctuation" crr="," comments="punctuation - comma needed after intro phrase"></edit>
+        <text>we discuss related work on handling variation in computational models and on /t/-deletion. Section 3 describes our computational model, and section 4 discusses its performance for recovering deleted /t/s. We look at</text>
+        <edit type="readability" crr="the" comments="readability - original was awkward, this is part one of the edit to smooth it out.">both a</edit>
+        <text>situation where word boundaries are pre specified</text>
+        <edit type="word choice" crr="so" comments="word choice - I think 'so' is a better choice of conjunction here as it calls out the cause and effect better">and</edit>
+        <text>only inference for underlying forms has to be performed</text>
+        <edit type="readability" crr=", as well as" comments="readability - part 2 of edit to smooth out this sentence. Comma is not strictly needed before the 'as well as' here, but it helps to disambiguate">; and</edit>
+        <text>the problem of jointly finding the word boundaries and recovering deleted underlying /t/s. Section 5 discusses our findings, and section 6 concludes with directions for further research.</text>
+    </introduction>   
+</doc>

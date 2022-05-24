@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc id="P03-1006" editor="B" format="Conf" position="NS" region="N">
+    <title>
+        <text>Generalized Algorithms for Constructing Statistical Language Models</text>
+    </title>
+    <abstract>
+        <text>Recent text and speech processing applications, such as speech mining, raise new and more general problems related to the construction of language models. We present and describe in detail several new and efficient algorithms to address these more general problems and report experimental results demonstrating their usefulness. We give an algorithm for</text>
+        <edit type="style;word order" crr="efficiently computing" comments="">computing efficiently</edit>
+        <text>the expected counts of any sequence in a word lattice output</text>
+        <edit type="word choice" crr="using" comments="">by</edit>
+        <text>a speech recognizer or any arbitrary weighted automaton; we describe a new technique for creating exact representations of n-gram language models</text>
+        <edit type="word choice" crr="using" comments="">by</edit>
+        <text>weighted automata whose size is practical for offline use, even for a vocabulary size of about 500,000 words and an n-gram order n = 6; and we present a simple and more general technique for constructing class-based language models that allows each class to represent an arbitrary weighted automaton. An efficient implementation of our algorithms and techniques has been incorporated</text>
+        <edit type="word choice" crr="into" comments="">in</edit>
+        <text>a general software library for language modeling, the GRM Library,</text>
+        <edit type="word choice;clarity" crr="which" comments="">that</edit>
+        <text>includes many other text and grammar processing functionalities.</text>
+    </abstract>   
+    <introduction>
+        <text>Statistical language models are crucial components of many modern natural language processing systems such as speech recognition, information extraction, machine translation,</text>
+        <edit type="word choice" crr="and" comments="word choice - this is an inclusive list, so 'and' is more appropriate than 'or'">or</edit>    
+        <text>document classification. In all cases, a language model is used in combination with other information sources to rank alternative hypotheses by assigning them some probabilities. There are classical techniques for constructing language models such as n-gram models with various smoothing techniques (see Chen and Goodman (1998) and the references therein for a survey and comparison of these techniques).</text>
+        <text>\\ In some recent text and speech processing applications, several new and more general problems arise that are related to the construction of language models. We present new and efficient algorithms to address these more general problems.</text>
+        <text>\\ Counting. Classical language models are constructed by deriving statistics from large input texts. In speech mining applications or for adaptation purposes, one often needs to construct a language model based on the output of a speech recognition system. But, the output of a recognition system is not just text. Indeed, the word error rate of conversational speech recognition systems is still too high in many tasks to rely only on the one-best output of the recognizer. Thus, the word lattice output by speech recognition systems is used instead because it contains the correct transcription in most cases.</text>
+        <text>\\ A word lattice is a weighted finite automaton (WFA) output by the recognizer for a particular utterance. It</text>
+        <edit type="style;word order" crr="typically contains" comments="style / readability - as above, it's smoother with the adverb first">contains typically</edit>
+        <text>a very large set of alternative transcription sentences for</text>
+        <edit type="word choice" crr="the" comments="">that</edit>
+        <text>utterance</text>
+        <edit type="clarity" crr="in question" comments="added for clarity"></edit>
+        <text>with the corresponding weights or probabilities. A necessary step for constructing a language model based on a word lattice is to derive the statistics for any given sequence from the lattices or WFAs output by the recognizer. This cannot be done by simply enumerating each path of the lattice and counting the number of occurrences of the sequence considered in each path since the number of paths of even a small automaton may be</text>
+        <edit type="word choice" crr="greater" comments="">more</edit>
+        <text>than four billion. We present a simple and efficient algorithm for computing the expected count of any given sequence in a WFA and report experimental results demonstrating its efficiency.</text>
+        <text>\\ Representation of language models by WFAs. Classical n-gram language models admit a natural representation by WFAs in which each state encodes a left context of width less than n. However, the size of this representation makes it impractical for offline optimizations such as those used in large-vocabulary speech recognition or general information extraction systems. Most offline representations of these models are based instead on an approximation to limit their size. We describe a new technique for creating an exact representation of n-gram language models by WFAs whose size is practical for offline use, even in tasks with a vocabulary size of about 500,000 words and for n = 6.</text>
+        <text>\\ Class-based models. In many applications, it is natural and convenient to construct class-based language models, that is, models based on classes of words (Brown et al., 1992).</text>
+        <edit type="readability" crr="In addition, such models are often" comments="">Such models are also often</edit>
+        <text>more robust since they may include words that belong to a class but</text>
+        <edit type="conciseness" crr="" comments="">that</edit>
+        <text>were not found in the corpus. Classical class-based models are based on simple classes, such as lists of words. But new clustering algorithms allow one to create more general and more complex classes that may be regular languages. Very large and complex classes can also be defined using regular expressions. We present a simple and more general approach to class-based language models based on general weighted context-dependent rules (Kaplan and Kay, 1994; Mohri and Sproat, 1996). Our approach allows us to deal efficiently with more complex classes such as weighted regular languages.</text>
+        <text>\\ We have fully implemented the</text>
+        <edit type="word choice" crr="previously discussed algorithms" comments="word order + word choice">algorithms just mentioned</edit>
+        <text>and incorporated them into a general software library for language modeling, the GRM Library, that includes many other text and grammar processing functionalities (Allauzen et al., 2003). In the following, we will present</text>
+        <edit type="word order" crr="these algorithms in detail" comments="">in detail these algorithms</edit>
+        <text>and briefly describe the corresponding GRM utilities.</text>
+    </introduction>   
+</doc>
