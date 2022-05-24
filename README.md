@@ -27,7 +27,7 @@ Each file contains the following information in xml tags.
   - `comments`: rationale comments
 
 # Citation
-Thank you for your interest in our dataset. If you use it in your research, please cite:]
+Thank you for your interest in our dataset. If you use it in your research, please cite:
 
 ```
 @misc{mita2022automated,
