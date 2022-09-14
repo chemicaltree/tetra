@@ -1,5 +1,4 @@
 # TETRA (Text Revision of ACL papers) corpus
-Last updated: May 24th, 2022
 
 TETRA consists of documen-level revisions for the articles published at ACL-related venues, and designed based on an annotation scheme that can handle edit types beyond sentences (such as argument flow) in addition to conventional word- and phrase-level edit types.
 
