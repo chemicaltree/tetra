@@ -39,6 +39,7 @@ Thank you for your interest in our dataset. If you use it in your research, plea
       primaryClass={cs.CL}
 }
 ```
+Attribution 4.0 International (CC BY 4.0)
 
 # License
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+This work is licensed under a [Creative Commons Attribution 4.0 International License.](https://creativecommons.org/licenses/by/4.0/)
